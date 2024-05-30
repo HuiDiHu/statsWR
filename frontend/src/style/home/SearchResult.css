@@ -1,0 +1,10 @@
+.search-result {
+    padding: 10px 20px;
+    color: black;
+    font-family: Helvetica, sans-serif;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    border-bottom: 0.5px solid rgb(251 146 60);
+}
+.search-result:hover {
+    background-color: #efefef;
+}
