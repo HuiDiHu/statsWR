@@ -1,10 +1,24 @@
 .search-result {
-    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
     color: black;
     font-family: Helvetica, sans-serif;
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     border-bottom: 0.5px solid rgb(251 146 60);
 }
+
 .search-result:hover {
     background-color: #efefef;
+}
+
+.champion-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.champion-name {
+    text-align: center;
+    padding-left: 10px;
+    color: #404040;
 }

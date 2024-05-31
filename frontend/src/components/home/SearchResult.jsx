@@ -9,7 +9,14 @@ const SearchResult = ({ props }) => {
                 alert(`Redirecting to ${props.result.name}'s champion page... TO BE IMPLEMENTED`)
             }}
         >
-            {props.result.name}
+            <img
+                src={`../../assets/champion-icons/${props.result.label}.png`}
+                alt={`../../assets/champion-icons/EMPTY_CHAMPION.png`}
+                className='champion-icon'
+            />
+            <p>
+                <span className='champion-name'>{props.result.name}</span>
+            </p>
         </div>
     )
 }

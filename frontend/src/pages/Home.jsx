@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/home/Navbar'
 import SearchBar from '../components/home/SearchBar'
 import SearchResultsList from '../components/home/SearchResultsList'
 import SearchIcons from '../components/home/SearchIcons'
