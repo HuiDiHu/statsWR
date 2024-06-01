@@ -43,7 +43,7 @@ const Tierlist = () => {
                                     </li>
                                 )}
                             </ul>
-                            <div className='h-[500px] bg-red-800' />
+                            
                         </div>
                     </div>
                 </div>
