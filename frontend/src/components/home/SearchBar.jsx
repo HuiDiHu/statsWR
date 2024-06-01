@@ -5,7 +5,7 @@ import { allChampions } from '../../constants'
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
 const SearchBar = ({ props }) => {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState("")
   const handleInputChange = (value) => {
     setInput(value);
     //usually results should be already filtered in the backend after the fetch/axois request
@@ -15,7 +15,8 @@ const SearchBar = ({ props }) => {
         value &&
         champion &&
         champion.name &&
-        champion.name.toLowerCase().startsWith(value.toLowerCase().trim()));
+        champion.name.toLowerCase().startsWith(value.toLowerCase().trim())
+      );
     })
     props.setSearchResults(results)
   }
@@ -29,10 +30,11 @@ const SearchBar = ({ props }) => {
         champion.name.toLowerCase().startsWith(input.toLowerCase().trim())
       )
     })
-    console.log(result)
-    result ?
-      alert(`Redirecting to ${result.name}'s champion page... TO BE IMPLEMENTED`) :
-      alert(`Redirecting to CHAMPION NOT FOUND PAGE... TO BE IMPLEMENTED`)
+    result ? handleRedirect(result.name) :handleRedirect("CHAMPION NOT FOUND");
+  }
+
+  const handleRedirect = (name) => {
+    alert(`Redirecting to ${name}'s champion page... TO BE IMPLEMENTED`)
   }
 
   return (

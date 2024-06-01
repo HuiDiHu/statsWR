@@ -3,7 +3,7 @@ import Navbar from '../components/home/Navbar'
 import SearchBar from '../components/home/SearchBar'
 import SearchResultsList from '../components/home/SearchResultsList'
 import SearchIcons from '../components/home/SearchIcons'
-import Footer from '../components/home/Footer'
+import Footer from '../components/Footer'
 
 const Home = () => {
   const [searchResults, setSearchResults] = useState([])
