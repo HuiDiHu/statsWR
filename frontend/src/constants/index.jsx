@@ -3,6 +3,12 @@ export const navItems = [
     { label: "Tier List", to: "/tierlist" }
 ];
 
+export const regionRankPatch = [
+    { label: "\"Global\"", imgSrc: "../../public/assets/misc/global-icon.svg"},
+    { label: "Diamond+", imgSrc: "../../public/assets/misc/diamond-icon.png"},
+    { label: "Version: 5.1B", imgSrc: "/"}
+];
+
 export const allChampions = [
     { label: "AATROX", name: "Aatrox"},
     { label: "AHRI", name: "Ahri"},
@@ -117,5 +123,5 @@ export const allChampions = [
     { label: "ZERI", name: "Zeri"},
     { label: "ZIGGS", name: "Ziggs"},
     { label: "ZOE", name: "Zoe"},
-    { label: "ZYRA", name: "Zyra"},
+    { label: "ZYRA", name: "Zyra"}
 ]
