@@ -1,4 +1,4 @@
-import React from 'react'
+import { useMemo } from 'react'
 import { useState } from 'react'
 import { regionRankPatch } from 'src/constants'
 import SideSearchbar from 'src/components/tierlist/SideSearchbar'
@@ -9,13 +9,18 @@ import { allChampions } from 'src/constants'
 const Body = () => {
     const [roleIndex, setRoleIndex] = useState(0);
     const [input, setInput] = useState("");
-    
-    const roleFilteredChampions = roleIndex === 0 ? allChampions : allChampions.filter((champion) => {
-        return champion && champion.label && champion.role.find((element) => element === roleIndex);
-    });
-    const filteredChampions = input === "" ? roleFilteredChampions : roleFilteredChampions.filter((champion) => {
-        return champion && champion.label && champion.name.toLowerCase().startsWith(input.toLowerCase().trim());
-    });
+
+    const roleFilteredChampions = useMemo(() => {
+        return roleIndex === 0 ? allChampions : allChampions.filter((champion) => {
+            return champion && champion.label && champion.role.find((element) => element === roleIndex);
+        })
+    }, [roleIndex]) || allChampions;
+
+    const filteredChampions = useMemo(() => {
+        return input === "" ? roleFilteredChampions : roleFilteredChampions.filter((champion) => {
+            return champion && champion.label && champion.name.toLowerCase().startsWith(input.toLowerCase().trim());
+        });
+    }, [input, roleIndex]) || allChampions;
 
     return (
         <div className='flex'>
