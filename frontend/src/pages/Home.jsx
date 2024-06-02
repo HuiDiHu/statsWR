@@ -14,8 +14,8 @@ const Home = () => {
       <div className='pt-20 w-1/3 h-[90vh] m-auto flex flex-col items-center min-w-[200px]'>
         <div className='h-[15vh]'></div>
         <SearchIcons />
-        <SearchBar props={{setSearchResults: setSearchResults}}/>
-        <SearchResultsList props={{searchResults}}/>
+        <SearchBar props={{ setSearchResults: setSearchResults }} />
+        <SearchResultsList props={{ searchResults }} />
       </div>
       <Footer />
     </div>

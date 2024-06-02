@@ -7,16 +7,21 @@ import ChampionCardsList from 'src/components/tierlist/ChampionCardsList'
 import { allChampions } from 'src/constants'
 
 const Body = () => {
-    const [filteredChampions, setFilteredChampions] = useState(allChampions);
-    const [roleFilteredChampions, setRoleFilteredChampions] = useState(allChampions);
     const [roleIndex, setRoleIndex] = useState(0);
     const [input, setInput] = useState("");
+    
+    const roleFilteredChampions = roleIndex === 0 ? allChampions : allChampions.filter((champion) => {
+        return champion && champion.label && champion.role.find((element) => element === roleIndex);
+    });
+    const filteredChampions = input === "" ? roleFilteredChampions : roleFilteredChampions.filter((champion) => {
+        return champion && champion.label && champion.name.toLowerCase().startsWith(input.toLowerCase().trim());
+    });
 
     return (
         <div className='flex'>
             <div className='flex flex-col flex-shrink-0 w-1/3 bg-[#31313c] rounded-md px-2'>
-                <SideSearchbar props={{ roleIndex, filteredChampions, setFilteredChampions, setInput }} />
-                <RoleSelection props={{ input, roleIndex, setRoleIndex, setFilteredChampions, setRoleFilteredChampions }} />
+                <SideSearchbar props={{ filteredChampions, setInput }} />
+                <RoleSelection props={{ roleIndex, setRoleIndex }} />
                 <ChampionCardsList props={{ filteredChampions }} />
             </div>
             <div className='flex flex-col flex-shrink-0 bg-[#31313c] grow ml-2 rounded-md'>
