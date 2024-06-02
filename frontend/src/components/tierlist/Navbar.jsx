@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Link } from "react-router-dom";
-import logo from '../../../public/assets/logo.png'
-import { navItems } from '../../constants'
+import logo from 'assets/logo.png'
+import { navItems } from 'src/constants'
 
 const Navbar = () => {
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);

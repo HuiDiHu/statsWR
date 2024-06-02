@@ -1,12 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
 import LaneCard from './LaneCard'
-import baronImg from '../../../public/assets/role-icons/baron-role-icon.png'
-import bottomImg from '../../../public/assets/role-icons/bottom-role-icon.png'
-import jungleImg from '../../../public/assets/role-icons/jungle-role-icon.png'
-import midImg from '../../../public/assets/role-icons/mid-role-icon.png'
-import supportImg from '../../../public/assets/role-icons/support-role-icon.png'
-import allIconImg from '../../../public/assets/role-icons/all-icon.png'
+import baronImg from 'assets/role-icons/baron-role-icon.png'
+import bottomImg from 'assets/role-icons/bottom-role-icon.png'
+import jungleImg from 'assets/role-icons/jungle-role-icon.png'
+import midImg from 'assets/role-icons/mid-role-icon.png'
+import supportImg from 'assets/role-icons/support-role-icon.png'
+import allIconImg from 'assets/role-icons/all-icon.png'
 
 
 const RoleSelection = ({ props }) => {

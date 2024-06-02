@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchResult from './SearchResult';
-import '../../style/home/SearchResultsList.css';
+import 'src/style/home/SearchResultsList.css';
 
 const SearchResultsList = ({ props }) => {
   return (

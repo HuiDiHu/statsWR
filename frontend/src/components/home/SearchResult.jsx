@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../style/home/SearchResult.css'
+import 'src/style/home/SearchResult.css'
 
 const SearchResult = ({ props }) => {
     const handleRedirect = (name) => {
@@ -12,8 +12,8 @@ const SearchResult = ({ props }) => {
             onClick={(e) => handleRedirect(props.result.name)}
         >
             <img
-                src={`../../assets/champion-icons/${props.result.label}.png`}
-                alt={`../../assets/champion-icons/EMPTY_CHAMPION.png`}
+                src={`assets/champion-icons/${props.result.label}.png`}
+                alt={`assets/champion-icons/EMPTY_CHAMPION.png`}
                 className='champion-icon'
             />
             <p>

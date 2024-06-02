@@ -1,12 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
-import Navbar from '../components/tierlist/Navbar'
-import { regionRankPatch } from '../constants'
-import Footer from '../components/Footer'
-import SideSearchbar from '../components/tierlist/SideSearchbar'
-import RoleSelection from '../components/tierlist/RoleSelection'
-import ChampionCardsList from '../components/tierlist/ChampionCardsList'
-import { allChampions } from '../constants'
+import Navbar from 'src/components/tierlist/Navbar'
+import { regionRankPatch } from 'src/constants'
+import Footer from 'src/components/Footer'
+import SideSearchbar from 'src/components/tierlist/SideSearchbar'
+import RoleSelection from 'src/components/tierlist/RoleSelection'
+import ChampionCardsList from 'src/components/tierlist/ChampionCardsList'
+import { allChampions } from 'src/constants'
 
 const Tierlist = () => {
     const [filteredChampions, setFilteredChampions] = useState(allChampions);

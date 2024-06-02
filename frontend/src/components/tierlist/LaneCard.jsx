@@ -1,4 +1,4 @@
-import { allChampions } from "../../constants"
+import { allChampions } from "src/constants"
 
 const LaneCard = ({ props }) => {
     const handleClick = () => {

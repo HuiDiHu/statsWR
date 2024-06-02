@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Navbar from '../components/home/Navbar'
-import SearchBar from '../components/home/SearchBar'
-import SearchResultsList from '../components/home/SearchResultsList'
-import SearchIcons from '../components/home/SearchIcons'
-import Footer from '../components/Footer'
+import Navbar from 'src/components/home/Navbar'
+import SearchBar from 'src/components/home/SearchBar'
+import SearchResultsList from 'src/components/home/SearchResultsList'
+import SearchIcons from 'src/components/home/SearchIcons'
+import Footer from 'src/components/Footer'
 
 const Home = () => {
   const [searchResults, setSearchResults] = useState([])

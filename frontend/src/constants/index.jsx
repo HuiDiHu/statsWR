@@ -4,8 +4,8 @@ export const navItems = [
 ];
 
 export const regionRankPatch = [
-    { label: "\"Global\"", imgSrc: "../../public/assets/misc/global-icon.svg"},
-    { label: "Diamond+", imgSrc: "../../public/assets/misc/diamond-icon.png"},
+    { label: "\"Global\"", imgSrc: "assets/misc/global-icon.svg"},
+    { label: "Diamond+", imgSrc: "assets/misc/diamond-icon.png"},
     { label: "Version: 5.1B", imgSrc: "/"}
 ];
 

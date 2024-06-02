@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { allChampions } from '../../constants'
+import { allChampions } from 'src/constants'
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
 

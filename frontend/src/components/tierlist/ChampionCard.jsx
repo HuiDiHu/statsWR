@@ -7,7 +7,7 @@ const ChampionCard = ({ props }) => {
         <div className='m-1'>
             <button onClick={() => handleRedirect(props.name)}>
                 <img
-                    className='h-12 w-12 bg-red-800'
+                    className='h-12 w-12'
                     src={props.imgSrc}
                     alt={props.imgSrcAlt}
                 />

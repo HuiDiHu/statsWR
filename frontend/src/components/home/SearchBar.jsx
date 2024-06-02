@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import '../../style/home/SearchBar.css'
-import { allChampions } from '../../constants'
+import 'src/style/home/SearchBar.css'
+import { allChampions } from 'src/constants'
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
 const SearchBar = ({ props }) => {

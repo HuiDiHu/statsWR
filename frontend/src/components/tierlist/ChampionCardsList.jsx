@@ -1,5 +1,4 @@
 import React from 'react'
-import { allChampions } from '../../constants'
 import ChampionCard from './ChampionCard'
 import { BsExclamationCircle } from "react-icons/bs";
 
@@ -13,8 +12,8 @@ const ChampionCardsList = ({ props }) => {
                     <ChampionCard
                         key={index}
                         props={{
-                            imgSrc: `../../../public/assets/champion-icons/${item.label}.png`,
-                            imgSrcAlt: '../../../public/assets/champion-icons/EMPTY_CHAMPION.png',
+                            imgSrc: `assets/champion-icons/${item.label}.png`,
+                            imgSrcAlt: 'assets/champion-icons/EMPTY_CHAMPION.png',
                             name: item.name
                         }} 
                     />
