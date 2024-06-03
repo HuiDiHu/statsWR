@@ -10,10 +10,10 @@ import allIconImg from 'assets/role-icons/all-icon.png'
 
 const RoleSelection = ({ props }) => {
     return (
-        <div className='mb-2 flex justify-center'>
+        <div className='mb-2 flex justify-center flex-wrap'>
             <LaneCard props={{
-                style: 'flex justify-center items-center py-2 px-3 border border-neutral-500 rounded-l-lg',
-                selectedStyle: 'flex justify-center items-center py-2 px-3 border border-[#5383e8] bg-[#5383e8] rounded-l-lg shadow',
+                style: 'flex justify-center items-center py-2 px-3 border border-neutral-500 lg:rounded-l-lg',
+                selectedStyle: 'flex justify-center items-center py-2 px-3 border border-[#5383e8] bg-[#5383e8] lg:rounded-l-lg shadow',
                 imgSrc: allIconImg,
                 index: 0,
                 selected: props.roleIndex === 0,
@@ -53,8 +53,8 @@ const RoleSelection = ({ props }) => {
                 setRoleIndex: props.setRoleIndex,
             }} />
             <LaneCard props={{
-                style: 'flex justify-center items-center py-2 px-3 border border-neutral-500 rounded-r-lg',
-                selectedStyle: 'flex justify-center items-center py-2 px-3 border border-[#5383e8] bg-[#5383e8] rounded-r-lg shadow',
+                style: 'flex justify-center items-center py-2 px-3 border border-neutral-500 lg:rounded-r-lg',
+                selectedStyle: 'flex justify-center items-center py-2 px-3 border border-[#5383e8] bg-[#5383e8] lg:rounded-r-lg shadow',
                 imgSrc: supportImg,
                 index: 5,
                 selected: props.roleIndex === 5,

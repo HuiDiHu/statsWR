@@ -7,11 +7,11 @@ const ChampionCard = ({ props }) => {
         <div className='m-1'>
             <button onClick={() => handleRedirect(props.name)}>
                 <img
-                    className='h-12 w-12'
+                    className='h-8 w-8 lg:h-12 lg:w-12'
                     src={props.imgSrc}
                     alt={props.imgSrcAlt}
                 />
-                <p className='text-neutral-400 text-xs w-12 truncate'>
+                <p className='text-neutral-400 text-xs w-8 lg:w-12 truncate'>
                     <span>{props.name}</span>
                 </p>
             </button>
