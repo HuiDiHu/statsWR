@@ -1,3 +1,7 @@
+const Champion = require('../models/Champion')
+const { StatusCodes } = require('http-status-codes')
+const { BadRequestError } = require('../errors')
+
 const getAllChampions = async (req, res) => {
     res.send('get all champions')
 }
@@ -11,7 +15,9 @@ const getChampion = async (req, res) => {
 }
 
 const createChampion = async (req, res) => {
-    res.send('create a champion')
+    const { label, name, role, winRate, pickRate, banRate, tier } = req.body
+    const champion = await Champion.create({ label, name, role, winRate, pickRate, banRate, tier })
+    res.status(StatusCodes.CREATED).json({ champion })
 }
 
 const updateChampion = async (req, res) => {
