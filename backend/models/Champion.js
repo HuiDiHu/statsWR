@@ -1,40 +1,45 @@
-const mongoose = require('mongoose')
-const { BadRequestError } = require('../errors')
+const mongoose = require('mongoose');
+const { BadRequestError } = require('../errors');
+
+const ChampionGameplaySchema = new mongoose.Schema({
+    winRate: {
+        type: Number,
+        default: 0.00
+    },
+    pickRate: {
+        type: Number,
+        default: 0.00
+    },
+    banRate: {
+        type: Number,
+        default: 0.00
+    },
+    date: {
+        type: Date,
+        default: Date.now()
+    }
+})
 
 const ChampionSchema = new mongoose.Schema({
-    label:{
-        type:String,
-        required:[true, 'Please provide champion label'],
-        unique:true
+    label: {
+        type: String,
+        required: [true, 'Please provide champion label']
     },
-    name:{
-        type:String,
-        required:[true, 'Please provide champion name']
+    name: {
+        type: String,
+        required: [true, 'Please provide champion name']
     },
-    role:{
-        type:Number,
-        required:[true, 'Please provide champion role']
+    role: {
+        type: Number,
+        required: [true, 'Please provide champion role']
     },
-    winRate:{
-        type:Array,
-        default:[]
-    },
-	pickRate:{
-        type:Array,
-        default:[]
-    },
-    banRate:{
-        type:Array,
-        default:[]
-    },
-    date:{
-        type:Array,
-        default:[]
-    },
-    tier:{
-        type:String,
-        default:'C'
+    gameplayData: [ChampionGameplaySchema],
+    tier: {
+        type: String,
+        default: 'NaN'
     }
-},{timestamps:true})
+}, { timestamps: true }).index({label: 1, role: 1}, {unique: true});
+
+
 
 module.exports = mongoose.model('Champion', ChampionSchema)

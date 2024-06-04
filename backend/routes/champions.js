@@ -4,14 +4,11 @@ const router = express.Router();
 const { 
     getAllChampions,
     getAllLaneChampions,
-    getChampion,
-    createChampion,
-    updateChampion,
-    deleteChampion
+    getChampion
 } = require('../controllers/champions')
 
-router.route('/').post(createChampion).get(getAllChampions)
-router.route('/:id').get(getChampion).delete(deleteChampion).patch(updateChampion)
+router.route('/').get(getAllChampions)
+router.route('/:id').get(getChampion)
 router.route('/lanes/:id').get(getAllLaneChampions)
 
 module.exports = router

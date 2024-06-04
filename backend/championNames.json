@@ -1,43 +1,100 @@
 [
     {
         "key": "迅捷斥候",
-        "val": {"label": "TEEMO", "name": "Teemo"}
+        "val": {
+            "label": "TEEMO",
+            "name": "Teemo"
+        }
     },
     {
         "key": "无畏战车",
-        "val": {"label": "URGOT", "name": "Urgot"}
+        "val": {
+            "label": "URGOT",
+            "name": "Urgot"
+        }
     },
     {
         "key": "不灭狂雷",
-        "val": {"label": "VOLIBEAR", "name": "Volibear"}
+        "val": {
+            "label": "VOLIBEAR",
+            "name": "Volibear"
+        }
     },
     {
         "key": "暗夜猎手",
-        "val": {"label": "VAYNE", "name": "Vayne"}
+        "val": {
+            "label": "VAYNE",
+            "name": "Vayne"
+        }
     },
     {
         "key": "德玛西亚之力",
-        "val": {"label": "GAREN", "name": "Garen"}
+        "val": {
+            "label": "GAREN",
+            "name": "Garen"
+        }
     },
     {
         "key": "暮光之眼",
-        "val": {"label": "SHEN", "name": "Shen"}
+        "val": {
+            "label": "SHEN",
+            "name": "Shen"
+        }
     },
     {
         "key": "蛮族之王",
-        "val": {"label": "TRYNDAMERE", "name": "Tryndamere"}
+        "val": {
+            "label": "TRYNDAMERE",
+            "name": "Tryndamere"
+        }
     },
     {
         "key": "封魔剑魂",
-        "val": {"label": "YONE", "name": "Yone"}
+        "val": {
+            "label": "YONE",
+            "name": "Yone"
+        }
     },
     {
         "key": "麦林炮手",
-        "val": {"label": "TRISTANA", "name": "Tristana"}
+        "val": {
+            "label": "TRISTANA",
+            "name": "Tristana"
+        }
     },
     {
         "key": "亡灵战神",
-        "val": {"label": "SION", "name": "Sion"}
+        "val": {
+            "label": "SION",
+            "name": "Sion"
+        }
+    },
+    {
+        "key": "腕豪",
+        "val": {
+            "label": "SETT",
+            "name": "Sett"
+        }
+    },
+    {
+        "key": "皮城女警",
+        "val": {
+            "label": "CAITLYN",
+            "name": "Caitlyn"
+        }
+    },
+    {
+        "key": "复仇之矛",
+        "val": {
+            "label": "KALISTA", 
+            "name": "Kalista"
+        }
+    },
+    {
+        "key": "圣枪游侠",
+        "val": {
+            "label": "LUCIAN", 
+            "name": "Lucian"
+        }
     }
 ]
-
