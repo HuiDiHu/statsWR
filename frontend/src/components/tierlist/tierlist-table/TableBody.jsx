@@ -6,7 +6,7 @@ const TableBody = () => {
 
     return (
         <table className='table-auto'>
-            <thead className='bg-neutral-800'>
+            <thead className='bg-zinc-800'>
                 <tr className='text-neutral-400 text-xs h-7 text-left'>
                     <th className='font-light pl-3'><span>Rank</span></th>
                     <th className='font-light pl-1'><span>Champion</span></th>

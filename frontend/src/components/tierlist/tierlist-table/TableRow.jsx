@@ -1,7 +1,7 @@
-const TableRow = () => {
+const TableRow = ({ props }) => {
     return (
-        <tr className='border border-x-0 border-y-1 border-[#1e1e1e] py-1'>
-            <td className='text-sm text-center py-2'>
+        <tr className='border border-x-0 border-y-1 border-[#1e1e1e] py-1 hover:bg-zinc-800 hover:border hover:border-y-0 hover:border-r-0 hover:border-orange-700 group'>
+            <td className='text-sm text-center py-2 group-hover:text-orange-500'>
                 <span>1</span>
             </td>
             <td className="py-1">
@@ -11,7 +11,7 @@ const TableRow = () => {
                         src='assets/champion-icons/RIVEN.png'
                         alt='assets/champion-icons/EMPTY_CHAMPION.png'
                     />
-                    <span className="pl-2 text-center text-xs font-semibold">Riven</span>
+                    <span className="pl-2 text-center text-xs font-semibold group-hover:text-orange-500">Riven</span>
                 </div>
             </td>
             <td>
