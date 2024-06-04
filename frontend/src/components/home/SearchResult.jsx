@@ -16,7 +16,7 @@ const SearchResult = ({ props }) => {
                 alt={`assets/champion-icons/EMPTY_CHAMPION.png`}
                 className='champion-icon'
             />
-            <p>
+            <p className='truncate'>
                 <span className='champion-name'>{props.result.name}</span>
             </p>
         </div>
