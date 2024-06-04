@@ -34,7 +34,42 @@ const TableBody = () => {
                 </tr>
             </thead>
             <tbody>
-                <TableRow />
+                <TableRow props={{
+                    rank: 1,
+                    label: "RIVEN",
+                    name: "Riven",
+                    role: 1,
+                    gameplayData:{
+                        winRate: 55.43,
+                        pickRate: 10.12,
+                        banRate: 1.69
+                    },
+                    tier: "A+",
+                }} />
+                <TableRow props={{
+                    rank: 2,
+                    label: "AATROX",
+                    name: "Aatrox",
+                    role: 1,
+                    gameplayData:{
+                        winRate: 52.14,
+                        pickRate: 6.69,
+                        banRate: 4.20
+                    },
+                    tier: "A",
+                }} />
+                <TableRow props={{
+                    rank: 3,
+                    label: "ANNIE",
+                    name: "Annie",
+                    role: 3,
+                    gameplayData:{
+                        winRate: 0.12,
+                        pickRate: 0.00,
+                        banRate: 69.42
+                    },
+                    tier: "F-",
+                }} />
             </tbody>
         </table>
     )
