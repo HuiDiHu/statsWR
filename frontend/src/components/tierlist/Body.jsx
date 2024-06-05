@@ -30,7 +30,7 @@ const Body = () => {
                 <RoleSelection props={{ roleIndex, setRoleIndex }} />
                 <ChampionCardsList props={{ filteredChampions }} />
             </div>
-            <div className='flex flex-1 flex-col flex-shrink-0 bg-[#31313c] grow ml-2 rounded-md'>
+            <div className={`flex flex-1 flex-col flex-shrink-0 bg-[#31313c] grow ml-2 rounded-md ${roleIndex !== 0 && 'h-min'}`}>
                 <TierlistDropdown />
                 <TableBody props={{ roleIndex }} />
             </div>

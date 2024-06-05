@@ -1,8 +1,15 @@
 const rolesTable = ['baron', 'jungle', 'mid', 'bottom', 'support'];
 
 const TableRow = ({ props }) => {
+    const handleRedirect = (name) => {
+        alert(`Redirecting to ${name}'s champion page... TO BE IMPLEMENTED`);
+    }
+
     return (
-        <tr className='border border-x-0 border-y-1 border-[#1e1e1e] py-1 hover:bg-zinc-800 hover:border hover:border-y-0 hover:border-r-0 hover:border-orange-700 group'>
+        <tr 
+            className='border border-x-0 border-y-1 border-[#1e1e1e] py-1 hover:bg-zinc-800 hover:border hover:border-y-0 hover:border-r-0 hover:border-orange-700 group'
+            onClick={(e) => handleRedirect(props.name)}
+        >
             <td className='text-sm text-center py-2 group-hover:text-orange-500'>
                 <span>{props.rank}</span>
             </td>
