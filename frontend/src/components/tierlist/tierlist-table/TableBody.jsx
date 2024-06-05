@@ -1,8 +1,25 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import TableRow from "./TableRow"
+import axios from 'axios'
 
-const TableBody = () => {
-    const [isLoading, setIsLoading] = useState(false)
+const TableBody = ({ props }) => {
+    const [loading, setLoading] = useState(false)
+    const [roleFilteredChampions, setRoleFilteredChampions] = useState([])
+
+    useEffect(() => {
+        setLoading(true)
+        axios
+            .get(`http://localhost:5555/api/v1/champions/lanes/${props.roleIndex}`)
+            .then((res) => {
+                console.log('Updated filtered champion data')
+                setRoleFilteredChampions(res.data.champions)
+                setLoading(false)
+            })
+            .catch((error) => {
+                setLoading(false)
+                console.log(error)
+            })
+    }, [props.roleIndex])
 
     return (
         <table className='table-auto'>
@@ -34,42 +51,22 @@ const TableBody = () => {
                 </tr>
             </thead>
             <tbody>
-                <TableRow props={{
-                    rank: 1,
-                    label: "RIVEN",
-                    name: "Riven",
-                    role: 1,
-                    gameplayData:{
-                        winRate: 55.43,
-                        pickRate: 10.12,
-                        banRate: 1.69
-                    },
-                    tier: "A+",
-                }} />
-                <TableRow props={{
-                    rank: 2,
-                    label: "AATROX",
-                    name: "Aatrox",
-                    role: 1,
-                    gameplayData:{
-                        winRate: 52.14,
-                        pickRate: 6.69,
-                        banRate: 4.20
-                    },
-                    tier: "A",
-                }} />
-                <TableRow props={{
-                    rank: 3,
-                    label: "ANNIE",
-                    name: "Annie",
-                    role: 3,
-                    gameplayData:{
-                        winRate: 0.12,
-                        pickRate: 0.00,
-                        banRate: 69.42
-                    },
-                    tier: "F-",
-                }} />
+                {roleFilteredChampions.map((champion, index) => (
+                    <TableRow
+                        key={index}
+                        props={{
+                            rank: index + 1,
+                            label: champion.label,
+                            name: champion.name,
+                            role: champion.role,
+                            gameplayData: {
+                                winRate: champion.gameplayData[champion.gameplayData.length - 1].winRate,
+                                pickRate: champion.gameplayData[champion.gameplayData.length - 1].pickRate,
+                                banRate: champion.gameplayData[champion.gameplayData.length - 1].banRate
+                            },
+                            tier: champion.tier
+                        }} />
+                ))}
             </tbody>
         </table>
     )

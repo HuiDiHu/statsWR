@@ -1,6 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 require('express-async-errors');
+const cors = require('cors')
 const app = express();
 
 //connectDB
@@ -16,6 +17,11 @@ const notFoundMiddleware = require('./middleware/not-found.js');
 const errorHandlerMiddleware = require('./middleware/error-handler.js');
 
 app.use(express.json())
+app.use(cors({
+    origin: 'http://localhost:5432',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type']
+}))
 
 //routes
 app.use('/api/v1/auth', authRouter);
