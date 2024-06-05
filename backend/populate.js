@@ -11,7 +11,7 @@ const start = async () => {
         const translatedJson = translateRawChampionsData()
         await Champion.insertMany(translatedJson)
         process.exit()
-    } catch(error) {
+    } catch (error) {
         console.log(error)
         throw new BadRequestError('Unable to correctly access MongoDB')
     }
