@@ -32,7 +32,7 @@ const Body = () => {
             </div>
             <div className='flex flex-1 flex-col flex-shrink-0 bg-[#31313c] grow ml-2 rounded-md'>
                 <TierlistDropdown />
-                <TableBody props={{roleIndex}}/>
+                <TableBody props={{ roleIndex }} />
             </div>
         </div>
     )
