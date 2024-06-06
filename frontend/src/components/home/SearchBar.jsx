@@ -2,10 +2,12 @@ import React from 'react'
 import { useState } from 'react'
 import 'src/style/home/SearchBar.css'
 import { allChampions } from 'src/constants'
-import { FaMagnifyingGlass } from "react-icons/fa6";
+import { FaMagnifyingGlass } from "react-icons/fa6"
+import { useNavigate } from 'react-router-dom'
 
 const SearchBar = ({ props }) => {
   const [input, setInput] = useState("")
+  const navigate = useNavigate()
   const handleInputChange = (value) => {
     setInput(value);
     //usually results should be already filtered in the backend after the fetch/axois request
@@ -30,21 +32,25 @@ const SearchBar = ({ props }) => {
         champion.name.toLowerCase().startsWith(input.toLowerCase().trim())
       )
     })
-    result ? handleRedirect(result.name) :handleRedirect("CHAMPION NOT FOUND");
+    result ? handleRedirect(result.label) : handleRedirect("CHAMPION NOT FOUND");
   }
 
-  const handleRedirect = (name) => {
-    alert(`Redirecting to ${name}'s champion page... TO BE IMPLEMENTED`)
+  const handleRedirect = (label) => {
+    if (!label || label === 'CHAMPION NOT FOUND') {
+      alert('CHAMPION NOT FOUND')
+      return
+    }
+    navigate(`/champion/${label}`, { state: { retAddr: '/' } })
   }
 
   return (
     <div className='input-wrapper'>
-      <input 
-        className='input' 
-        placeholder='Search Champion...' 
-        value={input} 
-        onChange={(e) => {handleInputChange(e.target.value)}}
-        onKeyDown={(e) => {e.key === "Enter" && handleSubmit()}}
+      <input
+        className='input'
+        placeholder='Search Champion...'
+        value={input}
+        onChange={(e) => { handleInputChange(e.target.value) }}
+        onKeyDown={(e) => { e.key === "Enter" && handleSubmit() }}
       />
       <button
         onClick={handleSubmit}

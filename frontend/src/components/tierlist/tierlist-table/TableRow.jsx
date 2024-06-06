@@ -1,14 +1,20 @@
+import { useNavigate } from "react-router-dom";
 const rolesTable = ['baron', 'jungle', 'mid', 'bottom', 'support'];
 
 const TableRow = ({ props }) => {
-    const handleRedirect = (name) => {
-        alert(`Redirecting to ${name}'s champion page... TO BE IMPLEMENTED`);
+    const navigate = useNavigate()
+    const handleRedirect = (label) => {
+        if (!label || label === 'CHAMPION NOT FOUND') {
+            alert('CHAMPION NOT FOUND')
+            return;
+        }
+        navigate(`/champion/${label}`, { state: { retAddr: '/tierlist' } });
     }
 
     return (
-        <tr 
+        <tr
             className='border border-x-0 border-y-1 border-[#1e1e1e] py-1 hover:bg-zinc-800 hover:border hover:border-y-0 hover:border-r-0 hover:border-orange-700 group'
-            onClick={(e) => handleRedirect(props.name)}
+            onClick={(e) => handleRedirect(props.label)}
         >
             <td className='text-sm text-center py-2 group-hover:text-orange-500'>
                 <span>{props.rank}</span>

@@ -1,11 +1,15 @@
 import React from 'react'
 import { FaMagnifyingGlass } from "react-icons/fa6";
-
+import { useNavigate } from 'react-router-dom';
 
 const SideSearchbar = ({ props }) => {
-    
-    const handleRedirect = (name) => {
-        alert(`Redirecting to ${name}'s champion page... TO BE IMPLEMENTED`);
+    const navigate = useNavigate()
+    const handleRedirect = (label) => {
+        if (!label || label === 'CHAMPION NOT FOUND') {
+            alert('CHAMPION NOT FOUND')
+            return;
+        }
+        navigate(`/champion/${label}`, { state: { retAddr: '/tierlist' } })
     }
 
     return (
@@ -18,9 +22,9 @@ const SideSearchbar = ({ props }) => {
                     value={props.input}
                     onChange={(e) => { props.setInput(e.target.value) }}
                     onKeyDown={(e) => {
-                        e.key === "Enter" && 
-                        props.filteredChampions.length > 0 && 
-                        handleRedirect(props.filteredChampions[0].name)
+                        e.key === "Enter" &&
+                            props.filteredChampions.length > 0 &&
+                            handleRedirect(props.filteredChampions[0].label)
                     }}
                 />
             </div>

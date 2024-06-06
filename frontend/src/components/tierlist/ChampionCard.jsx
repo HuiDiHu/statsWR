@@ -1,11 +1,17 @@
+import { useNavigate } from "react-router-dom";
 const ChampionCard = ({ props }) => {
-    const handleRedirect = (name) => {
-        alert(`Redirecting to ${name}'s champion page... TO BE IMPLEMENTED`);
+    const navigate = useNavigate()
+    const handleRedirect = (label) => {
+        if (!label || label === 'CHAMPION NOT FOUND') {
+            alert('CHAMPION NOT FOUND')
+            return;
+        }
+        navigate(`/champion/${label}`, { state: { retAddr: '/tierlist' } })
     }
 
     return (
         <div className='m-1'>
-            <button onClick={() => handleRedirect(props.name)}>
+            <button onClick={() => handleRedirect(props.label)}>
                 <img
                     className='h-8 w-8 lg:h-12 lg:w-12'
                     src={props.imgSrc}
