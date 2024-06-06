@@ -10,7 +10,7 @@ const TableBody = ({ props }) => {
     const [focusSection, setFocusSection] = useState(defaultSection)
     const [isDecreasing, setIsDecreasing] = useState(1)
 
-    const focusSectionStyle = "border-b-2 border-orange-700 text-orange-500";
+    const focusSectionStyle = `${isDecreasing === 1 ? 'border-b-orange-700' : 'border-t-orange-700'} text-orange-500`;
 
     useEffect(() => {
         setLoading(true)
@@ -52,9 +52,9 @@ const TableBody = ({ props }) => {
         <table className='table-auto'>
             <thead className='bg-zinc-800'>
                 <tr className='text-neutral-400 text-xs h-7 text-left'>
-                    <th className='font-light pl-3'><span>Rank</span></th>
-                    <th className='font-light pl-1'><span>Champion</span></th>
-                    <th className={`font-light pl-1 text-center ${focusSection === 'tier' && focusSectionStyle}`}>
+                    <th className='font-light pl-3 border-y-2 border-y-zinc-800'><span>Rank</span></th>
+                    <th className='font-light pl-1 border-y-2 border-y-zinc-800'><span>Champion</span></th>
+                    <th className={`font-light pl-1 text-center border-y-2 border-y-zinc-800 ${focusSection === 'tier' && focusSectionStyle}`}>
                         <button
                             className='w-full'
                             onClick={() => {
@@ -65,8 +65,8 @@ const TableBody = ({ props }) => {
                             <span>Tier</span>
                         </button>
                     </th>
-                    <th className='font-light pl-1 text-center'><span>Position</span></th>
-                    <th className={`font-light pl-1 text-center ${focusSection === 'winRate' && focusSectionStyle}`}>
+                    <th className='font-light pl-1 text-center border-y-2 border-y-zinc-800'><span>Position</span></th>
+                    <th className={`font-light pl-1 text-center border-y-2 border-y-zinc-800 ${focusSection === 'winRate' && focusSectionStyle}`}>
                         <button
                             className='w-full'
                             onClick={() => {
@@ -77,7 +77,7 @@ const TableBody = ({ props }) => {
                             <span>Win Rate</span>
                         </button>
                     </th>
-                    <th className={`font-light pl-1 text-center max-sm:hidden ${focusSection === 'pickRate' && focusSectionStyle}`}>
+                    <th className={`font-light pl-1 text-center max-sm:hidden border-y-2 border-y-zinc-800 ${focusSection === 'pickRate' && focusSectionStyle}`}>
                         <button
                             className='w-full'
                             onClick={() => {
@@ -88,7 +88,7 @@ const TableBody = ({ props }) => {
                             <span>Pick Rate</span>
                         </button>
                     </th>
-                    <th className={`font-light pl-1 text-center max-sm:hidden ${focusSection === 'banRate' && focusSectionStyle}`}>
+                    <th className={`font-light pl-1 text-center max-sm:hidden border-y-2 border-y-zinc-800 ${focusSection === 'banRate' && focusSectionStyle}`}>
                         <button
                             className='w-full'
                             onClick={() => {
