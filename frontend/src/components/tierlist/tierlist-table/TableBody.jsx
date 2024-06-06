@@ -101,7 +101,7 @@ const TableBody = ({ props }) => {
                     </th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className={loading && props.roleIndex === 0 && 'hidden'}>
                 {roleFilteredChampions.map((champion, index) => (
                     <TableRow
                         key={index}
