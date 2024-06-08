@@ -19,7 +19,7 @@ const Body = () => {
 
     const filteredChampions = useMemo(() => {
         return input === "" ? roleFilteredChampions : roleFilteredChampions.filter((champion) => {
-            return champion && champion.label && champion.name.toLowerCase().startsWith(input.toLowerCase().trim());
+            return champion && champion.label && champion.name.toLowerCase().includes(input.toLowerCase().trim());
         });
     }, [input, roleIndex]) || allChampions;
 

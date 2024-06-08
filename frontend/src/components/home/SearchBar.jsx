@@ -17,7 +17,7 @@ const SearchBar = ({ props }) => {
         value &&
         champion &&
         champion.name &&
-        champion.name.toLowerCase().startsWith(value.toLowerCase().trim())
+        champion.name.toLowerCase().includes(value.toLowerCase().trim())
       );
     })
     props.setSearchResults(results)
@@ -29,7 +29,7 @@ const SearchBar = ({ props }) => {
         input &&
         champion &&
         champion.name &&
-        champion.name.toLowerCase().startsWith(input.toLowerCase().trim())
+        champion.name.toLowerCase().includes(input.toLowerCase().trim())
       )
     })
     result ? handleRedirect(result.label) : handleRedirect("CHAMPION NOT FOUND");
