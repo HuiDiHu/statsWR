@@ -17,7 +17,7 @@ const SideSearchbar = ({ props }) => {
             <div className='m-2 ml-3 flex items-center'>
                 <FaMagnifyingGlass className='fill-neutral-500' />
                 <input
-                    className='h-5 w-10/12 ml-3 text-xs lg:text-sm focus:outline-none'
+                    className='bg-transparent h-5 w-10/12 ml-3 text-xs lg:text-sm focus:outline-none'
                     placeholder='Search a Champion'
                     value={props.input}
                     onChange={(e) => { props.setInput(e.target.value) }}

@@ -54,7 +54,7 @@ const TableBody = ({ props }) => {
                 <tr className='text-neutral-400 text-xs h-7 text-left'>
                     <th className='font-light pl-3 border-y-2 border-y-zinc-800'><span>Rank</span></th>
                     <th className='font-light pl-1 border-y-2 border-y-zinc-800'><span>Champion</span></th>
-                    <th className={`font-light pl-1 text-center border-y-2 border-y-zinc-800 ${focusSection === 'tier' && focusSectionStyle}`}>
+                    <th className={`font-light pl-1 text-center border-y-2 border-y-zinc-800 ${focusSection === 'tier' ? focusSectionStyle : undefined}`}>
                         <button
                             className='w-full'
                             onClick={() => {
@@ -66,7 +66,7 @@ const TableBody = ({ props }) => {
                         </button>
                     </th>
                     <th className='font-light pl-1 text-center border-y-2 border-y-zinc-800'><span>Position</span></th>
-                    <th className={`font-light pl-1 text-center border-y-2 border-y-zinc-800 ${focusSection === 'winRate' && focusSectionStyle}`}>
+                    <th className={`font-light pl-1 text-center border-y-2 border-y-zinc-800 ${focusSection === 'winRate' ? focusSectionStyle : undefined}`}>
                         <button
                             className='w-full'
                             onClick={() => {
@@ -77,7 +77,7 @@ const TableBody = ({ props }) => {
                             <span>Win Rate</span>
                         </button>
                     </th>
-                    <th className={`font-light pl-1 text-center max-sm:hidden border-y-2 border-y-zinc-800 ${focusSection === 'pickRate' && focusSectionStyle}`}>
+                    <th className={`font-light pl-1 text-center max-sm:hidden border-y-2 border-y-zinc-800 ${focusSection === 'pickRate' ? focusSectionStyle : undefined}`}>
                         <button
                             className='w-full'
                             onClick={() => {
@@ -88,7 +88,7 @@ const TableBody = ({ props }) => {
                             <span>Pick Rate</span>
                         </button>
                     </th>
-                    <th className={`font-light pl-1 text-center max-sm:hidden border-y-2 border-y-zinc-800 ${focusSection === 'banRate' && focusSectionStyle}`}>
+                    <th className={`font-light pl-1 text-center max-sm:hidden border-y-2 border-y-zinc-800 ${focusSection === 'banRate' ? focusSectionStyle : undefined}`}>
                         <button
                             className='w-full'
                             onClick={() => {
@@ -101,7 +101,7 @@ const TableBody = ({ props }) => {
                     </th>
                 </tr>
             </thead>
-            <tbody className={loading && props.roleIndex === 0 && 'hidden'}>
+            <tbody className={loading && props.roleIndex === 0 ? 'hidden' : undefined}>
                 {roleFilteredChampions.map((champion, index) => (
                     <TableRow
                         key={index}

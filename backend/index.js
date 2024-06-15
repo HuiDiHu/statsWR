@@ -18,7 +18,7 @@ const errorHandlerMiddleware = require('./middleware/error-handler.js');
 
 app.use(express.json())
 app.use(cors({
-    origin: 'http://localhost:5432',
+    origin: 'http://localhost:5173',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type']
 }))
