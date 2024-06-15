@@ -20,13 +20,13 @@ const TableRow = ({ props }) => {
                 <span>{props.rank}</span>
             </td>
             <td className="py-1">
-                <div className='flex max-sm:flex-col md:items-center max-sm:max-w-20'>
+                <div className='flex max-md:flex-col md:items-center max-md:max-w-20'>
                     <img
                         className='h-8 w-8 rounded-sm'
                         src={`assets/champion-icons/${props.label}.png`}
                         alt='assets/champion-icons/EMPTY_CHAMPION.png'
                     />
-                    <span className="md:pl-2 md:text-center max-sm:truncate text-xs font-semibold group-hover:text-orange-500">{props.name}</span>
+                    <span className="md:pl-2 md:text-center max-md:truncate text-xs font-semibold group-hover:text-orange-500">{props.name}</span>
                 </div>
             </td>
             <td>
@@ -42,10 +42,10 @@ const TableRow = ({ props }) => {
                 <h5 className="text-center text-sm text-neutral-400 pl-1">{props.gameplayData.winRate}%</h5>
             </td>
             <td className={`${props.focusSection === 'pickRate' && 'bg-zinc-800'}`}>
-                <h5 className="text-center text-sm text-neutral-400 pl-1 max-sm:hidden">{props.gameplayData.pickRate}%</h5>
+                <h5 className="text-center text-sm text-neutral-400 pl-1 max-md:hidden">{props.gameplayData.pickRate}%</h5>
             </td>
             <td className={`${props.focusSection === 'banRate' && 'bg-zinc-800'}`}>
-                <h5 className="text-center text-sm text-neutral-400 pl-1 max-sm:hidden">{props.gameplayData.banRate}%</h5>
+                <h5 className="text-center text-sm text-neutral-400 pl-1 max-md:hidden">{props.gameplayData.banRate}%</h5>
             </td>
         </tr>
     )

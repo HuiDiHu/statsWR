@@ -77,7 +77,7 @@ const TableBody = ({ props }) => {
                             <span>Win Rate</span>
                         </button>
                     </th>
-                    <th className={`font-light pl-1 text-center max-sm:hidden border-y-2 border-y-zinc-800 ${focusSection === 'pickRate' ? focusSectionStyle : undefined}`}>
+                    <th className={`font-light pl-1 text-center max-md:hidden border-y-2 border-y-zinc-800 ${focusSection === 'pickRate' ? focusSectionStyle : undefined}`}>
                         <button
                             className='w-full'
                             onClick={() => {
@@ -88,7 +88,7 @@ const TableBody = ({ props }) => {
                             <span>Pick Rate</span>
                         </button>
                     </th>
-                    <th className={`font-light pl-1 text-center max-sm:hidden border-y-2 border-y-zinc-800 ${focusSection === 'banRate' ? focusSectionStyle : undefined}`}>
+                    <th className={`font-light pl-1 text-center max-md:hidden border-y-2 border-y-zinc-800 ${focusSection === 'banRate' ? focusSectionStyle : undefined}`}>
                         <button
                             className='w-full'
                             onClick={() => {
