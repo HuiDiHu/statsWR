@@ -1,2 +1,2 @@
-const translateRawChampionsData = require('./translateRawChampionsData.js')
+const translateRawChampionsData = require('./translateRawChampionsData')
 const translatedData = translateRawChampionsData()

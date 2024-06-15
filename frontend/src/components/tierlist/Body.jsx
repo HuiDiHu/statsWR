@@ -24,7 +24,7 @@ const Body = () => {
     }, [input, roleIndex]) || allChampions;
 
     return (
-        <div className='flex'>
+        <body className='flex'>
             <div className='flex flex-col flex-shrink-0 w-1/3 bg-[#31313c] rounded-md px-2 h-min'>
                 <SideSearchbar props={{ filteredChampions, setInput }} />
                 <RoleSelection props={{ roleIndex, setRoleIndex }} />
@@ -34,7 +34,7 @@ const Body = () => {
                 <TierlistDropdown />
                 <TableBody props={{ roleIndex }} />
             </div>
-        </div>
+        </body>
     )
 }
 

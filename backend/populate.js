@@ -1,6 +1,6 @@
 require('dotenv').config()
 const connectDB = require('./db/connect')
-const translateRawChampionsData = require('./translateRawChampionsData.js')
+const translateRawChampionsData = require('./translateRawChampionsData')
 const Champion = require('./models/Champion')
 const { BadRequestError } = require('./errors')
 
