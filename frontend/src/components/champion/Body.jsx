@@ -10,6 +10,7 @@ const Body = ({ props }) => {
   const [info, setInfo] = useState({})
 
   useEffect(() => {
+    window.scrollTo(0,0)
     setLoading(true)
     axios
       .get(`http://localhost:5555/api/v1/champions/${props.label}`)
@@ -45,8 +46,8 @@ const Body = ({ props }) => {
             pickRate: info.gameplayData ? info.gameplayData['pickRate'] : '',
             banRate: info.gameplayData ? info.gameplayData['banRate'] : '',
             rank: '1/0',
-            
-          }}/>
+
+          }} />
           <Graphs />
         </div>
       }
