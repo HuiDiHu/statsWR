@@ -40,7 +40,7 @@ const SearchBar = ({ props }) => {
       alert('CHAMPION NOT FOUND')
       return
     }
-    navigate(`/champion/${label}`, { state: { retAddr: '/' } })
+    navigate(`/champion/${label}`, { state: { retAddr: '/', champLabel:label } })
   }
 
   return (

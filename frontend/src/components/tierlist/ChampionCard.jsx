@@ -6,7 +6,7 @@ const ChampionCard = ({ props }) => {
             alert('CHAMPION NOT FOUND')
             return;
         }
-        navigate(`/champion/${label}`, { state: { retAddr: '/tierlist' } })
+        navigate(`/champion/${label}`, { state: { retAddr: '/tierlist', champLabel: label } })
     }
 
     return (

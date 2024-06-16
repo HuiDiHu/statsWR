@@ -29,7 +29,15 @@ const getAllLaneChampions = async (req, res) => {
 
 const getChampion = async (req, res) => {
     //TODO: implement this after the design for champion specific page is completed
-    return res.status(StatusCodes.OK).send('get a champion');
+    const {
+        params: { id: label }
+    } = req;
+    if (!label) { throw new NotFoundError('Champion not found.') }
+    //filter by label
+    const champion = await Champion.find({ label: label })
+    if (!champion) { throw new NotFoundError(`Champion with label:${label} not found.`) }
+    champion.sort((a, b) => (a.gameplayData[a.gameplayData.length - 1].pickRate < b.gameplayData[b.gameplayData.length - 1].pickRate ? 1 : -1))
+    return res.status(StatusCodes.OK).json({ champion });
 }
 
 module.exports = {

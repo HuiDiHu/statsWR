@@ -3,18 +3,18 @@ const rolesTable = ['baron', 'jungle', 'mid', 'bottom', 'support'];
 
 const TableRow = ({ props }) => {
     const navigate = useNavigate()
-    const handleRedirect = (label) => {
+    const handleRedirect = (label, role) => {
         if (!label || label === 'CHAMPION NOT FOUND') {
             alert('CHAMPION NOT FOUND')
             return;
         }
-        navigate(`/champion/${label}`, { state: { retAddr: '/tierlist' } });
+        navigate(`/champion/${label}`, { state: { retAddr: '/tierlist', champLabel: label, role: role } });
     }
 
     return (
         <tr
             className='border border-x-0 border-y-1 border-[#1e1e1e] py-1 hover:bg-zinc-800 hover:border hover:border-y-0 hover:border-r-0 hover:border-orange-700 group'
-            onClick={(e) => handleRedirect(props.label)}
+            onClick={(e) => handleRedirect(props.label, props.role)}
         >
             <td className='text-sm text-center py-2 group-hover:text-orange-500'>
                 <span>{props.rank}</span>

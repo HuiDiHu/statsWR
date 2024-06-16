@@ -25,7 +25,7 @@ const Champion = () => {
                 {'<-- Go Back'}
             </Link>
             <h1>{`Welcome to ${championLabel}'s champion page.`}</h1>
-            <Body />
+            <Body props={{ label: location.state.champLabel, defaultRole: location.state.role ? location.state.role : undefined }}/>
             <Footer />
         </div>
     )
