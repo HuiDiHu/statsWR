@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import IconAndRoles from './IconAndRoles'
 import StatsLabel from './StatsLabel'
-import Graphs from './Graphs'
+import GraphsContainer from './GraphsContainer'
 
 const Body = ({ props }) => {
   const [loading, setLoading] = useState(false)
@@ -48,7 +48,7 @@ const Body = ({ props }) => {
             rank: '1/0',
 
           }} />
-          <Graphs />
+          <GraphsContainer />
         </div>
       }
     </div>

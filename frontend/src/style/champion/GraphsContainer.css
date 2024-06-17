@@ -1,0 +1,8 @@
+.grow-transition {
+    flex-grow: 1;
+    transition: all 1.5s;
+}
+.shrink-transition {
+    flex-shrink: 1;
+    transition: all 1.5s;
+}
