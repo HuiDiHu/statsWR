@@ -6,7 +6,7 @@ export const navItems = [
 export const regionRankPatch = [
     { label: "\"Global\"", imgSrc: "assets/misc/global-icon.svg" },
     { label: "Diamond+", imgSrc: "assets/misc/diamond-icon.png" },
-    { label: "Version: 5.1B", imgSrc: "/" }
+    { label: "Version: 5.1C", imgSrc: "/" }
 ];
 
 export const allChampions = [
@@ -69,6 +69,7 @@ export const allChampions = [
     { label: "MORGANA", name: "Morgana", role: [0, 2, 3, 5] },
     { label: "DR_MUNDO", name: "Dr. Mundo", role: [0, 1, 2] },
     { label: "NAMI", name: "Nami", role: [0, 5] },
+    { label: "MAOKAI", name: "Maokai", role: [0, 1, 2, 3, 5] },
     { label: "NASUS", name: "Nasus", role: [0, 1] },
     { label: "NAUTILUS", name: "Nautilus", role: [0, 1, 2, 5] },
     { label: "NILAH", name: "Nilah", role: [0, 4] },

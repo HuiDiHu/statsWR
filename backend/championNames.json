@@ -782,5 +782,12 @@
             "label": "RAKAN", 
             "name": "Rakan"
         }
+    },
+    {
+        "key": "扭曲树精",
+        "val": {
+            "label": "MAOKAI",
+            "name": "Maokai"
+        }
     }
 ]
