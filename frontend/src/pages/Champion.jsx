@@ -20,7 +20,7 @@ const Champion = () => {
         7. Footer  
     */
     return (
-        <div className='flex flex-col items-center'>
+        <div>
             <Link to={location.state.retAddr}>
                 {'<-- Go Back'}
             </Link>

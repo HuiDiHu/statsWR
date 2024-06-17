@@ -14,13 +14,13 @@ const Graphs = ({ props }) => {
             >
                 <div className={`${isHovered === 3 ? 'grow-transition' : 'shrink-transition'}`}></div>
                 <div
-                    className='flex flex-col'
+                    className={`flex flex-col ${isHovered === 4 ? 'justify-end' : ''}`}
                 >
                     <div className={`${isHovered === 2 ? 'grow-transition' : 'shrink-transition'}`}></div>
                     <Graph props={{ isHovered, setIsHovered, graphLabel: 'TIER', id: '1' }} />
                 </div>
                 <div
-                    className='flex flex-col'
+                    className={`flex flex-col ${isHovered === 3 ? 'justify-end' : ''}`}
                 >
                     <div className={`${isHovered === 1 ? 'grow-transition' : 'shrink-transition'}`}></div>
                     <Graph props={{ isHovered, setIsHovered, graphLabel: 'WINRATE', id: '2' }} />

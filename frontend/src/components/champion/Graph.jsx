@@ -1,7 +1,7 @@
 const Graph = ({ props }) => {
-    const graphStyle = 'w-[400px] h-[400px] rounded-lg bg-red-800 mx-8 ease-in duration-500 pointer-events-none'
-    const selectedGraphStyle = 'w-[600px] h-[600px] rounded-xl bg-red-800 mx-8 ease-in duration-[400ms] pointer-events-none'
-    const unselectedGraphStyle = 'w-[200px] h-[200px] rounded-md bg-red-800 mx-4 ease-in duration-500 pointer-events-none'
+    const graphStyle = 'lg:w-[400px] lg:h-[400px] w-[150px] h-[150px] rounded-lg bg-red-800 mx-8 ease-in duration-500 pointer-events-none'
+    const selectedGraphStyle = 'lg:w-[600px] lg:h-[600px] w-[225px] h-[225px] rounded-xl bg-red-800 mx-8 ease-in duration-[400ms] pointer-events-none'
+    const unselectedGraphStyle = 'lg:w-[200px] lg:h-[200px] w-[100px] h-[100px] rounded-md bg-red-800 mx-4 ease-in duration-500 pointer-events-none'
     const labelStyle = 'text-xl border-2 border-y-0 border-orange-700 px-4 mb-1 ease-in duration-500 pointer-events-none'
     const selectedLabelStyle = 'text-4xl border-2 border-y-0 border-orange-700 px-4 mb-1 ease-in duration-500 pointer-events-none'
     const unselectedLabelStyle = 'text-md border-2 border-y-0 border-orange-700 px-4 mb-1 ease-in duration-500 pointer-events-none'

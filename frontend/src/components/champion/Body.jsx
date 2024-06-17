@@ -3,6 +3,7 @@ import axios from 'axios'
 import IconAndRoles from './IconAndRoles'
 import StatsLabel from './StatsLabel'
 import GraphsContainer from './GraphsContainer'
+import logo from 'assets/logo.png'
 
 const Body = ({ props }) => {
   const [loading, setLoading] = useState(false)
@@ -10,7 +11,7 @@ const Body = ({ props }) => {
   const [info, setInfo] = useState({})
 
   useEffect(() => {
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0)
     setLoading(true)
     axios
       .get(`http://localhost:5555/api/v1/champions/${props.label}`)
@@ -32,25 +33,33 @@ const Body = ({ props }) => {
   }, [props.label])
 
   return (
-    <div className='w-[70%] min-h-[1000px] bg-blue-700'>
-      {!loading &&
-        <div className='flex flex-col items-center'>
-          <IconAndRoles props={{
-            label: props.label,
-            defaultRole: props.defaultRole,
-            name: info.name
-          }} />
-          <StatsLabel props={{
-            tier: info.tier ? info.tier : '',
-            winRate: info.gameplayData ? info.gameplayData['winRate'] : '',
-            pickRate: info.gameplayData ? info.gameplayData['pickRate'] : '',
-            banRate: info.gameplayData ? info.gameplayData['banRate'] : '',
-            rank: '1/0',
+    <div className='relative flex justify-center'>
+      <div className='w-[70%] min-h-[1000px] bg-blue-700'>
+        {!loading &&
+          <div className='flex flex-col items-center'>
+            <IconAndRoles props={{
+              label: props.label,
+              defaultRole: props.defaultRole,
+              name: info.name
+            }} />
+            <StatsLabel props={{
+              tier: info.tier ? info.tier : '',
+              winRate: info.gameplayData ? info.gameplayData['winRate'] : '',
+              pickRate: info.gameplayData ? info.gameplayData['pickRate'] : '',
+              banRate: info.gameplayData ? info.gameplayData['banRate'] : '',
+              rank: '1/0',
 
-          }} />
-          <GraphsContainer />
-        </div>
-      }
+            }} />
+            <GraphsContainer />
+          </div>
+        }
+      </div>
+      <img
+        className='fixed bottom-10 right-10 h-12 w-12 hover:h-14 hover:w-14 hover:bottom-9 hover:right-9 ease-in-out duration-200'
+        onClick={() => window.scroll({ top: 0, left: 0, behavior: 'smooth' })}
+        src={logo}
+        alt=''
+      />
     </div>
   )
 }
