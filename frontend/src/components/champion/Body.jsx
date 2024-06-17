@@ -9,6 +9,7 @@ const Body = ({ props }) => {
   const [loading, setLoading] = useState(false)
   const [championData, setChampionData] = useState([])
   const [info, setInfo] = useState({})
+  const [isClicked, setIsClicked] = useState(0)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -31,9 +32,11 @@ const Body = ({ props }) => {
         console.log(error)
       })
   }, [props.label])
-
   return (
-    <div className='relative flex justify-center'>
+    <div 
+      className='relative flex justify-center'
+      onClick={() => {setIsClicked(0)}}
+    >
       <div className='w-[70%] min-h-[1000px] bg-blue-700'>
         {!loading &&
           <div className='flex flex-col items-center'>
@@ -50,7 +53,7 @@ const Body = ({ props }) => {
               rank: '1/0',
 
             }} />
-            <GraphsContainer />
+            <GraphsContainer props={{ isClicked, setIsClicked}}/>
           </div>
         }
       </div>
