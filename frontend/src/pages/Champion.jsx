@@ -21,7 +21,7 @@ const Champion = () => {
     */
     return (
         <div>
-            <Link to={location.state.retAddr}>
+            <Link to={location.state.retAddr ? location.state.retAddr : '/'}>
                 {'<-- Go Back'}
             </Link>
             <h1>{`Welcome to ${championLabel}'s champion page.`}</h1>
