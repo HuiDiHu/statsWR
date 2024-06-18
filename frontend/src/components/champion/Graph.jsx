@@ -49,7 +49,7 @@ const Graph = ({ props }) => {
 
     return (
         <div
-            className='flex flex-col items-center py-4 pointer-events-auto'
+            className={`flex flex-col items-center py-4 pointer-events-auto ${props.isClicked !== Number(props.id) ? 'cursor-pointer' : 'cursor-auto'}`}
             id={props.id}
             onMouseOver={handleMouseOver}
             onMouseOut={() => props.setIsHovered(0)}
