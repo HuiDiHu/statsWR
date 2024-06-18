@@ -12,6 +12,7 @@ const Graph = ({ props }) => {
     const nonclickedLabelStyle = 'text-md border-2 border-y-0 border-orange-700 px-4 mb-1 ease-in duration-500 pointer-events-none'
 
     const handleMouseOver = (e) => {
+        e.stopPropagation();
         setTimeout(() => {
             switch (e.target.id) {
                 case "1":
@@ -52,7 +53,7 @@ const Graph = ({ props }) => {
             className={`flex flex-col items-center py-4 pointer-events-auto ${props.isClicked !== Number(props.id) ? 'cursor-pointer' : 'cursor-auto'}`}
             id={props.id}
             onMouseOver={handleMouseOver}
-            onMouseOut={() => props.setIsHovered(0)}
+            onMouseLeave={() => {props.setIsHovered(0)}}
             onClick={handleMouseClick}
         >
             <span

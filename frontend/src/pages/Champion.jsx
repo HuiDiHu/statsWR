@@ -21,11 +21,15 @@ const Champion = () => {
     */
     return (
         <div>
-            <Link to={location.state.retAddr ? location.state.retAddr : '/'}>
+            <Link to={location.state ? location.state.retAddr : '/'}>
                 {'<-- Go Back'}
             </Link>
             <h1>{`Welcome to ${championLabel}'s champion page.`}</h1>
-            <Body props={{ label: location.state.champLabel, defaultRole: location.state.role ? location.state.role : undefined }}/>
+            {location.state ? 
+            <Body props={{ label: location.state.champLabel, defaultRole: location.state.role ? location.state.role : undefined }} />
+            :
+            <div className='text-center text-4xl text-red-600'> SOMETHING WENT WRONG... PLEASE GO BACK</div>
+            }
             <Footer />
         </div>
     )

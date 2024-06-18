@@ -37,7 +37,7 @@ const Body = ({ props }) => {
       className='relative flex justify-center'
       onClick={() => {setIsClicked(0)}}
     >
-      <div className='w-[70%] min-h-[1000px] bg-blue-700'>
+      <div className='w-[80%] min-h-[1000px] bg-blue-700'>
         {!loading &&
           <div className='flex flex-col items-center'>
             <IconAndRoles props={{

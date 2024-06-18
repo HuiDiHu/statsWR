@@ -6,7 +6,7 @@ import 'src/style/champion/GraphsContainer.css'
 const Graphs = ({ props }) => {
     const [isHovered, setIsHovered] = useState(0)
     return (
-        <div id='0'>
+        <div className='px-10' onMouseOver={() => {setIsHovered(0)}}>
             <div
                 className={`flex ${((props.isClicked === 0 && isHovered === 4) || props.isClicked === 4) ? 'justify-end' : ''}`}
             >
