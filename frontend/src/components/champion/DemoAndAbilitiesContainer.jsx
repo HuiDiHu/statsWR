@@ -77,7 +77,7 @@ const DemoAndAbilitiesContainer = () => {
             </li>
           ))}
         </ul>
-        <div className='mt-5 mb-10 ml-1 flex flex-col w-full rounded-lg'>
+        <div className='mt-5 mb-10 ml-1 flex flex-col w-full rounded-lg bg-[#1e1e1e] p-2'>
           <span className='mb-1'>{abilitySlot[selectedAbility]}</span>
           <span className='mb-3'>{tempChampAbilities[selectedAbility].name}</span>
           <span className='text-wrap'>{tempChampAbilities[selectedAbility].description}</span>
