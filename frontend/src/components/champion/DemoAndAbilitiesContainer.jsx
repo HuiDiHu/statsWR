@@ -6,7 +6,8 @@
 import React, { useEffect, useState } from 'react'
 
 const abilitySlot = ['PASSIVE', '1ST ABILITY', '2ND ABILITY', '3RD ABILITY', 'ULTIMATE']
-//these are placeholders for an import from constants...
+
+//TODO: these are placeholders for an import from constants...
 const tempVideoSrc = [
   'https://www.wildriftfire.com/images/champions/abilities/aatrox-deathbringer-stance.webm',
   'https://www.wildriftfire.com/images/champions/abilities/aatrox-the-darkin-blade.webm',
