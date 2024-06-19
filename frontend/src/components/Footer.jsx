@@ -14,6 +14,14 @@ const Footer = () => {
                     </Link>
                 </p>
                 <p className='text-xs'>
+                    <span>All champion ability info and demo sourced from {" "}</span>
+                    <Link to={"https://www.wildriftfire.com"}>
+                        <span className='underline text-sky-700'>
+                            Wildriftfire.com
+                        </span>
+                    </Link>
+                </p>
+                <p className='text-xs'>
                     <span>Last updated on 5/30/2024</span>
                 </p>
                 <p className='text-xs line-through'>

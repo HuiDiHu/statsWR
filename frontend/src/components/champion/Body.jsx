@@ -3,6 +3,7 @@ import axios from 'axios'
 import IconAndRoles from './IconAndRoles'
 import StatsLabel from './StatsLabel'
 import GraphsContainer from './GraphsContainer'
+import DemoAndAbilitiesContainer from './DemoAndAbilitiesContainer'
 import logo from 'assets/logo.png'
 
 const Body = ({ props }) => {
@@ -37,7 +38,7 @@ const Body = ({ props }) => {
       className='relative flex justify-center'
       onClick={() => {setIsClicked(0)}}
     >
-      <div className='w-[80%] min-h-[1000px] bg-blue-700'>
+      <div className='w-[80%] min-h-[1000px] bg-[#31313c]'>
         {!loading &&
           <div className='flex flex-col items-center'>
             <IconAndRoles props={{
@@ -54,6 +55,7 @@ const Body = ({ props }) => {
 
             }} />
             <GraphsContainer props={{ isClicked, setIsClicked}}/>
+            <DemoAndAbilitiesContainer />
           </div>
         }
       </div>
