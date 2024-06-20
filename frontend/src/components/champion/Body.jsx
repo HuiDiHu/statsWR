@@ -11,6 +11,7 @@ const Body = ({ props }) => {
   const [championData, setChampionData] = useState([])
   const [info, setInfo] = useState({})
   const [isClicked, setIsClicked] = useState(0)
+  const [isHovered, setIsHovered] = useState(0)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -37,6 +38,7 @@ const Body = ({ props }) => {
     <div 
       className='relative flex justify-center'
       onClick={() => {setIsClicked(0)}}
+      onMouseOver={() => {setIsHovered(0)}}
     >
       <div className='w-[80%] min-h-[1000px] bg-[#31313c]'>
         {!loading &&
@@ -54,8 +56,8 @@ const Body = ({ props }) => {
               rank: '1/0',
 
             }} />
-            <GraphsContainer props={{ isClicked, setIsClicked}}/>
-            <DemoAndAbilitiesContainer />
+            <GraphsContainer props={{ isHovered, setIsHovered, isClicked, setIsClicked}}/>
+            <DemoAndAbilitiesContainer props={{ label: props.label }}/>
           </div>
         }
       </div>

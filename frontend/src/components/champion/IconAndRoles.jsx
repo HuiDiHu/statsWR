@@ -9,7 +9,7 @@ const IconAndRoles = ({ props }) => {
         />
       </div>
       <h1 className='mt-2.5 text-2xl'>{props.name || 'CHAMPION_NOT_FOUND'}</h1>
-      <h3 className='text-sm'>The bruh blade</h3>
+      <h3 className='text-sm'>The Broken Blade</h3>
     </div>
   )
 }

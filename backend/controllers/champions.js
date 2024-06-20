@@ -1,4 +1,5 @@
 const Champion = require('../models/Champion')
+const Abilities = require('../models/Abilities')
 const { StatusCodes } = require('http-status-codes')
 const { BadRequestError, NotFoundError } = require('../errors')
 
@@ -40,10 +41,22 @@ const getChampion = async (req, res) => {
     return res.status(StatusCodes.OK).json({ champion });
 }
 
+const getChampionAbilities = async (req, res) => {
+    const {
+        params: { id: label }
+    } = req;
+    if (!label) { throw new NotFoundError('Champion not found.') }
+    //filter by champion
+    const abilities = await Abilities.findOne({ label: label })
+    if (!abilities) { throw new NotFoundError(`Champion with label:${label} not found.`) }
+    return res.status(StatusCodes.OK).json({ abilities: abilities.ability })
+}
+
 module.exports = {
     getAllChampions,
     getAllLaneChampions,
-    getChampion
+    getChampion,
+    getChampionAbilities
 }
 
 

@@ -4,17 +4,10 @@
 3. Champion ability descriptions
 */
 import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const abilitySlot = ['PASSIVE', '1ST ABILITY', '2ND ABILITY', '3RD ABILITY', 'ULTIMATE']
 
-//TODO: these are placeholders for an import from constants...
-const tempVideoSrc = [
-  'https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt0503822260ec55b0/63755995a3fffc10b9dc2e83/Aatrox_Passive.mp4',
-  'https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blte131313716699a28/6375599671c75510a0c9f59c/Aatrox_Ability1.mp4',
-  'https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt009eb30c8a3e3902/63755997fb13fd114111d61a/Aatrox_Ability2.mp4',
-  'https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltb9e9fc711d7dfcbb/6375598dd4802c10f7f4c166/Aatrox_Ability3.mp4',
-  'https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltef2efaf871609da2/63755998cca9f010a904bf52/Aatrox_ULT.mp4'
-]
 const tempChampAbilities = [
   {
     iconSrc: 'https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltf02de5aa154436e8/637408773177be104ac204f6/Aatrox_0.jpg',
@@ -43,22 +36,36 @@ const tempChampAbilities = [
   }
 ]
 
-const DemoAndAbilitiesContainer = () => {
+const DemoAndAbilitiesContainer = ({ props }) => {
   const [selectedAbility, setSelectedAbility] = useState(0)
+  const [champAbilities, setChampAbilities] = useState([])
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5555/api/v1/champions/abilities/${props.label}`)
+      .then((res) => {
+        setChampAbilities(res.data.abilities)
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }, [props.label])
 
   return (
     <div className='flex flex-col items-center w-full'>
       <div className='relative flex justify-center items-center h-[460px] w-[775px] bg-[#1e1e1e] rounded-3xl mb-5'>
-        <video
-          autoPlay
-          loop
-          muted
-          key={tempVideoSrc[selectedAbility]}
-          className='h-[400px] rounded-3xl'
-        >
-          <source src={tempVideoSrc[selectedAbility]} type='video/mp4' />
-          Video doesn't exist :/
-        </video>
+        {selectedAbility < champAbilities.length &&
+          <video
+            autoPlay
+            loop
+            muted
+            key={champAbilities[selectedAbility].demoSrc}
+            className='transition-opacity h-[400px] rounded-3xl'
+          >
+            <source src={champAbilities[selectedAbility].demoSrc} type='video/mp4' />
+            Video doesn't exist :/
+          </video>
+        }
         <div className='absolute bottom-2 left-10 h-4 w-32 bg-gradient-to-r from-orange-500 to-orange-700 overflow-hidden 
                         after:h-full after:w-full after:bg-[#1e1e1e] after:absolute after:rotate-45 after:origin-bottom-right
                         before:h-full before:w-full before:bg-[#1e1e1e] before:absolute before:rotate-45 before:origin-top-left'>
@@ -70,7 +77,7 @@ const DemoAndAbilitiesContainer = () => {
       </div>
       <div className='w-[790px]'>
         <ul className='flex pl-5 space-x-5'>
-          {tempChampAbilities.map((ability, index) => (
+          {champAbilities.map((ability, index) => (
             <li key={index}>
               <button
                 className={`p-1 flex justify-center items-center rounded-full ${selectedAbility !== index ? 'bg-gradient-to-b from-[#d9c49a] to-[#4e432a]' : 'bg-gradient-to-b from-sky-200 to-sky-500'}`}
@@ -92,8 +99,8 @@ const DemoAndAbilitiesContainer = () => {
           </div>
           <div className='absolute top-1.5 right-40 h-1 w-48 bg-orange-700'></div>
           <span className='mb-1 text-orange-700'>{abilitySlot[selectedAbility]}</span>
-          <span className='mb-3 font-semibold text-2xl first-letter:text-3xl'>{tempChampAbilities[selectedAbility].name}</span>
-          <span className='text-md text-wrap'>{tempChampAbilities[selectedAbility].description}</span>
+          <span className='mb-3 font-semibold text-2xl first-letter:text-3xl'>{selectedAbility < champAbilities.length && champAbilities[selectedAbility].name}</span>
+          <span className='text-md text-wrap'>{selectedAbility < champAbilities.length && champAbilities[selectedAbility].description}</span>
         </div>
       </div>
     </div>

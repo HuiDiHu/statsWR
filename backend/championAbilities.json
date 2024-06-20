@@ -1,0 +1,1058 @@
+{   
+    "AATROX": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt0503822260ec55b0/63755995a3fffc10b9dc2e83/Aatrox_Passive.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltf02de5aa154436e8/637408773177be104ac204f6/Aatrox_0.jpg",
+            "name": "DEATHBRINGER STANCE",
+            "description": "Periodically, Aatrox's next basic attack deals bonus physical damage and heals him, based on the target's max health."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blte131313716699a28/6375599671c75510a0c9f59c/Aatrox_Ability1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt8a9b72bd71cff770/637408772f1aba10d25a6996/Aatrox_1.jpg",
+            "name": "THE DARKIN BLADE",
+            "description": "Aatrox slams his greatsword down, dealing physical damage. He can swing three times, each with a different area of effect."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt009eb30c8a3e3902/63755997fb13fd114111d61a/Aatrox_Ability2.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt2647a75d08760657/6374087707d496104f38b139/Aatrox_2.jpg",
+            "name": "INFERNAL CHAINS",
+            "description": "Aatrox smashes the ground, dealing damage to the first enemy hit. Champions and large monsters have to leave the impact area quickly or they will be dragged to the center and take the damage again."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltb9e9fc711d7dfcbb/6375598dd4802c10f7f4c166/Aatrox_Ability3.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt1dc77fc7124260bb/63740877da728110eb03aeb6/Aatrox_3.jpg",
+            "name": "UMBRAL DASH",
+            "description": "Passively, Aatrox heals when damaging enemy champions. On activation, he dashes in a direction."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltef2efaf871609da2/63755998cca9f010a904bf52/Aatrox_ULT.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt3d3184feb4c01eca/63740877deb37610ecbb373f/Aatrox_4.jpg",
+            "name": "WORLD ENDER",
+            "description": "Aatrox unleashes his demonic form, fearing nearby enemy minions and gaining attack damage, increased healing, and Move Speed. If he gets a takedown, this effect is extended."
+        }
+    ],
+    "AHRI": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blte2a7a97498054ede/5f76a07902e6b80ebf8ffee3/Ahri_Ability_Passive_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt34d4365f058cfb33/5f76a0713dea860e7be3c48e/Ahri_0.jpg",
+            "name": "ESSENCE THEFT",
+            "description": "Whenever Ahri hits a target with a spell, she gains a stack of Essence Theft. When she has enough stacks, her next spell that hits an enemy also heals her."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltab2f370583feac50/5f76a0789d46c20f091755df/Ahri_Ability_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltd7da2e1226badf08/5f76a071be6df80f0910b0ae/Ahri_1.jpg",
+            "name": "ORB OF DECEPTION",
+            "description": "Ahri sends out and pulls back her orb, dealing magic damage on the way out and true damage on the way back."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt3e1690136413376c/5f76a0778db9ea0f149eab54/Ahri_Ability_2a_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt0ce5597cda0c9063/5f76a0719d46c20f091755db/Ahri_2.jpg",
+            "name": "FOX-FIRE",
+            "description": "Ahri gains a brief burst of movement speed and releases three fox-fires, that lock onto and attack nearby enemies."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt58cc7fafed7aace4/5f76a0793dea860e7be3c492/Ahri_Ability_3_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blted283ff4812bf343/5f76a071e69fa40ef318176e/Ahri_3.jpg",
+            "name": "CHARM",
+            "description": "Ahri blows a kiss that damages and charms an enemy it encounters, instantly stopping movement abilities and causing them to walk harmlessly towards her. The target temporarily takes increased damage from Ahri."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blta10be7855eef9bd5/5f76a079879de80eb41af9e0/Ahri_Ability_Ult_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltfea95583f02bcfbe/5f76a071d4fbb50ef30754c5/Ahri_4.jpg",
+            "name": "SPIRIT RUSH",
+            "description": "Ahri dashes forward and fires essence bolts, damaging nearby enemies. Spirit Rush can be cast up to three times before going on cooldown."
+        }
+    ],
+    "AKALI": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltb2fe63feab50c75d/5f9b3be5d48a9b3234f438b9/akali_ability_passive_1_20.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blta592e2b8028f5b6a/5f9b3be35297d32899253f37/akali_0.jpg",
+            "name": "ASSASSIN'S MARK",
+            "description": "Dealing spell damage to a champion creates a ring of energy around them. Exiting that ring empowers Akali's next autoattack with bonus range and damage."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt741ac25b113c4ad3/5f9b3be65327e22643642961/akali_ability_1_1_20.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltc2fb7cda4903d72e/5f9b3be598312b1100f09aa1/akali_1.jpg",
+            "name": "FIVE POINT STRIKE",
+            "description": "Akali throws out five kunai, dealing damage based on her bonus Attack Damage and Ability Power and slowing at maximum range."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt5f5e8bf8bbb7c21e/5f9b3be94c821b106f61bde4/akali_ability_2_1_20.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltbc210ca6ab130ff4/5f9b3be7a88d1f3a1e58d705/akali_2.jpg",
+            "name": "TWILIGHT SHROUD",
+            "description": "Akali drops a cover of smoke and briefly gains Movement Speed and restores Energy. While inside the shroud, Akali becomes invisible. Attacking or using abilities will briefly reveal her."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltfc02e3f40ca50fc6/5f9b3becfef5a62bd5dd41ed/akali_ability_3_1_20.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt98de2196dc5a65f8/5f9b3bea76673c0d52ecb763/akali_3.jpg",
+            "name": "SHURIKEN FLIP",
+            "description": "Akali flips backward and fires a shuriken forward, dealing magic damage. The first enemy or smoke cloud hit is marked. Re-casting dashes to the marked target, dealing additional damage."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt8b22e97810d5b8bc/5f9b3beeb543e210850be570/akali_ability_ult_1_20.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltf7011ba275135dc1/5f9b3beb86dd137fe5a09a12/akali_4.jpg",
+            "name": "PERFECT EXECUTION",
+            "description": "Akali leaps in a direction, damaging enemies she strikes. Re-casting dashes in a direction, executing all enemies she strikes."
+        }
+    ],
+    "AKSHAN": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt2488aec7a2401ea8/60f0953fdd52f525eb2bf94b/Akshan_Ability_Passive_For_Web.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt9ff536ed3a1d02f8/60f09d7c6554cc2ee3b4640d/Akshan_0.jpg",
+            "name": "DIRTY FIGHTING",
+            "description": "Every third attack or ability hit deals bonus physical damages. Against champions, also gains damage shield for brief moment."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt81a4238ad69b7839/60f0953016291c305a36ba4b/Akshan_Ability_1_For_Web.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt74f8bfe8ac6dd51f/60f09d7c2551b47a42e0c6b2/Akshan_1.jpg",
+            "name": "AVENGERANG",
+            "description": "Like a typical boomerang spell, can hit each enemy twice (once on way out and in). Boomerang will reach some units beyond the last target hit, if it hits a different target during this it’s range will extend (theoretically range is infinite)"
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt7ef11ced26b18ac1/60f095354073f6306001c0bb/Akshan_Ability_2_For_Web.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltbe5dd129e0e099a0/60f09d7c2a120025e5847725/Akshan_2.jpg",
+            "name": "GOING ROGUE",
+            "description": "Passive: Enemies that kill Akshan’s allies become Scoundrels for few brief seconds. Killing a Scoundrel grants Akshan bonus golds and reduces the fallen ally’s death timer. Active: Gain camouflage for a few seconds. Duration is refreshed when Akshan is near a wall or in brush. Gains movement speed when moving toward Scoundrels."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt48fe691ae3c97b08/60f0953b6554cc2ee3b463dd/Akshan_Ability_3_For_Web.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltb50e38d1636dc1fc/60f09d7c6a54304c40591793/Akshan_3.jpg",
+            "name": "HEROIC SWING",
+            "description": "Akshan fires a rope that attaches to a wall for a few seconds to allow him to swing in a circle. While swinging, Akshan shoots an enemy he has recently damaged."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt0eb9902b82ba9630/60f0954316291c305a36ba4f/Akshan_Ability_Ult_For_Web.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt64744faccf4532bf/60f09d7c36954912f039abf0/Akshan_4.jpg",
+            "name": "COMEUPPANCE",
+            "description": "Locks onto an enemy champion and begins overcharging Mist shots over a few seconds."
+        }
+    ],
+    "ALISTAR": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt5fdd672b100e5d5f/5f7f70538ebedd0f2d2c31b9/alistar_ability_passive_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt128d78d5ec2d0f98/5f7f70521ca9100f24f816b4/alistar_0.jpg",
+            "name": "TRIUMPHANT ROAR",
+            "description": "Alistar charges his roar by stunning or displacing enemy champions or when nearby enemies die. When fully charged he heals himself all nearby allied champions."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltaa6c15b7008e91e1/5f7f7056791dbc0f80a3ccbb/alistar_ability_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt98aa8a39b4731233/5f7f7055e48f650f03b4bc84/alistar_1.jpg",
+            "name": "PULVERIZE",
+            "description": "Alistar smashes the ground, dealing damage to nearby enemies and tossing them into the air."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltfbb55bd231f0c40e/5f7f705950868d0ef2120862/alistar_ability_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltdcba86cc9ff4ae57/5f7f7058ee00c80ec595af56/alistar_2.jpg",
+            "name": "HEADBUTT",
+            "description": "Alistar rams a target with his head, dealing damage and knocking the target back. May also target turrets to deal bonus damage."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltcedf81f23e395571/5f7f705cbe9b6d0f2963544b/alistar_ability_3_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt40cebf004ffba83c/5f7f705a86abe10efc8eaa8a/alistar_3.jpg",
+            "name": "TRAMPLE",
+            "description": "Alistar tramples nearby enemy units, ignoring unit collision and gaining stacks if he damages an enemy champion. At full stacks Alistar's next basic attack against an enemy champion deals additional magic damage and stuns them."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt1eece7f1bd31b420/5f7f706010c63c0f19235530/alistar_ability_ult_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt5d988921753b3393/5f7f705e1a0a7b0f226b86f2/alistar_4.jpg",
+            "name": "UNBREAKABLE WILL",
+            "description": "Alistar lets out a wild roar, removing all crowd control effects on himself, and reducing incoming physical and magical damage for the duration."
+        }
+    ],
+    "AMUMU": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt13045795078dee36/5f7f706d235f470f4937181e/amumu_ability_passive_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt77a1cd3df5936e7f/5f7f706bb0ebb60f03a114c1/amumu_0.jpg",
+            "name": "CURSED TOUCH",
+            "description": "Amumu's basic attacks Curse his enemies, causing them to take bonus true damage from incoming magic damage."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt7193708739107566/5f7f707110c63c0f1923553c/amumu_ability_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltf44274b9f58e4034/5f7f706f2b9e620efd8742e0/amumu_1.jpg",
+            "name": "BANDAGE TOSS",
+            "description": "Amumu tosses a sticky bandage at a target, stunning and damaging the target while he pulls himself to them."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt745c49994f4b8641/5f7f707490ca8a0f01e5bf4e/amumu_ability_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt9b1cbda93d9ae34f/5f7f7072a85bbe0f755da365/amumu_2.jpg",
+            "name": "DESPAIR",
+            "description": "Overcome by anguish, nearby enemies lose a percentage of their maximum Health each second and have their Curses refreshed."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt5e3771a34c827ff4/5f7f707831b2350f1e6703a8/amumu_ability_3_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt5368dc6c07234e45/5f7f7076e7028c0f3ac46823/amumu_3.jpg",
+            "name": "TANTRUM",
+            "description": "Permanently reduces the physical damage Amumu would take. Amumu can unleash his rage, dealing damage to surrounding enemies. Each time Amumu is hit, the cooldown on Tantrum is reduced by 0.5 seconds."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt19fa3a653765e471/5f7f707bd48a690f08f8b6dd/amumu_ability_ult_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt88a96a74d129b548/5f7f70790fa7480f8b8d7e57/amumu_4.jpg",
+            "name": "CURSE OF THE SAD MUMMY",
+            "description": "Amumu entangles surrounding enemy units in bandages, applying his Curse, damaging them and rendering them unable to attack or move."
+        }
+    ],
+    "ANNIE": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt59c8cfe2e258b469/5f7f7088ff65030f24b7284b/annie_ability_passive_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt62b7651ca4667e74/5f7f70868ebedd0f2d2c31cd/annie_0.jpg",
+            "name": "PYROMANIA",
+            "description": "After casting 4 spells, Annie's next offensive spell will stun the target."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltd7576cd8ee97e89a/5f7f708bcb46430ef864db5a/annie_ability_1a_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt94bc2d94e5c0e7cb/5f7f7089b0ebb60f03a114cd/annie_1.jpg",
+            "name": "DISINTEGRATE",
+            "description": "Annie hurls a Mana infused fireball, dealing damage in a small area and refunding the Mana cost and half its cooldown if it destroys the target."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltd6b785dc7f275331/5f7f708e9223840f03e064c6/annie_ability_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt7169f5d5e205bcde/5f7f708c9223840f03e064c2/annie_2.jpg",
+            "name": "INCINERATE",
+            "description": "Annie casts a blazing cone of fire, dealing damage to all enemies in the area."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt66423f7c22d58e68/64cd4719bfb6712daa6bf874/Annie_Ability_3_2023Remake.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blta81fa4b1420e5630/5f7f708fbe9b6d0f2963545d/annie_3.jpg",
+            "name": "MOLTEN SHIELD",
+            "description": "Annie casts a shield over herself and Tibbers and gains move speed."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt8870e47e9876a0b6/64cd49333692761821af77fd/Annie_Ability_Ult_2023Remake.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blte8b52faf27a525a8/5f7f7092b5b2ab0fa1dd26fd/annie_4.jpg",
+            "name": "SUMMON: TIBBERS",
+            "description": "Annie summons Tibbers, dealing damage in the area. Tibbers enrages after pouncing on an enemy or when Annie dies, gaining move and attack speed. Recast: Annie orders Tibbers to pounce on a target. He deals damage and knocks up the target when he lands."
+        }
+    ],
+    "ASHE": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt6575260d2ec996c6/5f7f70a13088980ee66121d7/ashe_ability_passive_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltb4091b5bdb0f97fa/5f7f70a0e7028c0f3ac46835/ashe_0.jpg",
+            "name": "FROST SHOT",
+            "description": "Ashe's attacks slow their target, causing her to deal increased damage to these targets. Ashe's critical strikes deal no bonus damage but apply an empowered slow to the target."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltc80a52fcacb9523a/5f7f70a5d48a690f08f8b6ef/ashe_ability_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt8288c5038098a9bc/5f7f70a350868d0ef212088a/ashe_1.jpg",
+            "name": "RANGER'S FOCUS",
+            "description": "Ashe builds up Focus by attacking. At maximum Focus, Ashe can cast Ranger's Focus to consume all stacks of Focus, temporarily increasing her Attack Speed and transforming her basic attack into a powerful flurry attack for the duration."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt2c92d7ffed9fd678/5f7f70a82f5dc20ef2c681d6/ashe_ability_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltc0e6ffd882f5003f/5f7f70a678777e0edb315ac6/ashe_2.jpg",
+            "name": "VOLLEY",
+            "description": "Ashe fires 9 arrows in a cone for increased damage. Also applies Frost Shot."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltcfec3745c64efc9b/5f7f70ab5d51f80ed08dd2ea/ashe_ability_3_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltbbd1f3d723146907/5f7f70aa472a560f4335f398/ashe_3.jpg",
+            "name": "HAWKSHOT",
+            "description": "Ashe sends her Hawk Spirit on a scouting mission anywhere on the map."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt77e5ffa6ed77da71/5f7f70af8ebedd0f2d2c31df/ashe_ability_ult_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltf730a6e1c65098a5/5f7f70acc1be730f80a84a6e/ashe_4.jpg",
+            "name": "ENCHANTED CRYSTAL ARROW",
+            "description": "Ashe fires a missile of ice which she can steer in the air. If the arrow collides with an enemy Champion, it deals damage and stuns the Champion, stunning for longer the farther arrow has traveled. In addition, surrounding enemy units take damage and are slowed."
+        }
+    ],
+    "AURELION_SOL": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltc28ea66deb731440/65a939aa7fc0000c58223c01/WildRift_Champion_Aurelion_Sol_Passive_1280x720_5mbps.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt8aba91e527530f94/65a9491f49a17d4a5dcff6bf/AurelionSol_0.jpg",
+            "name": "COSMIC CREATOR",
+            "description": "Aurelion Sol's damaging abilities break down enemies into permanent stacks of Stardust, which improve each of his abilities."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltea5c6d6a25bbb3c2/65a94829d7d856cf87b4ee08/WildRift_Champion_Aurelion_Sol_Ability1_1280x720_5mbps.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt63d32b88611d1d42/65a9492aa933e521ea026c1c/AurelionSol_1.jpg",
+            "name": "BREATH OF LIGHT",
+            "description": "Aurelion Sol channels his dragon breath to exhale a beam of starfire, revealing and damaging the first enemy hit and splashing reduced damage onto nearby enemies. Each second the breath is channeled directly at an enemy will deal bonus damage, which is improved by the amount of Stardust that's been collected. This ability collects Stardust if the target is a champion. Aurelion Sol can move while channeling Breath of Light."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blta54d0574834164ef/65a948905d5135b612fb9102/WildRift_Champion_Aurelion_Sol_Ability2_1280x720_5mbps.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt2450c7f78137c827/65a9493cdaaa5096859c80db/AurelionSol_2.jpg",
+            "name": "ASTRAL FLIGHT",
+            "description": "Aurelion Sol flies over terrain in a targeted direction. While in this state, he can cast other abilities. Breath of Light no longer has a cooldown or maximum channel duration and deals increased damage while flying. Astral Flight's remaining cooldown is reduced whenever an enemy champion dies after being recently damaged by Aurelion Sol. Stardust increases Astral Flight's maximum range."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltb7a7c567719c688f/65a948b42b0bb7293533c052/WildRift_Champion_Aurelion_Sol_Ability3_1280x720_5mbps.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt721064eacb94c33e/65a94947b56104519d8c2e2f/AurelionSol_3.jpg",
+            "name": "SINGULARITY",
+            "description": "Aurelion Sol summons a black hole, damaging enemies and slowly pulling them toward its center. This ability grants Stardust each time an enemy dies within the black hole and for each second an enemy champion is caught inside it. The center of the black hole executes enemies who are below a certain percentage of their maximum health. Stardust increases Singularity's area as well as the execution threshold."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltb1fbf01b95f40341/65a948dacdbb961fc4c50227/WildRift_Champion_Aurelion_Sol_ULT_1280x720_5mbps.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt91bfe51e7876b795/65a9495149a17dd903cff6c5/AurelionSol_4.jpg",
+            "name": "FALLING STAR / THE SKIES DESCEND",
+            "description": "Falling Star: Aurelion Sol calls down a star. The impact deals magic damage and stuns enemies hit while also granting Stardust for each enemy champion hit. Gathering enough Stardust transforms Aurelion Sol's next ult cast into The Skies Descend. The Skies Descend: Aurelion Sol calls a giant star down from the heavens with an increased impact zone and increased damage, knocking up enemies rather than stunning them. A shockwave then spreads from the edge of the impact zone, which damages and slows the enemies it hits."
+        }
+    ],
+    "BLITZCRANK": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt660933111c6d31d9/5f7f70d9fd54990ef1b756bf/blitzcrank_ability_passive_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt5053918bbf9b5004/5f7f70d7ecb90f0f22474d8d/blitzcrank_0.jpg",
+            "name": "MANA BARRIER",
+            "description": "Blitzcrank gains a shield based on his mana when dropping to low health."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt9c13874ab455a0b7/5f7f70dc472a560f4335f3a2/blitzcrank_ability_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltf9e9211348c2d72c/5f7f70daa1441e0f5fc46b2b/blitzcrank_1.jpg",
+            "name": "ROCKET GRAB",
+            "description": "Blitzcrank fires his right hand to grab an opponent on its path, dealing damage and dragging it back to him."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt24cf653a7581c520/5f7f70dfb0ebb60f03a114db/blitzcrank_ability_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt07cfd19deef3a831/5f7f70ddfbf5650f0cf1471f/blitzcrank_2.jpg",
+            "name": "OVERDRIVE",
+            "description": "Blitzcrank super charges himself to get dramatically increased Movement and Attack Speed. He is temporarily slowed after the effect ends."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt528b1526f3e6b143/5f7f70e3e91fb80ef8022bbf/blitzcrank_ability_3_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt288c70f0237c67df/5f7f70e11ca9100f24f816f0/blitzcrank_3.jpg",
+            "name": "POWER FIST",
+            "description": "Blitzcrank charges up his fist to make his next attack critically strike and pop his target up in the air."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt4473ed2b04a46f5f/5f7f70e63088980ee66121ef/blitzcrank_ability_ult_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltefecb44c40034523/5f7f70e40faf280f13a2aeb7/blitzcrank_4.jpg",
+            "name": "STATIC FIELD",
+            "description": "Enemies attacked by Blitzcrank are marked and take lightning damage after 1 second. Additionally, Blitzcrank can activate this ability to damage nearby enemies, and silence them briefly."
+        }
+    ],
+    "BRAND": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blta9aeb89e78c156f5/6132dced8faa7a6bbfbff81b/Brand_Ability_Passive.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blte8031085d683d33a/6132ea218f8f7644bdf4f110/Brand_0.jpg",
+            "name": "BLAZE",
+            "description": "Brand's spells light his targets ablaze, dealing damage over 1 seconds, stacking up to 2 times. If Brand kills an enemy while it is ablaze he regains mana. When Blaze reaches max stacks on a Champion or large monster, it becomes unstable. It detonates in 3 seconds, applying spell effects and dealing massive damage in an area around the victim."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt84f92933dec233f3/6132dd739db95e7ff74b6a98/Brand_Ability_1a.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt409727d968437c74/6132ea57504fe365615e5a9b/Brand_1.jpg",
+            "name": "SEAR",
+            "description": "Launches a projectile that stops on the first enemy hit, dealing damage and applying a stack of Brand’s passive. If the target was previously afflicted by Brand’s passive they are also briefly stunned."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt81c5890db07c8820/6132de068faa7a6bbfbff81f/Brand_Ability_2a.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt49edb207dad61cff/6132ea848e16ab655b349685/Brand_2.jpg",
+            "name": "PILLAR OF FLAME",
+            "description": "After a short delay, Brand creates a Pillar of Flame at a target area, dealing magic damage to enemy units within the area."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt50f44f6a93468e27/6132e5fb4a33fd446132a2db/Brand_Ability_3a1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt969127df2ddff985/6132eaa8a9655d098c7cdffa/Brand_3.jpg",
+            "name": "CONFLAGRATION",
+            "description": "Brand conjures a powerful blast at his target that spreads to nearby enemies, dealing magic damage. If the target is ablaze, Conflagration's spread is doubled."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt9ace5f99c34c9433/6132dfe78f8f7644bdf4f106/Brand_Ability_Ult1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltdc38e171f95480d4/6132eaf1cc95cf70fa047f78/Brand_4.jpg",
+            "name": "PYROCLASM",
+            "description": "Launches a projectile that travels to the target, dealing damage and applying a stack of Brand’s passive. The projectile will then bounce to a nearby target. Does not damage Brand."
+        }
+    ],
+    "BRAUM": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt3ebbe283fd8debcb/5f7f70f5a85bbe0f755da3a5/braum_ability_passive_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt38d701878e87f2b2/5f7f70f32b9e620efd874320/braum_0.jpg",
+            "name": "CONCUSSIVE BLOWS",
+            "description": "Braum's basic attacks apply Concussive Blows. Once the first stack is applied, ally basic attacks also stack Concussive Blows. Upon reaching 4 stacks, the target is stunned and takes magic damage. For the next few seconds they cannot receive new stacks, but take bonus magic damage from Braum's attacks."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt8c52b0e03d22d23a/5f7f70f85d51f80ed08dd30e/braum_ability_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt2f0cd2f1d3dca01c/5f7f70f7e75e0f0f194a7018/braum_1.jpg",
+            "name": "WINTER'S BITE",
+            "description": "Braum propels freezing ice from his shield, slowing and dealing magic damage. Applies a stack of Concussive Blows."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltaf22d515144df481/5f7f70fc2f5dc20ef2c681f6/braum_ability_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt00ed1e5cbd93a3ec/5f7f70fd7f76200f1733c1b6/braum_3.jpg",
+            "name": "STAND BEHIND ME",
+            "description": "Braum leaps to a target allied champion or minion. On arrival, Braum and the ally gain Armor and Magic Resist for a few seconds."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt21619681276223e0/5f7f70ff235f470f49371846/braum_ability_3_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt466137a5bf7ec25c/5f7f70fab5b2ab0fa1dd2723/braum_2.jpg",
+            "name": "UNBREAKABLE",
+            "description": "Braum raises his shield in a direction for several seconds, intercepting all projectiles causing them to hit him and be destroyed. He negates the damage of the first attack completely and reduces the damage of all subsequent attacks from this direction."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt4e624f4a63498706/5f7f7103b0ebb60f03a114e3/braum_ability_ult_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt4d64410bc59ca686/5f7f7101e75e0f0f194a701c/braum_4.jpg",
+            "name": "GLACIAL FISSURE",
+            "description": "Braum slams the ground, knocking up enemies nearby and in a line in front of him. A fissure is left along the line that slows enemies."
+        }
+    ],
+    "CAITLYN": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt23c226032e0d8918/6183181cd6ef6a585adf2567/Caitlyn_Ability_Passive.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt74df512220a223fe/61831d69c9714c667b4fe940/Caitlyn_0.jpg",
+            "name": "HEADSHOT",
+            "description": "Every few basic attacks, or against a target she has trapped or netted, Caitlyn will fire a headshot dealing bonus damage that scales with her critical strike chance. On trapped or netted targets, Caitlyn's Headshot attack range is doubled."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt3a448935e5d35d92/61831881666f1777c9bcebaf/Caitlyn_Ability_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltdb9688090499ee8c/61831d8a71dc1b799a73fe7b/Caitlyn_1.jpg",
+            "name": "PILTOVER PEACEMAKER",
+            "description": "Caitlyn revs up her rifle for 1 second to unleash a penetrating shot that deals physical damage (deals less damage to subsequent targets)."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blta40ad31d2921f69d/618318c371dc1b799a73fe63/Caitlyn_Ability_2.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltb0617b074eec67f6/61831dbe666f1777c9bcebcb/Caitlyn_2.jpg",
+            "name": "YORDLE SNAP TRAP",
+            "description": "Caitlyn sets a trap to find sneaky yordles. When sprung, the trap reveals and immobilizes the enemy champion for brief period, granting Caitlyn an empowered Headshot."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt7579011886059b3e/618318e27a22505a5c254156/Caitlyn_Ability_3.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt2692d88096c2d3c9/61831dd6ffff3679072221be/Caitlyn_3.jpg",
+            "name": "CALIBER NET",
+            "description": "Caitlyn fires a heavy net to slow her target. The recoil knocks Caitlyn back."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt8602d82bbb480d2d/61831904666f1777c9bcebb3/Caitlyn_Ability_Ult.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blta83d4b3879148a73/61831dec19df7c77cdb1fbcf/Caitlyn_4.jpg",
+            "name": "ACE IN THE HOLE",
+            "description": "Caitlyn takes time to line up the perfect shot, dealing massive damage to a single target at a huge range. Enemy champions can intercept the bullet for their ally."
+        }
+    ],
+    "CAMILLE": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blta33dee4789c5c188/5f7f711078777e0edb315adc/camille_ability_passive_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blta910cfa93e80e077/5f7f710e31b2350f1e6703e8/camille_0.jpg",
+            "name": "ADAPTIVE DEFENSES",
+            "description": "Basic attacks on champions grant a shield equal to 20% of Camille's maximum health against their damage type (Physical or Magic) for a brief duration."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt7e8bc3c68ed5ab05/5f7f71148becd30f135cba3f/camille_ability_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt1cea03c58c8366e3/5f7f71127e60370f753183bf/camille_1.jpg",
+            "name": "PRECISION PROTOCOL",
+            "description": "Camille's next attack deals bonus damage and grants bonus movement speed. This spell can be recast for a short period of time, doing significantly increased bonus damage if Camille delays a period of time between the two attacks."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt8445cf94fe44c6d6/5f7f7117d48a690f08f8b711/camille_ability_2b_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt4113420847b94a95/5f7f7115a85bbe0f755da3a9/camille_2.jpg",
+            "name": "TACTICAL SWEEP",
+            "description": "Camille blasts in a cone after a delay, dealing damage. Enemies in the outer half are slowed and take extra damage, while also healing Camille."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blte0a801c05f79ff83/5f7f711b0687250f6aedc19b/camille_ability_3a_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltea0543f9700308ee/5f7f7119cb46430ef864db7a/camille_3.jpg",
+            "name": "HOOKSHOT",
+            "description": "Camille pulls herself to a wall, leaping off and knocking up enemy champions upon landing."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt62abd7ad942acec2/5f7f711e8ebedd0f2d2c3201/camille_ability_ult_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltc002a6fe51dcd293/5f7f711decb90f0f22474d99/camille_4.jpg",
+            "name": "THE HEXTECH ULTIMATUM",
+            "description": "Camille dashes to target champion, anchoring them to the area, and knocking away other enemies."
+        }
+    ],
+    "CORKI": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltc85c7035bb8c8199/60109c230a80720ff10f39cc/Corki_Ability_Passive.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltbcfe0b58233392f0/60109c376215cf0f9a18d9b8/Corki_0.jpg",
+            "name": "HEXTECH MUNITIONS",
+            "description": "A percentage of Corki's basic attack damage is converted into magic damage. Corki can occasionally retrieve The Package inside his base, granting him movement speed and an empowered cast of Valkyrie."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt1ea3fe717ee60036/60109c203c38be10329e3dc1/Corki_Ability_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blta937fe8d19b4d9a8/60109c370a80720ff10f39d0/Corki_1.jpg",
+            "name": "PHOSPHOROUS BOMB",
+            "description": "Corki fires a flash bomb at a target location, dealing magic damage to enemies in the area. This attack additionally reveals units in the area for a duration."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt453267177475e09c/60109c1e0069f70f77720289/Corki_Ability_2.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt60364fc1f7a46e2d/60109c3796de49101cfb5116/Corki_2.jpg",
+            "name": "VALKYRIE",
+            "description": "Corki flies a short distance, dropping bombs that create a trail of fire that damages opponents who remain in it. Special Delivery: If Corki has The Package, the flight is longer, enemies are knocked aside and the zone slows and deals damage."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltb02ac5bd6446d3d7/60109c235ad9610f6cb78fbb/Corki_Ability_3.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt57f61675c7bf8c7e/60109c377957730fa57aaf60/Corki_3.jpg",
+            "name": "GATLING GUN",
+            "description": "Corki's gatling gun rapidly fires in a cone towards his current target, dealing damage and reducing enemy Armor and Magic Resist."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltd8e48d91933c167f/60109c220839e910126d76ef/Corki_Ability_Ult.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt9c20c2f7b6191baf/60109c3794a1800f61b509bc/Corki_4.jpg",
+            "name": "MISSILE BARRAGE",
+            "description": "Corki fires a missile toward his target location that explodes on impact, dealing damage to enemies in an area. Corki stores missiles over time, up to a maximum. Every third missile fired will be a Big One, dealing extra damage."
+        }
+    ],
+    "DARIUS": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt441b0f1737b3992a/6010716394a1800f61b50866/Darius_Ability_Passive.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt70a72749e797d862/601071460069f70f77720115/Darius_0.jpg",
+            "name": "HEMORRHAGE",
+            "description": "Darius's attacks and damaging abilities cause enemies to bleed for physical damage over time, stacking up to a cap. Upon reaching full stacks, Darius gains Noxian Might for a few seconds, gaining Attack Damage and applying full stacks of Hemorrhage instead of 1."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltfd74e82fa00aca99/601071620069f70f7772011d/Darius_Ability_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt5a8b7d2593d72286/601071465ad9610f6cb78e2e/Darius_1.jpg",
+            "name": "DECIMATE",
+            "description": "Darius winds up and swings his axe in a wide circle. Enemies struck by the blade take more damage than those struck by the handle. Darius heals based on enemy champions hit by the blade, and applies Hemorrhage."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt9970a6a8882cea19/601071630069f70f77720121/Darius_Ability_2.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt265a043d75188c0c/601071467957730fa57aadf4/Darius_2.jpg",
+            "name": "CRIPPLING STRIKE",
+            "description": "Darius empowers his next attack to deal additional damage with a large slow."
+        },
+        {
+            "demoSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt38b2caf946d6a701/601071463e567f1011da354a/Darius_3.jpg",
+            "iconSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltabd1cb6e2748a396/601071626e1217102724a501/Darius_Ability_3.mp4",
+            "name": "APPREHEND",
+            "description": "Darius hones his axe, passively causing his physical damage to ignore a percentage of his target's Armor. When activated, Darius sweeps up his enemies with his axe's hook and pulls them to him."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt80c17dbcea3b9c9a/601071625ad9610f6cb78e36/Darius_Ability_Ult.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blte5ced8db9ae2b065/601071466e1217102724a4f5/Darius_4.jpg",
+            "name": "NOXIAN GUILLOTINE",
+            "description": "Darius leaps to an enemy champion and strikes a lethal blow, dealing true damage. This damage is increased for each stack of Hemorrhage on the target. If Noxian Guillotine is a killing blow, its cooldown is refreshed, granting Noxian Might and causing nearby minions and monsters to flee."
+        }
+    ],
+    "DIANA": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltd0254774487d1c60/6089db017cc444103417da36/Diana_Ability0.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blte33558fa9d86dada/6089db12f6a831100b5dd93b/Diana_0.jpg",
+            "name": "MOONSILVER BLADE",
+            "description": "Every third strike cleaves nearby enemies for an additional magic damage. After using an ability, Diana gains attack speed for her next 3 attacks."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt84f06883592f7b70/6089db02f07013101daf11df/Diana_Ability1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt25c050233f606f09/6089db121022211019ccb5b9/Diana_1.jpg",
+            "name": "CRESCENT STRIKE",
+            "description": "Unleashes a bolt of lunar energy in an arc dealing magic damage, and applying Moonlight."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt0a26c29f3bce8e0a/6089db04f871471012bddad9/Diana_Ability2.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt3a13812303de0add/6089db123aa0431020f5dc60/Diana_2.jpg",
+            "name": "PALE CASCADE",
+            "description": "Diana creates three orbiting spheres that detonate on contact with enemies to deal damage in an area. She also gains a temporary shield that absorbs damage. If her third sphere detonates, the shield gains additional strength."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt520844e3b7e94fbd/6089db053c949610275198ad/Diana_Ability3.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltc7c5e6a0938c8d07/6089db12162d47104df497e9/Diana_3.jpg",
+            "name": "LUNAR RUSH",
+            "description": "Diana dashes to an enemy and deals magic damage. Lunar Rush has no cooldown when used to dash to an enemy afflicted with Moonlight, removing Moonlight in an area."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltad0dbf7865dc7805/6089db073aa0431020f5dc5c/Diana_Ability4.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt94a4a3eca4706841/6089db123c949610275198b1/Diana_4.jpg",
+            "name": "MOONFALL",
+            "description": "Diana summons the moon in an area, slowing enemies nearby and applying Moonlight in a growing area. Releasing the button slams the moon down, spiraling enemies toward her and dealing damage scaling with the charge time."
+        }
+    ],
+    "DR_MUNDO": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt37e4f2f36f056600/61a6b9c847db93765d9107e8/DrMundo-rework_Ability_Passive_For_Web.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt03e8c7adaed7a2ca/61a6a04d7a299413900aa5c9/DrMundo-rework_0.jpg",
+            "name": "GOES WHERE HE PLEASES",
+            "description": "Dr. Mundo resists the first Immobilizing effect that hits him, instead losing Health and dropping a chemical cannister nearby. Dr. Mundo can pick it up by walking over it, restoring Health and reducing this Ability's Cooldown. Dr. Mundo also has significantly increased Health regeneration."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt2c2c5d8add62510a/61a6b9dbf35725134cf38a38/DrMundo-rework_Ability_1_For_Web.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt7287e4d93aa2b38b/61a6a213eb16c322c4dd38c8/DrMundo-rework_1.jpg",
+            "name": "INFECTED BONESAW",
+            "description": "Dr. Mundo throws an infected bonesaw, dealing damage to the first enemy hit based on their current health and slowing them."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt9c522998738ac429/61a6b9e447db93765d9107ec/DrMundo-rework_Ability_2_For_Web.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt7b1aed115d4eae91/61a6a26db209251341b54653/DrMundo-rework_2.jpg",
+            "name": "HEART ZAPPER",
+            "description": "Dr. Mundo electrocutes himself, dealing persistent damage to nearby enemies and storing a portion of damage he takes. At the end of the duration or on Recast, Dr. Mundo deals a burst of damage to nearby enemies. If the burst hit an enemy, he heals a percentage of the stored damage."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltfedbd06b75c106ec/61a6b9fa34f3f5135367adb6/DrMundo-rework_Ability_3_For_Web.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltfeb23377d7f800f3/61a6a29fc854b013a2d05faa/DrMundo-rework_3.jpg",
+            "name": "BLUNT FORCE TRAUMA",
+            "description": "Passive - Dr. Mundo gains bonus Attack Damage, increasing based on his missing Health. Active - Dr. Mundo slams his “medical” bag into an enemy, dealing additional damage based on his missing Health. If the enemy dies they are swatted away, dealing damage to enemies they pass through."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt7e9d2ed8c3022beb/61a6ba0eb71bc0412dac4320/DrMundo-rework_Ability_ULT.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt5fe5b2a60f5b6101/61a6a2c93865bf22bd9600d4/DrMundo-rework_4.jpg",
+            "name": "MAXIMUM DOSAGE",
+            "description": "Dr. Mundo pumps himself with chemicals, instantly healing a percent of his missing Health. He then gains bonus Attack Damage and Move Speed, and regenerates a portion of his maximum Health over a long duration."
+        }
+    ],
+    "DRAVEN": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt36be83dddea0cd45/60108942533a1810075f6960/Draven_Ability_Passive.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt21d2023f4bf96419/60108ccb0cb0aa0ffcdd5b04/Draven_0.jpg",
+            "name": "LEAGUE OF DRAVEN",
+            "description": "Draven gains his fans' Adoration when he catches a Spinning Axe or kills a minion, monster, or tower. Killing enemy champions grants Draven bonus gold based on how much Adoration he has."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltc2c230be21632440/601089533e567f1011da3643/Draven_Ability_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltf61d711bf2b27d42/60108cfb3c38be10329e3d85/Draven_1.jpg",
+            "name": "SPINNING AXE",
+            "description": "Draven's next attack will deal bonus physical damage. This axe will ricochet off the target high up into the air. If Draven catches it, he automatically readies another Spinning Axe. Draven can have two Spinning Axes at once."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blte8e864d1ab911e48/6010895b27b1080f843709cc/Draven_Ability_2.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltfc4740e13dd64e41/60108d0c0cb0aa0ffcdd5b10/Draven_2.jpg",
+            "name": "BLOOD RUSH",
+            "description": "Draven gains increased Movement Speed and Attack Speed. The Movement Speed bonus decreases rapidly over its duration. Catching a Spinning Axe will refresh the cooldown of Blood Rush."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blta5cad0962aa78eff/601089666215cf0f9a18d976/Draven_Ability_3.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blte91d8ded277ddf2f/60108d1994a1800f61b5094e/Draven_3.jpg",
+            "name": "STAND ASIDE",
+            "description": "Draven throws his axes, dealing physical damage to targets hit and knocking them aside. Targets hit are slowed."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blta7b2e19f08269caa/6010897a82548c0f8284c56c/Draven_Ability_Ult.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt2371166eefffef3c/60108d255ad9610f6cb78f53/Draven_4.jpg",
+            "name": "WHIRLING DEATH",
+            "description": "Draven hurls two massive axes to deal physical damage to each unit struck. Whirling Death slowly reverses direction and returns to Draven after striking an enemy champion. Draven may also activate this ability while the axes are in flight to cause it to return early. Deals less damage for each unit hit and resets when the axes reverse direction."
+        }
+    ],
+    "EKKO": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt8aacfd972fd4caf3/6275bd70941a2939d3d014ad/Ekko_Ability_Passive_forWEB.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltdb8d2bcb2736ef49/627441693debbf3afdd2da7a/Ekko_0_ability_icon.jpg",
+            "name": "Z-DRIVE RESONANCE",
+            "description": "Every third attack or damaging spell on the same target deals bonus magic damage, and grants Ekko a burst of speed if the target is a champion."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltebaf6479913cd862/62743d4a6ed4423afc98e561/Ekko_Ability_1b.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltb658a40c0748fa4e/627441a48c90c334d0d4145e/Ekko_1_ability_icon.jpg",
+            "name": "TIMEWINDER",
+            "description": "Ekko throws a temporal grenade that expands into a time-distortion field upon hitting an enemy champion, slowing and damaging anyone caught inside. After a delay, the grenade rewinds back to Ekko, dealing damage on its return."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt00cffc9fbcbcebed/62743e8a8c90c334d0d4144a/Ekko_Ability_2b.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltb0996f362faba78a/627441db76b17f2f94787fd5/Ekko_2_ability_icon.jpg",
+            "name": "PARALLEL CONVERGENCE",
+            "description": "Ekko's basic attacks deal bonus magic damage to low health enemies. He can cast Parallel Convergence to split the timeline, creating an anomaly after a few seconds that slows enemies caught inside. If Ekko enters the anomaly, he gains shielding and stuns enemies by suspending them in time."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltc2c35424607ef4f7/627440553debbf3afdd2da74/Ekko_Ability_3a.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltbc8766cf6af8f7aa/62744222ce4b5935f33209fb/Ekko_3_ability_icon.jpg",
+            "name": "PHASE DIVE",
+            "description": "Ekko rolls evasively while charging up his Z-Drive. His next attack deals bonus damage and warps reality, teleporting him to his target."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt0bd311f471bfcb28/627440209dfd5f30d076f1bb/Ekko_Ability_ult1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltfa03f8dbea741b80/6274426a52bd3634ca6feb58/Ekko_4_ability_icon.jpg",
+            "name": "CHRONOBREAK",
+            "description": "Ekko shatters his timeline, becoming untargetable and rewinding to a more favorable point in time. He returns to whenever he was a few seconds ago, and heals for a percentage of the damage received in that duration. Enemies near his arrival zone take massive damage."
+        }
+    ],
+    "EVELYNN": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt70746bdc652c93de/5f9b3bfcfef5a62bd5dd41f3/evelynn_ability_passive_1_20.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt4786ed8d7e94efda/5f9b3bfbcdb91d2b1bab2fad/evelynn_0.jpg",
+            "name": "DEMON SHADE",
+            "description": "When out of combat, Evelynn enters Demon Shade. Demon Shade heals Evelynn when she is low on health and grants Camouflage after level 5."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltff44a68a14fa1783/5f9b3bffaa7e3a7bdfa16aa7/evelynn_ability_1_1_20.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt433ed81a1f4f45f7/5f9b3bfd94a65837f1e5c625/evelynn_1.jpg",
+            "name": "HATE SPIKE",
+            "description": "Evelynn strikes out with her lasher twice, dealing damage to the first unit hit. Then, Evelynn can re-cast to shoot another line of spikes at nearby foes."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt5f79fa20fc9bb305/5f9b3c0133afcc08d8d319f0/evelynn_ability_2_1_20.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt0a8f47f0b8d39e54/5f9b3c018b396a289f2707ad/evelynn_2.jpg",
+            "name": "ALLURE",
+            "description": "Evelynn curses her target, causing her next attack or spell after a delay to slow or charm her target, based on time cursed, and reduce their magic resist."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt63baad78757b7d65/5f9b3c058825282bcecdeaf9/evelynn_ability_3_1_20.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltb733931ae96a153e/5f9b3c01186d4e7fde8bec09/evelynn_3.jpg",
+            "name": "WHIPLASH",
+            "description": "Evelynn whips her target with her Lasher, dealing damage. She then gains movement speed for a short duration. When exiting Demon Shade, Whiplash pulls Evelynn to her target."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt9bb7103210c6619b/5f9b3c067a68907e5db4c2cd/evelynn_ability_ult_1_20.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt955586a25d6fd594/5f9b3c03186d4e7fde8bec0d/evelynn_4.jpg",
+            "name": "LAST CARESS",
+            "description": "Evelynn briefly goes untargetable and decimates the area in front of her before warping backwards a long distance."
+        }
+    ],
+    "EZREAL": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt561074affbf87eca/5f7f714ae75e0f0f194a7032/ezreal_ability_passive_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltd48b005b202c42ae/5f7f7148e48f650f03b4bcd8/ezreal_0.jpg",
+            "name": "RISING SPELL FORCE",
+            "description": "Ezreal gains increasing Attack Speed each time he successfully hits a spell, stacking up to 4 times."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt0d4ec8260c7e9c0a/5f7f714d31b2350f1e6703ee/ezreal_ability_1b_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt2d83f9fadc6ecfb2/5f7f714b6953080f2f223581/ezreal_1.jpg",
+            "name": "MYSTIC SHOT",
+            "description": "Ezreal fires a damaging bolt of energy which reduces all of his cooldowns slightly if it strikes an enemy unit."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltd8442596ce7c83cb/5f7f714f90ca8a0f01e5bf8e/ezreal_ability_2a_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt9fa9c1972555ddb4/5f7f714ec1be730f80a84a90/ezreal_2.jpg",
+            "name": "ESSENCE FLUX",
+            "description": "Ezreal fires an orb that sticks to the first champion or objective hit. If Ezreal hits an enemy with the orb, it detonates and deals damage."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltad34ae91658c03f3/5f7f7152cb46430ef864db8a/ezreal_ability_3_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltef0aa554a19426ca/5f7f71507f76200f1733c1c6/ezreal_3.jpg",
+            "name": "ARCANE SHIFT",
+            "description": "Ezreal teleports to a target nearby location and fires a homing bolt which strikes the nearest enemy unit. Prioritizes enemies stuck with Essence Flux."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt6db7ac5c5d23ddda/5f7f7155791dbc0f80a3ccef/ezreal_ability_ult_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltea8764c4b26c056b/5f7f7153bea0360f96bae7e6/ezreal_4.jpg",
+            "name": "TRUESHOT BARRAGE",
+            "description": "Ezreal winds up before firing a powerful barrage of energy that deals massive damage to each unit it passes through (damage is reduced for minions and non-epic monsters)."
+        }
+    ],
+    "FIDDLESTICKS": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltbcb755a74da567a3/6531b61b8feec30b0b68c3ec/Fiddlesticks_Ability0_1280x720.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt0450ced35c5430b6/6531b27f42d5ba12a9c6ff1e/Fiddlesticks_0.jpg",
+            "name": "A HARMLESS SCARECROW",
+            "description": "Fiddlesticks' trinket is replaced by scarecrow effigies."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltb6ba767efd8a8b90/6531b8ae879a504ba69e2970/Fiddlesticks_Ability1_1280x720.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltf45a9962b09bc553/6531b27c53da3f40c65a87f6/Fiddlesticks_1.jpg",
+            "name": "TERRIFY",
+            "description": "Fiddlesticks damaging enemies with spells while unseen or targeting an enemy with Terrify's activation strikes a target unit with fear, causing it to flee in terror for a duration."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt6835e8c7eda7a40c/6531b8d5cf22e312befdbaad/Fiddlesticks_Ability2_1280x720.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt28d8c586944e81b5/6531b27eff2cf79c0499b5f9/Fiddlesticks_2.jpg",
+            "name": "BOUNTIFUL HARVEST",
+            "description": "Fiddlesticks drains health from nearby enemies, dealing bonus execute damage at the end of the duration."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt126ee08e75bbc877/6531b8d548aba330268b3042/Fiddlesticks_Ability3_1280x720.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blta66ddcfd0747e9d6/6531b27e74aa53310632707a/Fiddlesticks_3.jpg",
+            "name": "REAP",
+            "description": "Fiddlesticks slashes an area with its scythe, slowing all enemies hit and silencing enemies hit in the center of the slash."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt772d5185e9ef0969/6531b8d672a9d90f96c106c1/Fiddlesticks_ULT_1280x720.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt9374520b274d8065/6531b27edd4b8804d050a30c/Fiddlesticks_4.jpg",
+            "name": "CROWSTORM",
+            "description": "A murder of crows flock wildly around Fiddlesticks, dealing damage per second to all enemy units in the area."
+        }
+    ],
+    "FIORA": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltdcc4894ba97551c1/5f7f716278777e0edb315af0/fiora_ability_passive_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt2e306e6fa9038543/5f7f715f8ebedd0f2d2c320f/fiora_0.jpg",
+            "name": "DUELIST'S DANCE",
+            "description": "Fiora challenges nearby enemy Champions to dodge her. She calls out a direction from which she will try to strike. If she can complete her own challenge, she receives a small bonus and calls out a new direction."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt8acd6c068de496b7/5f7f716650868d0ef21208c4/fiora_ability_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt3592f7ee6457944c/5f7f71640faf280f13a2aed3/fiora_1.jpg",
+            "name": "LUNGE",
+            "description": "Fiora lunges in a direction and stabs a nearby enemy, dealing physical damage and applying on-hit effects."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltfc5905ac8da50663/5f7f7169e7028c0f3ac46865/fiora_ability_2a_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltfa166306d06519e6/5f7f7167941cfd0f0e589f91/fiora_2.jpg",
+            "name": "RIPOSTE",
+            "description": "Fiora parries all incoming damage and disables for a short time, then stabs in a direction. This stab slows the first enemy champion hit, or stuns them if Fiora blocked an immobilizing effect with this ability."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt6ce051e7925df6a3/5f7f716cbea0360f96bae7ea/fiora_ability_3_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltcdce3292cb4ab1c8/5f7f716bd0efe10f4e2d43d2/fiora_3.jpg",
+            "name": "BLADEWORK",
+            "description": "Fiora has increased attack speed for the next two attacks. The first attack slows the target, and the second attack will critically strike."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltf0281d316308f3eb/5f7f716fa1441e0f5fc46b59/fiora_ability_ult_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltdd579115e4f3a946/5f7f716d86abe10efc8eaacc/fiora_4.jpg",
+            "name": "GRAND CHALLENGE",
+            "description": "Fiora reveals all four Vitals on an enemy champion and gains movement speed while near them. If Fiora hits all 4 Vitals or if the target dies after she has hit at least one, Fiora and her allies in the area are healed over the next few seconds."
+        }
+    ],
+    "FIZZ": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blte2a98a4071f78a60/5f7f717c90ca8a0f01e5bf94/fizz_ability_passive_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt613deeec97de3689/5f7f717b10c63c0f1923557a/fizz_0.jpg",
+            "name": "SEASTONE TRIDENT",
+            "description": "Fizz's attacks deal additional damage over time."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt300e751a977572c4/5f7f71811ca9100f24f81718/fizz_ability_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt4c7e3c52d142193b/5f7f717fd0efe10f4e2d43d6/fizz_1.jpg",
+            "name": "URCHIN STRIKE",
+            "description": "Fizz dashes through his target, dealing magic damage and applying on hit effects."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt04f4315e18e28545/5f7f7184b5b2ab0fa1dd2739/fizz_ability_2a_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt9837db493d827ef3/5f7f7182941cfd0f0e589f95/fizz_2.jpg",
+            "name": "RENDING WAVE",
+            "description": "Empowers Fizz' next attack to deal bonus damage, and killing a unit resets Rending Wave's cooldown. Additional attacks deal more damage."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt4018b4502869616d/5f7f71886f845d0f192f8fcb/fizz_ability_3_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt449ce514e4132763/5f7f7186235f470f49371858/fizz_3.jpg",
+            "name": "PLAYFUL / TRICKSTER",
+            "description": "Fizz hops into the air, landing gracefully upon his spear and becoming untargetable. From this position, Fizz can either slam the ground or choose to jump again before smashing back down."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltdf433c532dcc4e97/5f7f718b86abe10efc8eaad2/fizz_ability_ult_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt4aa5f22ccc07c170/5f7f7189a1441e0f5fc46b63/fizz_4.jpg",
+            "name": "CHUM THE WATERS",
+            "description": "Fizz tosses a fish in a direction that attaches to any champion that touches it, slowing the target. After a short delay, a shark erupts from the ground, knocking up the target and knocking any nearby enemies aside. All enemies hit are dealt magic damage and slowed."
+        }
+    ],
+    "GALIO": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt6cccabf268ec0e58/608b051cf6a831100b5ddf8b/Galio_Ability0.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt93388fab88c0cbb0/608b04c23aa0431020f5e1f2/Galio_0.jpg",
+            "name": "COLOSSAL SMASH",
+            "description": "Every few seconds, Galio's next basic attack deals bonus magic damage in an area."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt086158a9a540f3d8/608b051d7cc444103417e06a/Galio_Ability1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt6f27f00f287f6fcd/608b04c217fcd110074c7968/Galio_1.jpg",
+            "name": "WINDS OF WAR",
+            "description": "Galio fires two windblasts that converge into a large tornado that deals damage over time."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltd1e5919092b7737b/608b0520f07013101daf1812/Galio_Ability2.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt4b1c82f9bedbe792/608b04c2f871471012bde061/Galio_2.jpg",
+            "name": "SHIELD OF DURAND",
+            "description": "Galio charges a defensive stance, moving slowly. Upon releasing the charge, Galio will taunt and damage nearby enemies."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt99f1ce456c12116e/608b051ef07013101daf180e/Galio_Ability3.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt25152e86a07c433e/608b04c271e79f1024c99824/Galio_3.jpg",
+            "name": "JUSTICE PUNCH",
+            "description": "Galio will briefly step back and charge, knocking up the first enemy champion he encounters."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt1e93a104f79e6026/608b05223c94961027519f53/Galio_Ability4.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt33aebb6a437951f8/608b04c25907c910150f8bfb/Galio_4.jpg",
+            "name": "HERO'S ENTRANCE",
+            "description": "Galio designates an ally's position as his landing spot, granting all allies in the area a magic shield. After a delay Galio smashes down location, knocking up nearby enemies."
+        }
+    ],
+    "GAREN": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt9528eaa91ea448e3/5f7f7198c1be730f80a84a9e/garen_ability_passive_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt11f06398de4beca3/5f7f719710c63c0f1923557e/garen_0.jpg",
+            "name": "PERSEVERANCE",
+            "description": "If Garen has not recently been struck by damage or enemy abilities, he regenerates a percentage of his total health each second."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blteb5a128609db6ba9/5f7f719c3088980ee6612203/garen_ability_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt8127841fc1653acd/5f7f719a6055b40f5913905f/garen_1.jpg",
+            "name": "DECISIVE STRIKE",
+            "description": "Garen gains a burst of movement speed, breaking free of all slows affecting him. His next attack strikes a vital area of his foe, dealing bonus damage and silencing them."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt999cfaa273f16065/5f7f719f472a560f4335f3c8/garen_ability_2a_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt6bf06dd512ddf0c9/5f7f719dcb46430ef864db94/garen_2.jpg",
+            "name": "COURAGE",
+            "description": "Garen reduces damage taken for a short time, and gains bonus resistance to crowd control."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt16549fb1e31b8e43/5f7f71a4472a560f4335f3cc/garen_ability_3_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt3ebc0a31a5b0e952/5f7f71a05d51f80ed08dd32c/garen_3.jpg",
+            "name": "JUDGMENT",
+            "description": "Garen rapidly spins his sword around his body, dealing physical damage to nearby enemies. Enemies hit by the bladestorm's edge are critically struck."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt3450c1be30de31c5/5f7f71a66e4e710f24012877/garen_ability_ult_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltb2b93ef57c579c97/5f7f71a5a85bbe0f755da3c5/garen_4.jpg",
+            "name": "DEMACIAN JUSTICE",
+            "description": "Garen calls upon the might of Demacia to attempt to execute an enemy champion, dealing damage in an area around his target."
+        }
+    ],
+    "GRAGAS": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt65a76b62ebc1f8ff/5f7f71b3e48f650f03b4bcf2/gragas_ability_passive_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltfc47f234221ae1f9/5f7f71b2b0ebb60f03a114f9/gragas_0.jpg",
+            "name": "HAPPY HOUR",
+            "description": "Gragas periodically heals upon using an ability."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltf7f60132b851d382/5f7f71b7e7028c0f3ac46871/gragas_ability_1_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt17e93fbb2ff0384a/5f7f71b6be9b6d0f29635497/gragas_1.jpg",
+            "name": "BARREL ROLL",
+            "description": "Gragas rolls his cask to a location, which can be activated to explode or will explode on its own after 3 seconds. Enemies struck by the blast have their Movement Speed slowed."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt60be329b6e04e228/5f7f71ba10c63c0f19235588/gragas_ability_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltcae3f168871ad47c/5f7f71b8cb46430ef864db9a/gragas_2.jpg",
+            "name": "DRUNKEN RAGE",
+            "description": "Gragas guzzles down brew from his cask for 1 second. After finishing, he becomes drunkenly empowered, dealing magic damage to all nearby enemies on his next basic attack and reducing damage received."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt5756aea9feabe8ec/5f7f71be2b9e620efd874348/gragas_ability_3_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt433c5eb126b17df7/5f7f71bc7759540f0e5f50f4/gragas_3.jpg",
+            "name": "BODY SLAM",
+            "description": "Gragas charges to a location and collides with the first enemy unit he comes across, dealing damage to all nearby enemy units and stunning them."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt1fb28e9a9690c561/5f7f71c2fd54990ef1b756df/gragas_ability_ult_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt7f38b2d5a7c05a32/5f7f71c02f5dc20ef2c68210/gragas_4.jpg",
+            "name": "EXPLOSIVE CASK",
+            "description": "Gragas hurls his cask to a location, dealing damage and knocking back enemies caught in the blast radius."
+        }
+    ],
+    "GRAVES": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltd3d6a473dccaf529/5f7f71cf90ca8a0f01e5bfa2/graves_ability_passive_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt736ab68c17f94b65/5f7f71cee48f650f03b4bcfe/graves_0.jpg",
+            "name": "NEW DESTINY",
+            "description": "Graves' shotgun has some unique properties. He must reload when he runs out of ammo. Attacks fire 4 bullets, which cannot pass through units. Non-champions struck by multiple bullets are knocked back."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt31710a7ead74df1f/5f7f71d3c1be730f80a84aa4/graves_ability_1a_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltc9df753e0e067ad4/5f7f71d18becd30f135cba5d/graves_1.jpg",
+            "name": "END OF THE LINE",
+            "description": "Graves fires an explosive shell that detonates after 1.5 seconds, or 0.25 seconds if it strikes terrain."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltc1f54aa8a7e6c709/5f7f71d686abe10efc8eaae4/graves_ability_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt82ec6ef5e63ee50d/5f7f71d56e4e710f2401287b/graves_2.jpg",
+            "name": "SMOKE SCREEN",
+            "description": "Graves fires a smoke canister at the target area creating a cloud of smoke that reduces sight range. Enemies caught in the initial impact are dealt magic damage and have their movement speed reduced briefly."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt06061e6ab90fce9a/5f7f71da8becd30f135cba61/graves_ability_3_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt2070870bcca72c4f/5f7f71d8d0efe10f4e2d43e4/graves_3.jpg",
+            "name": "QUICKDRAW",
+            "description": "Graves dashes forward gaining an Armor boost for several seconds. If Graves dashes towards an enemy champion, gain two stacks of True Grit instead. Hitting enemies with basic attacks lowers the cooldown of this skill and refreshes the resistance boost."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltcc550413e2ebabae/5f7f71debe9b6d0f296354a1/graves_ability_ult_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt61a4b54034b4f154/5f7f71dce7028c0f3ac46879/graves_4.jpg",
+            "name": "COLLATERAL DAMAGE",
+            "description": "Graves fires an explosive shell dealing heavy damage to the first champion it hits, and pushing Graves back from recoil. After hitting a champion or reaching the end of its range, the shell explodes dealing damage in a cone."
+        }
+    ],
+    "GWEN": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt8a824070c95b4dc7/631fb4db809ac764c96d739a/GWEN_Passive.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt8da4fd35dea5a1c7/631f9ca504361d715f54e9b2/Gwen_0.jpg",
+            "name": "A THOUSAND CUTS",
+            "description": "Gwen's attacks deal bonus magic damage based on the target's health. She heals for a portion of the damage dealt to champions by this effect."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt45655e9c0aeaf3e8/631fb4e219c64564c313ccbb/GWEN_Ability1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltf0b767a75c812a59/631f9cf52343d638c693e1bf/Gwen_1.jpg",
+            "name": "SNIP SNIP!",
+            "description": "Gwen snips her scissors in a cone up to 6 times dealing magic damage. Gwen deals true damage to units in the center and applies her passive to them on each snip."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blte13c3cf8d7ab4cbc/631fb4ef8966566ecdfba978/GWEN_Ability2.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blta10209ddaa0ede86/631f9d33fac7b2660d9fdbe8/Gwen_2.jpg",
+            "name": "HALLOWED MIST",
+            "description": "Gwen summons mist that protects her from enemies outside of it. She can only be targeted by enemies who enter the mist."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltf179e704a17a0b2b/631fb4f7ed568d5ecda9c768/GWEN_Ability3.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltdbd63629983585e8/631f9da6ed568d5ecda9c73a/Gwen_3.jpg",
+            "name": "SKIP 'N SLASH",
+            "description": "Gwen dashes a short distance then gains Attack Speed, attack range, and magic damage on-hit for a few seconds. If she hits an enemy during that time, this ability's cooldown is partially refunded."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt8315c124ab115908/631fb50294f0bf32f4c41445/GWEN_ULT.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt481896990b83edcc/631f9e0f6a7f7364973bc732/Gwen_4.jpg",
+            "name": "NEEDLEWORK",
+            "description": "Gwen hurls a needle that slows enemies hit, deals magic damage, and applies A Thousand Cuts to champions hit. This ability can be cast up to two more times, with each cast throwing additional needles and dealing more damage."
+        }
+    ],
+    "HECARIM": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltba4b3208a7bc0d01/6508e42d68adc294eaa7b3dc/Hecarim_Passive.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt7f8ed06fb5952de0/6508e41a4b35c8cfe6ffefd4/Hecarim_0.png",
+            "name": "WARPATH",
+            "description": "Hecarim gains Attack Damage equal to a percentage of his bonus Move Speed."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt5213d6e6ce272247/6508e41acd4063c768735011/Hecarim_Ability_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt84665bf4e3791f7a/6508e41ab29ddbbbf95444eb/Hecarim_1.png",
+            "name": "RAMPAGE",
+            "description": "Hecarim cleaves nearby enemies dealing physical damage. If Hecarim damages at least one enemy, he increases the damage and lowers the cooldown of subsequent Rampages."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt654c20c37c846c2c/6508e41be019059a5aecae4f/Hecarim_Ability_2.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt0049fcc17db75855/6508e41a065768002feae411/Hecarim_2.png",
+            "name": "SPIRIT OF DREAD",
+            "description": "Hecarim gains Armor and Magic Resist. Hecarim deals magic damage to nearby enemies, and gains Health equal to a percentage of any damage those enemies suffer."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt5a4df4544a568a34/6508e41bb556bd6660d3aebb/Hecarim_Ability_3.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blta8372c3b3dad3a49/6508e41ae30292632a4f2f39/Hecarim_3.png",
+            "name": "DEVASTATING CHARGE",
+            "description": "Hecarim gains increasing Move Speed and can move through units for a short duration. His next attack knocks the target back and deals additional physical damage based on the distance he has traveled since activating the ability."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt84a98b9778bad0f3/6508e42e0657689084eae415/Hecarim_ULT.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt25d570a3cc164407/6508e41a9116f27dff6b0207/Hecarim_4.png",
+            "name": "ONSLAUGHT OF SHADOWS",
+            "description": "Hecarim summons spectral riders and charges forward, dealing magic damage in a line. Hecarim creates a shockwave when he finishes his charge, causing nearby enemies to flee in terror."
+        }
+    ],
+    "IRELIA": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt1c9ecbe409587e7e/60ad28c93aac347374b5bbd2/Irelia_Ability_P.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt441c848cb83f9827/60ad289a1df7ea69b75bb385/Irelia_0.jpg",
+            "name": "IONIAN FERVOR",
+            "description": "When Irelia strikes enemies with spells she gains stacking bonus Attack Speed. At maximum stacks she also gains bonus damage on hit."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt957030e0ceecf42c/60ad28d01df7ea69b75bb38d/Irelia_Ability_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt56ba2b054b755b8a/60ad289aeab8ca74ace8677b/Irelia_1.jpg",
+            "name": "BLADESURGE",
+            "description": "Irelia dashes forward to strike her target, healing herself. If the target is Marked or dies to Bladesurge, its cooldown refreshes."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt82a108df146a6c2a/60ad28cd4adeb65c03d76cf8/Irelia_Ability_2.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltfe54ed938707454b/60ad289aa5998d6af95678ea/Irelia_2.jpg",
+            "name": "DEFIANT DANCE",
+            "description": "Irelia charges a strike that deals more damage as she charges. She takes reduced physical damage during the charge."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltf45d277c07588541/60ad28caeab8ca74ace8677f/Irelia_Ability_3.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltf6109cfc946ca21f/60ad289a909370737ae4a2f2/Irelia_3.jpg",
+            "name": "FLAWLESS DUET",
+            "description": "Irelia sends out two blades which converge on each other. Enemies caught in between are damaged, stunned and Marked."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltccb09c2839ac82a0/60ad28c494bb755c04c28f30/Irelia_Ability_Ult.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blte5546e94ad6a014d/60ad289a0a03095ac9587028/Irelia_4.jpg",
+            "name": "VANGUARD'S EDGE",
+            "description": "Irelia fires a massive number of blades that explode outward upon hitting an enemy champion. Enemies hit by the blades are damaged and Marked. Afterwards the blades form a wall that will damage and slow enemies that walk through it."
+        }
+    ],
+    "JANNA": [
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt47a79487fbea56e7/6526052f580c6b6184ba58db/Janna_Ability_Passive_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt8ac32ffa7e61521e/5f7f71ea0faf280f13a2aee9/janna_0.jpg",
+            "name": "TAILWIND",
+            "description": "Janna passively gains move speed and gives nearby allied champions the same bonus."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt917eb2b2809a9f20/652604969d1a1c3073b37be9/Janna_Ability_1b_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt284f8cc80462eba7/5f7f71ee0687250f6aedc1bd/janna_1.jpg",
+            "name": "HOWLING GALE",
+            "description": "Janna summons a powerful whirlwind, dealing damage and knocking up enemies in its path."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltf4589632bf603f4d/652605690819467a23b3495d/Janna_Ability_2_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltbc8e783c245fc169/5f7f71f1efdbc80efd07080b/janna_2.jpg",
+            "name": "ZEPHYR",
+            "description": "Janna gains move speed. The wind spirit affects the two closest champions in range, granting move speed to allies and damaging enemies."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt72f15822e710ba0f/652605a233706f205cd3e319/Janna_Ability_3b_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt31defd2d79bba93b/5f7f71f40108fe0f08577eb3/janna_3.jpg",
+            "name": "EYE OF THE STORM",
+            "description": "Janna conjures a defensive gale that shields herself, an ally, or a turret if one is in range. This shield also grants attack damage."
+        },
+        {
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt7ee1139addb90c71/6526059405f84993d7dd2462/Janna_Ability_Ult_1_1.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt4869d5a1fc0ad15b/5f7f71f86953080f2f2235a1/janna_4.jpg",
+            "name": "MONSOON",
+            "description": "Janna calls forth mighty winds of salvation, knocking back surrounding enemies and healing nearby allies."
+        }
+    ]
+}
