@@ -48,7 +48,7 @@ const DemoAndAbilitiesContainer = () => {
 
   return (
     <div className='flex flex-col items-center w-full'>
-      <div className='flex justify-center items-center h-[460px] w-[775px] bg-[#1e1e1e] rounded-3xl mb-5'>
+      <div className='relative flex justify-center items-center h-[460px] w-[775px] bg-[#1e1e1e] rounded-3xl mb-5'>
         <video
           autoPlay
           loop
@@ -59,9 +59,17 @@ const DemoAndAbilitiesContainer = () => {
           <source src={tempVideoSrc[selectedAbility]} type='video/mp4' />
           Video doesn't exist :/
         </video>
+        <div className='absolute bottom-2 left-10 h-4 w-32 bg-gradient-to-r from-orange-500 to-orange-700 overflow-hidden 
+                        after:h-full after:w-full after:bg-[#1e1e1e] after:absolute after:rotate-45 after:origin-bottom-right
+                        before:h-full before:w-full before:bg-[#1e1e1e] before:absolute before:rotate-45 before:origin-top-left'>
+        </div>
+        <div className='absolute top-1.5 right-10 h-4 w-32 bg-gradient-to-l from-orange-500 to-orange-700 overflow-hidden 
+                        after:h-full after:w-full after:bg-[#1e1e1e] after:absolute after:-rotate-45 after:origin-bottom-right
+                        before:h-full before:w-full before:bg-[#1e1e1e] before:absolute before:-rotate-45 before:origin-top-left'>
+        </div>
       </div>
       <div className='w-[790px]'>
-        <ul className='flex space-x-5'>
+        <ul className='flex pl-5 space-x-5'>
           {tempChampAbilities.map((ability, index) => (
             <li key={index}>
               <button
@@ -77,10 +85,15 @@ const DemoAndAbilitiesContainer = () => {
             </li>
           ))}
         </ul>
-        <div className='mt-5 mb-10 ml-1 flex flex-col w-full rounded-lg bg-[#1e1e1e] p-2'>
-          <span className='mb-1'>{abilitySlot[selectedAbility]}</span>
-          <span className='mb-3'>{tempChampAbilities[selectedAbility].name}</span>
-          <span className='text-wrap'>{tempChampAbilities[selectedAbility].description}</span>
+        <div className='relative mt-5 mb-10 ml-1 flex flex-col w-full rounded-lg bg-[#1e1e1e] p-3.5'>
+          <div className='absolute top-1.5 right-10 h-4 w-32 bg-gradient-to-l from-orange-500 to-orange-700 overflow-hidden 
+                        after:h-full after:w-full after:bg-[#1e1e1e] after:absolute after:rotate-45 after:origin-bottom-right
+                        before:h-full before:w-full before:bg-[#1e1e1e] before:absolute before:rotate-45 before:origin-top-left'>
+          </div>
+          <div className='absolute top-1.5 right-40 h-1 w-48 bg-orange-700'></div>
+          <span className='mb-1 text-orange-700'>{abilitySlot[selectedAbility]}</span>
+          <span className='mb-3 font-semibold text-2xl first-letter:text-3xl'>{tempChampAbilities[selectedAbility].name}</span>
+          <span className='text-md text-wrap'>{tempChampAbilities[selectedAbility].description}</span>
         </div>
       </div>
     </div>
