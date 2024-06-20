@@ -15,14 +15,14 @@ const Footer = () => {
                 </p>
                 <p className='text-xs'>
                     <span>All champion ability info and demo sourced from {" "}</span>
-                    <Link to={"https://www.wildriftfire.com"}>
+                    <Link to={"https://wildrift.leagueoflegends.com/en-us/champions"}>
                         <span className='underline text-sky-700'>
-                            Wildriftfire.com
+                            Riot's official website
                         </span>
                     </Link>
                 </p>
                 <p className='text-xs'>
-                    <span>Last updated on 5/30/2024</span>
+                    <span>Last updated on 6/19/2024</span>
                 </p>
                 <p className='text-xs line-through'>
                     <span>rito pls release official wildrift API</span>
