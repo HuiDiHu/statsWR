@@ -45,16 +45,17 @@ const DemoAndAbilitiesContainer = ({ props }) => {
       .get(`http://localhost:5555/api/v1/champions/abilities/${props.label}`)
       .then((res) => {
         setChampAbilities(res.data.abilities)
+        props.setStatus("AOK")
       })
       .catch((error) => {
+        props.setStatus("BAD_REQUEST")
         console.log(error);
       })
   }, [props.label])
-
   return (
     <div className='flex flex-col items-center w-full'>
       <div className='relative flex justify-center items-center h-[460px] w-[775px] bg-[#1e1e1e] rounded-3xl mb-5'>
-        {selectedAbility < champAbilities.length &&
+        {selectedAbility < champAbilities.length && props.status === "AOK" &&
           <video
             autoPlay
             loop
@@ -65,6 +66,13 @@ const DemoAndAbilitiesContainer = ({ props }) => {
             <source src={champAbilities[selectedAbility].demoSrc} type='video/mp4' />
             Video doesn't exist :/
           </video>
+        }
+        {props.status === "BAD_REQUEST" && 
+          <div>
+            <h1 className='text-center text-4xl text-red-600'>
+              ERROR CODE 400: AXIOS BAD REQUEST ERROR...
+            </h1>
+          </div>
         }
         <div className='absolute bottom-2 left-10 h-4 w-32 bg-gradient-to-r from-orange-500 to-orange-700 overflow-hidden 
                         after:h-full after:w-full after:bg-[#1e1e1e] after:absolute after:rotate-45 after:origin-bottom-right

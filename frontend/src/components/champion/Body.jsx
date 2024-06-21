@@ -12,6 +12,8 @@ const Body = ({ props }) => {
   const [info, setInfo] = useState({})
   const [isClicked, setIsClicked] = useState(0)
   const [isHovered, setIsHovered] = useState(0)
+  const [curRole, setCurRole] = useState(props.defaultRole)
+  const [status, setStatus] = useState("AOK")
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -23,17 +25,33 @@ const Body = ({ props }) => {
         setInfo({
           name: res.data.champion[0].name,
           label: props.label,
-          role: props.defaultRole ? props.defaultRole : res.data.champion[0].role,
-          gameplayData: (props.defaultRole ? res.data.champion.find((item) => item.role === props.defaultRole).gameplayData : res.data.champion[0].gameplayData)[0],
-          tier: props.defaultRole ? res.data.champion.find((item) => item.role === props.defaultRole).tier : res.data.champion[0].tier,
+          gameplayData: (curRole ? res.data.champion.find((item) => item.role === curRole).gameplayData : res.data.champion[0].gameplayData),
+          tier: curRole ? res.data.champion.find((item) => item.role === curRole).tier : res.data.champion[0].tier,
         })
+        setCurRole(curRole ? curRole : res.data.champion[0].role)
+        setStatus("AOK")
         setLoading(false);
       })
       .catch((error) => {
         setLoading(false)
+        setStatus("BAD_REQUEST")
         console.log(error)
       })
   }, [props.label])
+
+  useEffect(() => {
+    const data = championData.find((item) => item.role === Number(curRole));
+    if (!data) {
+      return;
+    }
+    setInfo({
+      name: data.name,
+      label: props.label,
+      gameplayData: data.gameplayData,
+      tier: data.tier
+    })
+  }, [curRole])
+
   return (
     <div 
       className='relative flex justify-center'
@@ -45,19 +63,21 @@ const Body = ({ props }) => {
           <div className='flex flex-col items-center'>
             <IconAndRoles props={{
               label: props.label,
-              defaultRole: props.defaultRole,
+              curRole,
+              setCurRole,
+              allRoles: championData.map((item) => item.role),
               name: info.name
             }} />
             <StatsLabel props={{
               tier: info.tier ? info.tier : '',
-              winRate: info.gameplayData ? info.gameplayData['winRate'] : '',
-              pickRate: info.gameplayData ? info.gameplayData['pickRate'] : '',
-              banRate: info.gameplayData ? info.gameplayData['banRate'] : '',
+              winRate: info.gameplayData ? info.gameplayData[info.gameplayData.length - 1]['winRate'] : '',
+              pickRate: info.gameplayData ? info.gameplayData[info.gameplayData.length - 1]['pickRate'] : '',
+              banRate: info.gameplayData ? info.gameplayData[info.gameplayData.length - 1]['banRate'] : '',
               rank: '1/0',
 
             }} />
             <GraphsContainer props={{ isHovered, setIsHovered, isClicked, setIsClicked}}/>
-            <DemoAndAbilitiesContainer props={{ label: props.label }}/>
+            <DemoAndAbilitiesContainer props={{ label: props.label, status, setStatus }}/>
           </div>
         }
       </div>
