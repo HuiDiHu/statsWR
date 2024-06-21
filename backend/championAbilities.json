@@ -1,4 +1,4 @@
-{   
+{
     "AATROX": [
         {
             "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/blt0503822260ec55b0/63755995a3fffc10b9dc2e83/Aatrox_Passive.mp4",
@@ -1053,6 +1053,1030 @@
             "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt4869d5a1fc0ad15b/5f7f71f86953080f2f2235a1/janna_4.jpg",
             "name": "MONSOON",
             "description": "Janna calls forth mighty winds of salvation, knocking back surrounding enemies and healing nearby allies."
+        }
+    ],
+    "JARVAN_IV": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/f6c24cf2e8e5a591c07ae057b0830d690c913b9d.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e24dbf99fd6f81bb48e84081fff46ebeb2b83943-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "MARTIAL CADENCE",
+            "description": "Jarvan's first basic attack on an enemy deals bonus physical damage based on their current Health. This effect cannot occur again on the same enemy for a few seconds."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/5cd5e5273aeb2bfe95f3e35e1ac507a9022ccdb0.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c071cb5323b90fe8697afe0d0229bf30c13e9f2e-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DRAGON STRIKE",
+            "description": "Jarvan IV extends his lance, dealing physical damage and lowering the Armor of enemies in its path. Additionally, this will pull Jarvan to his Demacian Standard, knocking up enemies in his path."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/2a183420df75eb486641d55012b3fd8b5db6cced.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3b5d4389afaa2caf8fe52e66b3c057afd8ddf24d-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "GOLDEN AEGIS",
+            "description": "Jarvan IV calls upon the ancient kings of Demacia to shield him from harm and slow surrounding enemies."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/6c36d3df2a31bbed821fdbaeff2174da2e2a64e3.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/450b75c357e0db316ece274694989f52d28447f2-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DEMACIAN STANDARD",
+            "description": "Jarvan IV carries the pride of Demacia, passively granting him bonus Attack Speed. Activating Demacian Standard allows Jarvan IV to place a Demacian flag that deals magic damage on impact and grants Attack Speed to nearby allied champions. Cast again to automatically cast Dragon Strike to the flag."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/8551adf76e53c2090690d6b48f14aafc485d32c9.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ee63b6658f44354ed8ec5f0176e5026c67ac577a-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "CATACLYSM",
+            "description": "Jarvan IV heroically leaps into battle at a target with such force that he terraforms the surrounding area to create an arena around them. Nearby enemies are damaged at the moment of impact."
+        }
+    ],
+    "JAX": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/eef79a4de7a316fa50194850c5569b903be6b576.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2b8133159ea071b862df7c9a2a15bdec89fe3778-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "RELENTLESS ASSAULT",
+            "description": "Jax's consecutive basic attacks continuously increase his Attack Speed."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/9a057af3a0cf63dfc510643d972774916b6e0790.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/730faac65b0511921c8c7e1b7ecf4fb094a58cb4-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "LEAP STRIKE",
+            "description": "Jax leaps toward a unit. If they are an enemy, he strikes them with his weapon"
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/b6f60c8a9c63b83fb4e25db1547e587f89afa3b7.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/87fbc50e2c1871520327a22781b8eba95b5e3253-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "EMPOWER",
+            "description": "Jax charges his weapon with energy, causing his next attack to deal additional damage."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/bc6c7c7a8fa813fbe206f89989d81b6f54e4d173.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/b5bf944216d9154eb78967666700641e0d3f49d7-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "COUNTER STRIKE",
+            "description": "Jax's combat prowess allows him to dodge all incoming attacks for a short duration and then quickly counterattack, stunning all surrounding enemies."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/e8601904a593aea2d1c0d6ee9d45f422eeb99dbe.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/1012cba4be0d426c6bfc99d531ae00ddc60427f1-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "GRANDMASTER'S MIGHT",
+            "description": "Every third consecutive attack deals additional Magic Damage. Additionally, Jax can activate this ability to strengthen his resolve, increasing his Armor and Magic Resist for a short duration."
+        }
+    ],
+    "JAYCE": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/5a9bc40b33ca1c4b2b4011f5dc26b75efff9d8ef.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/55043dccfd2a0500d8c14320e5af100f71a56d25-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "HEXTECH CAPACITOR",
+            "description": "When Jayce swaps weapons he gains movement speed for a short duration."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/679697e44e3cb31ea21fd2ecb245e67aa35d64a0.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/18b5b9c0648d58101d0bab3e1581a8fc8e0cda5f-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "TO THE SKIES! / SHOCK BLAST",
+            "description": "Hammer Stance: Leaps to an enemy dealing physical damage and slowing enemies. Cannon Stance: Fires an orb of electricity that detonates upon hitting an enemy (or reaching the end of its path) dealing physical damage to all enemies hit."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/527397a179c274294e8d8d620bda93e4136e4241.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3a14f8a3de984b6bc166ac5c6e226af312352626-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "LIGHTNING FIELD / HYPER CHARGE",
+            "description": "Hammer Stance: Passive: Restores Mana per strike. Active: Creates a field of lightning damaging nearby enemies for several seconds. Cannon Stance: Gains a burst of energy, increasing Attack Speed to maximum for several attacks."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/b5a4a03cef3965050e88377c69bd553bfe3fd985.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a9b3315405982bfefe35f351d9b98ca87a2f38c9-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "THUNDERING BLOW / ACCELERATION GATE",
+            "description": "Hammer Stance: Deals magic damage to an enemy and knocks them back a short distance. Cannon Stance: Deploys an Acceleration Gate increasing the Movement Speed of all allied champions who pass through it. If Shock Blast is fired through the gate the missile speed, range, and damage will increase."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/852731b84b54861dff8cb94d7c1537a66f64fb58.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cb70e4541ed6f48ba2fbd31947dcb02da3328e1c-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "MERCURY CANNON / MERCURY HAMMER",
+            "description": "Hammer Stance: Transforms the Mercury Hammer into the Mercury Cannon gaining new abilities and increased range. The first attack in this form reduces the target's Armor and Magic Resist. Cannon Stance: Transforms the Mercury Cannon into the Mercury Hammer gaining new abilities and increasing Armor and Magic Resist. The first attack in this form deals additional magic damage."
+        }
+    ],
+    "JHIN": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/b8f85702bd8fde57ca32815abebcc29ec4446b4b.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e68c9203ae7b25e39a78d9486fbc04f736ef61de-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "WHISPER",
+            "description": "Jhin's hand cannon, Whisper, is a precise instrument designed to deal superior damage. It fires at a fixed rate and carries only four shots. Jhin imbues the final bullet with dark magics to critically strike and deal bonus execute damage. Whenever Whisper crits, it inspires Jhin with a burst of movement speed."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/9b1db2076182639a8b7ece8f439d786073242556.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/30d346e4c5cdadf6ef4c281cae0392aba29d8572-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DANCING GRENADE",
+            "description": "Jhin launches a magical cartridge at an enemy. It can hit up to four targets and gains damage each time it kills."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/3b67f24c14d28908c7bdb67c40be1a4adb1c4538.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d18698db86b50fc17aea51d87b9c1ba8b0c2fb89-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DEADLY FLOURISH",
+            "description": "Jhin fires a single shot with incredible range. It pierces through minions and monsters, but stops on the first champion hit. If the target was recently struck by Jhin's allies, lotus traps, or damaged by Jhin, they are rooted."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/9ec80dc0dd6707b25e1acc9edff80341c2a3ae5c.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b45ed71cf0afe522207dd31177f9ce3f5a270c57-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "CAPTIVE AUDIENCE",
+            "description": "Jhin places an invisible lotus trap that blooms when walked over. It slows nearby enemies before dealing damage with an explosion of serrated petals. When Jhin kills an enemy champion, a lotus trap will bloom near where they were killed."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/d0419ca6be65d6a568dfac85e1ff9dc75aec9b44.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a7675d9c1bc90207ebda6a9aeb4a67a2d10e0b8b-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "CURTAIN CALL",
+            "description": "Jhin channels, transforming Whisper into a shoulder-mounted mega-cannon. It is able to fire 4 super shots at extreme range that pierce through minions and monsters, but stop on the first champion impacted. Whisper cripples enemies hit, which slows them and deals execute damage. The 4th shot is perfectly crafted, epically powerful, and guaranteed to critically strike."
+        }
+    ],
+    "JINX": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/d30d4b6c186d3cc1b230d8bccf8f2260d02a8aff.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/15e2529b96f56993dac7b9218c44698fa561a3c2-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "GET EXCITED!",
+            "description": "Jinx receives massively increased Movement Speed and Attack Speed whenever she helps kill or destroy an enemy champions epic jungle monster, or structure."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/8ef378364dc17511b1330d6d5f7c41ab7e228b1a.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/30b22cf52c9cf21ece17a217af0153a4fb5d1eff-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SWITCHEROO!",
+            "description": "Jinx modifies her basic attacks by swapping between Pow-Pow, her minigun and Fishbones, her rocket launcher. Attacks with Pow-Pow grant Attack Speed, while attacks with Fishbones deal area of effect damage, gain increased range, and drain Mana."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/194c44635fb66ea8142a7dcdcca0d49b2582019e.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/aaad94098f0a6ab6c0d70d67c99e4a28c52d1f19-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "ZAP!",
+            "description": "Jinx uses Zapper, her shock pistol, to fire a blast that deals damage to the first enemy hit, slowing and revealing it."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/c3c1b720f6c247ba417556d9cc25eeb0ede2310a.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fa19f0effc1be6d30fe2afd5372237e12df5fb85-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "FLAME CHOMPERS!",
+            "description": "Jinx throws out a line of snare grenades that explode after 5 seconds, lighting enemies on fire. Flame Chompers will bite enemy champions who walk over them, rooting them in place."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/e176bc4d17e65cce0f811f2f703f38b375a6c45e.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7727824cd16c591254904058922187a4eccb8cc7-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SUPER MEGA DEATH ROCKET!",
+            "description": "Jinx fires a super rocket across the map that gains damage as it travels. The rocket will explode upon colliding with an enemy champion, dealing damage to it and surrounding enemies based on their missing Health."
+        }
+    ],
+    "KAISA": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/35ae1639300370804f7baa08c8b4b54959d23111.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8e5a628441a54cf36112a519fa2f1a8d804f95ac-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SECOND SKIN",
+            "description": "Kai'Sa's basic attacks stack Plasma, dealing increasing bonus magic damage. Allies' immobilizing effects help stack Plasma. Additionally, Kai'Sa's item purchases upgrade her basic spells to have more powerful properties."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/0ce275aa20161ac8a79674401a186924b0fd4720.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cbeadf202ac7a109004e6d1f36cf95767216ebca-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "ICATHIAN RAIN",
+            "description": "Kai'Sa shoots a swarm of missiles that seek out nearby targets. Living Weapon: Icathian Rain is upgraded to shoot more missiles."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/895eec74a2874af21d9602b65cbd68f7cc753ee1.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1b0597ebeabe60f303b2180b28135c1e0703c5c5-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "VOID SEEKER",
+            "description": "Kai'Sa shoots a long range missile, revealing and marking enemies with her passive. Living Weapon: Void Seeker is upgraded to apply more Plasma marks and reduce cooldown on champion hit."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/8afd84b76547f91c33dc4e751ed89f78338be9a0.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/caa3546d3aa43b20cb2313f3053b002426121a57-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SUPERCHARGE",
+            "description": "Kai'Sa briefly increases her movement speed, then increases her attack speed. Living Weapon: Supercharge is upgraded to briefly grant Invisibility."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/cf4f6d523e12ef866444a3708b6c4ac6086d0731.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3495f169849118d9086b0e7e7ec744911c89fad7-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "KILLER INSTINCT",
+            "description": "Kai'Sa dashes near an enemy champion marked by Plasma and gains a temporary shield."
+        }
+    ],
+    "KALISTA": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/56ea3ab4801785d8e4ff326c3b6d590dd81bd8ad.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f1701e112fb52ef14291bd6eb55af578e0179a05-256x256.jpg?auto=format&fit=crop&q=80&h=160&w=160&crop=center",
+            "name": "MARTIAL POISE",
+            "description": "Enter a movement command while winding up Kalista's basic attack or Pierce to lunge a short distance when she launches her attack."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/79e16daa298ccf3c8f0dfd82fa02d1dab16b4e9d.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3aa0e888fa1ca9712f4a4337bab6d91a2f6092f7-256x256.jpg?auto=format&fit=crop&q=80&h=160&w=160&crop=center",
+            "name": "PIERCE",
+            "description": "Throw a fast moving spear that passes through enemies it kills."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/9bbf1c19210edeb23ec22bee0f0aed81eed418cf.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e5e63eb7386094d56b12def46cd8a2952edbc2b2-256x256.jpg?auto=format&fit=crop&q=80&h=160&w=160&crop=center",
+            "name": "SENTINEL",
+            "description": "Gain bonus damage when Kalista and her Oathsworn strike the same target. Activate to send a soul to scout out the path, revealing the area in front of it."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/8e6b9b19060ae1a1111239e5b0a13022df4e15bf.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/617efb12640afbb3db27a1e67bfa05379a589c49-256x256.jpg?auto=format&fit=crop&q=80&h=160&w=160&crop=center",
+            "name": "REND",
+            "description": "Attacks impale their targets with spears. Activate to rip the spears out, slowing and dealing escalating damage."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/3ba5b40185f27d24a4b43a8aa9d5429981c54176.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/daee36366c2a407d053908c0984082406aa509dd-256x256.jpg?auto=format&fit=crop&q=80&h=160&w=160&crop=center",
+            "name": "FATE'S CALL",
+            "description": "Kalista teleports the Oathsworn ally to herself. They gain the ability to dash toward a position, knocking enemy champions back."
+        }
+    ],
+    "KARMA": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/96fa5bb113ca6d4ef71ff1038eb7c2ef01db7bc2.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7bfe4f9b39db557a2d72c7564a7bc9839c7eaf67-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "MANTRA",
+            "description": "After using 3 abilities, Karma's next ability will be enhanced."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/f9d85de5a17aeaf43fb6a80b53bde96831b2d590.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b57d69fe63c9eca1358d5b65351c1ea1899a9bf3-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "INNER FLAME",
+            "description": "Karma sends forth a ball of spirit energy that explodes and deals damage upon hitting an enemy unit. Mantra Bonus: In addition to the explosion, Mantra increases the destructive power of her Inner Flame, creating a cataclysm which deals damage after a short delay."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/5b4baa115e13512cef03dd9f93fac4a475655a83.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/105c213510bac0bfc4ecf71fa9dd3f886bd7fe02-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "FOCUSED RESOLVE",
+            "description": "Karma creates a tether between herself and up to two targeted enemies dealing damage and revealing them. If the tethers are not broken, the enemyies will be rooted and damaged again. Mantra Bonus: Karma creates an additional tether between the targets, dealing extra damage and extending the root duration. If only a single enemy is within range, a tether will spread from them to the next nearest enemy."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/f6bcbf820b556ed9fe059a0a0494bb6c16037fb2.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3f31aa4a221a324cf354f23ac791f1852ffcf200-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "INSPIRE",
+            "description": "Karma summons a protective shield that absorbs incoming damage and increases the Move Speed of the protected ally. Mantra Bonus: Energy radiates out from her target, strengthening the initial shield and applying Inspire to nearby allied champions."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/9e1c9327a1eb1c5fc902c5abc4fff485b50c0b99.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/506c25ed03aa3b9ea6e5d43802b9895eb8c10433-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "TRANSCENDENT EMBRACE",
+            "description": "Karma forms a ring of spirit energy at a target location. After a brief delay, it detonates, dealing magic damage to all enemies inside and slowing them for a few seconds. If enemies are hit at the edge of the ring, they will be pulled in toward the center. Karma immediately enters the Mantra state."
+        }
+    ],
+    "KASSADIN": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/a97c344b5bca92cbcb94edde6cc907f3d250afa0.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e8edc7324929cb69de2ef5c9179d945efb9ffcfb-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "VOID STONE",
+            "description": "When Kassadin casts a spell near a visible enemy champion, he gains a magic shield."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/aec030bbfd50bb0cfb1ad97c53ce6de53577f507.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d45ce0e35e931ce61ca9dde770e84bbf1e079e9b-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "NULL SPHERE",
+            "description": "Fires an orb that deals magic damage and silences the first enemy hit."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/9d0a4513a61aa0bb756cb6b4ed012a6a62220daa.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/10fefc0f781c89555c85724d998de4ff0980c374-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "NETHER BLADE",
+            "description": "Empowers his next basic attack within to gain range and deal bonus magic damage and restore a percentage of missing mana on hit. If Nether Blade kills the target its remaining cooldown is reduced."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/0bd88e64a4272976038d8d4007bbdaf54e2cbad1.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/75645f8b4542fcb120d0732e80f325ceabc8b286-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "FORCE PULSE",
+            "description": "Deals magic damage to enemies in a cone and slows them. Force Pulse becomes enhanced after other spells are cast nearby, dealing increased magic damage and slowing instead."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/ee4e10aa2d37f93473e64d89d84dcd4ed8db21e6.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/251e1fa529c267da8b9bf3643205ea3a06657cbf-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "RIFTWALK",
+            "description": "Blinks to target location and deals magic damage to nearby enemies. Casting Riftwalk causes the next Riftwalk within a certain amount of time to deal more damage and cost double the mana. (Up to 3 times)"
+        }
+    ],
+    "KATARINA": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/da74bb5aace60b5b3839dc503ad79d49fde007bf.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/64522a426633969553de57153352991b090e5a8c-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "VORACITY",
+            "description": "Whenever an enemy champion dies that Katarina has damaged recently, her remaining ability cooldowns are dramatically reduced. If Katarina picks up a Dagger, she uses it to slash through all nearby enemies, dealing magic damage."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/a11bf669361e778c0ca8330c41a85942d50d00f9.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/34a9768b260702eb1d92032d35a6cc81337719c1-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "BOUNCING BLADE",
+            "description": "Katarina throws a Dagger at the target that then bounces to nearby enemies before ricocheting onto the ground."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/8720cd3df2c29252152a280d875e0d2dca3c3153.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b70f54b930e53b2f3647b33be7f4ec23ad13a08d-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "PREPARATION",
+            "description": "Katarina gains a burst of movement speed, tossing a Dagger into the air directly above herself."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/bd7c38e0d397aab297b0dbef26e6dad18f662216.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6c26851015e722cc7b70c72311d78ed60aba83ee-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SHUNPO",
+            "description": "Katarina blinks to a location near a Dagger or unit, dealing damage to the nearest enemy. Picking up a Dagger reduces Shunpo's cooldown."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/a8fc114a2b6214b04b3042c319f813c3aed77ece.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/026f0679e80e02b3081f2db0c75299bcad7df7e3-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DEATH LOTUS",
+            "description": "Katarina becomes a flurry of blades, dealing damage over time and applying healing reduction. Katarina is able to slowly reposition for a short time."
+        }
+    ],
+    "KAYLE": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/2c55f5dcbaa8215416113306a7834ff3becb303f.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/29177357449ce40cbf88d8630e9a49a02b19d8be-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DIVINE ASCENT",
+            "description": "Kayle's attacks are empowered by the heavens as she levels up and spends skill points. Her wings are lit aflame as she progressively gains Attack Speed, Movement Speed, Attack Range, and waves of fire on her attacks."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/2e9a94443aa2e4e9c9170d241d0a0f24916210a1.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a94d29a7d0f60d3381471890250792a0d7dc40e1-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "RADIANT BLAST",
+            "description": "Kayle conjures a portal, summoning a celestial sword that pierces through enemies, slowing, damaging, and reducing the resistances of all hit."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/135f71d14b30dea23c724bf23f757e1e4f6d7526.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ef3ae82c0a2f311d2526a849b173988cc6bd0ece-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "CELESTIAL BLESSING",
+            "description": "Blessed by the divine, Kayle heals and grants movement speed to herself and the nearest ally."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/d6847992123a98a3799f26d7f3f1c5b353d99a46.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/937d44bdd7c9227e1ab183c1829ab476dd17542e-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "STARFIRE SPELLBLADE",
+            "description": "Passive: Kayle's celestial sword, Virtue, deals bonus magic damage to enemies she attacks. Active: Kayle's next attack smites her target with celestial fire, dealing bonus damage proportionate to their missing health."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/4d3bf1688376287599faefa44be756b8c08a695e.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6df49ee652057c43fc96bf3a69dd8b0273b3b5fa-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DIVINE JUDGMENT",
+            "description": "Kayle makes an ally invulnerable and calls upon former Aspects of Justice to purify the area around her target with a holy rain of swords."
+        }
+    ],
+    "KAYN": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/13fa1bda4c5bf03e73b71653d5bc63cd437193c8.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/42bfe3e43b846f48326334e3f06e43b2e26e3070-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "THE DARKIN SCYTHE",
+            "description": "Kayn wields an ancient weapon and fights Rhaast, the darkin within it, for control. Either the Darkin will triumph, or Kayn will master Rhaast and become the Shadow Assassin. Darkin: Heal for a percentage of spell damage dealt to champions. Shadow Assassin: For the first few seconds in combat with enemy champions, deal bonus damage."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/0d6be28a7dfd17d74994b6df3ecd60dd26c7290c.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d9065eefc982731bf93850a9698306611bab3635-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "REAPING SLASH",
+            "description": "Kayn dashes, then slashes. Both deal damage."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/5889f9812af5021bbb3f343c566003e38601b107.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6e58bb982cc87c720515d5866e5061c8fbb20a99-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "BLADE'S REACH",
+            "description": "Kayn damages and slows targets in a line."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/28d02b2ce0c37ebea3f7cf4e839c2ac0c7b7ee61.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6381df16d124bc02207544718e46c8afc16f6ad9-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SHADOW STEP",
+            "description": "Kayn can walk through terrain."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/940595e561cda53f3cb7c0cf3eba4f60f52c8fc4.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4105acd0d152cbe7cc8989d57dc16ee0e4fc692d-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "UMBRAL TRESPASS",
+            "description": "Kayn hides in an enemy's body, dealing massive damage when he bursts out."
+        }
+    ],
+    "KENNEN": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/bc874d466ea3c6d0c5988e662788eafb294e5484.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fdb6d6b214a1b33ca15fd569affc8631f3755bbd-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "MARK OF THE STORM",
+            "description": "Kennen stuns enemies he hits 3 times with his abilities."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/e85584b96b2ef1bb9eb80f3b78be971b3d920e0b.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e5c92766223e78bb091ba4d5162107faa14492a9-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "THUNDERING SHURIKEN",
+            "description": "Throws a shuriken, dealing magic damage to the first enemy hit."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/6dae2137ebaa05583c5d8e83bdc90af4674a1664.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/e5bc1042245d4b46a8173410db98f91e09a902d2-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "ELECTRICAL SURGE",
+            "description": "Kennen passively deals extra damage and adds a Mark of the Storm to his target every few attacks, and he can activate this ability to damage and add another Mark of the Storm to targets who are already marked."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/5540b023c3b805e5118acb8003cb21878b7fee0f.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/7844a8ee4ae59f8528b2e839dcd4b571592396b2-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "LIGHTNING RUSH",
+            "description": "Kennen morphs into a lightning form, becoming unable to attack. Kennen gains movement speed when entering this form, and attack speed when leaving it."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/0d001dd8d11e33568e60a8bed3fcd9565854e7ed.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3cb5d96bac4732b727dd551b16c7add786f1096e-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SLICING MAELSTROM",
+            "description": "Kennen summons a storm that strikes at nearby enemy champions for magical damage."
+        }
+    ],
+    "KHAZIX": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/34ab877980af46b075d5e1d47b110fe339c20357.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0371e2057feaccf934e6d986d6c79bd93d4be01a-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "UNSEEN THREAT",
+            "description": "When the enemy team loses sight of Kha'Zix its next attack against enemy champions deals bonus magic damage and slows them briefly."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/483b89eb6f88c0b0f9297c0fde170dfe3e6170ce.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5b105c59f8f629f500c7dd5eca1a2fbe6c7f1c07-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "TASTE THEIR FEAR",
+            "description": "Kha'Zix causes physical damage by slashes with its claws dealing additional damage if the target is isolated. Evolved Reaper Claws: basic attacks and Taste Their Fear have increased range and if a target is isolated, meaning that they have no teammates or turrets nearby, then a significant portion of Taste Their Fear's cooldown is refunded."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/0ff3f5b405163fe5794e19feaeaa77b42e48b643.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c4476f83828908e33f911768f91b812c09c810d3-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "VOID SPIKE",
+            "description": "Kha'Zix fires spikes to deal physical damage while also partially healing itself if it is within the explosion. Evolved Spike Racks: fires additional spikes revealing and slowing enemies for a short duration."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/bc27a40a8b9048d0c5c9f8536278dd59a44b79b1.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/94aad1127a4858320821cf29c665ee69084530b0-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "LEAP",
+            "description": "Kha'Zix leaps to a targeted area and deals physical damage. Evolved Wings: Leap gains significant range and the cooldown is refunded on champion takedowns."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/2b6a3bf785f47a3a321859a20503ee6fd889332d.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7de1100b260f41abc68b796d1fb076126b00de5f-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "VOID ASSAULT",
+            "description": "Passive: each upgrade to Void Assault allows for Kha'Zix to evolve one of his abilities. Active: Kha'Zix becomes invisible and gains movement speed briefly. Evolved Adaptive Cloaking: invisibility duration lasts longer and can be cast multiple times."
+        }
+    ],
+    "KINDRED": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/3bb5a1708277546756fa4dc2d7e5c900a14590cc.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c0c168bf39bd9e6900b07f8e8f60cdb2c4f2cfe3-128x128.png?auto=format&fit=crop&q=80&h=128&w=128&crop=center",
+            "name": "MARK OF THE KINDRED",
+            "description": "Kindred can mark targets to Hunt. Successfully completing a Hunt permanently empowers Kindred's basic abilities. Every 4 hunts completed also increases Kindred's basic attack range."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/cb38417bf908d841ee7cb15f7adb6e014ef6182a.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f890567b4319283ca0db57f8224bce89324981fe-128x128.png?auto=format&fit=crop&q=80&h=128&w=128&crop=center",
+            "name": "DANCE OF ARROWS",
+            "description": "Kindred tumbles and shoots up to three arrows at nearby targets."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/eeda22bae65310ceef0402f96bea5c91529a7de5.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8a2e2a821d8b2a70a0d8c6f91b7e0bb9efc8f3bc-128x128.png?auto=format&fit=crop&q=80&h=128&w=128&crop=center",
+            "name": "WOLF'S FRENZY",
+            "description": "Wolf enrages and attacks enemies around him. Lamb passively gains stacks by moving and attacking. When fully charged, Lamb's next attack restores health."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/d1176191fc671464a64d61ac3c3cf6556b01f853.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9b1dfa4707e51e013e8f7aaa04d83cc7282b240b-128x128.png?auto=format&fit=crop&q=80&h=128&w=128&crop=center",
+            "name": "MOUNTING DREAD",
+            "description": "Lamb fires a carefully placed shot, slowing the target. If Lamb attacks the target two more times, her third attack instead directs Wolf to pounce on the enemy, savaging them for massive damage."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/97932129b1554a8defbcb6eb8e0d39fd53f1bda9.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/27edb7a95f1f2cd67f7b9a48a08a12a7cfe22280-100x100.jpg?auto=format&fit=crop&q=80&h=100&w=100&crop=center",
+            "name": "LAMB'S RESPITE",
+            "description": "Lamb grants all living things inside a zone a respite from death. Until the effect ends, nothing can die. At the end, units are healed."
+        }
+    ],
+    "LEE_SIN": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/7fc9c84e969da41b6cd9733ce1315dc3dceb7767.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d054deda664ef785931ed10873e76909866ee1ba-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "FLURRY",
+            "description": "After Lee Sin uses an ability, his next 2 basic attacks gain Attack Speed and return Energy."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/1fc55e43259f1ab5848bf44bdeaa6b1d42e7473a.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9394488507d896bf008bd2aa52c570e9d26d3b51-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SONIC WAVE / RESONATING STRIKE",
+            "description": "Sonic Wave: Lee Sin projects a discordant wave of sound to locate his enemies, dealing physical damage to the first enemy it encounters. If Sonic Wave hits, Lee Sin can cast Resonating Strike for the next 3 seconds. Resonating Strike: Lee Sin dashes to the enemy hit by Sonic Wave, dealing physical damage based on the target's missing Health."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/58aa51b982bd3ec53cd4e378ed26d8310a65e02f.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/884543307c6ae8a8113c682ca32c42dec89b05b8-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SAFEGUARD",
+            "description": "Lee Sin rushes to target position, shielding himself from damage if an enemy champion or monster is near the landing point. After using Safeguard, Lee Sin can cast Iron Will for the next few seconds. Iron Will: Lee Sin's next attack deals bonus magic damage and has omnivamp."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/1bb3d0d0f30f009489d4dec2bf3a08c5666f3b59.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/df423dd91f36e9ee792e167126705344585e8fd3-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "TEMPEST / CRIPPLE",
+            "description": "Tempest: Lee Sin smashes the ground, sending out a shockwave that deals magic damage and reveals enemy units hit. If Tempest hits an enemy, Lee Sin can cast cripple for the next 3 seconds. Cripple: Lee Sin cripples nearby enemies damaged by Tempest, reducing their Movement Speed for 4 seconds. Movement Speed recovers gradually over the duration."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/a816b8796b77a7ca6e82d397e8f73dced8d9bc68.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8dfc7b2d51b5d53d6fb400fc38d8ef17da229877-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DRAGON'S RAGE",
+            "description": "Lee Sin performs a powerful roundhouse kick launching his target back, dealing physical damage to the target and any enemies they collide with. Enemies the target collides with are knocked into the air for a short duration."
+        }
+    ],
+    "LEONA": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/d03676e92a99ada6e4de95694fd146098b4af9b9.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d0f2105e9fbdfdb8003b55c595b3e2c49d7ab0ce-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SUNLIGHT",
+            "description": "Damaging spells afflict enemies with Sunlight. When allied Champions deal damage to those targets, they consume the Sunlight to deal additional magic damage."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/d03676e92a99ada6e4de95694fd146098b4af9b9.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a554b61b9ab3b2118d8e0be68a96abc63d1e916b-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SHIELD OF DAYBREAK",
+            "description": "Leona uses her shield to perform her next basic attack, dealing bonus magic damage and stunning the target."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/c774335445144678845f370b720c36dc4d76508c.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bd144a6487d249ced5f12400028429195d250bc6-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "ECLIPSE",
+            "description": "Leona raises her shield to gain Armor, and Magic Resist. When the duration first ends, if there are nearby enemies, she will deal magic damage to them and prolong the duration of the effect."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/e48f5c7a876c5f5c7c5332e3850bbad55d0b3318.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f879f7352d905daec1c4a189ee25a2701f2e0855-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "ZENITH BLADE",
+            "description": "Leona projects a solar image of her sword, dealing magic damage to all enemies in a line. When the image fades, the last enemy champion struck will be briefly rooted and Leona will dash to them."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/58ef7d00cbd08471c7ae7e7240afab618a898a52.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b3377baff2a2495573c7da1bf2262a1d44ec8428-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SOLAR FLARE",
+            "description": "Leona calls down a beam of solar energy, dealing damage to enemies in an area. Enemies in the center of the area are stunned, while enemies on the outside are slowed."
+        }
+    ],
+    "LILLIA": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/61d44c5024e3fe67c373bea303700e115ecd829b.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bd7244df76f95238f9f6ec781e1fbf249c9dd43b-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DREAM-LADEN BOUGH",
+            "description": "Hitting a champion or monster with a skill will deal additional max Health damage over time."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/d4dbb779456b49aff59a9dca1dbbd3e5056529e1.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/f3a762746fec467b0ebaa7c9bf2a7f57d84812dd-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "BLOOMING BLOWS",
+            "description": "Passively, Lillia gains stacking Move Speed when hitting enemies with spells. She can activate this to deal magic damage to nearby enemies, dealing extra true damage on the edge."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/d0739e4867425e1757ac342bcd114d4b87772564.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/60be50808fa385ca3663c3a4ce47e87d62075fa6-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "WATCH OUT! EEP!",
+            "description": "Lillia deals damage in a nearby area, dealing heavy damage in the center."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/5ab7b80320a3e114e475080f74a373a71c1615ce.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2ae87e42678bac86eec9856613156e5041a69e44-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SWIRLSEED",
+            "description": "Lillia hurls a seed that damages and slows those it lands on. If it doesn't hit anything, it will continue rolling until it hits a wall or target."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/15bd7c4edaeb3ef4927129ddbb2d79880db6cbc7.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/93cc161152c99c252c5486b7585c2e89c173c40e-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "LILTING LULLABY",
+            "description": "Lillia causes all enemies with Dream Dust on them to become Drowsy before falling asleep. Those enemies will take extra damage on being forcibly woken up."
+        }
+    ],
+    "LUCIAN": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/fadad9074ffedf8e72a8be5d3b264339f9ea2e63.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/11f13c63b279fcc0248174cd5fc679d298e78113-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "LIGHTSLINGER",
+            "description": "Whenever Lucian uses an ability, his next attack becomes a double-shot."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/415677945d73c17122e9ab678efd7be546fbaa3d.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/33ff1b85640d2bfa80613288eaf85d92d8af0212-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "PIERCING LIGHT",
+            "description": "Lucian shoots a bolt of piercing light through a target."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/3b0dbde0bf40ca7404acd15809fd1924af6eb1cd.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3ba13c855b2ced1e184035550cb05a3a8c3106dc-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "ARDENT BLAZE",
+            "description": "Lucian shoots a missile that explodes in a star shape, marking and briefly revealing enemies. Lucian gains Movement Speed for attacking marked enemies."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/3ac68548a8098f3514de48c55c91f20b2d2558ee.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7a96dd37f3c2e9040d0fe78a338690e69e4d5a0d-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "RELENTLESS PURSUIT",
+            "description": "Lucian quickly dashes a short distance. Lightslinger attacks reduce Relentless Pursuit's cooldown."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/6374f34d0e68b93ff714745a2fd408309a058966.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d677babea85a70b713000e65f98bc0507d9c07f5-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "THE CULLING",
+            "description": "Lucian unleashes a torrent of shots from his weapons."
+        }
+    ],
+    "LULU": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/c3fc8845e0b8af1db36551afade95b6bd6586feb.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/affa8a832f986546437e90aab1b2e4fe19637af5-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "PIX, FAERIE COMPANION",
+            "description": "Pix fires magical bolts of energy whenever the champion he's following attacks another enemy unit. These bolts are homing, but can be intercepted by other units."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/ba84f5f46c7f2aef986372dde29f111d4f6ad15f.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/599fc3fd16fb4b6bdfa68292335e551a6be6feea-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "GLITTERLANCE",
+            "description": "Pix and Lulu each fire a bolt of magical energy that heavily slows all enemies it hits."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/cd17c73d09f6509e92e7157e544ddca70659c924.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b1cda90078113a5ca219d29555fdcf620ed955ea-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "WHIMSY",
+            "description": "If cast on an ally, grants them Attack Speed and Movement Speed for a short time. If cast on an enemy, turns them into an adorable critter that can't attack or cast spells."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/a4c8d570bb5fef380327fb976307e4e05a4045af.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/04691a85d70982200321fd44dd191cf959899e7c-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "HELP, PIX!",
+            "description": "If cast on an ally, commands Pix to jump to an ally and shield them. He then follows them and aids their attacks. If cast on an enemy, commands Pix to jump to an enemy and damage them. He then follows them and grants you vision of that enemy."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/216cb7b5abd3e40b3474a29f282cf51ae1cfe678.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4f5e1ca4c0e4836727c5618695575542ea42afc0-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "WILD GROWTH",
+            "description": "Lulu enlarges an ally (or herself), knocking nearby enemies into the air and granting the ally a large amount of bonus health. For the next few seconds, that ally gains an aura that slows nearby enemies."
+        }
+    ],
+    "LUX": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/c119461b59888cae6c77a4f4166ff3f886888a4c.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/090fd8465f3f506ab1ddc5b2ae884acfa34aaa69-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "ILLUMINATION",
+            "description": "Lux's damaging spells charge the target with energy for 5 seconds. Lux's next attack ignites the energy, dealing bonus magic damage (depending on Lux's level) to the target."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/1aa08ea6f34dfb0255c77291881f2d40480f0245.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3f3f744d2a2730e5bf6b7d507f88cc641cc67312-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "LIGHT BINDING",
+            "description": "Lux releases a sphere of light that binds and deals damage to up to two enemy units."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/f9cecde17c2c7e072358b6602e026a6887bd6e8b.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2c683da61dd7cc7bbba29448bf89b670339c1b16-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "PRISMATIC BARRIER",
+            "description": "Lux throws her wand and bends the light around any friendly target it touches, protecting them from enemy damage."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/207e9ab4362556e6ad2a033d42add52dbfcee311.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/72411e62eff9d511b01253d60225dcb1207dcba0-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "LUCENT SINGULARITY",
+            "description": "Fires an anomaly of twisted light to an area, which slows nearby enemies. Lux can detonate it to damage enemies in the area of effect."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/273a8741c07c0c76a1833d8f69ee0cac277f1125.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/681b7dc3ab435f7684ac5288272dce4c88ba0807-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "FINAL SPARK",
+            "description": "After gathering energy, Lux fires a beam of light that deals damage to all targets in the area. In addition, triggers Lux's passive ability and refreshes the Illumination debuff duration."
+        }
+    ],
+    "MALPHITE": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/c0f48a68e3c6ff7bf4319a0cd4a5cd11388a4610.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e91dc58fadccfba5d58809141220e533096c8cdd-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "GRANITE SHIELD",
+            "description": "Malphite is shielded by a layer of rock which absorbs damage up to 10% of his maximum Health. If Malphite has not been hit for 8 seconds, this effect recharges."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/b0cdb6939d23af04a8cb9ca2c8efed24c6b1b33e.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4ab3350c224b9ee23ab180eef8e348ab7fb7ba40-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SEISMIC SHARD",
+            "description": "Using his primal elemental magic, Malphite sends a shard of the earth through the ground at his foe, dealing damage upon impact and stealing Movement Speed for 3 seconds."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/78050154ebf275e298b32bfc69fd55c18eb32c86.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f97f4c5499058532ef900a742f47b5acfc5fcf8f-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "THUNDERCLAP",
+            "description": "Malphite passively gains armor. When Malphite activates Thunderclap, he attacks with such force that it creates a sonic boom. For the next few seconds, his attacks create aftershocks in front of him."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/c22ce4986b3d4c2e70f33e7c17c695e28f253829.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/64f5c5dacc57a665ebfaf6bf6f64051863b40a6e-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "GROUND SLAM",
+            "description": "Malphite slams the ground, sending out a shockwave that deals magic damage based on his Armor as damage and reduces the Attack Speed of enemies for a short duration."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/ecb634815030e7fa0277ae404cbfd21c462ca990.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7c1d88cdfa246cc355177211576045acd754acc4-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "UNSTOPPABLE FORCE",
+            "description": "Malphite ferociously charges to a location, damaging enemies and knocking them into the air."
+        }
+    ],
+    "MAOKAI": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/debf32b49653060732122f1155e8ecc5a8946fbf.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/163cccfcace22f88bd8b98d968795eb5426164d5-256x256.png?auto=format&fit=crop&q=80&h=160&w=160&crop=center",
+            "name": "SAP MAGIC",
+            "description": "Maokai's basic attack also heals him and deals additional damage on a moderate cooldown. Each time Maokai casts a spell or is struck by an enemy's spell, this cooldown is reduced."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/509551ba7d279883005bf7f006e18cdebe4d0e08.mp4",
+            "iconSrc": "https://ddragon.leagueoflegends.com/cdn/14.11.1/img/spell/MaokaiQ.png",
+            "name": "BRAMBLE SMASH",
+            "description": "Maokai knocks back nearby enemies with a shockwave, dealing magic damage and slowing them."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/ad8f0e783c97503a4dcd39cd7a39905b3f666772.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1229dc8ea14ddcaef25b843c15103da6cc05d9f7-256x256.jpg?auto=format&fit=crop&q=80&h=160&w=160&crop=center",
+            "name": "TWISTED ADVANCE",
+            "description": "Maokai contorts into a mass of moving roots, becoming untargetable and dashing to the target. Upon arrival, he roots the target."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/a97b2095e63e53de0ed7d4f5067068aa22c09a0a.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/36b807ee7b8560c834750774bbd159c6211b8e5b-256x256.png?auto=format&fit=crop&q=80&h=160&w=160&crop=center",
+            "name": "SAPLING TOSS",
+            "description": "Maokai flings a sapling to the target area to stand guard. More effective in brush."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/224357dc25bd4f090626ad592657db98072e52fb.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b25608e1fdeca2bbf14df9d0a139eb365b97dafe-256x256.png?auto=format&fit=crop&q=80&h=160&w=160&crop=center",
+            "name": "NATURE'S GRASP ",
+            "description": "Maokai summons a colossal wall of brambles and thorns that slowly advances forwards, damaging and rooting any enemies in the path."
+        }
+    ],
+    "MASTER_YI": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/91cc69667980f21927a62cfd31d785b3233d3b80.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/91bf53294513d45bdfe562698d13afa117d1916a-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DOUBLE STRIKE",
+            "description": "Every few consecutive basic attacks, Master Yi strikes twice."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/a88ddf1934a6c0580d8510e6f025cc3bfcb18603.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/be69f33da86dc9196f37b179a6ecc597eda9846b-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "ALPHA STRIKE",
+            "description": "Master Yi teleports across the battlefield with blinding speed, dealing physical damage to multiple units in his path, while simultaneously becoming untargetable. Alpha Strike can critically strike and deals bonus physical damage to monsters. Basic attacks reduce Alpha Strike's cooldown."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/aaa94245e247c84ec7f63c44cf5ae87dd477f5bf.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ec8e23d4a69e7bfb47bc91abb493d0dafcd019a5-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "MEDITATE",
+            "description": "Master Yi rejuvenates his body by focus of mind, restoring Health and taking reduced damage for a short time."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/55fca812bb81eb6d7bc4c0e9eae55401802e8522.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5504824fb10d63628c08193f9a4cdd9c20f578f4-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "WUJU STYLE",
+            "description": "Grants bonus true damage on basic attacks."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/b6a058df4d2ab0f2ff1fe2e361d0b0bd6337785e.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3b62831c3de9489edaf0d675c0c691e1395acffb-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "HIGHLANDER",
+            "description": "Master Yi moves with unparalleled agility, temporarily increasing his Movement and Attack Speeds as well as making him immune to all slowing effects. While active, Champion kills or assists extend Highlander's duration. Passively reduces cooldown for his other abilities on a kill or assist."
+        }
+    ],
+    "MISS_FORTUNE": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/f513b86b43e0427f1e282811ccaad994f5a72a61.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f742630f390586c3f9336a63674f4a5b1ae6699c-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "LOVE TAP",
+            "description": "Miss Fortune deals bonus physical damage whenever she basic attacks a new target."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/6b2309586938e8b42684db8ac1344bdfd000b16c.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/a5545d2400dc4cf4f5e7386013b7ea48d39a68f1-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DOUBLE UP",
+            "description": "Miss Fortune fires a bullet, damaging an enemy and critically striking a target behind them. Applies on-hit effects."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/0583e0c29006e44e443035d339fbfee00d1e042f.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/30f86fe40b11934974fe24b67161f38504d74905-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "STRUT",
+            "description": "Miss Fortune passively gains Movement Speed when not attacked. This ability can be activated to grant bonus Attack Speed for a short duration. While it's on cooldown, Love Taps reduce the remaining cooldown of Strut."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/06dbac7e4b9d938da46f6c8465500d0099da984b.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/b72564fd01759862bf34ad46f7ffd7df547cfa00-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "MAKE IT RAIN",
+            "description": "Miss Fortune reveals an area with a flurry of bullets, dealing waves of damage to opponents and slowing them."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/7eda26f190286f6b44d75f232676ef3b3df52500.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d4d9e564880bee9ef9208743f72a65d7eca82149-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "BULLET TIME",
+            "description": "Miss Fortune channels a barrage of bullets into a cone in front of her, dealing large amounts of damage to enemies. Each wave of Bullet Time can critically strike."
+        }
+    ],
+    "MORGANA": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/ed5a4a223b1250e84708afd8ca1aaab1e5c5f68c.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1b89213c4f6991c771b1b3731758aebcc1c3e698-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SOUL SIPHON",
+            "description": "Morgana drains spirit from her enemies, healing as she deals damage to champions, large minions, and medium and larger jungler monsters."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/c82a0d7991b7ff8ef3d4a350e578407f2f141c8e.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/acac8defd9bd80a58aa1caae9d69f6c12ae46e35-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DARK BINDING",
+            "description": "Morgana binds an enemy in place with dark magic, forcing them to feel the pain they've caused and dealing magic damage."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/6f7b868a52925205d68ff034b96a743cb0b3b631.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d55651a1f1f08e25a85aae7bd2f854e57e905b95-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "TORMENTED SHADOW",
+            "description": "Morgana casts a cursed shadow on an area, damaging enemies who dare stand in her dark circle. They receive magic damage over time, which increases the lower health they are."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/6b13e420dae8e8f1b22db88127d37f2755cf5494.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f90b85e95561042a61cbe60ada573fd0efbf4095-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "BLACK SHIELD",
+            "description": "Morgana anoints an ally with a protective barrier of starfire, which absorbs magical damage and disabling effects until it is broken."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/66a495c7c03598c38a2d2c926931f6d91f2f367e.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/14a7205f81d4c340c1f66bac701a685465819ce7-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SOUL SHACKLES",
+            "description": "Morgana unleashes the full force of her Celestial power as she unbinds her wings and hovers above the ground. She lashes chains of dark pain onto nearby enemy champions, gaining Move Speed towards them. The chains slow and deal initial damage and, after a delay, stun those who are unable to break them."
+        }
+    ],
+    "NAMI": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/cf8fc86766773435a7b132da8a17837b4703c5e4.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/029ed19d4b70ba8d44d01a1301360a8a09a15163-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SURGING TIDES",
+            "description": "When Nami's abilities hit allied champions they gain Movement Speed for a short duration."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/2588b49af6bcf86f6b8a7802e76026a905887d25.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/38b37b63b605267258007958d7312fd15f095eec-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "AQUA PRISON",
+            "description": "Sends a bubble to a target area, dealing damage and stunning all enemies on impact."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/10cbd94576d0c7b0378e01b49dc55abb0aebccbb.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/607f9526c3dabdcdc30b9e28887e1c5fbf8ce6a5-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "EBB AND FLOW",
+            "description": "Unleashes a stream of water that bounces back and forth between allied and enemy champions, healing allies and damaging enemies."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/a6915253631bfe26de0cd8dab2dcd7397cdaa661.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3c837d03bb8e15d2cc03c8e01ca411c491792b3b-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "TIDECALLER'S BLESSING",
+            "description": "Empowers an allied champion for a short duration. The ally's basic attacks and spells deal bonus magic damage and slow the target."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/bb878cd1e36afded56653c3e49fb616d2fc92fe3.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f0eaa13d3cdc73b833af670a9ebbc92fd563ab18-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "TIDAL WAVE",
+            "description": "Summons a massive Tidal Wave that knocks up, slows, and damages enemies. Allies hit gain double the effect of Surging Tides."
+        }
+    ],
+    "NASUS": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/41065e71a9395a9b19f3aafc4efc3825a89c4be0.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ea571ee7e0ca9b8618bd9aa770790c7a4f92bbde-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SOUL EATER",
+            "description": "Gains bonus physical vamp."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/0b98f403dc72e30e72af84259801c9010ed87042.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/054f17f0aadce296246bfde1f7d7c7535c25c72a-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SIPHONING STRIKE",
+            "description": "Nasus strikes his foe, dealing damage and increasing the power of his future Siphoning Strikes if he slays his target."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/3da356e1f3c01f303d37e3e6cc05525937fee101.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3d030d28176797f406f51da4bdb46cdb39fdabe1-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "WITHER",
+            "description": "Nasus ages an enemy champion, decelerating their Movement and Attack Speeds over time."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/bdd05195e1eb89f0ed498f3e6d695938ee88b7cf.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ab7fea4e9a691fada2568c290494bc603ec644f6-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SPIRIT FIRE",
+            "description": "Nasus unleashes a spirit flame at a location, dealing damage and reducing the Armor of enemies who stand on it."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/beaf48682beb60d6ddf41278fd6a175724e565a1.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8ea0ca2ccea0bd448dc12269b6ce417c0d606125-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "FURY OF THE SANDS",
+            "description": "Nasus unleashes a mighty sandstorm that batters nearby enemies. While the storm rages, he gains increased Health, Attack Range, damages nearby enemies, has a reduced cooldown on Siphoning Strike, and gains bonus Armor and Magic Resistance for the duration."
+        }
+    ],
+    "NAUTILUS": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/7de7666fa9d08a3bc9af541ccc4102be6febcf03.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4d69aeeb436d31c6afed6fd0c1988fa7c93c7465-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "STAGGERING BLOW",
+            "description": "Nautilus' first Attack against a target deals increased physical damage and roots them briefly."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/61f2690981146ddc98ff6d0d50ae28174be4df81.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/81bdea7f8da620d3329b7c69bdbc6f11151f7ef2-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DREDGE LINE",
+            "description": "Nautilus hurls his anchor forward. Colliding with an enemy pulls them and Nautilus together, dealing magic damage. Colliding with terrain pulls Nautilus towards it."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/aef9300be65bd76b39baaa560d8184e265942a55.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9e083e98b9fbe48a27de0bcc28c3b06c72931577-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "TITAN'S WRATH",
+            "description": "Nautilus gains a temporary Shield. While it persists, his Attacks deal damage over time to his target and surrounding enemies."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/e3dbd030a4f73880438463e069f6a6dd61aaaabf.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/62b883022dde80b7e7444fef3373e65d67f70836-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "RIPTIDE",
+            "description": "Nautilus creates three exploding waves around himself. Each explosion damages and slows enemies."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/115a4f826b905677b64d123558f412f21b16675a.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5e9575b001d05ea1d2aab5b80caeb1bd40fef637-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "DEPTH CHARGE",
+            "description": "Nautilus fires a shockwave into the earth that chases an opponent. This shockwave rips up the earth above it, knocking enemies into the air. When it reaches the opponent, the shockwave erupts, knocking his target into the air and stunning them."
+        }
+    ],
+    "NILAH": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/c94e23a5702445e1effe543b4058b9867e71dbf5.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a072bb11e54c27122c3211fbca19b89d6936c38d-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "JOY UNENDING",
+            "description": "Nilah gains increased experience from last-hitting minions along with the ability to enhance and share nearby healing and shielding from her allies."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/a711b32ff8caa0c4071decdddf8c6fd55907e446.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/87ff34c92bdc6387cb5aab1839e7b55cead6d9f9-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "FORMLESS BLADE",
+            "description": "With a snap of her whip-blade, Nilah damages any enemies she hits in a straight line in her chosen direction. This action extends her attack range for a short duration."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/5fc8ee71b7f32737ff0a5a00a52251bbe80b284a.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a16ab3389e90d3896fcc43fd99f37cdae9aa30e2-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "JUBILANT VEIL",
+            "description": "Nilah envelops herself in mist, increasing her movement speed and allowing her to gracefully dodge all incoming attacks. Any allies she touches during the mist's duration will also gain this effect."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/1ba7139993544e1c1c0011694eeb002665c30d0a.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ff1ed1d0c945a46be95b052b5fc16b5901b6a28d-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SLIPSTREAM",
+            "description": "Nilah enthusiastically dashes toward her target, dealing damage to any enemies she passes through on the way."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/f4842428e3722fd3817bcf4cbaf52d1fd646600f.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d4f0ed389a873b942617758fefe2ac4574dd103f-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "APOTHEOSIS",
+            "description": "Twirling her whip-blade in joyful exuberance, Nilah deals damage to enemies around her before pulling them closer with her weapon."
+        }
+    ],
+    "NUNU_WILLUMP": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/2b8dba4c10814678be5b2d97013b7f66e4ca6a59.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e8061f08256ca278b9238504f9dd822f029f2ad5-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "CALL OF THE FRELJORD",
+            "description": "Nunu increases the attack speed and movement speed of Willump and a nearby ally, and causes Willump's basic attacks to damage enemies around the target."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/7b3571aa422311809bd926f3e9de677b3e970c53.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/150d836deaba6ad81b31700d5d2becba3a8850f8-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "CONSUME",
+            "description": "Willump takes a bite out of a minion, monster, or enemy champion, dealing damage and healing himself."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/2e7d6d878ffa4bf50d0bf0a0f750d2186ee1fabd.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/34fe6fa918a83a2702927a358cb96a26b488652d-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "BIGGEST SNOWBALL EVER!",
+            "description": "Willump creates a snowball that grows in size and speed as he rolls it. The snowball damages and knocks up enemies."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/8a93ca4db6aa85272d8cc1ae66df6e79e76bc1ee.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1374b337f9c57b5408252ff2585810d657420dc0-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "SNOWBALL BARRAGE",
+            "description": "Nunu throws multiple snowballs that damage enemies. When he's finished, Willump roots any champions or large monsters that were hit by a snowball."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/b92bc00ed3796640706d4b5a8263fcb6668eccea.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e053ad79b9b5c2add0b525591e0e578d4527fd2e-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "ABSOLUTE ZERO",
+            "description": "Nunu & Willump create a powerful blizzard in an area that slows enemies and deals massive damage at the end."
+        }
+    ],
+    "OLAF": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/3e63c36ef9c45eb9f57a69647fc4226e49dcdca4.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/23e1c590cbbcb6c0fb1be62a7df2d7bdcd7f39a6-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "BERSERKER RAGE",
+            "description": "Olaf's Attack Speed is increased by 1% for each 1% of his Health he is missing."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/9f8f6ffae16f2e969739c2fc21c3c97b566a974c.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a642b89f20a9e61e863269adb55c6e94c25a4d87-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "UNDERTOW",
+            "description": "Olaf throws an axe into the ground at a target location, dealing damage to enemies it passes through and slowing their Movement Speed. If Olaf picks up the axe, the ability's cooldown is reduced by 4.5 seconds."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/f10ffb568f8f577468f8ca310851c2c9b5d98d1a.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8ec5a3d616009a36c374832734175faa20f27108-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "VICIOUS STRIKES",
+            "description": "Olaf's Attack Speed is increased, he gains Physical Vamp and has increased healing from all sources based on how much Health he is missing."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/90ee4c7710be5aac278ac9ce169422577a3321ac.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5db6db12705a809d4d1c0b64ab101adf48636763-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "RECKLESS SWING",
+            "description": "Olaf dashes to an enemy and attacks with such force that it deals true damage to his target. If the target does not die, Olaf takes true damage."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/0cbf904dda21fadbf0ca3aa726be05a2c1fe5ce3.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e2a848d5535d17d34e3cd6bb894f613fcbf2eb3d-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
+            "name": "RAGNAROK",
+            "description": "Olaf temporarily becomes immune to disables."
         }
     ]
 }
