@@ -30,7 +30,7 @@ const Champion = () => {
                     retAddr: location.state ? location.state.retAddr : '/'
                 }} />
                 :
-                <div className='text-center text-4xl text-red-600'> SOMETHING WENT WRONG... PLEASE GO BACK</div>
+                <div className='text-center text-4xl text-red-600 mt-20'> SOMETHING WENT WRONG... PLEASE GO BACK</div>
             }
             <img
                 className='fixed bottom-10 right-10 h-12 w-12 hover:h-14 hover:w-14 hover:bottom-9 hover:right-9 ease-in-out duration-200'

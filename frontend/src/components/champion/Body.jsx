@@ -73,7 +73,7 @@ const Body = ({ props }) => {
               label: props.label,
               curRole,
               setCurRole,
-              allRoles: championData.map((item) => item.role),
+              allRoles: championData.map((item) => item.role) || [],
               name: info.name,
               title: champTitle
             }} />
