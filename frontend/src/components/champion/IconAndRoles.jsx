@@ -2,13 +2,13 @@ import { useEffect, useState } from "react"
 
 const roleTable = ['all', 'baron', 'jungle', 'mid', 'bottom', 'support'];
 
-const IconButton = (curRole, role, handleMouseClick) => {
+const IconButton = (n, curRole, role, handleMouseClick) => {
   return (
     <button
       key={role}
       id={role}
       onClick={handleMouseClick}
-      className={`mx-2.5 flex items-center justify-center ${curRole === role ? 'border-2 border-orange-700' : ''} h-8 w-8 transition-all ease-in-out rounded-full bg-gradient-to-b from-[#d9c49a] to-[#4e432a]`}
+      className={`mx-2.5 flex items-center justify-center ${curRole === role && n > 1 ? 'border-2 border-orange-700' : ''} h-8 w-8 transition-all ease-in-out rounded-full bg-gradient-to-b from-[#d9c49a] to-[#4e432a]`}
     >
       <img
         className='h-6 w-6'
@@ -61,17 +61,17 @@ const IconAndRoles = ({ props }) => {
         />
       </div>
       <div id="top-role-container" className="flex justify-between absolute top-12 w-[225px]">
-        {topContainerContent.map((role) => IconButton(Number(props.curRole), role, handleMouseClick))}
+        {topContainerContent.map((role) => IconButton(Number(props.allRoles.length), Number(props.curRole), role, handleMouseClick))}
       </div>
       <div id="mid-role-container" className="flex justify-between absolute top-24 w-[200px]">
-        {midContainerContent.map((role) => IconButton(Number(props.curRole), role, handleMouseClick))}
+        {midContainerContent.map((role) => IconButton(Number(props.allRoles.length), Number(props.curRole), role, handleMouseClick))}
       </div>
       <div id="bot-role-container" className="flex justify-center absolute top-32">
-        {botContainerContent.map((role) => IconButton(Number(props.curRole), role, handleMouseClick))}
+        {botContainerContent.map((role) => IconButton(Number(props.allRoles.length), Number(props.curRole), role, handleMouseClick))}
       </div>
       <br></br>
       <h1 className='mt-5 text-2xl'>{props.name || 'CHAMPION_NOT_FOUND'}</h1>
-      <h3 className='text-sm'>The Broken Blade</h3>
+      <h3 className='text-sm font-extralight'>{props.title}</h3>
     </div>
   )
 }

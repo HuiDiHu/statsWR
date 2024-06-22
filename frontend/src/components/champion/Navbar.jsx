@@ -30,7 +30,7 @@ const Navbar = () => {
                         {navItems.map((item, index) => (
                             <li key={index}>
                                 <Link to={item.to}>
-                                    <div className={item.label === "Tier List" ? 'p-4 bg-neutral-700 rounded-lg' : 'p-4'}>
+                                    <div className='p-4'>
                                         <span>
                                             {item.label}
                                         </span>

@@ -106,7 +106,7 @@ const DemoAndAbilitiesContainer = ({ props }) => {
                         before:h-full before:w-full before:bg-[#1e1e1e] before:absolute before:rotate-45 before:origin-top-left'>
           </div>
           <div className='absolute top-1.5 right-40 h-1 w-48 bg-orange-700'></div>
-          <span className='mb-1 text-orange-700'>{abilitySlot[selectedAbility]}</span>
+          <span className='mb-1 text-orange-700 font-light'>{abilitySlot[selectedAbility]}</span>
           <span className='mb-3 font-semibold text-2xl first-letter:text-3xl'>{selectedAbility < champAbilities.length && champAbilities[selectedAbility].name}</span>
           <span className='text-md text-wrap'>{selectedAbility < champAbilities.length && champAbilities[selectedAbility].description}</span>
         </div>

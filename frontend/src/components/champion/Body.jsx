@@ -3,8 +3,9 @@ import axios from 'axios'
 import IconAndRoles from './IconAndRoles'
 import StatsLabel from './StatsLabel'
 import GraphsContainer from './GraphsContainer'
+import { allChampions } from 'src/constants'
 import DemoAndAbilitiesContainer from './DemoAndAbilitiesContainer'
-import logo from 'assets/logo.png'
+import { Link } from 'react-router-dom'
 
 const Body = ({ props }) => {
   const [loading, setLoading] = useState(false)
@@ -14,10 +15,12 @@ const Body = ({ props }) => {
   const [isHovered, setIsHovered] = useState(0)
   const [curRole, setCurRole] = useState(props.defaultRole)
   const [status, setStatus] = useState("AOK")
+  const [champTitle, setChampTitle] = useState("")
 
   useEffect(() => {
     window.scrollTo(0, 0)
     setLoading(true)
+    setChampTitle(allChampions.find((item) => item.label === props.label).title)
     axios
       .get(`http://localhost:5555/api/v1/champions/${props.label}`)
       .then((res) => {
@@ -51,14 +54,19 @@ const Body = ({ props }) => {
       tier: data.tier
     })
   }, [curRole])
-
   return (
     <div 
-      className='relative flex justify-center'
+      className='flex justify-center'
       onClick={() => {setIsClicked(0)}}
       onMouseOver={() => {setIsHovered(0)}}
     >
-      <div className='w-[80%] min-h-[1000px] bg-[#31313c]'>
+      <div className='relative w-[80%] min-h-[1000px] bg-[#31313c] rounded-lg mt-2'>
+        <Link 
+          className='flex justify-center items-center h-8 w-16 rounded-lg bg-gradient-to-r from-orange-500 to-orange-800 absolute top-10 left-10'
+          to={props.retAddr}
+        >
+          <span className='text-md'> Back</span>
+        </Link>
         {!loading &&
           <div className='flex flex-col items-center'>
             <IconAndRoles props={{
@@ -66,7 +74,8 @@ const Body = ({ props }) => {
               curRole,
               setCurRole,
               allRoles: championData.map((item) => item.role),
-              name: info.name
+              name: info.name,
+              title: champTitle
             }} />
             <StatsLabel props={{
               tier: info.tier ? info.tier : '',
@@ -81,12 +90,6 @@ const Body = ({ props }) => {
           </div>
         }
       </div>
-      <img
-        className='fixed bottom-10 right-10 h-12 w-12 hover:h-14 hover:w-14 hover:bottom-9 hover:right-9 ease-in-out duration-200'
-        onClick={() => window.scroll({ top: 0, left: 0, behavior: 'smooth' })}
-        src={logo}
-        alt=''
-      />
     </div>
   )
 }
