@@ -499,8 +499,8 @@
             "description": "Darius empowers his next attack to deal additional damage with a large slow."
         },
         {
-            "demoSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt38b2caf946d6a701/601071463e567f1011da354a/Darius_3.jpg",
-            "iconSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltabd1cb6e2748a396/601071626e1217102724a501/Darius_Ability_3.mp4",
+            "demoSrc": "https://assets.contentstack.io/v3/assets/blt370612131b6e0756/bltabd1cb6e2748a396/601071626e1217102724a501/Darius_Ability_3.mp4",
+            "iconSrc": "https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt38b2caf946d6a701/601071463e567f1011da354a/Darius_3.jpg",
             "name": "APPREHEND",
             "description": "Darius hones his axe, passively causing his physical damage to ignore a percentage of his target's Armor. When activated, Darius sweeps up his enemies with his axe's hook and pulls them to him."
         },
