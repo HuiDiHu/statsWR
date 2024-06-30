@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useLayoutEffect } from "react"
 
 const roleTable = ['all', 'baron', 'jungle', 'mid', 'bottom', 'support'];
 
@@ -22,8 +22,10 @@ const IconAndRoles = ({ props }) => {
   const [topContainerContent, setTopContainerContent] = useState([])
   const [midContainerContent, setMidContainerContent] = useState([])
   const [botContainerContent, setBotContainerContent] = useState([])
+  const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    setLoading(true)
     const allRoles = props.allRoles.sort();
     let lb = 0, rb = allRoles.length - 1;
     while (rb >= lb) {
@@ -44,6 +46,7 @@ const IconAndRoles = ({ props }) => {
       }
       --rb; ++lb;
     }
+    setLoading(false);
   }, [props.label])
 
   const handleMouseClick = (e) => {

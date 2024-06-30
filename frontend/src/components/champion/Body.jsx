@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useLayoutEffect } from 'react'
 import axios from 'axios'
 import IconAndRoles from './IconAndRoles'
 import StatsLabel from './StatsLabel'
@@ -17,9 +17,9 @@ const Body = ({ props }) => {
   const [status, setStatus] = useState("AOK")
   const [champTitle, setChampTitle] = useState("")
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
+  useLayoutEffect(() => {
     setLoading(true)
+    window.scrollTo(0, 0)
     setChampTitle(allChampions.find((item) => item.label === props.label).title)
     axios
       .get(`http://localhost:5555/api/v1/champions/${props.label}`)
@@ -42,7 +42,7 @@ const Body = ({ props }) => {
       })
   }, [props.label])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const data = championData.find((item) => item.role === Number(curRole));
     if (!data) {
       return;
@@ -56,7 +56,7 @@ const Body = ({ props }) => {
   }, [curRole])
   return (
     <div 
-      className='flex justify-center'
+      className='relative z-0 flex justify-center'
       onClick={() => {setIsClicked(0)}}
       onMouseOver={() => {setIsHovered(0)}}
     >

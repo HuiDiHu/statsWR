@@ -3,44 +3,18 @@
 2. Five different interactable ability buttons to change video and description
 3. Champion ability descriptions
 */
-import React, { useEffect, useState } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import axios from 'axios'
+import logo from 'assets/logo.png'
 
 const abilitySlot = ['PASSIVE', '1ST ABILITY', '2ND ABILITY', '3RD ABILITY', 'ULTIMATE']
-
-const tempChampAbilities = [
-  {
-    iconSrc: 'https://images.contentstack.io/v3/assets/blt370612131b6e0756/bltf02de5aa154436e8/637408773177be104ac204f6/Aatrox_0.jpg',
-    name: 'DEATHBRINGER STANCE',
-    description: "Periodically, Aatrox's next basic attack deals bonus physical damage and heals him, based on the target's max health."
-  },
-  {
-    iconSrc: 'https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt8a9b72bd71cff770/637408772f1aba10d25a6996/Aatrox_1.jpg',
-    name: 'THE DARKIN BLADE',
-    description: "Aatrox slams his greatsword down, dealing physical damage. He can swing three times, each with a different area of effect."
-  },
-  {
-    iconSrc: 'https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt2647a75d08760657/6374087707d496104f38b139/Aatrox_2.jpg',
-    name: 'INFERNAL CHAINS',
-    description: 'Aatrox smashes the ground, dealing damage to the first enemy hit. Champions and large monsters have to leave the impact area quickly or they will be dragged to the center and take the damage again.'
-  },
-  {
-    iconSrc: 'https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt1dc77fc7124260bb/63740877da728110eb03aeb6/Aatrox_3.jpg',
-    name: 'UMBRAL DASH',
-    description: 'Passively, Aatrox heals when damaging enemy champions. On activation, he dashes in a direction.'
-  },
-  {
-    iconSrc: 'https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt3d3184feb4c01eca/63740877deb37610ecbb373f/Aatrox_4.jpg',
-    name: 'WORLD ENDER',
-    description: 'Aatrox unleashes his demonic form, fearing nearby enemy minions and gaining attack damage, increased healing, and Move Speed. If he gets a takedown, this effect is extended.'
-  }
-]
 
 const DemoAndAbilitiesContainer = ({ props }) => {
   const [selectedAbility, setSelectedAbility] = useState(0)
   const [champAbilities, setChampAbilities] = useState([])
+  const [demoLoaded, setDemoLoaded] = useState(false)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     axios
       .get(`http://localhost:5555/api/v1/champions/abilities/${props.label}`)
       .then((res) => {
@@ -52,6 +26,7 @@ const DemoAndAbilitiesContainer = ({ props }) => {
         console.log(error);
       })
   }, [props.label])
+  
   return (
     <div className='flex flex-col items-center w-full'>
       <div className='relative flex justify-center items-center h-[460px] w-[775px] bg-[#1e1e1e] rounded-3xl mb-5'>
@@ -60,13 +35,15 @@ const DemoAndAbilitiesContainer = ({ props }) => {
             autoPlay
             loop
             muted
+            onLoadStart={() => setDemoLoaded(false)}
+            onLoadedData={() => setDemoLoaded(true)}
             key={champAbilities[selectedAbility].demoSrc}
             className='transition-opacity h-[400px] rounded-3xl'
           >
             <source src={champAbilities[selectedAbility].demoSrc} type='video/mp4' />
-            Video doesn't exist :/
           </video>
         }
+        {!demoLoaded && <img className="h-20 w-20 absolute bottom-10 right-10 animate-bounce" src={logo}/>}
         {props.status === "BAD_REQUEST" && 
           <div>
             <h1 className='text-center text-4xl text-red-600'>

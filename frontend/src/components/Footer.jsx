@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="mt-20 border-t pt-5 pb-10 border-neutral-700 px-10">
+        <footer className="relative z-0 mt-20 border-t pt-5 pb-10 border-neutral-700 px-10">
             <div className='flex flex-col items-center'>
                 <p className='text-xs'>
                     <span>All data sourced from RIOT's official Wild Rift{" "}</span>

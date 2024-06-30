@@ -1,16 +1,26 @@
 import React, { useState } from 'react'
-import Navbar from 'src/components/home/Navbar'
+import Navbar from 'src/components/Navbar'
 import SearchBar from 'src/components/home/SearchBar'
 import SearchResultsList from 'src/components/home/SearchResultsList'
 import SearchIcons from 'src/components/home/SearchIcons'
 import Footer from 'src/components/Footer'
+import LoginModal from 'src/components/LoginModal';
+import SignupModal from 'src/components/SignupModal';
 
 const Home = () => {
-  const [searchResults, setSearchResults] = useState([])
+  const [searchResults, setSearchResults] = useState([]);
+  const [loginModal, setLoginModal] = useState(false);
+  const [signupModal, setSignupModal] = useState(false);
 
   return (
     <div>
-      <Navbar />
+      <Navbar props={{
+        titleHidden: true,
+        label: 'Home',
+        loginModal, signupModal, setLoginModal, setSignupModal
+      }} />
+      {loginModal && <LoginModal onClose={() => setLoginModal(false)} />}
+      {signupModal && <SignupModal onClose={() => setSignupModal(false)}/>}
       <div className='pt-20 w-1/3 h-[90vh] m-auto flex flex-col items-center min-w-[200px]'>
         <div className='h-[15vh]'></div>
         <SearchIcons />
