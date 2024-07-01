@@ -2,9 +2,9 @@ const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs')
 
 const UserSchema = new mongoose.Schema({
-    name: {
+    username: {
         type: String,
-        required: [true, 'Please provide a name.'],
+        required: [true, 'Please provide a username.'],
         minlength: 3,
         maxlength: 50,
     },

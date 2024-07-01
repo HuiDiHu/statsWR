@@ -1,4 +1,11 @@
+import * as d3 from "d3";
+import { useState } from "react";
+
 const Graph = ({ props }) => {
+    const [height, setHeight] = useState(400);
+    const [width, setWidth] = useState(400);
+
+    
     const graphStyle = 'cursor-pointer lg:w-[400px] lg:h-[400px] w-[150px] h-[150px] rounded-lg bg-[#1e1e1e] mx-8 ease-in duration-500 pointer-events-none'
     const selectedGraphStyle = 'cursor-pointer lg:w-[450px] lg:h-[450px] w-[175px] h-[175px] rounded-lg bg-[#1e1e1e] mx-8 ease-in duration-[400ms] shadow-[rgba(194,65,12,0.5)_12px_6px_4.8px_0px] pointer-events-none'
     const unselectedGraphStyle = 'cursor-pointer lg:w-[375px] lg:h-[375px] w-[137.5px] h-[137.5px] rounded-lg bg-[#1e1e1e] mx-4 ease-in duration-500 pointer-events-none'
@@ -47,7 +54,7 @@ const Graph = ({ props }) => {
                 break
         }
     }
-
+    console.log(props.graphLabel, props.data)
     return (
         <div
             className={`flex flex-col items-center py-4 pointer-events-auto ${props.isClicked !== Number(props.id) ? 'cursor-pointer' : 'cursor-auto'}`}
@@ -74,6 +81,7 @@ const Graph = ({ props }) => {
                     (props.isClicked === Number(props.id) ? clickedGraphStyle : nonclickedGraphStyle)
                 }
             >
+                {props.data}
             </div>
         </div>
     )
