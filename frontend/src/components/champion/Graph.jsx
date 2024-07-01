@@ -1,15 +1,11 @@
-import * as d3 from "d3";
-import { useState } from "react";
+import GraphContent from "./GraphContent";
 
 const Graph = ({ props }) => {
-    const [height, setHeight] = useState(400);
-    const [width, setWidth] = useState(400);
 
-    
-    const graphStyle = 'cursor-pointer lg:w-[400px] lg:h-[400px] w-[150px] h-[150px] rounded-lg bg-[#1e1e1e] mx-8 ease-in duration-500 pointer-events-none'
-    const selectedGraphStyle = 'cursor-pointer lg:w-[450px] lg:h-[450px] w-[175px] h-[175px] rounded-lg bg-[#1e1e1e] mx-8 ease-in duration-[400ms] shadow-[rgba(194,65,12,0.5)_12px_6px_4.8px_0px] pointer-events-none'
+    const graphStyle = 'cursor-pointer lg:w-[400px] lg:h-[400px] w-[150px] h-[150px] rounded-lg bg-[#1e1e1e] mx-2 lg:mx-8 ease-in duration-500 pointer-events-none'
+    const selectedGraphStyle = 'cursor-pointer lg:w-[450px] lg:h-[450px] w-[175px] h-[175px] rounded-lg bg-[#1e1e1e] mx-2 lg:mx-8 ease-in duration-[400ms] shadow-[rgba(194,65,12,0.5)_12px_6px_4.8px_0px] pointer-events-none'
     const unselectedGraphStyle = 'cursor-pointer lg:w-[375px] lg:h-[375px] w-[137.5px] h-[137.5px] rounded-lg bg-[#1e1e1e] mx-4 ease-in duration-500 pointer-events-none'
-    const clickedGraphStyle = 'lg:w-[600px] lg:h-[600px] w-[225px] h-[225px] rounded-xl bg-[#1e1e1e] mx-8 ease-in duration-[400ms] pointer-events-none'
+    const clickedGraphStyle = 'lg:w-[600px] lg:h-[600px] w-[225px] h-[225px] rounded-xl bg-[#1e1e1e] mx-2 lg:mx-8 ease-in duration-[400ms] pointer-events-none'
     const nonclickedGraphStyle = 'cursor-pointer lg:w-[200px] lg:h-[200px] w-[100px] h-[100px] rounded-md bg-[#1e1e1e] mx-4 ease-in duration-500 pointer-events-none'
 
     const labelStyle = 'cursor-pointer text-xl border-2 border-y-0 border-orange-700 px-4 mb-1 ease-in duration-500 pointer-events-none'
@@ -54,21 +50,21 @@ const Graph = ({ props }) => {
                 break
         }
     }
-    console.log(props.graphLabel, props.data)
+
     return (
         <div
-            className={`flex flex-col items-center py-4 pointer-events-auto ${props.isClicked !== Number(props.id) ? 'cursor-pointer' : 'cursor-auto'}`}
+            className={`flex flex-col items-center py-2 lg:py-4 pointer-events-auto ${props.isClicked !== Number(props.id) ? 'cursor-pointer' : 'cursor-auto'}`}
             id={props.id}
             onMouseOver={handleMouseOver}
-            onMouseLeave={() => {props.setIsHovered(0)}}
+            onMouseLeave={() => { props.setIsHovered(0) }}
             onClick={handleMouseClick}
         >
             <span
                 className={
-                    props.isClicked === 0 ? 
-                    (props.isHovered === Number(props.id) ? selectedLabelStyle : 
-                    (props.isHovered === 0 ? labelStyle : unselectedLabelStyle)) :
-                    (props.isClicked === Number(props.id) ? clickedLabelStyle : nonclickedLabelStyle)
+                    props.isClicked === 0 ?
+                        (props.isHovered === Number(props.id) ? selectedLabelStyle :
+                            (props.isHovered === 0 ? labelStyle : unselectedLabelStyle)) :
+                        (props.isClicked === Number(props.id) ? clickedLabelStyle : nonclickedLabelStyle)
                 }
             >
                 {props.graphLabel}
@@ -76,12 +72,17 @@ const Graph = ({ props }) => {
             <div
                 className={
                     props.isClicked === 0 ?
-                    (props.isHovered === Number(props.id) ? selectedGraphStyle : 
-                    (props.isHovered === 0 ? graphStyle : unselectedGraphStyle)) : 
-                    (props.isClicked === Number(props.id) ? clickedGraphStyle : nonclickedGraphStyle)
+                        (props.isHovered === Number(props.id) ? selectedGraphStyle :
+                            (props.isHovered === 0 ? graphStyle : unselectedGraphStyle)) :
+                        (props.isClicked === Number(props.id) ? clickedGraphStyle : nonclickedGraphStyle)
                 }
             >
-                {props.data}
+                <GraphContent props={{
+                    id: props.graphLabel,
+                    dim: props.isClicked === 0 ?
+                        (props.isHovered === Number(props.id) ? (window.innerWidth > 1000 ? 450 : 175) : (props.isHovered === 0 ? (window.innerWidth > 1000 ? 400 : 150) : (window.innerWidth > 1000 ? 375 : 137.5))) 
+                        : (props.isClicked === Number(props.id) ? (window.innerWidth > 1000 ? 600 : 225) : (window.innerWidth > 1000 ? 200 : 100))
+                }} />
             </div>
         </div>
     )

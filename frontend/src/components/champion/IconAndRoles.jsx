@@ -22,10 +22,8 @@ const IconAndRoles = ({ props }) => {
   const [topContainerContent, setTopContainerContent] = useState([])
   const [midContainerContent, setMidContainerContent] = useState([])
   const [botContainerContent, setBotContainerContent] = useState([])
-  const [loading, setLoading] = useState(false)
 
   useLayoutEffect(() => {
-    setLoading(true)
     const allRoles = props.allRoles.sort();
     let lb = 0, rb = allRoles.length - 1;
     while (rb >= lb) {
@@ -46,8 +44,7 @@ const IconAndRoles = ({ props }) => {
       }
       --rb; ++lb;
     }
-    setLoading(false);
-  }, [props.label])
+  }, [props.allRoles])
 
   const handleMouseClick = (e) => {
     e.stopPropagation();
@@ -73,7 +70,7 @@ const IconAndRoles = ({ props }) => {
         {botContainerContent.map((role) => IconButton(Number(props.allRoles.length), Number(props.curRole), role, handleMouseClick))}
       </div>
       <br></br>
-      <h1 className='mt-5 text-2xl'>{props.name || 'CHAMPION_NOT_FOUND'}</h1>
+      <h1 className='mt-5 text-2xl'>{props.name || '...'}</h1>
       <h3 className='text-sm font-extralight'>{props.title}</h3>
     </div>
   )
