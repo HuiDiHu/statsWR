@@ -1,8 +1,9 @@
 //let values = props.data //2d array containing [dates, values]
-let values = [["2024-06-17", 49.22], ["2023-06-17", 44.22], ["2022-06-17", 34.22], ["2021-06-17", 50.22], ["2023-02-17", 50.22]];
+let values = [["2024-06-17T05:32:34.440Z", 49.22], ["2023-06-17T05:32:34.440Z", 44.22], ["2022-06-17T05:32:34.440Z", 34.22], ["2021-06-17T05:32:34.440Z", 50.22], ["2023-02-17T05:32:34.440Z", 50.22]];
 
 let xAxisScale
 let yAxisScale
+let xScale
 
 //TODO: Will need to find a way to make these scale as the container changes size in the future
 let width = 400 
@@ -39,9 +40,8 @@ const generateScales = () => {
   
   //scale used to create visual y-axis representation AND position elements
   yAxisScale = d3.scaleLinear() //scale for winrate values
-    .domain([0, 100])
+    .domain([0, 1])
     .range([height - padding, padding])
-    //.tickFormat((d) => d + '%');
     //range([start, end])
 }
 
@@ -53,6 +53,32 @@ let plotPoints = () => {
   .style('visibility', 'hidden')
   .style('width', 'auto')
   .style('height', 'auto')
+  */
+
+  //TODO
+  // Declare the area generator.
+  const area = d3.area()
+      .x(d => xScale(d[0]))
+      .y0(yAxisScale(0))
+      .y1(d => yAxisScale(d[1]/100));
+
+  // Append a path for the area (under the axes).
+  svg.append("path")
+      .attr("fill", "steelblue")
+      .attr("d", area(values));
+  
+  /*
+  // TODO: Create path for the area below the line
+  svg.append("path")
+    .datum(values)
+    .attr("fill", "lightblue") // Fill color of the shaded area
+    .attr("opacity", 0.5)
+    .attr("stroke", "none") // No stroke for the path
+    .attr("d", d3.area()
+      .x(d => xScale(d[0]))
+      //.y0(yAxisScale(0))
+      .y0(d => yAxisScale(0)) // Bottom of the area (x-axis)
+      .y1(d => yAxisScale(d[1]/100))); // Top of the area (line)
   */
 
   svg.selectAll('circle')
@@ -67,8 +93,19 @@ let plotPoints = () => {
       return d[1]
     })
     .attr('cx', (d, i) => xScale(i)) //x position (positioned using index i since the x axis is scaled using dates)
-    .attr('cy', (d) => yAxisScale(d[1])) //y position
+    .attr('cy', (d) => yAxisScale(d[1]/100)) //y position
     .attr('r', (d) => 5); //radius size of each point
+
+  svg.selectAll("line")
+   .data(values.slice(1)) //Start from the second data point
+   .enter()
+   .append("line")
+   .attr("x1", (d, i) => xScale(i))
+   .attr("y1", (d, i) => yAxisScale(values[i][1]/100)) //Use past data point
+   .attr("x2", (d, i) => xScale(i + 1))
+   .attr("y2", (d) => yAxisScale(d[1]/100)) //Use the current data point
+   .style("stroke", "orange")
+   .style("stroke-width", 3);
 
   //not required for now
   /*
@@ -90,6 +127,7 @@ let plotPoints = () => {
 let generateAxes = () => {
   let xAxis = d3.axisBottom(xAxisScale)
   let yAxis = d3.axisLeft(yAxisScale)
+  yAxis.tickFormat(d3.format(".0%")); //display percentages
 
   //Remember svg = d3.select('svg');
   svg.append('g')
@@ -98,11 +136,20 @@ let generateAxes = () => {
     //centers the x axis. translate(x, y)
     //height-padding must be in brackets
     .attr('transform', 'translate(0, ' + (height - padding) + ')')
+    .selectAll("text") // Select all x-axis labels
+    .attr("transform", "rotate(-30)") // Rotate labels
+    .style("text-anchor", "end") // Align labels to the end of the tick
+    .attr("dx", "-.8em") // Adjust horizontal position
+    .attr("dy", ".15em"); // Adjust vertical position
 
   svg.append('g')
     .call(yAxis)
     .attr('id', 'y-axis')
     .attr('transform', 'translate(' + padding + ', 0)')
+    .call(g => g.selectAll(".tick line").clone() //For grid lines
+      .attr("x2", width - padding - padding)
+      .attr("stroke", "orange") 
+      .attr("stroke-opacity", 0.5))
 }
 
 //call the functions to generate the graph
@@ -113,7 +160,7 @@ generateAxes();
 
 
 
-
+  
 /*
 
 <script src="https://d3js.org/d3.v5.min.js"></script> //This code is placed into an html file to import D3 allowing for the use of built in D3 functions
@@ -122,4 +169,10 @@ generateAxes();
 
 <link href="GraphsExample.css" rel="stylesheet"> //Placed into the same html file to customize the graph's elements. The axes and points used to create the graphs are html elements and can be given ids that css can identify
 
+
+.call(g => g.select(".domain").remove()) //removes an axis line from graph
+
+
+https://observablehq.com/@d3/line-chart/2?intent=fork
+https://observablehq.com/@d3/area-chart/2?intent=fork
 */
