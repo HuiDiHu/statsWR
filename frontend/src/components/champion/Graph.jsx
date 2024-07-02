@@ -50,7 +50,7 @@ const Graph = ({ props }) => {
                 break
         }
     }
-
+    
     return (
         <div
             className={`flex flex-col items-center py-2 lg:py-4 pointer-events-auto ${props.isClicked !== Number(props.id) ? 'cursor-pointer' : 'cursor-auto'}`}
@@ -79,9 +79,10 @@ const Graph = ({ props }) => {
             >
                 <GraphContent props={{
                     id: props.graphLabel,
-                    dim: props.isClicked === 0 ?
+                    dim: (props.isClicked === 0 ?
                         (props.isHovered === Number(props.id) ? (window.innerWidth > 1000 ? 450 : 175) : (props.isHovered === 0 ? (window.innerWidth > 1000 ? 400 : 150) : (window.innerWidth > 1000 ? 375 : 137.5))) 
-                        : (props.isClicked === Number(props.id) ? (window.innerWidth > 1000 ? 600 : 225) : (window.innerWidth > 1000 ? 200 : 100))
+                        : (props.isClicked === Number(props.id) ? (window.innerWidth > 1000 ? 600 : 225) : (window.innerWidth > 1000 ? 200 : 100))),
+                    data: props.data
                 }} />
             </div>
         </div>

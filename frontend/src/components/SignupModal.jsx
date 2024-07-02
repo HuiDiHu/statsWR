@@ -1,8 +1,36 @@
 import { useState } from "react"
+import axios from 'axios'
+import logo from 'assets/logo.png'
+
 const SignupModal = ({ onClose, props }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [username, setUsername] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [errMsg, setErrMsg] = useState("")
+
+    const handleSignupSubmit = () => {
+        setLoading(true)
+        axios
+            .post('http://localhost:5555/api/v1/auth/register', { email, username, password })
+            .then((res) => {
+                props.setSignupModal(false)
+                setErrMsg("")
+                setTimeout(() => { alert(`Welcome ${res.data.user.username}!`) }, 150)
+                setLoading(false)
+            })
+            .catch((error) => {
+                const temp = error.response.data.msg.split(',')[0]
+                switch(temp) {
+                    case "Duplicate value entered for email field":
+                        setErrMsg("User with this email already exist.")
+                        break;
+                    default:
+                        setErrMsg(temp)
+                }
+                setLoading(false)
+            })
+    }
 
     return (
         <div
@@ -10,7 +38,7 @@ const SignupModal = ({ onClose, props }) => {
             onClick={onClose}
         >
             <div
-                className="w-[45%] h-[550px] bg-[#31313c] rounded-3xl flex flex-col justify-between items-center py-2"
+                className="relative w-[45%] h-[550px] bg-[#31313c] rounded-3xl flex flex-col justify-between items-center py-2"
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="w-[40%] h-[10%] m-5 shadow-[0_3px_5px_0_rgba(0,0,0,0.5)] flex justify-center items-center">
@@ -57,13 +85,18 @@ const SignupModal = ({ onClose, props }) => {
                         </div>
                     </div>
                 </div>
+                <div className="w-full h-[5%]">
+                    <span className={`text-red-600 flex items-start justify-center`}>{errMsg}</span>
+                </div>
                 <div className="w-full h-[35%] flex flex-col items-center justify-center">
                     <button
                         className="w-[30%] h-[30%] rounded-xl m-4 mb-7 bg-gradient-to-r from-orange-500 to-orange-800 flex justify-center items-center shadow-[1px_3px_5px_0_rgba(0,0,0,0.5)]"
+                        onClick={handleSignupSubmit}
                     >
                         <span className="text-xl">Sign Up</span>
                     </button>
                 </div>
+                {loading && <img className="h-12 w-12 lg:h-14 lg:w-14 absolute bottom-5 right-5 lg:bottom-10 lg:right-10 animate-spin" src={logo}/>}
             </div>
         </div>
     )

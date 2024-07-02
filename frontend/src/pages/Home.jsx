@@ -19,8 +19,8 @@ const Home = () => {
         label: 'Home',
         loginModal, signupModal, setLoginModal, setSignupModal
       }} />
-      {loginModal && <LoginModal onClose={() => setLoginModal(false)} />}
-      {signupModal && <SignupModal onClose={() => setSignupModal(false)}/>}
+      {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{setLoginModal}} />}
+      {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{setSignupModal}} />}
       <div className='pt-20 w-1/3 h-[90vh] m-auto flex flex-col items-center min-w-[200px]'>
         <div className='h-[15vh]'></div>
         <SearchIcons />

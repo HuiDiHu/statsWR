@@ -1,8 +1,13 @@
 const express = require('express');
 require('dotenv').config();
 require('express-async-errors');
-const cors = require('cors')
+
 const app = express();
+
+const cors = require('cors')
+//authenticate when trying to create comments
+const authenticateUser = require('./middleware/authentication');
+
 
 //connectDB
 const connectDB = require('./db/connect');

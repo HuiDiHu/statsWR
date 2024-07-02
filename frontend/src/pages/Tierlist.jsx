@@ -17,8 +17,8 @@ const Tierlist = () => {
                 label: 'Tier List',
                 loginModal, signupModal, setLoginModal, setSignupModal
             }} />
-            {loginModal && <LoginModal onClose={() => setLoginModal(false)} />}
-            {signupModal && <SignupModal onClose={() => setSignupModal(false)}/>}
+            {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{setLoginModal}} />}
+            {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{setSignupModal}} />}
             <div className='relative flex flex-col'>
                 <div className='flex flex-col items-center'>
                     <div className='flex flex-col w-3/4'>

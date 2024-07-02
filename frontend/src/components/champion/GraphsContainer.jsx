@@ -20,7 +20,7 @@ const Graphs = ({ props }) => {
                     className={`flex flex-col ${((props.isClicked === 0 && props.isHovered === 4) || props.isClicked === 4) ? 'justify-end' : ''}`}
                 >
                     <div className={`${((props.isClicked === 0 && props.isHovered === 2) || props.isClicked === 2) ? 'grow-transition' : 'shrink-transition'}`}></div>
-                    <Graph props={{ isClicked: props.isClicked, setIsClicked: props.setIsClicked, isHovered: props.isHovered, setIsHovered: props.setIsHovered, graphLabel: 'TIER', id: '1' }} />
+                    <Graph props={{ isClicked: props.isClicked, setIsClicked: props.setIsClicked, isHovered: props.isHovered, setIsHovered: props.setIsHovered, graphLabel: 'TIER', id: '1', data: [] }} />
                 </div>
                 <div
                     className={`flex flex-col ${((props.isClicked === 0 && props.isHovered === 3) || props.isClicked === 3) ? 'justify-end' : ''}`}

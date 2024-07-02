@@ -151,9 +151,9 @@ let generateAxes = () => {
     .attr('id', 'y-axis')
     .attr('transform', 'translate(' + padding + ', 0)')
     .call(g => g.selectAll(".tick line").clone() //For grid lines
-      .attr("x2", width - padding - padding)
-      .attr("stroke", "orange") 
-      .attr("stroke-opacity", 0.5))
+    .attr("x2", width - padding - padding)
+    .attr("stroke", "orange") 
+    .attr("stroke-opacity", 0.5));
 }
 
 //call the functions to generate the graph
