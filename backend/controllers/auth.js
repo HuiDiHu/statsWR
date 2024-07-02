@@ -10,7 +10,7 @@ const register = async (req, res) => {
     }
     const user = await User.create({ email, username, password })
     const token = user.createJWT()
-    res.status(StatusCodes.CREATED).json({ user: { username: user.username }, token })
+    res.status(StatusCodes.CREATED).json({ user: { id: user._id, username: user.username }, token })
 }
 
 const login = async (req, res) => {
@@ -30,7 +30,7 @@ const login = async (req, res) => {
     }
 
     const token = user.createJWT()
-    res.status(StatusCodes.OK).json({ user: { username: user.username }, token })
+    res.status(StatusCodes.OK).json({ user: { id: user._id, username: user.username }, token })
 }
 
 module.exports = {
