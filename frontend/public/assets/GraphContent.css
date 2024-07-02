@@ -1,0 +1,14 @@
+g{
+  /*fill: linear-gradient(#d10000 85%, #323281 100%);*/
+  fill: orange;
+}
+
+circle{
+  fill: #3AAFA9;
+}
+
+text{
+  fill: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
