@@ -55,6 +55,7 @@ let plotPoints = () => {
   .style('height', 'auto')
   */
 
+/*
   //TODO
   // Declare the area generator.
   const area = d3.area()
@@ -66,6 +67,7 @@ let plotPoints = () => {
   svg.append("path")
       .attr("fill", "steelblue")
       .attr("d", area(values));
+*/
   
   /*
   // TODO: Create path for the area below the line
