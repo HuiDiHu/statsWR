@@ -1,9 +1,16 @@
 //let values = props.data //2d array containing [dates, values]
 let values = [["2024-06-17T05:32:34.440Z", 49.22], ["2023-06-17T05:32:34.440Z", 44.22], ["2022-06-17T05:32:34.440Z", 34.22], ["2021-06-17T05:32:34.440Z", 50.22], ["2023-02-17T05:32:34.440Z", 50.22]];
 
+//sorts values by date values of each sub array. The awkward syntax is necessary since the default sort() function sorts by alphabetical order. 
+values.sort((a, b) => {
+    let dateA = new Date(a[0]); // Parse each date string into a Date object
+    let dateB = new Date(b[0]);
+    return dateA - dateB; // Compare the dates
+});
+
 let xAxisScale
 let yAxisScale
-let xScale
+let datesArray
 
 //TODO: Will need to find a way to make these scale as the container changes size in the future
 let width = 400 
@@ -22,22 +29,17 @@ const drawCanvas = () => {
 //WINRATE – [[date: "2024-06-17T05:32:34.440Z", data: 58.22]]
 
 const generateScales = () => {
-  //scale used for positioning elements along the x-axis based on date
-  xScale = d3.scaleLinear()
-    .domain([0, values.length - 1]) //scale range 
-    .range([padding, width - padding]) //page range (start, end)
-  
-  //map function iterates through values which is an array of arrays and returns the first element of each array (we have to do this in order to apply the max/min function to dates I believe) (May have to shave off the extra time stamps using a for loop)
-  let datesArray = values.map((d) => {
+  //map function iterates through values which is an array of arrays and returns the first element of each array (we have to do this in order to apply the max/min function to datesArray and to utilize xAxisScale which is a time scale)
+  datesArray = values.map((d) => {
     return new Date(d[0])
   })
 
   //each graph should spawn in the top left corner of its respective container element
-  //scale used to create visual x-axis representation
+  //scale used to create visual x-axis representation (IT CAN ONLY SCALE DATE OBJECTS WHICH IS WHY DATESARRAY EXISTS)
   xAxisScale = d3.scaleTime() //scale for dates
     .domain([d3.min(datesArray), d3.max(datesArray)])
     .range([padding, width - padding])
-  
+
   //scale used to create visual y-axis representation AND position elements
   yAxisScale = d3.scaleLinear() //scale for winrate values
     .domain([0, 1])
@@ -59,7 +61,7 @@ let plotPoints = () => {
   //TODO
   // Declare the area generator.
   const area = d3.area()
-      .x(d => xScale(d[0]))
+      .x(d => xAxisScale(d[0]))
       .y0(yAxisScale(0))
       .y1(d => yAxisScale(d[1]/100));
 
@@ -68,7 +70,7 @@ let plotPoints = () => {
       .attr("fill", "steelblue")
       .attr("d", area(values));
 */
-  
+
   /*
   // TODO: Create path for the area below the line
   svg.append("path")
@@ -77,7 +79,7 @@ let plotPoints = () => {
     .attr("opacity", 0.5)
     .attr("stroke", "none") // No stroke for the path
     .attr("d", d3.area()
-      .x(d => xScale(d[0]))
+      .x(d => xAxisScale(d[0]))
       //.y0(yAxisScale(0))
       .y0(d => yAxisScale(0)) // Bottom of the area (x-axis)
       .y1(d => yAxisScale(d[1]/100))); // Top of the area (line)
@@ -94,7 +96,7 @@ let plotPoints = () => {
     .attr('data-value', (d) => {
       return d[1]
     })
-    .attr('cx', (d, i) => xScale(i)) //x position (positioned using index i since the x axis is scaled using dates)
+    .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
     .attr('cy', (d) => yAxisScale(d[1]/100)) //y position
     .attr('r', (d) => 5); //radius size of each point
 
@@ -102,9 +104,9 @@ let plotPoints = () => {
    .data(values.slice(1)) //Start from the second data point
    .enter()
    .append("line")
-   .attr("x1", (d, i) => xScale(i))
+   .attr("x1", (d, i) => xAxisScale(datesArray[i]))
    .attr("y1", (d, i) => yAxisScale(values[i][1]/100)) //Use past data point
-   .attr("x2", (d, i) => xScale(i + 1))
+   .attr("x2", (d, i) => xAxisScale(datesArray[i+1]))
    .attr("y2", (d) => yAxisScale(d[1]/100)) //Use the current data point
    .style("stroke", "orange")
    .style("stroke-width", 3);
@@ -114,11 +116,11 @@ let plotPoints = () => {
   .on('mouseover', (d) => {
     tooltip.transition()
       .style('visibility', 'visible')
-      
+
     tooltip.text(d[0])
       document.querySelector('#tooltip').setAttribute('data-date', d[0])
     })
-    
+
   .on('mouseout', (d) => {
     tooltip.transition()
       .style('visibility', 'hidden')
@@ -162,7 +164,7 @@ generateAxes();
 
 
 
-  
+
 /*
 
 <script src="https://d3js.org/d3.v5.min.js"></script> //This code is placed into an html file to import D3 allowing for the use of built in D3 functions
