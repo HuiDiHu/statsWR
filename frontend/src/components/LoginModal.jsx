@@ -1,6 +1,7 @@
 import { useState } from "react"
 import axios from 'axios'
 import logo from 'assets/logo.png'
+import { Link } from "react-router-dom"
 
 const LoginModal = ({ onClose, props }) => {
     const [email, setEmail] = useState("");
@@ -14,12 +15,17 @@ const LoginModal = ({ onClose, props }) => {
             .post('http://localhost:5555/api/v1/auth/login', { email, password })
             .then((res) => {
                 props.setLoginModal(false)
-                setErrMsg("")
-                setTimeout(() => { alert(`Welcome ${res.data.user.username}!`) }, 150)
+                setErrMsg(""); setEmail(""); setPassword("");
+                localStorage.setItem('token', res.data.token)
+                localStorage.setItem('userID', res.data.user.id)
+                localStorage.setItem('username', res.data.user.username)
+                localStorage.setItem('profile', res.data.user.profile)
+
                 setLoading(false)
             })
             .catch((error) => {
-                setErrMsg(error.response.data.msg)
+                console.log(error)
+                setErrMsg(error.response ? error.response.data.msg : '')
                 setLoading(false)
             })
     }
@@ -85,6 +91,18 @@ const LoginModal = ({ onClose, props }) => {
                     </button>
                 </div>
                 {loading && <img className="h-12 w-12 lg:h-14 lg:w-14 absolute bottom-5 right-5 lg:bottom-10 lg:right-10 animate-spin" src={logo}/>}
+                <p className="text-xs absolute bottom-5 left-5">
+                    <span>Need an account?{' '}</span>
+                    <span 
+                        className="text-sky-600 cursor-pointer"
+                        onClick={() => {
+                            props.setLoginModal(false);
+                            props.setSignupModal(true);
+                        }}
+                    >
+                        Register
+                    </span>
+                </p>
             </div>
         </div>
     )

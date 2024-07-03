@@ -6,6 +6,7 @@ import { navItems } from 'src/constants'
 
 const Navbar = ({ props }) => {
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+    const [dummy, setDummy] = useState(false);
 
     const toggleNavbar = () => {
         setMobileDrawerOpen(!mobileDrawerOpen);
@@ -40,18 +41,36 @@ const Navbar = ({ props }) => {
                             </li>
                         ))}
                     </ul>
-                    <div className='hidden lg:flex justify-center space-x-12 items.center'>
-                        <button 
-                            className="py-2 px-3 border rounded-md"
-                            onClick={() => {props.setLoginModal(true); props.setSignupModal(false)}}
+                    <div className={`${localStorage.getItem('userID') ? 'flex' : 'hidden'} lg:flex justify-end space-x-12 items-center w-[46%] lg:w-[23%]`}>
+                        <button
+                            className={`${localStorage.getItem('userID') ? 'hidden' : ''} py-2 px-3 border rounded-md`}
+                            onClick={() => { props.setLoginModal(true); props.setSignupModal(false) }}
                         >
                             Log In
                         </button>
-                        <button 
-                            className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md"
-                            onClick={() => {props.setLoginModal(false); props.setSignupModal(true)}}
+                        <button
+                            className={`${localStorage.getItem('userID') ? 'hidden' : ''} bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md`}
+                            onClick={() => { props.setLoginModal(false); props.setSignupModal(true) }}
                         >
                             Create an account
+                        </button>
+                        <div className={localStorage.getItem('userID') ? 'flex items-center' : 'hidden'}>
+                            <img
+                                className='h-12 w-12 rounded-full mr-3'
+                                src={`../../public/assets/misc/profile/${localStorage.getItem('profile')}.png`}
+                            />
+                            <h2>
+                                {localStorage.getItem('username')}
+                            </h2>
+                        </div>
+                        <button
+                            className={`${localStorage.getItem('userID') ? '' : 'hidden'} rounded-lg h-10 w-20 bg-red-700`}
+                            onClick={() => {
+                                localStorage.removeItem('token'); localStorage.removeItem('userID'); localStorage.removeItem('username'); localStorage.removeItem('profile');
+                                setDummy(!dummy)
+                            }}
+                        >
+                            Sign Out
                         </button>
                     </div>
                     <div className='lg:hidden md:flex flex-col justify-end'>
@@ -71,13 +90,13 @@ const Navbar = ({ props }) => {
                                 </li>
                             ))}
                         </ul>
-                        <div className="flex space-x-6 mt-5">
-                            <a href="#" className="py-2 px-3 border rounded-md">
+                        <div className={`${localStorage.getItem('userID') ? 'hidden' : 'flex'} space-x-6 mt-5`}>
+                            <button onClick={() => { props.setLoginModal(true); props.setSignupModal(false); setMobileDrawerOpen(false) }} className="py-2 px-3 border rounded-md">
                                 Sign In
-                            </a>
-                            <a href="#" className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800">
+                            </button>
+                            <button onClick={() => { props.setLoginModal(false); props.setSignupModal(true); setMobileDrawerOpen(false) }} className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800">
                                 Create an account
-                            </a>
+                            </button>
                         </div>
                     </div>
                 )}

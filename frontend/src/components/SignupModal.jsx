@@ -15,8 +15,12 @@ const SignupModal = ({ onClose, props }) => {
             .post('http://localhost:5555/api/v1/auth/register', { email, username, password })
             .then((res) => {
                 props.setSignupModal(false)
-                setErrMsg("")
-                setTimeout(() => { alert(`Welcome ${res.data.user.username}!`) }, 150)
+                setErrMsg(""); setEmail(""); setUsername(""); setPassword("");
+                localStorage.setItem('token', res.data.token)
+                localStorage.setItem('userID', res.data.user.id)
+                localStorage.setItem('username', res.data.user.username)
+                localStorage.setItem('profile', res.data.user.profile)
+
                 setLoading(false)
             })
             .catch((error) => {
@@ -97,6 +101,18 @@ const SignupModal = ({ onClose, props }) => {
                     </button>
                 </div>
                 {loading && <img className="h-12 w-12 lg:h-14 lg:w-14 absolute bottom-5 right-5 lg:bottom-10 lg:right-10 animate-spin" src={logo}/>}
+                <p className="text-xs absolute bottom-5 left-5">
+                    <span>Already have an account?{' '}</span>
+                    <span 
+                        className="text-sky-600 cursor-pointer"
+                        onClick={() => {
+                            props.setSignupModal(false);
+                            props.setLoginModal(true);
+                        }}
+                    >
+                        Log In
+                    </span>
+                </p>
             </div>
         </div>
     )

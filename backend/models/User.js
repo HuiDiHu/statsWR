@@ -22,6 +22,10 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please provide a password.'],
         minlength: [6, 'Password must be longer than 5 characters.'],
+    },
+    profile: {
+        type: String,
+        default: "RedBrambleback"
     }
 }, {strict: true})
 
@@ -36,7 +40,7 @@ UserSchema.methods.createJWT = function () {
         { userId: this._id, username: this.username },
         process.env.JWT_SECRET,
         {
-            expiresIn: '30m',
+            expiresIn: '1h',
         }
     )
 }

@@ -33,8 +33,8 @@ const Champion = () => {
                     loginModal, signupModal, setLoginModal, setSignupModal
                 }}
             />
-            {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{setLoginModal}} />}
-            {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{setSignupModal}} />}
+            {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{setLoginModal, setSignupModal}} />}
+            {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{setLoginModal, setSignupModal}} />}
             {location.state ?
                 <Body props={{ 
                     label: location.state.champLabel, 
