@@ -12,6 +12,7 @@
 const { StatusCodes } = require('http-status-codes')
 const { BadRequestError, UnauthenticatedError, NotFoundError } = require('../errors')
 const Comment = require('../models/Comment')
+const User = require('../models/User')
 
 const getAllComments = async (req, res) => {
     //get all comments 
@@ -28,10 +29,12 @@ const createComment = async (req, res) => {
     if (!userID) {
         throw new UnauthenticatedError('Please log in before using this feature.')
     }
+    const user = await User.findById(userID);
+    
     if (!text) {
         throw new NotFoundError('Please enter a message.')
     }
-    const comment = await Comment.create({ text, userID });
+    const comment = await Comment.create({ text, user: { userID: user._id, username: user.username, profile: user.profile} });
 
     res.status(StatusCodes.CREATED).json({ comment })
 }

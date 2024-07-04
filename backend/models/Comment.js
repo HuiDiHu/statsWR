@@ -6,16 +6,28 @@ const userIDSchema = new mongoose.Schema({
     }
 })
 
+const userSchema = new mongoose.Schema({
+    userID: {
+        type: String,
+        required: true
+    },
+    username: {
+        type: String,
+        required: true
+    },
+    profile: {
+        type: String,
+        required: true
+    }
+})
+
 const CommentSchema = new mongoose.Schema({
     text: { //comment text
         type: String, 
         required: true,
         maxlength: [300, 'Character limit exceeded.']
     },
-    userID: { //used for pfp and user authentification for edits
-        type: String, 
-        required: [true, 'User not found.']
-    },
+    user: userSchema,
     date: { //date created
         type: Date,
         default: Date.now()
