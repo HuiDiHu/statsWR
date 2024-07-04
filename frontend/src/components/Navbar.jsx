@@ -12,6 +12,7 @@ const Navbar = ({ props }) => {
         setMobileDrawerOpen(!mobileDrawerOpen);
     }
 
+    
     return (
         <nav className={`${mobileDrawerOpen && 'sticky '}top-0 z-20 py-3 backdrop-blur-lg ${!mobileDrawerOpen && 'border-b '} border-neutral-700/80`}>
             <div className='container px-4 mx-auto relative text-sm'>
@@ -57,7 +58,7 @@ const Navbar = ({ props }) => {
                         <div className={localStorage.getItem('userID') ? 'flex items-center' : 'hidden'}>
                             <img
                                 className='h-12 w-12 rounded-full mr-3'
-                                src={`../../public/assets/misc/profile/${localStorage.getItem('profile')}.png`}
+                                src={`../../assets/misc/profile/${localStorage.getItem('profile')}.png`}
                             />
                             <h2>
                                 {localStorage.getItem('username')}

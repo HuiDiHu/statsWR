@@ -15,7 +15,7 @@ const connectDB = require('./db/connect');
 //routers
 const championsRouter = require('./routes/champions');
 const authRouter = require('./routes/auth');
-
+const commentRouter = require('./routes/comments');
 
 //error handler
 const notFoundMiddleware = require('./middleware/not-found.js');
@@ -30,7 +30,8 @@ app.use(cors({
 
 //routes
 app.use('/api/v1/auth', authRouter);
-app.use('/api/v1/champions', championsRouter)
+app.use('/api/v1/champions', championsRouter);
+app.use('/api/v1/comments', commentRouter);
 
 
 app.use(notFoundMiddleware)

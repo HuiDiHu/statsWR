@@ -3,7 +3,8 @@ import { useLayoutEffect, useRef } from "react";
 
 const GraphContent = ({ props }) => {
     const ref = useRef();
-    const values = [["2024-06-17", 49.22], ["2023-06-17", 44.22], ["2022-06-17", 34.22], ["2021-06-17", 50.22], ["2023-02-17", 50.22]]; //real data is in props.data;
+    //const values = [["2024-06-17", 49.22], ["2023-06-17", 44.22], ["2022-06-17", 34.22], ["2021-06-17", 50.22], ["2023-02-17", 50.22]];
+    const values = props.data
     values.sort((a, b) => {
         let dateA = new Date(a[0]); // Parse each date string into a Date object
         let dateB = new Date(b[0]);
@@ -52,6 +53,7 @@ const GraphContent = ({ props }) => {
                 .attr('data-value', (d) => {
                     return d[1]
                 })
+                .attr('fill', "orange")
                 .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position (positioned using index i since the x axis is scaled using dates)
                 .attr('cy', (d) => yAxisScale(d[1] / 100)) //y position
                 .attr('r', (d) => 5); //radius size of each point

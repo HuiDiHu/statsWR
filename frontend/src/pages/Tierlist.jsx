@@ -27,7 +27,7 @@ const Tierlist = () => {
                     </div>
                 </div>
                 <img
-                    className='fixed bottom-10 right-10 h-12 w-12 hover:h-14 hover:w-14 hover:bottom-9 hover:right-9 ease-in-out duration-200'
+                    className='fixed bottom-10 right-10 h-8 w-8 hover:h-10 hover:w-10 lg:h-12 lg:w-12 hover:lg:h-14 hover:lg:w-14 hover:bottom-9 hover:right-9 ease-in-out duration-200'
                     onClick={() => window.scroll({ top: 0, left: 0, behavior: 'smooth' })}
                     src={logo}
                     alt=''

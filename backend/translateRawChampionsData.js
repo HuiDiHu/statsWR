@@ -8,6 +8,18 @@ const rawChampionsData = [
     fs.readFileSync(`./rawChampionsData/support.txt`, 'utf8')
 ]
 
+//IMPORTANT!!! READ this before populate or uploadPatchData
+/* Checklist
+    1. make sure last element in uploadDates is the correct date FOR THE PATCH
+    2. make sure rawChampionsData have the correct data FOR THE PATCH
+    3. update version in frontend constants folder
+*/
+const uploadDates = [
+    "2024-05-16", //5.1B
+    "2024-06-14", //5.1C
+    //"2024-07-01", //5.1D
+]
+const currentDate = uploadDates[uploadDates.length - 1]
 
 const translateRawChampionsData = () => {
     const hashMap = new Map()
@@ -39,7 +51,8 @@ const translateRawChampionsData = () => {
                     gameplayData: {
                         winRate: champion.winRate,
                         pickRate: champion.pickRate,
-                        banRate: champion.banRate
+                        banRate: champion.banRate,
+                        date: new Date(currentDate)
                     }
                 })
             }
