@@ -16,10 +16,10 @@ const SignupModal = ({ onClose, props }) => {
             .then((res) => {
                 props.setSignupModal(false)
                 setErrMsg(""); setEmail(""); setUsername(""); setPassword("");
-                localStorage.setItem('token', res.data.token)
-                localStorage.setItem('userID', res.data.user.id)
-                localStorage.setItem('username', res.data.user.username)
-                localStorage.setItem('profile', res.data.user.profile)
+                window.sessionStorage.setItem('token', res.data.token)
+                window.sessionStorage.setItem('userID', res.data.user.id)
+                window.sessionStorage.setItem('username', res.data.user.username)
+                window.sessionStorage.setItem('profile', res.data.user.profile)
 
                 setLoading(false)
             })

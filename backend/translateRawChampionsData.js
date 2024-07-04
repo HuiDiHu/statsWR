@@ -17,7 +17,7 @@ const rawChampionsData = [
 const uploadDates = [
     "2024-05-16", //5.1B
     "2024-06-14", //5.1C
-    //"2024-07-01", //5.1D
+    "2024-07-03", //5.1D
 ]
 const currentDate = uploadDates[uploadDates.length - 1]
 
