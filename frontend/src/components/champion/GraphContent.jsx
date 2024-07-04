@@ -46,7 +46,7 @@ const GraphContent = ({ props }) => {
                 .domain([d3.min(values, (d) => {
                     return d[1] / 100 < 0.1 ? Math.max(0, d[1] / 100 - 0.02) : (d[1] / 100 - 0.1)
                 }), d3.max(values, (d) => {
-                    return d[1] / 100 > 0.9 ? d[1] / 100 : (d[1] / 100 + 0.1)
+                    return d[1] / 100 > 0.9 ? 1 : (d[1] / 100 + 0.1)
                 })])
                 .range([height - paddingBottom, paddingTop])
 
