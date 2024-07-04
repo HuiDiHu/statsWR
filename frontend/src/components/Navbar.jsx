@@ -42,7 +42,7 @@ const Navbar = ({ props }) => {
                             </li>
                         ))}
                     </ul>
-                    <div className={`${window.sessionStorage.getItem('userID') ? 'flex' : 'hidden'} lg:flex justify-end space-x-12 items-center w-[46%] lg:w-[23%]`}>
+                    <div className={`${window.sessionStorage.getItem('userID') ? 'flex' : 'hidden'} lg:flex text-xs lg:text-sm justify-end space-x-12 items-center w-[46%] lg:w-[26%]`}>
                         <button
                             className={`${window.sessionStorage.getItem('userID') ? 'hidden' : ''} py-2 px-3 border rounded-md`}
                             onClick={() => { props.setLoginModal(true); props.setSignupModal(false) }}
@@ -57,15 +57,15 @@ const Navbar = ({ props }) => {
                         </button>
                         <div className={window.sessionStorage.getItem('userID') ? 'flex items-center' : 'hidden'}>
                             <img
-                                className='h-12 w-12 rounded-full mr-3'
+                                className='h-12 w-12 rounded-full mr-2'
                                 src={`../../assets/misc/profile/${window.sessionStorage.getItem('profile')}.png`}
                             />
-                            <h2>
+                            <h2 className='max-w-[100px] lg:max-w-[125px] text-center break-words'>
                                 {window.sessionStorage.getItem('username')}
                             </h2>
                         </div>
                         <button
-                            className={`${window.sessionStorage.getItem('userID') ? '' : 'hidden'} rounded-lg h-10 w-20 bg-red-700`}
+                            className={`${window.sessionStorage.getItem('userID') ? '' : 'hidden'} rounded-lg h-8 min-w-16 lg:h-10 lg:min-w-20 bg-red-700 text-nowrap`}
                             onClick={() => {
                                 window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('userID'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile');
                                 setDummy(!dummy)
