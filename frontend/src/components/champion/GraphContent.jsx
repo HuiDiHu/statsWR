@@ -40,15 +40,35 @@ const GraphContent = ({ props }) => {
                 .domain([d3.min(datesArray), d3.max(datesArray)])
                 .range([paddingLeft, width - paddingRight]);
 
+            //declare baseline variable to be used for shading range
+            const baseline = d3.min(values, (d) => {
+                return d[1] / 100 < 0.1 ? 0 : (d[1] / 100 - 0.1)
+            })
+
             //scale used to create visual y-axis representation AND position elements
             const yAxisScale = d3
                 .scaleLinear()
-                .domain([d3.min(values, (d) => {
-                    return d[1] / 100 < 0.1 ? 0 : (d[1] / 100 - 0.1)
-                }), d3.max(values, (d) => {
+                .domain([baseline, d3.max(values, (d) => {
                     return d[1] / 100 > 0.9 ? 1 : (d[1] / 100 + 0.1)
                 })])
                 .range([height - paddingBottom, paddingTop])
+
+
+            // Transform the values to a format that can be used by the scales
+            const transformedValues = values.map(d => ({
+                x: new Date(d[0]),
+                y: d[1] / 100
+            }));
+            svg.append("path") //append path element
+                .datum(transformedValues) // Use datum instead of data
+                .attr("fill", "orange")
+                .attr("opacity", 0.5)
+                .attr("stroke", "none")
+                .attr("d", d3.area()
+                    .x(d => xAxisScale(d.x)) // Access the 'x' property
+                    .y0(d => yAxisScale(baseline)) // Bottom of the area (x-axis)
+                    .y1(d => yAxisScale(d.y))); // Access the 'y' property
+
 
             svg.selectAll('circle')
                 .data(values)
@@ -103,9 +123,9 @@ const GraphContent = ({ props }) => {
                     .attr("x2", width - paddingLeft - paddingRight)
                     .attr("stroke", "orange")
                     .attr("stroke-opacity", 0.5))
-                //.selectAll("text")
-                //.attr("font-size", "0.95em")
-                //.attr("display", "none");
+            //.selectAll("text")
+            //.attr("font-size", "0.95em")
+            //.attr("display", "none");
 
         }, 150)
 
