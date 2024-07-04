@@ -37,12 +37,12 @@ const TableBody = ({ props }) => {
         if (section === 'tier') {
             setRoleFilteredChampions([...roleFilteredChampions].sort((a, b) => {
                 return a.tier < b.tier ? newIsDecreasing : ( a.tier > b.tier ? -newIsDecreasing :
-                    newIsDecreasing * ( Number(b.gameplayData[a.gameplayData.length - 1].winRate) - 
+                    newIsDecreasing * ( Number(b.gameplayData[b.gameplayData.length - 1].winRate) - 
                                     Number(a.gameplayData[a.gameplayData.length - 1].winRate) ) )
             }))
         } else {
             setRoleFilteredChampions([...roleFilteredChampions].sort((a, b) => {
-                return newIsDecreasing * ( Number(b.gameplayData[a.gameplayData.length - 1][section]) - 
+                return newIsDecreasing * ( Number(b.gameplayData[b.gameplayData.length - 1][section]) - 
                          Number(a.gameplayData[a.gameplayData.length - 1][section]) )
             }))
         }

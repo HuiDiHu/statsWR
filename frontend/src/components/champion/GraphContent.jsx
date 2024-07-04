@@ -18,7 +18,11 @@ const GraphContent = ({ props }) => {
 
             const width = props.dim
             const height = props.dim
-            const padding = props.dim / 10
+            const paddingTop = 3 * props.dim / 40
+            const paddingBottom = 5 * props.dim / 40
+            const paddingLeft = 5 * props.dim / 40
+            const paddingRight = 3 * props.dim / 40
+
             const svg = d3
                 .select(ref.current)
                 .append('svg')
@@ -34,18 +38,23 @@ const GraphContent = ({ props }) => {
             const xAxisScale = d3
                 .scaleTime()
                 .domain([d3.min(datesArray), d3.max(datesArray)])
-                .range([padding, width - padding]);
+                .range([paddingLeft, width - paddingRight]);
 
             //scale used to create visual y-axis representation AND position elements
             const yAxisScale = d3
                 .scaleLinear()
-                .domain([0, 1])
-                .range([height - padding, padding]);  
-            
+                .domain([d3.min(values, (d) => {
+                    return d[1] / 100 < 0.1 ? Math.max(0, d[1] / 100 - 0.02) : (d[1] / 100 - 0.1)
+                }), d3.max(values, (d) => {
+                    return d[1] / 100 > 0.9 ? d[1] / 100 : (d[1] / 100 + 0.1)
+                })])
+                .range([height - paddingBottom, paddingTop])
+
             svg.selectAll('circle')
                 .data(values)
                 .enter()
                 .append('circle')//creates circle elements
+                .attr('fill', 'orange')
                 .attr('class', 'dataPoint')
                 .attr('data-date', (d) => {
                     return d[0]
@@ -53,8 +62,7 @@ const GraphContent = ({ props }) => {
                 .attr('data-value', (d) => {
                     return d[1]
                 })
-                .attr('fill', "orange")
-                .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position (positioned using index i since the x axis is scaled using dates)
+                .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
                 .attr('cy', (d) => yAxisScale(d[1] / 100)) //y position
                 .attr('r', (d) => 5); //radius size of each point
 
@@ -79,7 +87,7 @@ const GraphContent = ({ props }) => {
                 .attr('id', 'x-axis')
                 //centers the x axis. translate(x, y)
                 //height-padding must be in brackets
-                .attr('transform', 'translate(0, ' + (height - padding) + ')')
+                .attr('transform', 'translate(0, ' + (height - paddingBottom) + ')')
                 .selectAll("text") // Select all x-axis labels
                 .attr("transform", "rotate(-30)") // Rotate labels
                 .style("text-anchor", "end") // Align labels to the end of the tick
@@ -89,11 +97,15 @@ const GraphContent = ({ props }) => {
             svg.append('g')
                 .call(yAxis)
                 .attr('id', 'y-axis')
-                .attr('transform', 'translate(' + padding + ', 0)')
+                .attr('transform', 'translate(' + paddingLeft + ', 0)')
+                .call(g => g.select(".domain").remove())
                 .call(g => g.selectAll(".tick line").clone() //For grid lines
-                    .attr("x2", width - padding - padding)
+                    .attr("x2", width - paddingLeft - paddingRight)
                     .attr("stroke", "orange")
-                    .attr("stroke-opacity", 0.5));
+                    .attr("stroke-opacity", 0.5))
+                //.selectAll("text")
+                //.attr("font-size", "0.95em")
+                //.attr("display", "none");
 
         }, 150)
 
