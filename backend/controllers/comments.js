@@ -16,25 +16,27 @@ const User = require('../models/User')
 
 const getAllChampionComments = async (req, res) => {
     //get all comments 
+    const { champion: championLabel } = req.query;
+    if (!championLabel) {throw new BadRequestError('Invalid champion page.')}
 
-    res.status(StatusCodes.OK).send('Get All Comments')
+    const comments = await Comment.find({ championLabel })
+    comments.sort((a, b) => (a.upvotes.length - a.downvotes.length < b.upvotes.length - b.downvotes.length ? 1 : -1))
+
+    res.status(StatusCodes.OK).json({ comments })
 }
 
 const createComment = async (req, res) => { //TODO: include userID and championLabel in params (rerouting for createComment and getAllChampionComments required)
-    const {
-        params: { id: userID }
-    } = req
+    const { champion: championLabel, user: userID } = req.query;
     const { text } = req.body;
 
-    if (!userID) {
-        throw new UnauthenticatedError('Please log in before using this feature.')
-    }
+    if (!userID) {throw new UnauthenticatedError('Please log in before using this feature.')}
+    if (!championLabel) {throw new BadRequestError('Invalid champion page.')}
     const user = await User.findById(userID);
     
     if (!text) {
         throw new NotFoundError('Please enter a message.')
     }
-    const comment = await Comment.create({ text, user: { userID: user._id, username: user.username, profile: user.profile} });
+    const comment = await Comment.create({ text, user: { userID: user._id, username: user.username, profile: user.profile}, championLabel });
 
     res.status(StatusCodes.CREATED).json({ comment })
 }
@@ -56,7 +58,12 @@ const deleteComment = async (req, res) => {
     //delete single comment
     //single comment with commentID (unique id)
 
-    res.status(StatusCodes.OK).send('Delete Comment')
+    const comment = await Comment.findByIdAndDelete(commentID)
+    if (!comment) {
+        throw new BadRequestError('Comment not found.')
+    }
+
+    res.status(StatusCodes.OK).json({ comment })
 }
 
 module.exports = {

@@ -4,7 +4,7 @@ import { useState, useLayoutEffect } from 'react'
 import 'src/style/champion/GraphsContainer.css'
 
 const Graphs = ({ props }) => {
-    //TODO: what the fuck is this??
+    //what the fuck is this??
     const [tierData, setTierData] = useState([])
     const [wrData, setWrData] = useState([])
     const [prData, setPrData] = useState([])

@@ -29,7 +29,6 @@ const getAllLaneChampions = async (req, res) => {
 }
 
 const getChampion = async (req, res) => {
-    //TODO: implement this after the design for champion specific page is completed
     const {
         params: { id: label }
     } = req;

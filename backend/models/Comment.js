@@ -1,11 +1,5 @@
 const mongoose = require('mongoose');
 
-const userIDSchema = new mongoose.Schema({
-    userID: {
-        type: String
-    }
-})
-
 const userSchema = new mongoose.Schema({
     userID: {
         type: String,
@@ -32,19 +26,15 @@ const CommentSchema = new mongoose.Schema({
         required: true
     },
     user: userSchema,
-    date: { //date created
-        type: Date,
-        default: Date.now()
-    },
     upvotes: {
-        type: [userIDSchema],
+        type: [String],
         default: []
     },
     downvotes: {
-        type: [userIDSchema],
+        type: [String],
         default: []
     }
-});
+}, { timestamps: true });
 
 
 module.exports = mongoose.model('Comment', CommentSchema)

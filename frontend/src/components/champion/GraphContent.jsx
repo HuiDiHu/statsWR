@@ -76,7 +76,7 @@ const GraphContent = ({ props }) => {
 
             svg.selectAll("path")
                 .datum(transformedValues)
-                .transition().delay(50).duration(650)
+                .transition().delay(175).duration(800)
                 .attr("fill", "orange")
                 .attr("opacity", 0.5)
                 .attr("stroke", "none")
@@ -108,7 +108,7 @@ const GraphContent = ({ props }) => {
 
             svg.selectAll('circle')
                 .data(values)
-                .transition().duration(700)
+                .transition().duration(850)
                 .attr('fill', 'orange')
                 .attr('class', 'dataPoint')
                 .attr('data-date', (d) => {
@@ -135,7 +135,7 @@ const GraphContent = ({ props }) => {
 
             svg.selectAll("line")
                 .data(values.slice(1)) //Start from the second data point
-                .transition().duration(700)
+                .transition().duration(850)
                 .attr("x1", (d, i) => xAxisScale(datesArray[i]))
                 .attr("y1", (d, i) => yAxisScale(values[i][1] / 100)) //Use past data point
                 .attr("x2", (d, i) => xAxisScale(datesArray[i + 1]))

@@ -28,9 +28,12 @@ app.use(cors({
     allowedHeaders: ['Content-Type']
 }))
 
+const { getAllChampionComments } = require('./controllers/comments')
+
 //routes
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/champions', championsRouter);
+app.get('/api/v1/comments/', getAllChampionComments)
 app.use('/api/v1/comments', commentRouter);
 
 

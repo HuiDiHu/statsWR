@@ -87,7 +87,7 @@ const Body = ({ props }) => {
             rank: '1/0',
 
           }} />
-          {info.gameplayData && <GraphsContainer props={{ label: props.label, isHovered, setIsHovered, isClicked, setIsClicked, gameplayData: info.gameplayData, role: curRole }} />}
+          <GraphsContainer props={{ label: props.label, isHovered, setIsHovered, isClicked, setIsClicked, gameplayData: info.gameplayData || [], role: curRole }} />
           <DemoAndAbilitiesContainer props={{ label: props.label, status, setStatus }} />
         </div>
 }
