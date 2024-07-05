@@ -14,13 +14,13 @@ const { BadRequestError, UnauthenticatedError, NotFoundError } = require('../err
 const Comment = require('../models/Comment')
 const User = require('../models/User')
 
-const getAllComments = async (req, res) => {
+const getAllChampionComments = async (req, res) => {
     //get all comments 
 
     res.status(StatusCodes.OK).send('Get All Comments')
 }
 
-const createComment = async (req, res) => {
+const createComment = async (req, res) => { //TODO: include userID and championLabel in params (rerouting for createComment and getAllChampionComments required)
     const {
         params: { id: userID }
     } = req
@@ -60,7 +60,7 @@ const deleteComment = async (req, res) => {
 }
 
 module.exports = {
-    getAllComments,
+    getAllChampionComments,
     createComment,
     updateComment,
     deleteComment

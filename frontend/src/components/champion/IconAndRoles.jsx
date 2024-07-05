@@ -48,7 +48,10 @@ const IconAndRoles = ({ props }) => {
 
   const handleMouseClick = (e) => {
     e.stopPropagation();
-    props.setCurRole(e.currentTarget.id)
+    if (props.curRole != Number(e.currentTarget.id)) {
+      props.setIsClicked(0)
+    }
+    props.setCurRole(Number(e.currentTarget.id))
   }
 
   return (

@@ -1,18 +1,17 @@
 import * as d3 from "d3";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useEffect, useRef } from "react";
 
 const GraphContent = ({ props }) => {
     const ref = useRef();
     //const values = [["2024-06-17", 49.22], ["2023-06-17", 44.22], ["2022-06-17", 34.22], ["2021-06-17", 50.22], ["2023-02-17", 50.22]];
-    const values = props.data
-    values.sort((a, b) => {
-        let dateA = new Date(a[0]); // Parse each date string into a Date object
-        let dateB = new Date(b[0]);
-        return dateA - dateB; // Compare the dates
-    });
-
 
     useLayoutEffect(() => {
+        const values = props.data
+        values.sort((a, b) => {
+            let dateA = new Date(a[0]); // Parse each date string into a Date object
+            let dateB = new Date(b[0]);
+            return dateA - dateB; // Compare the dates
+        });
         setTimeout(() => {
             d3.select(ref.current).selectAll('svg').remove();
 
@@ -27,7 +26,9 @@ const GraphContent = ({ props }) => {
                 .select(ref.current)
                 .append('svg')
                 .attr('width', width)
-                .attr('height', height);
+                .attr('height', height)
+                .attr('viewBox', [0, 0, width, height])
+                .attr('style', "max-width: 100%; height: auto;");
 
             const datesArray = values.map((d) => {
                 return new Date(d[0])
@@ -59,8 +60,23 @@ const GraphContent = ({ props }) => {
                 x: new Date(d[0]),
                 y: d[1] / 100
             }));
+            const dummyTransformedValues = values.map(d => ({
+                x: new Date(d[0]),
+                y: baseline
+            }))
             svg.append("path") //append path element
-                .datum(transformedValues) // Use datum instead of data
+                .datum(dummyTransformedValues)
+                .attr("fill", "orange")
+                .attr("opacity", 0.5)
+                .attr("stroke", "none")
+                .attr("d", d3.area()
+                    .x(d => xAxisScale(d.x)) // Access the 'x' property
+                    .y0(d => yAxisScale(baseline)) // Bottom of the area (x-axis)
+                    .y1(d => yAxisScale(d.y))); // Access the 'y' property
+
+            svg.selectAll("path")
+                .datum(transformedValues)
+                .transition().delay(50).duration(650)
                 .attr("fill", "orange")
                 .attr("opacity", 0.5)
                 .attr("stroke", "none")
@@ -70,8 +86,12 @@ const GraphContent = ({ props }) => {
                     .y1(d => yAxisScale(d.y))); // Access the 'y' property
 
 
+            const dummyValues = values.map(d => (
+                [d[0], baseline]
+            ))
+
             svg.selectAll('circle')
-                .data(values)
+                .data(dummyValues)
                 .enter()
                 .append('circle')//creates circle elements
                 .attr('fill', 'orange')
@@ -86,10 +106,36 @@ const GraphContent = ({ props }) => {
                 .attr('cy', (d) => yAxisScale(d[1] / 100)) //y position
                 .attr('r', (d) => 5); //radius size of each point
 
+            svg.selectAll('circle')
+                .data(values)
+                .transition().duration(700)
+                .attr('fill', 'orange')
+                .attr('class', 'dataPoint')
+                .attr('data-date', (d) => {
+                    return d[0]
+                })
+                .attr('data-value', (d) => {
+                    return d[1]
+                })
+                .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
+                .attr('cy', (d) => yAxisScale(d[1] / 100)) //y position
+                .attr('r', (d) => 5); //radius size of each point
+
+
             svg.selectAll("line")
-                .data(values.slice(1)) //Start from the second data point
+                .data(dummyValues.slice(1)) //Start from the second data point
                 .enter()
                 .append("line")
+                .attr("x1", (d, i) => xAxisScale(datesArray[i]))
+                .attr("y1", (d, i) => yAxisScale(dummyValues[i][1] / 100)) //Use past data point
+                .attr("x2", (d, i) => xAxisScale(datesArray[i + 1]))
+                .attr("y2", (d) => yAxisScale(d[1] / 100)) //Use the current data point
+                .style("stroke", "orange")
+                .style("stroke-width", 3);
+
+            svg.selectAll("line")
+                .data(values.slice(1)) //Start from the second data point
+                .transition().duration(700)
                 .attr("x1", (d, i) => xAxisScale(datesArray[i]))
                 .attr("y1", (d, i) => yAxisScale(values[i][1] / 100)) //Use past data point
                 .attr("x2", (d, i) => xAxisScale(datesArray[i + 1]))
@@ -129,12 +175,18 @@ const GraphContent = ({ props }) => {
 
         }, 150)
 
-    });
+    }, [/*props.role, */props.data]);
+
+    useEffect(() => {
+        d3.select(ref.current).select('svg')
+            .transition().duration(650)
+            .attr('width', props.dim)
+            .attr('height', props.dim)
+
+    }, [props.dim])
 
     return (
-        <svg id={props.id} ref={ref} className='w-full h-full flex justify-center items-center'>
-            <h2>Test Graph</h2>
-        </svg>
+        <svg id={props.id} ref={ref} className='w-full h-full flex justify-center items-center' />
     )
 }
 

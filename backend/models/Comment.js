@@ -27,6 +27,10 @@ const CommentSchema = new mongoose.Schema({
         required: true,
         maxlength: [300, 'Character limit exceeded.']
     },
+    championLabel: {//which champion page
+        type: String,
+        required: true
+    },
     user: userSchema,
     date: { //date created
         type: Date,

@@ -76,7 +76,8 @@ const Body = ({ props }) => {
             setCurRole,
             allRoles: championData.map((item) => item.role) || [],
             name: info.name,
-            title: champTitle
+            title: champTitle,
+            setIsClicked
           }} />
           <StatsLabel props={{
             tier: info.tier ? info.tier : '',
@@ -86,7 +87,7 @@ const Body = ({ props }) => {
             rank: '1/0',
 
           }} />
-          <GraphsContainer props={{ isHovered, setIsHovered, isClicked, setIsClicked, gameplayData: info.gameplayData ? info.gameplayData : [] }} />
+          {info.gameplayData && <GraphsContainer props={{ label: props.label, isHovered, setIsHovered, isClicked, setIsClicked, gameplayData: info.gameplayData, role: curRole }} />}
           <DemoAndAbilitiesContainer props={{ label: props.label, status, setStatus }} />
         </div>
 }
