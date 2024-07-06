@@ -75,7 +75,12 @@ const Comment = ({ props }) => {
                 </h6>
                 <div className='flex flex-col w-full rounded-xl border p-2 pointer-events-none'>
                     <p ref={textRef} className={`${show === 'Read more' ? 'max-h-16 overflow-y-hidden' : 'h-auto'} text-sm text-wrap break-words pointer-events-auto`}>
-                        {props.data.text}
+                        {props.data.text.split('\\n').map((subStr, index) => (
+                            <span key={index}>
+                                {subStr}
+                                <br />
+                            </span>
+                        ))}
                     </p>
 
                     <span

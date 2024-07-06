@@ -18,7 +18,7 @@ const CommentSectionHeader = ({ props }) => {
         }
         axios
             .post(`http://localhost:5555/api/v1/comments/create/?champion=${props.label}&user=${window.sessionStorage.getItem('userID')}`, {
-                text: commentText
+                text: commentText.replaceAll('\n', '\\n')
             })
             .then((res) => {
                 props.setMyComments(prev => {
@@ -32,7 +32,7 @@ const CommentSectionHeader = ({ props }) => {
         textRef.current.style.height = '40px'
         setCommentText("")
     }
-
+    console.log(commentText)
     return (
         <div className='w-full rounded-t-xl bg-[#31313c] border border-x-0 border-t-0'>
             <div className='p-3 border border-[#1e1e1e] border-x-0 border-t-0'>

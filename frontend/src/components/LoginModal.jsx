@@ -41,6 +41,10 @@ const LoginModal = ({ onClose, props }) => {
             <div
                 className="relative w-[45%] h-[550px] bg-[#31313c] rounded-3xl flex flex-col justify-between items-center py-2"
                 onClick={(e) => e.stopPropagation()}
+                onKeyDown={(e) => {
+                    e.key === "Enter" &&
+                        handleLoginSubmit()
+                }}
             >
                 <div className="w-[40%] h-[10%] m-5 shadow-[0_3px_5px_0_rgba(0,0,0,0.5)] flex justify-center items-center">
                     <span className="text-2xl">Log In</span>
