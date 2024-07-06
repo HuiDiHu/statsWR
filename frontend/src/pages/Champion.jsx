@@ -54,7 +54,7 @@ const Champion = () => {
                 }}/>
             }
             <img
-                className='fixed z-0 bottom-10 right-10 h-12 w-12 hover:h-14 hover:w-14 hover:bottom-9 hover:right-9 ease-in-out duration-200'
+                className='fixed z-0 bottom-6 right-2 h-8 w-8 hover:h-9 hover:w-9 hover:bottom-5 hover:right-1 lg:bottom-10 lg:right-10 lg:h-12 lg:w-12 hover:lg:h-14 hover:lg:w-14 hover:lg:bottom-9 hover:lg:right-9 ease-in-out duration-200'
                 onClick={() => window.scroll({ top: 0, left: 0, behavior: 'smooth' })}
                 src={logo}
                 alt=''

@@ -68,7 +68,7 @@ const Comment = ({ props }) => {
                 className='h-14 w-14 rounded-full mr-5'
                 src={`../../../../assets/misc/profile/${props.data.user.profile}.png`}
             />
-            <div className='w-[85%] flex flex-col'>
+            <div className='w-[75%] flex flex-col'>
                 <h6 className='space-x-3'>
                     <span className='text-sm'>@{props.data.user.username}</span>
                     <span className='text-xs opacity-60'><TimeAgo date={props.data.updatedAt} /></span>
