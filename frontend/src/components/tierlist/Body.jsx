@@ -28,7 +28,7 @@ const Body = () => {
             <div className='flex flex-col flex-shrink-0 w-1/3 bg-[#31313c] rounded-md px-2 h-min'>
                 <SideSearchbar props={{ filteredChampions, setInput }} />
                 <RoleSelection props={{ roleIndex, setRoleIndex }} />
-                <ChampionCardsList props={{ filteredChampions }} />
+                <ChampionCardsList props={{ filteredChampions, roleIndex }} />
             </div>
             <div className={`flex flex-1 flex-col flex-shrink-0 bg-[#31313c] grow ml-2 rounded-md ${roleIndex !== 0 && 'h-min'}`}>
                 <TierlistDropdown />

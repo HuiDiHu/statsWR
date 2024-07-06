@@ -15,7 +15,8 @@ const ChampionCardsList = ({ props }) => {
                             imgSrc: `assets/champion-icons/${item.label}.png`,
                             imgSrcAlt: 'assets/champion-icons/EMPTY_CHAMPION.png',
                             name: item.name,
-                            label: item.label
+                            label: item.label,
+                            roleIndex: props.roleIndex
                         }} 
                     />
                 )) :

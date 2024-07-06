@@ -12,7 +12,7 @@ export const regionRankPatch = [
 export const allChampions = [
     { label: "AATROX", name: "Aatrox", role: [0, 1, 2], title: "THE DARKIN BLADE" },
     { label: "AHRI", name: "Ahri", role: [0, 3], title: "THE NINE-TAILED FOX" },
-    { label: "AKALI", name: "Akali", role: [0, 1, 3, 5], title: "THE ROGUE ASSASSIN" },
+    { label: "AKALI", name: "Akali", role: [0, 1, 3], title: "THE ROGUE ASSASSIN" },
     { label: "AKSHAN", name: "Akshan", role: [0, 1, 3], title: "THE ROGUE SENTINEL" },
     { label: "ALISTAR", name: "Alistar", role: [0, 5], title: "THE MINOTAUR" },
     { label: "AMUMU", name: "Amumu", role: [0, 2], title: "THE SAD MUMMY" },

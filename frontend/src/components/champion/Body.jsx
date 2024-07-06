@@ -25,8 +25,8 @@ const Body = ({ props }) => {
       .get(`http://localhost:5555/api/v1/champions/${props.label}`)
       .then((res) => {
         setChampionData(res.data.champion)
+        props.setName(res.data.champion[0].name)
         setInfo({
-          name: res.data.champion[0].name,
           label: props.label,
           gameplayData: (curRole ? res.data.champion.find((item) => item.role === curRole).gameplayData : res.data.champion[0].gameplayData),
           tier: curRole ? res.data.champion.find((item) => item.role === curRole).tier : res.data.champion[0].tier,
@@ -48,7 +48,6 @@ const Body = ({ props }) => {
       return;
     }
     setInfo({
-      name: data.name,
       label: props.label,
       gameplayData: data.gameplayData,
       tier: data.tier
@@ -75,7 +74,7 @@ const Body = ({ props }) => {
             curRole,
             setCurRole,
             allRoles: championData.map((item) => item.role) || [],
-            name: info.name,
+            name: props.name,
             title: champTitle,
             setIsClicked
           }} />

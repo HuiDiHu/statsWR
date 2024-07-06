@@ -60,23 +60,19 @@ const GraphContent = ({ props }) => {
                 x: new Date(d[0]),
                 y: d[1] / 100
             }));
-            const dummyTransformedValues = values.map(d => ({
-                x: new Date(d[0]),
-                y: baseline
-            }))
             svg.append("path") //append path element
-                .datum(dummyTransformedValues)
+                .datum(transformedValues)
                 .attr("fill", "orange")
                 .attr("opacity", 0.5)
                 .attr("stroke", "none")
                 .attr("d", d3.area()
                     .x(d => xAxisScale(d.x)) // Access the 'x' property
                     .y0(d => yAxisScale(baseline)) // Bottom of the area (x-axis)
-                    .y1(d => yAxisScale(d.y))); // Access the 'y' property
+                    .y1(d => yAxisScale(baseline))); // Access the 'y' property
 
             svg.selectAll("path")
                 .datum(transformedValues)
-                .transition().delay(175).duration(800)
+                .transition().duration(850)
                 .attr("fill", "orange")
                 .attr("opacity", 0.5)
                 .attr("stroke", "none")
@@ -85,13 +81,8 @@ const GraphContent = ({ props }) => {
                     .y0(d => yAxisScale(baseline)) // Bottom of the area (x-axis)
                     .y1(d => yAxisScale(d.y))); // Access the 'y' property
 
-
-            const dummyValues = values.map(d => (
-                [d[0], baseline]
-            ))
-
             svg.selectAll('circle')
-                .data(dummyValues)
+                .data(values)
                 .enter()
                 .append('circle')//creates circle elements
                 .attr('fill', 'orange')
@@ -103,7 +94,7 @@ const GraphContent = ({ props }) => {
                     return d[1]
                 })
                 .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
-                .attr('cy', (d) => yAxisScale(d[1] / 100)) //y position
+                .attr('cy', (d) => yAxisScale(baseline)) //y position
                 .attr('r', (d) => 5); //radius size of each point
 
             svg.selectAll('circle')
@@ -123,13 +114,13 @@ const GraphContent = ({ props }) => {
 
 
             svg.selectAll("line")
-                .data(dummyValues.slice(1)) //Start from the second data point
+                .data(values.slice(1)) //Start from the second data point
                 .enter()
                 .append("line")
                 .attr("x1", (d, i) => xAxisScale(datesArray[i]))
-                .attr("y1", (d, i) => yAxisScale(dummyValues[i][1] / 100)) //Use past data point
+                .attr("y1", (d, i) => yAxisScale(baseline)) //Use past data point
                 .attr("x2", (d, i) => xAxisScale(datesArray[i + 1]))
-                .attr("y2", (d) => yAxisScale(d[1] / 100)) //Use the current data point
+                .attr("y2", (d) => yAxisScale(baseline)) //Use the current data point
                 .style("stroke", "orange")
                 .style("stroke-width", 3);
 

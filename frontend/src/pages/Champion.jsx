@@ -3,6 +3,7 @@ import { useLocation, useParams } from 'react-router-dom'
 import logo from 'assets/logo.png'
 import Navbar from 'src/components/Navbar'
 import Body from 'src/components/champion/Body'
+import CommentSection from 'src/components/champion/comments/CommentSection'
 import Footer from 'src/components/Footer'
 import LoginModal from 'src/components/LoginModal';
 import SignupModal from 'src/components/SignupModal';
@@ -13,6 +14,7 @@ const Champion = () => {
     const location = useLocation()
     const [loginModal, setLoginModal] = useState(false);
     const [signupModal, setSignupModal] = useState(false);
+    const [name, setName] = useState("")
     /*
         0. Navbar?
         { Body
@@ -39,10 +41,17 @@ const Champion = () => {
                 <Body props={{ 
                     label: location.state.champLabel, 
                     defaultRole: location.state.role ? location.state.role : undefined,
-                    retAddr: location.state ? location.state.retAddr : '/'
+                    retAddr: location.state ? location.state.retAddr : '/',
+                    name, setName
                 }} />
                 :
                 <div className='text-center text-4xl text-red-600 mt-20'> SOMETHING WENT WRONG... PLEASE GO BACK</div>
+            }
+            {location.state.champLabel && 
+                <CommentSection props={{
+                    label: location.state.champLabel,
+                    name, setLoginModal, setSignupModal
+                }}/>
             }
             <img
                 className='fixed z-0 bottom-10 right-10 h-12 w-12 hover:h-14 hover:w-14 hover:bottom-9 hover:right-9 ease-in-out duration-200'

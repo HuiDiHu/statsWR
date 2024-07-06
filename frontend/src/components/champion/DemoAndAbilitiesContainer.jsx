@@ -26,7 +26,7 @@ const DemoAndAbilitiesContainer = ({ props }) => {
         console.log(error);
       })
   }, [props.label])
-  
+
   return (
     <div className='flex flex-col items-center w-full'>
       <div className='relative flex justify-center items-center h-[230px] w-[387.5px] md:h-[307px] md:w-[517px] lg:h-[460px] lg:w-[775px] bg-[#1e1e1e] rounded-3xl mb-5'>
@@ -43,8 +43,8 @@ const DemoAndAbilitiesContainer = ({ props }) => {
             <source src={champAbilities[selectedAbility].demoSrc} type='video/mp4' />
           </video>
         }
-        {!demoLoaded && <img className="h-12 w-12 lg:h-20 lg:w-20 absolute bottom-5 right-5 lg:bottom-10 lg:right-10 animate-bounce" src={logo}/>}
-        {props.status === "BAD_REQUEST" && 
+        {!demoLoaded && <img className="h-12 w-12 lg:h-20 lg:w-20 absolute bottom-5 right-5 lg:bottom-10 lg:right-10 animate-bounce" src={logo} />}
+        {props.status === "BAD_REQUEST" &&
           <div>
             <h1 className='text-center text-4xl text-red-600'>
               ERROR CODE 400: AXIOS BAD REQUEST ERROR...
