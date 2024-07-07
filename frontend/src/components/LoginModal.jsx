@@ -14,13 +14,15 @@ const LoginModal = ({ onClose, props }) => {
         axios
             .post('http://localhost:5555/api/v1/auth/login', { email, password })
             .then((res) => {
-                props.setLoginModal(false)
+                props.setLoginModal(false);
                 setErrMsg(""); setEmail(""); setPassword("");
                 window.sessionStorage.setItem('token', res.data.token)
                 window.sessionStorage.setItem('username', res.data.user.username)
                 window.sessionStorage.setItem('profile', res.data.user.profile)
-                
-                setLoading(false)
+                window.sessionStorage.setItem('userID', res.data.user.id)
+
+                if (props.setLogged) props.setLogged(true)
+                setLoading(false);
             })
             .catch((error) => {
                 console.log(error)

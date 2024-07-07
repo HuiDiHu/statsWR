@@ -13,14 +13,17 @@ const CommentSection = ({ props }) => {
                 <CommentSectionHeader props={{
                     name: props.name,
                     label: props.label,
+                    setLogged: props.setLogged,
                     n,sortedBy, setSortedBy, setMyComments,
                     setLoginModal: props.setLoginModal,
                 }} />
                 <CommentList props={{
                     label: props.label,
+                    setLogged: props.setLogged,
+                    logged: props.logged,
                     setN,
-                    sortedBy,
-                    myComments,
+                    sortedBy, setSortedBy,
+                    myComments, setMyComments,
                     setLoginModal: props.setLoginModal,
                 }} />
                 <div className='w-full bg-[#31313c] rounded-b-xl h-10'>

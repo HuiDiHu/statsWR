@@ -8,20 +8,22 @@ const CommentList = ({ props }) => {
     const [comments, setComments] = useState([])
 
     useEffect(() => {
+        //console.log("reloaded...")
         setLoading(true)
         axios
             .get(`http://localhost:5555/api/v1/comments/?champion=${props.label}`)
             .then((res) => {
+                props.setSortedBy('Popular')
                 setComments(res.data.comments)
                 props.setN(res.data.comments.length)
+                props.setMyComments([])
                 setLoading(false)
             })
             .catch((error) => {
                 setLoading(false)
                 console.log(error)
             })
-
-    }, [props.label])
+    }, [props.logged])
 
     useEffect(() => {
         if (comments) {
@@ -44,6 +46,8 @@ const CommentList = ({ props }) => {
                     <Comment key={data._id} props={{
                         data,
                         setLoginModal: props.setLoginModal,
+                        setLogged: props.setLogged,
+                        logged: props.logged
                     }} />
                 ))
             }
@@ -53,6 +57,8 @@ const CommentList = ({ props }) => {
                     <Comment key={data._id} props={{
                         data,
                         setLoginModal: props.setLoginModal,
+                        setLogged: props.setLogged,
+                        logged: props.logged
                     }} />
                 ))
             }

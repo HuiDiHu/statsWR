@@ -32,14 +32,15 @@ const CommentSectionHeader = ({ props }) => {
             .catch((error) => {
                 console.log(error)
                 if (error.response.status === 401) {
-                    window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile');
-                    props.setLoginModal(true)
+                    window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile'); window.sessionStorage.removeItem('userID'); 
+                    props.setLoginModal(true); props.setLogged(false)
                 }
             })
-
+        
         textRef.current.style.height = '40px'
         setCommentText("")
     }
+
     return (
         <div className='w-full rounded-t-xl bg-[#31313c] border border-x-0 border-t-0'>
             <div className='p-3 border border-[#1e1e1e] border-x-0 border-t-0'>

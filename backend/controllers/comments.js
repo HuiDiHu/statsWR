@@ -25,7 +25,7 @@ const getAllChampionComments = async (req, res) => {
     res.status(StatusCodes.OK).json({ comments })
 }
 
-const createComment = async (req, res) => { //TODO: userID handled by auth middleware so refactor the route and this function
+const createComment = async (req, res) => { 
     const { champion: championLabel } = req.query;
     const { text } = req.body;
     const { userID } = req.user;
@@ -44,10 +44,22 @@ const updateComment = async (req, res) => {
     const {
         params: { id: commentID }
     } = req;
-    //update text or update upvotes/downvotes
+    const { upvote, downvote } = req.body
+    //update upvotes/downvotes
     //single comment with commentID (unique id)
 
-    res.status(StatusCodes.OK).send('Update Comment')
+    let updates = {
+        "$push": {},
+        "$pull": {}
+    }
+    if (upvote !== null) {
+        upvote ? updates["$push"]["upvotes"] = req.user.userID : updates["$pull"]["upvotes"] = req.user.userID
+    }
+    if (downvote !== null) {
+        downvote ? updates["$push"]["downvotes"] = req.user.userID : updates["$pull"]["downvotes"] = req.user.userID
+    }
+    const comment = await Comment.findByIdAndUpdate(commentID, updates, {new: true})
+    res.status(StatusCodes.OK).json({ comment })
 }
 
 const deleteComment = async (req, res) => {

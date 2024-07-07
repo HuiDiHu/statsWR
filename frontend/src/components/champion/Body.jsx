@@ -62,7 +62,7 @@ const Body = ({ props }) => {
     >
       <div className='relative w-[80%] min-h-[1000px] bg-[#31313c] rounded-lg mt-2'>
         <Link
-          className='flex justify-center items-center h-8 w-16 rounded-lg bg-gradient-to-r from-orange-500 to-orange-800 absolute top-10 left-10'
+          className='flex justify-center items-center h-8 w-16 rounded-lg bg-gradient-to-r from-orange-500 to-orange-800 absolute top-10 left-10 cursor-pointer'
           to={props.retAddr}
         >
           <span className='text-md'> Back</span>

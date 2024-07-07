@@ -15,6 +15,7 @@ const Champion = () => {
     const [loginModal, setLoginModal] = useState(false);
     const [signupModal, setSignupModal] = useState(false);
     const [name, setName] = useState("")
+    const [logged, setLogged] = useState(window.sessionStorage.getItem('token') !== null)
     /*
         0. Navbar?
         { Body
@@ -32,11 +33,11 @@ const Champion = () => {
             <Navbar props={{
                 titleHidden: false,
                 label: 'Champion',
-                loginModal, signupModal, setLoginModal, setSignupModal
+                loginModal, signupModal, setLoginModal, setSignupModal, setLogged
             }}
             />
-            {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{ setLoginModal, setSignupModal }} />}
-            {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{ setLoginModal, setSignupModal }} />}
+            {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{ setLoginModal, setSignupModal, setLogged }} />}
+            {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{ setLoginModal, setSignupModal, setLogged }} />}
             {location.state ?
                 <Body props={{
                     label: location.state.champLabel,
@@ -50,7 +51,8 @@ const Champion = () => {
             {location.state && location.state.champLabel &&
                 <CommentSection props={{
                     label: location.state.champLabel,
-                    name, setLoginModal, setSignupModal
+                    name, setLoginModal, setSignupModal,
+                    setLogged, logged
                 }} />
             }
             <img

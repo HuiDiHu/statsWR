@@ -6,7 +6,7 @@ import { navItems } from 'src/constants'
 
 const Navbar = ({ props }) => {
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
-    const [dummy, setDummy] = useState(false);
+    const [dummy, setDummy] = useState(false)
 
     const toggleNavbar = () => {
         setMobileDrawerOpen(!mobileDrawerOpen);
@@ -67,8 +67,8 @@ const Navbar = ({ props }) => {
                         <button
                             className={`${window.sessionStorage.getItem('token') ? '' : 'hidden'} rounded-lg h-8 min-w-16 lg:h-10 lg:min-w-20 bg-red-700 text-nowrap`}
                             onClick={() => {
-                                window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile');
-                                setDummy(!dummy)
+                                window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile'); window.sessionStorage.removeItem('userID'); 
+                                props.setLogged(false); setDummy(prev => {!prev})
                             }}
                         >
                             Sign Out

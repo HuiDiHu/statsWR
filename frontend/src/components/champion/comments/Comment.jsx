@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
 import TimeAgo from 'react-timeago'
-import { BiSolidUpvote } from "react-icons/bi";
-import { BiSolidDownvote } from "react-icons/bi";
+import { BiSolidUpvote } from "react-icons/bi"
+import { BiSolidDownvote } from "react-icons/bi"
+import axios from 'axios'
 
 const Comment = ({ props }) => {
     const [show, setShow] = useState('')
-    const [dummy, setDummy] = useState(false)
     const [upvote, setUpvote] = useState(false)
     const [downvote, setDownvote] = useState(false)
     const [cumulativeCount, setCumulativeCount] = useState(props.data.upvotes.length - props.data.downvotes.length)
@@ -13,8 +13,9 @@ const Comment = ({ props }) => {
     //this seems completely useless but CommentSection breaks without it :/
     useEffect(() => {
         setShow('Read more')
-        setDummy(prevDummy => { return !prevDummy })
-    }, [props.data._id])
+        setUpvote(props.data.upvotes.includes(window.sessionStorage.getItem('userID')))
+        setDownvote(props.data.downvotes.includes(window.sessionStorage.getItem('userID')))
+    }, [props.data._id, props.logged])
 
     //buggy because signout doesn't cause rerender of Comment
     useEffect(() => {
@@ -25,47 +26,42 @@ const Comment = ({ props }) => {
         }
     })
 
-    const handleUpvotes = () => {
-        //TODO: get rid of this since authentication middleware is now in place
-        if (!window.sessionStorage.getItem('token')) {
-            props.setLoginModal(true)
-            return;
-        }
-        if (!upvote) {
-            setUpvote(true)
-            setCumulativeCount(prev => { return prev + 1 })
-            //TODO: axios include upvote
-            if (downvote) {
-                setDownvote(false)
-                setCumulativeCount(prev => { return prev + 1 })
-                //TODO: axios remove downvote
-            }
+    const handleVote = (voteType) => {
+        let upvoteQuery = null; let downvoteQuery = null;
+        if (voteType === 'upvote') {
+            if (!upvote) {
+                upvoteQuery = true
+                if (downvote) { downvoteQuery = false }
+            } else { upvoteQuery = false }
         } else {
-            setUpvote(false)
-            setCumulativeCount(prev => { return prev - 1 })
-            //TODO: axios remove upvote
+            if (!downvote) {
+                downvoteQuery = true
+                if (upvote) { upvoteQuery = false }
+            } else { downvoteQuery = false }
         }
-    }
-
-    const handleDownvotes = () => {
-        //TODO: get rid of this since authentication middleware is now in place
-        if (!window.sessionStorage.getItem('token')) {
-            props.setLoginModal(true)
-            return;
-        }
-        if (!downvote) {
-            setDownvote(true)
-            setCumulativeCount(prev => { return prev - 1 })
-            //TODO: axios include downvote
-            if (upvote) {
-                setUpvote(false)
-                setCumulativeCount(prev => { return prev - 1 })
-                //TODO: axios remove upvote
-            }
-        } else {
-            setDownvote(false)
-            setCumulativeCount(prev => { return prev + 1 })
-        }
+        axios
+            .create({
+                baseURL: 'http://localhost:5555',
+                headers: {
+                    Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
+                }
+            })
+            .put(`api/v1/comments/${props.data._id}`, {
+                upvote: upvoteQuery,
+                downvote: downvoteQuery
+            })
+            .then((res) => {
+                if (upvoteQuery !== null) setUpvote(upvoteQuery)
+                if (downvoteQuery !== null) setDownvote(downvoteQuery)
+                setCumulativeCount(res.data.comment.upvotes.length - res.data.comment.downvotes.length)
+            })
+            .catch((error) => {
+                console.log(error)
+                if (error.response.status === 401) {
+                    window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile'); window.sessionStorage.removeItem('userID');
+                    props.setLoginModal(true); props.setLogged(false)
+                }
+            })
     }
 
     const textRef = useRef()
@@ -106,12 +102,12 @@ const Comment = ({ props }) => {
                 <div className='flex flex-col items-center'>
                     <BiSolidUpvote
                         className={`${upvote ? 'text-orange-600' : ''} w-5 h-5 cursor-pointer`}
-                        onClick={handleUpvotes}
+                        onClick={() => {handleVote('upvote')}}
                     />
                     <span>{cumulativeCount}</span>
                     <BiSolidDownvote
                         className={`${downvote ? 'text-orange-600' : ''} w-5 h-5 cursor-pointer`}
-                        onClick={handleDownvotes}
+                        onClick={() => {handleVote('downvote')}}
                     />
                 </div>
             </div>

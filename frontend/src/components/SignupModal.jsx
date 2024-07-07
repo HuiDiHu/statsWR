@@ -19,8 +19,9 @@ const SignupModal = ({ onClose, props }) => {
                 window.sessionStorage.setItem('token', res.data.token)
                 window.sessionStorage.setItem('username', res.data.user.username)
                 window.sessionStorage.setItem('profile', res.data.user.profile)
-
-                setLoading(false)
+                window.sessionStorage.setItem('userID', res.data.user.id)
+                if (props.setLogged) props.setLogged(true)
+                setLoading(false);
             })
             .catch((error) => {
                 const temp = error.response.data.msg.split(',')[0]
