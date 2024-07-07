@@ -7,7 +7,7 @@ import Footer from 'src/components/Footer'
 import LoginModal from 'src/components/LoginModal';
 import SignupModal from 'src/components/SignupModal';
 
-const Home = () => {
+const Home = ({ props }) => {
   const [searchResults, setSearchResults] = useState([]);
   const [loginModal, setLoginModal] = useState(false);
   const [signupModal, setSignupModal] = useState(false);
@@ -17,10 +17,11 @@ const Home = () => {
       <Navbar props={{
         titleHidden: true,
         label: 'Home',
-        loginModal, signupModal, setLoginModal, setSignupModal
+        loginModal, signupModal, setLoginModal, setSignupModal,
+        setLogged: props.setLogged 
       }} />
-      {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{setLoginModal, setSignupModal}} />}
-      {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{setLoginModal, setSignupModal}} />}
+      {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{setLoginModal, setSignupModal, setLogged: props.setLogged }} />}
+      {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{setLoginModal, setSignupModal, setLogged: props.setLogged }} />}
       <div className='pt-20 w-1/3 h-[90vh] m-auto flex flex-col items-center min-w-[200px]'>
         <div className='h-[15vh]'></div>
         <SearchIcons />

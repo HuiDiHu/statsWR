@@ -20,7 +20,6 @@ const getAllChampionComments = async (req, res) => {
     if (!championLabel) {throw new BadRequestError('Invalid champion page.')}
 
     const comments = await Comment.find({ championLabel })
-    comments.sort((a, b) => (a.upvotes.length - a.downvotes.length < b.upvotes.length - b.downvotes.length ? 1 : -1))
 
     res.status(StatusCodes.OK).json({ comments })
 }

@@ -6,7 +6,7 @@ import logo from 'assets/logo.png'
 import LoginModal from 'src/components/LoginModal';
 import SignupModal from 'src/components/SignupModal';
 
-const Tierlist = () => {
+const Tierlist = ({ props }) => {
     const [loginModal, setLoginModal] = useState(false);
     const [signupModal, setSignupModal] = useState(false);
 
@@ -15,10 +15,11 @@ const Tierlist = () => {
             <Navbar props={{
                 titleHidden: false,
                 label: 'Tier List',
-                loginModal, signupModal, setLoginModal, setSignupModal
+                loginModal, signupModal, setLoginModal, setSignupModal, 
+                setLogged: props.setLogged
             }} />
-            {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{setLoginModal, setSignupModal}} />}
-            {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{setLoginModal, setSignupModal}} />}
+            {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{setLoginModal, setSignupModal, setLogged: props.setLogged }} />}
+            {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{setLoginModal, setSignupModal, setLogged: props.setLogged }} />}
             <div className='relative flex flex-col'>
                 <div className='flex flex-col items-center'>
                     <div className='flex flex-col w-3/4'>

@@ -6,11 +6,13 @@ import Champion from './pages/Champion'
 import Test from './pages/Test'
 
 const App = () => {
+  const [logged, setLogged] = useState(window.sessionStorage.getItem('token') !== null)
+
   return (
     <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/tierlist' element={<Tierlist />} />
-      <Route path='/champion/:id' element={<Champion />} />
+      <Route path='/' element={<Home props={{logged, setLogged}} />} />
+      <Route path='/tierlist' element={<Tierlist props={{logged, setLogged}} />} />
+      <Route path='/champion/:id' element={<Champion props={{logged, setLogged}} />} />
       <Route path='/test' element={<Test />}/>
     </Routes>
   )
