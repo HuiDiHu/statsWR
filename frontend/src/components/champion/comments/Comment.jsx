@@ -78,6 +78,7 @@ const Comment = ({ props }) => {
                 props.setComments(comments => (
                     comments.filter((item) => item._id !== props.data._id)
                 ))
+                props.setN(prev => prev - 1)
             })
             .catch((error) => {
                 console.log(error)

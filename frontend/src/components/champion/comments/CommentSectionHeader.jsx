@@ -28,6 +28,7 @@ const CommentSectionHeader = ({ props }) => {
                 props.setMyComments(prev => {
                     return [res.data.comment, ...prev]
                 })
+                props.setN(prev => prev + 1)
             })
             .catch((error) => {
                 console.log(error)

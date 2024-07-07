@@ -38,13 +38,14 @@ const CommentList = ({ props }) => {
             }
         }
     }, [props.sortedBy])
-    
+
     return (
         <div className='flex flex-col w-full'>
             {
                 props.myComments.map((data) => (
                     <Comment key={data._id} props={{
                         data,
+                        setN: props.setN,
                         setComments: props.setMyComments,
                         setLoginModal: props.setLoginModal,
                         setLogged: props.setLogged,
@@ -57,6 +58,7 @@ const CommentList = ({ props }) => {
                 comments.map((data) => (
                     <Comment key={data._id} props={{
                         data,
+                        setN: props.setN,
                         setComments,
                         setLoginModal: props.setLoginModal,
                         setLogged: props.setLogged,

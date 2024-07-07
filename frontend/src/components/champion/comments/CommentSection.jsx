@@ -14,7 +14,7 @@ const CommentSection = ({ props }) => {
                     name: props.name,
                     label: props.label,
                     setLogged: props.setLogged,
-                    n,sortedBy, setSortedBy, setMyComments,
+                    n, setN, sortedBy, setSortedBy, setMyComments,
                     setLoginModal: props.setLoginModal,
                 }} />
                 <CommentList props={{
