@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import axios from 'axios'
-const defaultProfile = 'RedBrambleback'
+const defaultProfile = 'EMPTY_CHAMPION'
 
 const CommentSectionHeader = ({ props }) => {
     const [commentText, setCommentText] = useState("")
@@ -21,7 +21,7 @@ const CommentSectionHeader = ({ props }) => {
             })
             .post(`/api/v1/comments/create/?champion=${props.label}`,
                 {
-                    text: commentText.replaceAll('\n', '\\n')
+                    text: commentText.trim().replaceAll('\n', '\\n')
                 }
             )
             .then((res) => {

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import TimeAgo from 'react-timeago'
 import { BiSolidUpvote } from "react-icons/bi"
 import { BiSolidDownvote } from "react-icons/bi"
+import { IoTrashOutline } from "react-icons/io5";
 import axios from 'axios'
 
 const Comment = ({ props }) => {
@@ -64,9 +65,32 @@ const Comment = ({ props }) => {
             })
     }
 
+    const handleDelete = () => {
+        axios
+            .create({
+                baseURL: 'http://localhost:5555',
+                headers: {
+                    Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
+                }
+            })
+            .delete(`api/v1/comments/${props.data._id}`)
+            .then((res) => {
+                props.setComments(comments => (
+                    comments.filter((item) => item._id !== props.data._id)
+                ))
+            })
+            .catch((error) => {
+                console.log(error)
+                if (error.response.status === 401) {
+                    window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile'); window.sessionStorage.removeItem('userID');
+                    props.setLoginModal(true); props.setLogged(false)
+                }
+            })
+    }
+
     const textRef = useRef()
     return (
-        <div className='flex w-full p-4 bg-[#31313c] border-b border-[#1e1e1e]'>
+        <div className='relative flex w-full p-4 bg-[#31313c] border-b border-[#1e1e1e]'>
             <img
                 className='h-14 w-14 rounded-full mr-5'
                 src={`../../../../assets/misc/profile/${props.data.user.profile}.png`}
@@ -102,15 +126,19 @@ const Comment = ({ props }) => {
                 <div className='flex flex-col items-center'>
                     <BiSolidUpvote
                         className={`${upvote ? 'text-orange-600' : ''} w-5 h-5 cursor-pointer`}
-                        onClick={() => {handleVote('upvote')}}
+                        onClick={() => { handleVote('upvote') }}
                     />
                     <span>{cumulativeCount}</span>
                     <BiSolidDownvote
                         className={`${downvote ? 'text-orange-600' : ''} w-5 h-5 cursor-pointer`}
-                        onClick={() => {handleVote('downvote')}}
+                        onClick={() => { handleVote('downvote') }}
                     />
                 </div>
             </div>
+            {window.sessionStorage.getItem('userID') === props.data.user.userID && <IoTrashOutline
+                className='absolute lg:bottom-3 lg:-right-6 lg:w-5 lg:h-5 bottom-2 -right-4 w-4 h-4 hover:text-red-600 pointer-events-auto cursor-pointer'
+                onClick={handleDelete}
+            />}
         </div>
     )
 }
