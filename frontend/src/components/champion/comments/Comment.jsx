@@ -9,55 +9,62 @@ const Comment = ({ props }) => {
     const [upvote, setUpvote] = useState(false)
     const [downvote, setDownvote] = useState(false)
     const [cumulativeCount, setCumulativeCount] = useState(props.data.upvotes.length - props.data.downvotes.length)
+
+    //this seems completely useless but CommentSection breaks without it :/
     useEffect(() => {
         setShow('Read more')
         setDummy(prevDummy => { return !prevDummy })
     }, [props.data._id])
+
+    //buggy because signout doesn't cause rerender of Comment
     useEffect(() => {
-        if (!window.sessionStorage.getItem('userID')) {
+        if (!window.sessionStorage.getItem('token')) {
             setUpvote(false)
             setDownvote(false)
             setCumulativeCount(props.data.upvotes.length - props.data.downvotes.length)
         }
     })
+
     const handleUpvotes = () => {
-        if (!window.sessionStorage.getItem('userID')) {
+        //TODO: get rid of this since authentication middleware is now in place
+        if (!window.sessionStorage.getItem('token')) {
             props.setLoginModal(true)
             return;
         }
         if (!upvote) {
             setUpvote(true)
-            setCumulativeCount(prev => {return prev+1})
+            setCumulativeCount(prev => { return prev + 1 })
             //TODO: axios include upvote
             if (downvote) {
                 setDownvote(false)
-                setCumulativeCount(prev => {return prev+1})
+                setCumulativeCount(prev => { return prev + 1 })
                 //TODO: axios remove downvote
             }
         } else {
             setUpvote(false)
-            setCumulativeCount(prev => {return prev-1})
+            setCumulativeCount(prev => { return prev - 1 })
             //TODO: axios remove upvote
         }
     }
 
     const handleDownvotes = () => {
-        if (!window.sessionStorage.getItem('userID')) {
+        //TODO: get rid of this since authentication middleware is now in place
+        if (!window.sessionStorage.getItem('token')) {
             props.setLoginModal(true)
             return;
         }
         if (!downvote) {
             setDownvote(true)
-            setCumulativeCount(prev => {return prev-1})
+            setCumulativeCount(prev => { return prev - 1 })
             //TODO: axios include downvote
             if (upvote) {
                 setUpvote(false)
-                setCumulativeCount(prev => {return prev-1})
+                setCumulativeCount(prev => { return prev - 1 })
                 //TODO: axios remove upvote
             }
         } else {
             setDownvote(false)
-            setCumulativeCount(prev => {return prev+1})
+            setCumulativeCount(prev => { return prev + 1 })
         }
     }
 
@@ -97,12 +104,12 @@ const Comment = ({ props }) => {
             </div>
             <div className='flex grow justify-end'>
                 <div className='flex flex-col items-center'>
-                    <BiSolidUpvote 
+                    <BiSolidUpvote
                         className={`${upvote ? 'text-orange-600' : ''} w-5 h-5 cursor-pointer`}
                         onClick={handleUpvotes}
                     />
                     <span>{cumulativeCount}</span>
-                    <BiSolidDownvote 
+                    <BiSolidDownvote
                         className={`${downvote ? 'text-orange-600' : ''} w-5 h-5 cursor-pointer`}
                         onClick={handleDownvotes}
                     />

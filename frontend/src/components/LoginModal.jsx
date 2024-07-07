@@ -17,10 +17,9 @@ const LoginModal = ({ onClose, props }) => {
                 props.setLoginModal(false)
                 setErrMsg(""); setEmail(""); setPassword("");
                 window.sessionStorage.setItem('token', res.data.token)
-                window.sessionStorage.setItem('userID', res.data.user.id)
                 window.sessionStorage.setItem('username', res.data.user.username)
                 window.sessionStorage.setItem('profile', res.data.user.profile)
-
+                
                 setLoading(false)
             })
             .catch((error) => {

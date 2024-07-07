@@ -42,20 +42,20 @@ const Navbar = ({ props }) => {
                             </li>
                         ))}
                     </ul>
-                    <div className={`${window.sessionStorage.getItem('userID') ? 'flex' : 'hidden'} lg:flex text-xs lg:text-sm justify-end space-x-12 items-center w-[46%] lg:w-[26%]`}>
+                    <div className={`${window.sessionStorage.getItem('token') ? 'flex' : 'hidden'} lg:flex text-xs lg:text-sm justify-end space-x-12 items-center w-[46%] lg:w-[26%]`}>
                         <button
-                            className={`${window.sessionStorage.getItem('userID') ? 'hidden' : ''} py-2 px-3 border rounded-md`}
+                            className={`${window.sessionStorage.getItem('token') ? 'hidden' : ''} py-2 px-3 border rounded-md`}
                             onClick={() => { props.setLoginModal(true); props.setSignupModal(false) }}
                         >
                             Log In
                         </button>
                         <button
-                            className={`${window.sessionStorage.getItem('userID') ? 'hidden' : ''} bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md`}
+                            className={`${window.sessionStorage.getItem('token') ? 'hidden' : ''} bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md`}
                             onClick={() => { props.setLoginModal(false); props.setSignupModal(true) }}
                         >
                             Create an account
                         </button>
-                        <div className={window.sessionStorage.getItem('userID') ? 'flex items-center' : 'hidden'}>
+                        <div className={window.sessionStorage.getItem('token') ? 'flex items-center' : 'hidden'}>
                             <img
                                 className='h-12 w-12 rounded-full mr-2'
                                 src={`../../assets/misc/profile/${window.sessionStorage.getItem('profile')}.png`}
@@ -65,9 +65,9 @@ const Navbar = ({ props }) => {
                             </h2>
                         </div>
                         <button
-                            className={`${window.sessionStorage.getItem('userID') ? '' : 'hidden'} rounded-lg h-8 min-w-16 lg:h-10 lg:min-w-20 bg-red-700 text-nowrap`}
+                            className={`${window.sessionStorage.getItem('token') ? '' : 'hidden'} rounded-lg h-8 min-w-16 lg:h-10 lg:min-w-20 bg-red-700 text-nowrap`}
                             onClick={() => {
-                                window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('userID'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile');
+                                window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile');
                                 setDummy(!dummy)
                             }}
                         >
@@ -91,7 +91,7 @@ const Navbar = ({ props }) => {
                                 </li>
                             ))}
                         </ul>
-                        <div className={`${window.sessionStorage.getItem('userID') ? 'hidden' : 'flex'} space-x-6 mt-5`}>
+                        <div className={`${window.sessionStorage.getItem('token') ? 'hidden' : 'flex'} space-x-6 mt-5`}>
                             <button onClick={() => { props.setLoginModal(true); props.setSignupModal(false); setMobileDrawerOpen(false) }} className="py-2 px-3 border rounded-md">
                                 Sign In
                             </button>

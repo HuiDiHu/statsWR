@@ -12,14 +12,18 @@ const CommentSectionHeader = ({ props }) => {
             alert('Comment has exceeded the 500 character limit!')
             return;
         }
-        if (!window.sessionStorage.getItem('userID')) {
-            props.setLoginModal(true)
-            return;
-        }
         axios
-            .post(`http://localhost:5555/api/v1/comments/create/?champion=${props.label}&user=${window.sessionStorage.getItem('userID')}`, {
-                text: commentText.replaceAll('\n', '\\n')
+            .create({
+                baseURL: 'http://localhost:5555',
+                headers: {
+                    Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
+                }
             })
+            .post(`/api/v1/comments/create/?champion=${props.label}}`,
+                {
+                    text: commentText.replaceAll('\n', '\\n')
+                }
+            )
             .then((res) => {
                 props.setMyComments(prev => {
                     return [res.data.comment, ...prev]
@@ -27,12 +31,15 @@ const CommentSectionHeader = ({ props }) => {
             })
             .catch((error) => {
                 console.log(error)
+                if (error.response.status === 401) {
+                    window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile');
+                    props.setLoginModal(true)
+                }
             })
 
         textRef.current.style.height = '40px'
         setCommentText("")
     }
-    console.log(commentText)
     return (
         <div className='w-full rounded-t-xl bg-[#31313c] border border-x-0 border-t-0'>
             <div className='p-3 border border-[#1e1e1e] border-x-0 border-t-0'>
@@ -67,9 +74,9 @@ const CommentSectionHeader = ({ props }) => {
                         </span>
                         <button
                             className={`${!commentText ? 'border-gray-400 text-gray-400 cursor-auto' : ''} text-sm rounded-full py-1 px-3 border-2`}
-                            onClick={() => { 
+                            onClick={() => {
                                 if (commentText) {
-                                    setCommentText("") 
+                                    setCommentText("")
                                     textRef.current.style.height = '40px'
                                 }
                             }}
@@ -86,19 +93,19 @@ const CommentSectionHeader = ({ props }) => {
                 </div>
             </div>
             <div className='flex w-full m-4 space-x-5'>
-                <button 
+                <button
                     className={`${props.sortedBy === 'Popular' ? '' : 'opacity-60'} text-xs w-16 h-6 flex items-center justify-center rounded-md bg-gradient-to-r from-[#d9c49a] to-[#4e432a]`}
-                    onClick={() => {props.setSortedBy('Popular')}}
+                    onClick={() => { props.setSortedBy('Popular') }}
                 >
                     Popular
                 </button>
-                <button 
+                <button
                     className={`${props.sortedBy === 'Recent' ? '' : 'opacity-60'} text-xs w-16 h-6 flex items-center justify-center rounded-md bg-gradient-to-r from-[#d9c49a] to-[#4e432a]`}
-                    onClick={() => {props.setSortedBy('Recent')}}
+                    onClick={() => { props.setSortedBy('Recent') }}
                 >
                     Recent
                 </button>
-            </div>  
+            </div>
         </div>
     )
 }

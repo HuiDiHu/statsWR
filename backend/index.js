@@ -25,7 +25,7 @@ app.use(express.json())
 app.use(cors({
     origin: 'http://localhost:5173',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type']
+    allowedHeaders: ['Content-Type', 'Authorization']
 }))
 
 const { getAllChampionComments } = require('./controllers/comments')
@@ -34,7 +34,7 @@ const { getAllChampionComments } = require('./controllers/comments')
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/champions', championsRouter);
 app.get('/api/v1/comments/', getAllChampionComments)
-app.use('/api/v1/comments', commentRouter);
+app.use('/api/v1/comments', authenticateUser, commentRouter);
 
 
 app.use(notFoundMiddleware)

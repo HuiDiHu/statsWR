@@ -19,7 +19,7 @@ const CommentSchema = new mongoose.Schema({
     text: { //comment text
         type: String, 
         required: true,
-        maxlength: [300, 'Character limit exceeded.']
+        maxlength: [501, 'Character limit exceeded.']
     },
     championLabel: {//which champion page
         type: String,

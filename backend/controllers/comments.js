@@ -25,18 +25,17 @@ const getAllChampionComments = async (req, res) => {
     res.status(StatusCodes.OK).json({ comments })
 }
 
-const createComment = async (req, res) => { //TODO: include userID and championLabel in params (rerouting for createComment and getAllChampionComments required)
-    const { champion: championLabel, user: userID } = req.query;
+const createComment = async (req, res) => { //TODO: userID handled by auth middleware so refactor the route and this function
+    const { champion: championLabel } = req.query;
     const { text } = req.body;
-
+    const { userID } = req.user;
     if (!userID) {throw new UnauthenticatedError('Please log in before using this feature.')}
     if (!championLabel) {throw new BadRequestError('Invalid champion page.')}
     const user = await User.findById(userID);
+    if (!user) {throw new UnauthenticatedError('Please log in before using this feature.')}
     
-    if (!text) {
-        throw new NotFoundError('Please enter a message.')
-    }
-    const comment = await Comment.create({ text, user: { userID: user._id, username: user.username, profile: user.profile}, championLabel });
+    if (!text) {throw new NotFoundError('Please enter a message.')}
+    const comment = await Comment.create({ text, user: { userID, username: user.username, profile: user.profile}, championLabel });
 
     res.status(StatusCodes.CREATED).json({ comment })
 }

@@ -17,7 +17,6 @@ const SignupModal = ({ onClose, props }) => {
                 props.setSignupModal(false)
                 setErrMsg(""); setEmail(""); setUsername(""); setPassword("");
                 window.sessionStorage.setItem('token', res.data.token)
-                window.sessionStorage.setItem('userID', res.data.user.id)
                 window.sessionStorage.setItem('username', res.data.user.username)
                 window.sessionStorage.setItem('profile', res.data.user.profile)
 

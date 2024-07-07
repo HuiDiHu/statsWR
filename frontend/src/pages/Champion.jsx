@@ -30,16 +30,16 @@ const Champion = () => {
     return (
         <div className='relative'>
             <Navbar props={{
-                    titleHidden: false,
-                    label: 'Champion',
-                    loginModal, signupModal, setLoginModal, setSignupModal
-                }}
+                titleHidden: false,
+                label: 'Champion',
+                loginModal, signupModal, setLoginModal, setSignupModal
+            }}
             />
-            {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{setLoginModal, setSignupModal}} />}
-            {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{setLoginModal, setSignupModal}} />}
+            {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{ setLoginModal, setSignupModal }} />}
+            {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{ setLoginModal, setSignupModal }} />}
             {location.state ?
-                <Body props={{ 
-                    label: location.state.champLabel, 
+                <Body props={{
+                    label: location.state.champLabel,
                     defaultRole: location.state.role ? location.state.role : undefined,
                     retAddr: location.state ? location.state.retAddr : '/',
                     name, setName
@@ -47,11 +47,11 @@ const Champion = () => {
                 :
                 <div className='text-center text-4xl text-red-600 mt-20'> SOMETHING WENT WRONG... PLEASE GO BACK</div>
             }
-            {location.state.champLabel && 
+            {location.state && location.state.champLabel &&
                 <CommentSection props={{
                     label: location.state.champLabel,
                     name, setLoginModal, setSignupModal
-                }}/>
+                }} />
             }
             <img
                 className='fixed z-0 bottom-6 right-2 h-8 w-8 hover:h-9 hover:w-9 hover:bottom-5 hover:right-1 lg:bottom-10 lg:right-10 lg:h-12 lg:w-12 hover:lg:h-14 hover:lg:w-14 hover:lg:bottom-9 hover:lg:right-9 ease-in-out duration-200'
