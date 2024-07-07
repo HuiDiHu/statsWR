@@ -7,6 +7,7 @@ const CommentList = ({ props }) => {
     const [loading, setLoading] = useState(false)
     const [skip, setSkip] = useState(0)
     const [comments, setComments] = useState([])
+    const [limit, setLimit] = useState(5)
 
     const sortByPopular = (a, b) => {
         if (a.user.userID === window.sessionStorage.getItem('userID')) {
@@ -41,7 +42,7 @@ const CommentList = ({ props }) => {
                 props.setSortedBy('Popular')
                 setComments(res.data.comments.sort((a, b) => sortByPopular(a, b)))
                 props.setN(res.data.comments.length)
-                props.setMyComments([])
+                props.setMyComments([]); setLimit(5)
                 setLoading(false)
             })
             .catch((error) => {
@@ -76,8 +77,8 @@ const CommentList = ({ props }) => {
             }
             {
                 comments && !loading &&
-                comments.map((data) => (
-                    <Comment key={data._id} props={{
+                comments.map((data, index) => (
+                    index < limit && <Comment key={data._id} props={{
                         data,
                         setN: props.setN,
                         setComments,
@@ -87,6 +88,13 @@ const CommentList = ({ props }) => {
                     }} />
                 ))
             }
+            <div 
+                className={`w-full bg-[#31313c] rounded-b-xl h-10 ${limit < comments.length ? 'text-opacity-60 cursor-pointer hover:opacity-60 hover:text-opacity-100 hover:text-lg hover:text-orange-500' : 'text-opacity-0 cursor-default'} 
+                transition-all ease-in-out text-center flex items-center justify-center pointer-events-auto text-orange-700`}
+                onClick={() => setLimit(prev => prev + 10)}
+            >
+                Expand For More
+            </div>
         </div>
     )
 }

@@ -26,9 +26,6 @@ const CommentSection = ({ props }) => {
                     myComments, setMyComments,
                     setLoginModal: props.setLoginModal,
                 }} />
-                <div className='w-full bg-[#31313c] rounded-b-xl h-10'>
-
-                </div>
             </div>
         </div>
     )
