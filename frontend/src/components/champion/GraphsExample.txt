@@ -106,11 +106,32 @@ let plotPoints = () => {
           .y0(d => yAxisScale(baseline)) // Bottom of the area (x-axis)
           .y1(d => yAxisScale(d.y))); // Access the 'y' property
 
+  //LOAD LINES FIRST BEFORE CIRCLES SO CIRCLES ARE DISPLAYED AT THE FRONT FOR TOOLTIP HOVER PRIORITY
+  svg.selectAll("line") 
+      .data(values.slice(1)) //Start from the second data point
+      .enter()
+      .append("line")
+      .attr("x1", (d, i) => xAxisScale(datesArray[i]))
+      .attr("y1", (d, i) => yAxisScale(baseline)) //Use past data point
+      .attr("x2", (d, i) => xAxisScale(datesArray[i + 1]))
+      .attr("y2", (d) => yAxisScale(baseline)) //Use the current data point
+      .style("stroke", "orange")
+      .style("stroke-width", 3);
+
+  svg.selectAll("line")
+      .data(values.slice(1)) //Start from the second data point
+      .transition().duration(850)
+      .attr("x1", (d, i) => xAxisScale(datesArray[i]))
+      .attr("y1", (d, i) => yAxisScale(values[i][1] / 100)) //Use past data point
+      .attr("x2", (d, i) => xAxisScale(datesArray[i + 1]))
+      .attr("y2", (d) => yAxisScale(d[1] / 100)) //Use the current data point
+      .style("stroke", "orange")
+      .style("stroke-width", 3);
+
   svg.selectAll('circle')
       .data(values)
       .enter()
       .append('circle')//creates circle elements
-      .attr('padding', "20px")
       .attr('fill', 'orange')
       .attr('class', 'dataPoint')
       .attr('data-date', (d) => {
@@ -121,7 +142,8 @@ let plotPoints = () => {
       })
       .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
       .attr('cy', (d) => yAxisScale(baseline)) //y position
-      .attr('r', (d) => 5); //radius size of each point
+      .attr('r', (d) => 5) //radius size of each point
+      .attr('padding', "20px");
 
   svg.selectAll('circle')
       .data(values)
@@ -149,7 +171,7 @@ let plotPoints = () => {
       const tooltipHeight = tooltip.node().getBoundingClientRect().height;
       const tooltipLeft = circleRect.left + (circleRect.width / 2) - (tooltipWidth / 2);
       const tooltipTop = circleRect.top - tooltipHeight - 10; 
-      
+
       // Create or update the tooltip
       d3.select("#tooltip")
           .style("left", tooltipLeft + "px")
@@ -162,27 +184,6 @@ let plotPoints = () => {
       d3.select("#tooltip")
         .style("visibility", "hidden")
     });
-
-  svg.selectAll("line")
-      .data(values.slice(1)) //Start from the second data point
-      .enter()
-      .append("line")
-      .attr("x1", (d, i) => xAxisScale(datesArray[i]))
-      .attr("y1", (d, i) => yAxisScale(baseline)) //Use past data point
-      .attr("x2", (d, i) => xAxisScale(datesArray[i + 1]))
-      .attr("y2", (d) => yAxisScale(baseline)) //Use the current data point
-      .style("stroke", "orange")
-      .style("stroke-width", 3);
-
-  svg.selectAll("line")
-      .data(values.slice(1)) //Start from the second data point
-      .transition().duration(850)
-      .attr("x1", (d, i) => xAxisScale(datesArray[i]))
-      .attr("y1", (d, i) => yAxisScale(values[i][1] / 100)) //Use past data point
-      .attr("x2", (d, i) => xAxisScale(datesArray[i + 1]))
-      .attr("y2", (d) => yAxisScale(d[1] / 100)) //Use the current data point
-      .style("stroke", "orange")
-      .style("stroke-width", 3);
 }
 
 let generateAxes = () => {
@@ -222,4 +223,3 @@ drawCanvas();
 generateScales();
 plotPoints();
 generateAxes();
-
