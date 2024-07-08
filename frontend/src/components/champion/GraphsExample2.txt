@@ -55,6 +55,21 @@ const generateScales = () => {
 }
 
 let plotPoints = () => { 
+  //TODO
+  let tooltip = d3.select("body").append("div")
+    .attr("id", "tooltip")
+    .style("position", "absolute") //Allows positioning within svg
+    .style("visibility", "hidden")
+    .style("background-color", "black")
+    .style("border-radius", "10px")
+    .style("border", "2px solid orange")
+    .style("padding", "5px")
+    .style("font-size", "12px")
+    .style("color", "white")
+    .style("width", "auto")
+    .style("height", "auto")
+    .style("text-align", "center")
+  
   // Transform the values to a format that can be used by the scales
   const transformedValues = values.map(d => ({
     x: new Date(d[0]),
@@ -113,6 +128,30 @@ let plotPoints = () => {
     .attr('cy', (d) => yAxisScale(d[1])) //y position
     .attr('r', (d) => 5); //radius size of each point
 
+  //TODO: Use tooltip to display the date and winrate of the point that the user hovers over.
+  svg.selectAll("circle")
+    .on("mouseover", function(event, d) {
+      // Get the coordinates of the mouse pointer and bounding box proportions
+      // const [mouseX, mouseY] = d3.pointer(event, this);
+      const circleRect = this.getBoundingClientRect();
+      const tooltipWidth = tooltip.node().getBoundingClientRect().width;
+      const tooltipHeight = tooltip.node().getBoundingClientRect().height;
+      const tooltipLeft = circleRect.left + (circleRect.width / 2) - (tooltipWidth / 2);
+      const tooltipTop = circleRect.top - tooltipHeight - 10; 
+
+      // Create or update the tooltip
+      d3.select("#tooltip")
+          .style("left", tooltipLeft + "px")
+          .style("top", tooltipTop + "px")
+          .html(`${d[0].slice(0, 10)}<br> ${d[1]}`)
+          .style("visibility", "visible")
+          //.html() allows html tags inside of the tooltip
+      })
+    .on("mouseout", function() {
+      d3.select("#tooltip")
+        .style("visibility", "hidden")
+    });
+  
   svg.selectAll("line")
    .data(values.slice(1)) //Start from the second data point
    .enter()
@@ -133,7 +172,6 @@ let plotPoints = () => {
    .attr("y2", (d) => yAxisScale(d[1])) //Use the current data point
    .style("stroke", "orange")
    .style("stroke-width", 3);
-
 }
 
 let generateAxes = () => {
@@ -171,5 +209,4 @@ drawCanvas();
 generateScales();
 plotPoints();
 generateAxes();
-
 
