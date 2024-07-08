@@ -97,6 +97,27 @@ let plotPoints = () => {
       .y0(d => yAxisScale(116)) // Bottom of the area (x-axis)
       .y1(d => yAxisScale(d.y))); // Access the 'y' property
 
+  svg.selectAll("line")
+   .data(values.slice(1)) //Start from the second data point
+   .enter()
+   .append("line")
+   .attr("x1", (d, i) => xAxisScale(datesArray[i]))
+   .attr("y1", (d, i) => yAxisScale(116)) //Use past data point
+   .attr("x2", (d, i) => xAxisScale(datesArray[i+1]))
+   .attr("y2", (d) => yAxisScale(116)) //Use the current data point
+   .style("stroke", "orange")
+   .style("stroke-width", 3);
+
+  svg.selectAll("line")
+   .data(values.slice(1)) //Start from the second data point
+   .transition().duration(850)
+   .attr("x1", (d, i) => xAxisScale(datesArray[i]))
+   .attr("y1", (d, i) => yAxisScale(values[i][1])) //Use past data point
+   .attr("x2", (d, i) => xAxisScale(datesArray[i+1]))
+   .attr("y2", (d) => yAxisScale(d[1])) //Use the current data point
+   .style("stroke", "orange")
+   .style("stroke-width", 3);
+
   svg.selectAll('circle')
     .data(values)
     .enter()
@@ -151,27 +172,6 @@ let plotPoints = () => {
       d3.select("#tooltip")
         .style("visibility", "hidden")
     });
-  
-  svg.selectAll("line")
-   .data(values.slice(1)) //Start from the second data point
-   .enter()
-   .append("line")
-   .attr("x1", (d, i) => xAxisScale(datesArray[i]))
-   .attr("y1", (d, i) => yAxisScale(116)) //Use past data point
-   .attr("x2", (d, i) => xAxisScale(datesArray[i+1]))
-   .attr("y2", (d) => yAxisScale(116)) //Use the current data point
-   .style("stroke", "orange")
-   .style("stroke-width", 3);
-
-  svg.selectAll("line")
-   .data(values.slice(1)) //Start from the second data point
-   .transition().duration(850)
-   .attr("x1", (d, i) => xAxisScale(datesArray[i]))
-   .attr("y1", (d, i) => yAxisScale(values[i][1])) //Use past data point
-   .attr("x2", (d, i) => xAxisScale(datesArray[i+1]))
-   .attr("y2", (d) => yAxisScale(d[1])) //Use the current data point
-   .style("stroke", "orange")
-   .style("stroke-width", 3);
 }
 
 let generateAxes = () => {
@@ -209,4 +209,3 @@ drawCanvas();
 generateScales();
 plotPoints();
 generateAxes();
-
