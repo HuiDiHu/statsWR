@@ -50,12 +50,11 @@ const Graph = ({ props }) => {
                 break
         }
     }
-    
     return (
         <div
             className={`flex flex-col items-center py-2 lg:py-4 pointer-events-auto ${props.isClicked === Number(props.id) ? 'cursor-auto' : 'cursor-pointer'}`}
             id={props.id}
-            onMouseOver={handleMouseOver}
+            onMouseEnter={handleMouseOver}
             onMouseLeave={() => { props.setIsHovered(0) }}
             onClick={handleMouseClick}
         >
@@ -71,20 +70,21 @@ const Graph = ({ props }) => {
             </span>
             <div
                 className={
-                    props.isClicked === 0 ?
+                    `${props.isClicked === 0 ?
                         (props.isHovered === Number(props.id) ? selectedGraphStyle :
                             (props.isHovered === 0 ? graphStyle : unselectedGraphStyle)) :
-                        (props.isClicked === Number(props.id) ? clickedGraphStyle : nonclickedGraphStyle)
+                        (props.isClicked === Number(props.id) ? clickedGraphStyle : nonclickedGraphStyle)} relative`
                 }
             >
                 <GraphContent props={{
                     id: props.graphLabel,
                     dim: (props.isClicked === 0 ?
-                        (props.isHovered === Number(props.id) ? (window.innerWidth > 1000 ? 450 : 175) : (props.isHovered === 0 ? (window.innerWidth > 1000 ? 400 : 150) : (window.innerWidth > 1000 ? 375 : 137.5))) 
+                        (props.isHovered === Number(props.id) ? (window.innerWidth > 1000 ? 450 : 175) : (props.isHovered === 0 ? (window.innerWidth > 1000 ? 400 : 150) : (window.innerWidth > 1000 ? 375 : 137.5)))
                         : (props.isClicked === Number(props.id) ? (window.innerWidth > 1000 ? 600 : 225) : (window.innerWidth > 1000 ? 200 : 100))),
                     data: props.data,
                     role: props.role,
                     label: props.label,
+                    isClicked: props.isClicked === Number(props.id)
                 }} />
             </div>
         </div>

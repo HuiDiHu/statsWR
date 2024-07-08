@@ -18,6 +18,7 @@ const Home = ({ props }) => {
         titleHidden: true,
         label: 'Home',
         loginModal, signupModal, setLoginModal, setSignupModal,
+        isLogged: props.isLogged,
         setLogged: props.setLogged 
       }} />
       {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{setLoginModal, setSignupModal, setLogged: props.setLogged }} />}

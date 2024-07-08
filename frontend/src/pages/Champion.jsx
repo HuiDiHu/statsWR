@@ -33,6 +33,7 @@ const Champion = ({ props }) => {
                 titleHidden: false,
                 label: 'Champion',
                 loginModal, signupModal, setLoginModal, setSignupModal,
+                isLogged: props.isLogged,
                 setLogged: props.setLogged
             }}
             />

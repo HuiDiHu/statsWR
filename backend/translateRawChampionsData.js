@@ -13,6 +13,7 @@ const rawChampionsData = [
     1. make sure last element in uploadDates is the correct date FOR THE PATCH
     2. make sure rawChampionsData have the correct data FOR THE PATCH
     3. update version in frontend constants folder
+    4. update footer's Last updated on
 */
 const uploadDates = [
     "2024-05-16", //5.1B

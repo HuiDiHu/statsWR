@@ -53,14 +53,16 @@ const Body = ({ props }) => {
       tier: data.tier
     })
   }, [curRole])
-  
+
   return (
     <div
       className='relative z-0 flex justify-center'
       onClick={() => { setIsClicked(0) }}
-      onMouseOver={() => { setIsHovered(0) }}
     >
-      <div className='relative w-[80%] min-h-[1000px] bg-[#31313c] rounded-lg mt-2'>
+      <div
+        className='relative w-[80%] min-h-[1000px] bg-[#31313c] rounded-lg mt-2'
+        onClick={() => { setIsClicked(0) }}
+      >
         <Link
           className='flex justify-center items-center h-8 w-16 rounded-lg bg-gradient-to-r from-orange-500 to-orange-800 absolute top-10 left-10 cursor-pointer'
           to={props.retAddr}
@@ -68,28 +70,28 @@ const Body = ({ props }) => {
           <span className='text-md'> Back</span>
         </Link>
         {info && championData &&
-        <div className='flex flex-col items-center'>
-          <IconAndRoles props={{
-            label: props.label,
-            curRole,
-            setCurRole,
-            allRoles: championData.map((item) => item.role) || [],
-            name: props.name,
-            title: champTitle,
-            setIsClicked
-          }} />
-          <StatsLabel props={{
-            tier: info.tier ? info.tier : '',
-            winRate: info.gameplayData ? info.gameplayData[info.gameplayData.length - 1]['winRate'] : '',
-            pickRate: info.gameplayData ? info.gameplayData[info.gameplayData.length - 1]['pickRate'] : '',
-            banRate: info.gameplayData ? info.gameplayData[info.gameplayData.length - 1]['banRate'] : '',
-            rank: '1/0',
+          <div className='flex flex-col items-center'>
+            <IconAndRoles props={{
+              label: props.label,
+              curRole,
+              setCurRole,
+              allRoles: championData.map((item) => item.role) || [],
+              name: props.name,
+              title: champTitle,
+              setIsClicked
+            }} />
+            <StatsLabel props={{
+              tier: info.tier ? info.tier : '',
+              winRate: info.gameplayData ? info.gameplayData[info.gameplayData.length - 1]['winRate'] : '',
+              pickRate: info.gameplayData ? info.gameplayData[info.gameplayData.length - 1]['pickRate'] : '',
+              banRate: info.gameplayData ? info.gameplayData[info.gameplayData.length - 1]['banRate'] : '',
+              rank: '1/0',
 
-          }} />
-          <GraphsContainer props={{ label: props.label, isHovered, setIsHovered, isClicked, setIsClicked, gameplayData: info.gameplayData || [], role: curRole }} />
-          <DemoAndAbilitiesContainer props={{ label: props.label, status, setStatus }} />
-        </div>
-}
+            }} />
+            <GraphsContainer props={{ label: props.label, isHovered, setIsHovered, isClicked, setIsClicked, gameplayData: info.gameplayData || [], role: curRole }} />
+            <DemoAndAbilitiesContainer props={{ label: props.label, status, setStatus }} />
+          </div>
+        }
       </div>
     </div>
   )

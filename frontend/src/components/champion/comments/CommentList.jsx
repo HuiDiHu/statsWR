@@ -5,7 +5,6 @@ import Comment from './Comment'
 
 const CommentList = ({ props }) => {
     const [loading, setLoading] = useState(false)
-    const [skip, setSkip] = useState(0)
     const [comments, setComments] = useState([])
     const [limit, setLimit] = useState(5)
 

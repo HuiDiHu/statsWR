@@ -75,7 +75,7 @@ const CommentSectionHeader = ({ props }) => {
                             {commentText.length}/500
                         </span>
                         <button
-                            className={`${!commentText ? 'border-gray-400 text-gray-400 cursor-auto' : ''} text-sm rounded-full py-1 px-3 border-2`}
+                            className={`${!commentText ? 'border-gray-400 text-gray-400 cursor-auto' : 'cursor-pointer'} text-sm rounded-full py-1 px-3 border-2`}
                             onClick={() => {
                                 if (commentText) {
                                     setCommentText("")
@@ -86,7 +86,7 @@ const CommentSectionHeader = ({ props }) => {
                             Cancel
                         </button>
                         <button
-                            className={`${!commentText ? 'grayscale-[65%] cursor-auto' : ''} text-sm rounded-full py-1 px-3 bg-gradient-to-r from-orange-500 to-orange-800`}
+                            className={`${!commentText ? 'grayscale-[65%] cursor-auto' : 'cursor-pointer'} text-sm rounded-full py-1 px-3 bg-gradient-to-r from-orange-500 to-orange-800`}
                             onClick={handleSubmit}
                         >
                             Comment

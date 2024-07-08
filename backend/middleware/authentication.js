@@ -1,6 +1,7 @@
 const User = require('../models/User')
 const jwt = require('jsonwebtoken')
 const { UnauthenticatedError } = require('../errors')
+const banList = require('../constants.json')['ban_list']
 
 const auth = async (req, res, next) => {
   // check header
@@ -11,7 +12,10 @@ const auth = async (req, res, next) => {
   const token = authHeader.split(' ')[1]
   try {
     const payload = jwt.verify(token, process.env.JWT_SECRET)
-    // attach the user to the job routes
+    if (banList.includes(payload.userID)) {
+      throw new UnauthenticatedError('Authentication invalid')
+    }
+    // attach to the user for the comment route
     req.user = { userID: payload.userID }
     next()
   } catch (error) {

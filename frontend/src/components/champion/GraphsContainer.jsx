@@ -22,7 +22,9 @@ const Graphs = ({ props }) => {
         setBrData(parseData('banRate'))
     }, [props.role, props.gameplayData])
     return (
-        <div className='py-10 px-28'>
+        <div 
+            className='my-10 mx-28'
+        >
             <div
                 className={`flex ${((props.isClicked === 0 && props.isHovered === 4) || props.isClicked === 4) ? 'justify-end' : ''}`}
             >
@@ -31,7 +33,7 @@ const Graphs = ({ props }) => {
                     className={`flex flex-col ${((props.isClicked === 0 && props.isHovered === 4) || props.isClicked === 4) ? 'justify-end' : ''}`}
                 >
                     <div className={`${((props.isClicked === 0 && props.isHovered === 2) || props.isClicked === 2) ? 'grow-transition' : 'shrink-transition'}`}></div>
-                    <Graph props={{ label: props.label, isClicked: props.isClicked, setIsClicked: props.setIsClicked, isHovered: props.isHovered, setIsHovered: props.setIsHovered, graphLabel: 'TIER', id: '1', data: tierData, role: props.role }} />
+                    <Graph props={{ label: props.label, isClicked: props.isClicked, setIsClicked: props.setIsClicked, isHovered: props.isHovered, setIsHovered: props.setIsHovered, graphLabel: 'RANK', id: '1', data: tierData, role: props.role }} />
                 </div>
                 <div
                     className={`flex flex-col ${((props.isClicked === 0 && props.isHovered === 3) || props.isClicked === 3) ? 'justify-end' : ''}`}

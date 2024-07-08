@@ -16,6 +16,7 @@ const Tierlist = ({ props }) => {
                 titleHidden: false,
                 label: 'Tier List',
                 loginModal, signupModal, setLoginModal, setSignupModal, 
+                isLogged: props.isLogged,
                 setLogged: props.setLogged
             }} />
             {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{setLoginModal, setSignupModal, setLogged: props.setLogged }} />}

@@ -13,6 +13,8 @@ const { StatusCodes } = require('http-status-codes')
 const { BadRequestError, UnauthenticatedError, NotFoundError } = require('../errors')
 const Comment = require('../models/Comment')
 const User = require('../models/User')
+const banList = require('../constants.json')['ban_list']
+
 
 const getAllChampionComments = async (req, res) => {
     //get all comments 
@@ -21,7 +23,7 @@ const getAllChampionComments = async (req, res) => {
 
     const comments = await Comment.find({ championLabel })
 
-    res.status(StatusCodes.OK).json({ comments })
+    res.status(StatusCodes.OK).json({ comments: comments.filter((comment) => !banList.includes(comment.user.userID)) })
 }
 
 const createComment = async (req, res) => { 
