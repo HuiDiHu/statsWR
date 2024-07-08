@@ -411,7 +411,7 @@ const GraphContent = ({ props }) => {
         } else {
             genPercentGraph(values)
         }
-    }, [/*props.role, */props.data]);
+    }, [props.role, props.data]);
 
     useEffect(() => {
         d3.select(ref.current).select('svg')
