@@ -51,7 +51,7 @@ const Comment = ({ props }) => {
                     Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
                 }
             })
-            .put(`api/v1/comments/${props.data._id}`, {
+            .put(`api/api/v1/comments/${props.data._id}`, {
                 upvote: upvoteQuery,
                 downvote: downvoteQuery
             })
@@ -77,7 +77,7 @@ const Comment = ({ props }) => {
                     Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
                 }
             })
-            .delete(`api/v1/comments/${props.data._id}`)
+            .delete(`api/api/v1/comments/${props.data._id}`)
             .then((res) => {
                 props.setComments(comments => (
                     comments.filter((item) => item._id !== props.data._id)
@@ -104,7 +104,7 @@ const Comment = ({ props }) => {
                     Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
                 }
             })
-            .put(`api/v1/comments/report/${props.data._id}`, { report: !reported })
+            .put(`api/api/v1/comments/report/${props.data._id}`, { report: !reported })
             .then((res) => {
                 if (!reported) {
                     props.setComments(comments => (

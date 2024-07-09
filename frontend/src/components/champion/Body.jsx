@@ -22,7 +22,7 @@ const Body = ({ props }) => {
     window.scrollTo(0, 0)
     setChampTitle(allChampions.find((item) => item.label === props.label).title)
     axios
-      .get(`http://localhost:5555/v1/champions/${props.label}`)
+      .get(`http://localhost:5555/api/v1/champions/${props.label}`)
       .then((res) => {
         setChampionData(res.data.champion)
         props.setName(res.data.champion[0].name)

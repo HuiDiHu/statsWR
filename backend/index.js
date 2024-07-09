@@ -31,10 +31,10 @@ app.use(cors({
 const { getAllChampionComments } = require('./controllers/comments')
 
 //routes
-app.use('/v1/auth', authRouter);
-app.use('/v1/champions', championsRouter);
-app.get('/v1/comments/', getAllChampionComments)
-app.use('/v1/comments', authenticateUser, commentRouter);
+app.use('/api/v1/auth', authRouter);
+app.use('/api/v1/champions', championsRouter);
+app.get('/api/v1/comments/', getAllChampionComments)
+app.use('/api/v1/comments', authenticateUser, commentRouter);
 
 
 app.use(notFoundMiddleware)
