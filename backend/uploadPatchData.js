@@ -8,8 +8,8 @@ const start = async () => {
     try {
         await connectDB(process.env.MONGO_URI)
         const translatedJson = translateRawChampionsData()
-        
-        for (const champion of translatedJson) { 
+
+        for (const champion of translatedJson) {
             if ((await Champion.findOne({ label: champion.label, role: Number(champion.role) })) == null) {
                 await Champion.create(champion)
                 continue;

@@ -14,6 +14,14 @@ const ChampionGameplaySchema = new mongoose.Schema({
         type: Number,
         default: 0.00
     },
+    weight: {
+        type: Number,
+        default: 0.00
+    },
+    tier: {
+        type: String,
+        default: "NaN,1/1"
+    },
     date: {
         type: Date,
         default: Date.now()
@@ -33,11 +41,7 @@ const ChampionSchema = new mongoose.Schema({
         type: Number,
         required: [true, 'Please provide champion role']
     },
-    gameplayData: [ChampionGameplaySchema],
-    tier: {
-        type: String,
-        default: 'NaN'
-    }
+    gameplayData: [ChampionGameplaySchema]
 }, { timestamps: true }).index({label: 1, role: 1}, {unique: true});
 
 

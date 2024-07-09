@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import TableRow from "./TableRow"
 import axios from 'axios'
 
-const defaultSection = 'winRate';
+const defaultSection = 'tier';
 
 const TableBody = ({ props }) => {
     const [loading, setLoading] = useState(false)
@@ -33,21 +33,12 @@ const TableBody = ({ props }) => {
         const newIsDecreasing = focusSection === section ? -isDecreasing : 1;
         setIsDecreasing(newIsDecreasing)
         setFocusSection(section)
-
-        if (section === 'tier') {
-            setRoleFilteredChampions([...roleFilteredChampions].sort((a, b) => {
-                return a.tier < b.tier ? newIsDecreasing : ( a.tier > b.tier ? -newIsDecreasing :
-                    newIsDecreasing * ( Number(b.gameplayData[b.gameplayData.length - 1].winRate) - 
-                                    Number(a.gameplayData[a.gameplayData.length - 1].winRate) ) )
-            }))
-        } else {
-            setRoleFilteredChampions([...roleFilteredChampions].sort((a, b) => {
-                return newIsDecreasing * ( Number(b.gameplayData[b.gameplayData.length - 1][section]) - 
-                         Number(a.gameplayData[a.gameplayData.length - 1][section]) )
-            }))
-        }
+        if (section === 'tier') section = 'weight'
+        setRoleFilteredChampions([...roleFilteredChampions].sort((a, b) => {
+            return newIsDecreasing * (Number(b.gameplayData[b.gameplayData.length - 1][section]) -
+                Number(a.gameplayData[a.gameplayData.length - 1][section]))
+        }))
     }
-
     return (
         <table className='table-auto'>
             <thead className='bg-zinc-800'>
@@ -115,7 +106,7 @@ const TableBody = ({ props }) => {
                                 pickRate: champion.gameplayData[champion.gameplayData.length - 1].pickRate,
                                 banRate: champion.gameplayData[champion.gameplayData.length - 1].banRate
                             },
-                            tier: champion.tier,
+                            tier: champion.gameplayData[champion.gameplayData.length - 1].tier.split(',')[0],
                             focusSection: focusSection
                         }}
                     />

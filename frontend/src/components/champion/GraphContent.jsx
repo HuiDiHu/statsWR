@@ -202,13 +202,7 @@ const GraphContent = ({ props }) => {
         }, 150)
     }
 
-    const genRankGraph = (values) => {
-        //TODO: remove this once rank and tier is calculated in the backend
-        values.sort((a, b) => {
-            let dateA = new Date(a[0]); // Parse each date string into a Date object
-            let dateB = new Date(b[0]);
-            return dateA - dateB; // Compare the dates
-        });
+    const genRankGraph = (values, baseline) => {
         setTimeout(() => {
             d3.select(ref.current).selectAll('svg').remove();
 
@@ -239,8 +233,6 @@ const GraphContent = ({ props }) => {
                 .range([paddingLeft, width - paddingRight]);
 
             //scale used to create visual y-axis representation AND position elements
-            //TODO change 116 into total number of champions in this role after rank and tier is calculated
-            const baseline = 116;
             const yAxisScale = d3.scaleLinear() //scale for winrate values
                 .domain([baseline, 1])
                 .range([height - paddingBottom, paddingTop])
@@ -368,7 +360,13 @@ const GraphContent = ({ props }) => {
             const xAxis = d3.axisBottom(xAxisScale)
             const yAxis = d3.axisLeft(yAxisScale)
             //TODO: change this once tier and rank calculated in backend
-            yAxis.tickValues([1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 116]) // manually set max/min ticks
+            let rankTickArr = [1, 10];
+            for (let i = 20; i < baseline; i += 10){   
+                rankTickArr.push(i)
+            };
+            rankTickArr.push(baseline)
+
+            yAxis.tickValues(rankTickArr) // manually set max/min ticks
 
             //Remember svg = d3.select('svg');
             svg.append('g')
@@ -407,7 +405,7 @@ const GraphContent = ({ props }) => {
             return dateA - dateB; // Compare the dates
         });
         if (props.id === 'RANK') {
-            genRankGraph([["2024-06-17T05:32:34.440Z", 1], ["2023-06-17T05:32:34.440Z", 76], ["2022-06-17T05:32:34.440Z", 34], ["2021-06-17T05:32:34.440Z", 50], ["2023-02-17T05:32:34.440Z", 116]])
+            genRankGraph(values.map(d => [d[0], Number(d[1].split('/')[0])]), Math.max(...(values.map(d => Number(d[1].split('/')[1])))))
         } else {
             genPercentGraph(values)
         }

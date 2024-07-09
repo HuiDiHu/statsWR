@@ -5,7 +5,7 @@ import 'src/style/champion/GraphsContainer.css'
 
 const Graphs = ({ props }) => {
     //what the fuck is this??
-    const [tierData, setTierData] = useState([])
+    const [rankData, setRankData] = useState([])
     const [wrData, setWrData] = useState([])
     const [prData, setPrData] = useState([])
     const [brData, setBrData] = useState([])
@@ -15,11 +15,17 @@ const Graphs = ({ props }) => {
             [item['date'], item[label]]
         ))
     }
+    const parseRankData = () => {
+        return props.gameplayData.map((item) => (
+            [item['date'], item['tier'].split(',')[1]]
+        ))
+    }
     useLayoutEffect(() => {
         //setTierData()
         setWrData(parseData('winRate'))
         setPrData(parseData('pickRate'))
         setBrData(parseData('banRate'))
+        setRankData(parseRankData())
     }, [props.role, props.gameplayData])
     return (
         <div 
@@ -33,7 +39,7 @@ const Graphs = ({ props }) => {
                     className={`flex flex-col ${((props.isClicked === 0 && props.isHovered === 4) || props.isClicked === 4) ? 'justify-end' : ''}`}
                 >
                     <div className={`${((props.isClicked === 0 && props.isHovered === 2) || props.isClicked === 2) ? 'grow-transition' : 'shrink-transition'}`}></div>
-                    <Graph props={{ label: props.label, isClicked: props.isClicked, setIsClicked: props.setIsClicked, isHovered: props.isHovered, setIsHovered: props.setIsHovered, graphLabel: 'RANK', id: '1', data: tierData, role: props.role }} />
+                    <Graph props={{ label: props.label, isClicked: props.isClicked, setIsClicked: props.setIsClicked, isHovered: props.isHovered, setIsHovered: props.setIsHovered, graphLabel: 'RANK', id: '1', data: rankData, role: props.role }} />
                 </div>
                 <div
                     className={`flex flex-col ${((props.isClicked === 0 && props.isHovered === 3) || props.isClicked === 3) ? 'justify-end' : ''}`}

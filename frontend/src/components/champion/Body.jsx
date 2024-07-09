@@ -29,7 +29,6 @@ const Body = ({ props }) => {
         setInfo({
           label: props.label,
           gameplayData: (curRole ? res.data.champion.find((item) => item.role === curRole).gameplayData : res.data.champion[0].gameplayData),
-          tier: curRole ? res.data.champion.find((item) => item.role === curRole).tier : res.data.champion[0].tier,
         })
         setCurRole(curRole ? curRole : res.data.champion[0].role)
         setStatus("AOK")
@@ -50,7 +49,6 @@ const Body = ({ props }) => {
     setInfo({
       label: props.label,
       gameplayData: data.gameplayData,
-      tier: data.tier
     })
   }, [curRole])
 
@@ -80,14 +78,20 @@ const Body = ({ props }) => {
               title: champTitle,
               setIsClicked
             }} />
-            <StatsLabel props={{
-              tier: info.tier ? info.tier : '',
-              winRate: info.gameplayData ? info.gameplayData[info.gameplayData.length - 1]['winRate'] : '',
-              pickRate: info.gameplayData ? info.gameplayData[info.gameplayData.length - 1]['pickRate'] : '',
-              banRate: info.gameplayData ? info.gameplayData[info.gameplayData.length - 1]['banRate'] : '',
-              rank: '1/0',
-
-            }} />
+            <StatsLabel props={info.gameplayData ?
+              {
+                tier: info.gameplayData[info.gameplayData.length - 1]['tier'].split(',')[0],
+                rank: info.gameplayData[info.gameplayData.length - 1]['tier'].split(',')[1],
+                prevRank: info.gameplayData.length > 1 ? info.gameplayData[info.gameplayData.length - 2]['tier'].split(',')[1] : info.gameplayData[info.gameplayData.length - 1]['tier'].split(',')[1],
+                winRate: info.gameplayData[info.gameplayData.length - 1]['winRate'],
+                prevWinRate: info.gameplayData.length > 1 ? info.gameplayData[info.gameplayData.length - 2]['winRate'] : info.gameplayData[info.gameplayData.length - 1]['winRate'],
+                pickRate: info.gameplayData[info.gameplayData.length - 1]['pickRate'],
+                prevPickRate: info.gameplayData.length > 1 ? info.gameplayData[info.gameplayData.length - 2]['pickRate'] : info.gameplayData[info.gameplayData.length - 1]['pickRate'],
+                banRate: info.gameplayData[info.gameplayData.length - 1]['banRate'],
+                prevBanRate: info.gameplayData.length > 1 ? info.gameplayData[info.gameplayData.length - 2]['banRate'] : info.gameplayData[info.gameplayData.length - 1]['banRate'],
+              } : 
+              { tier: '', rank: 0, prevRank: 0, winRate: 0, prevWinRate: 0, pickRate: 0, prevPickRate: 0, banRate: 0, prevBanRate: 0 }
+          } />
             <GraphsContainer props={{ label: props.label, isHovered, setIsHovered, isClicked, setIsClicked, gameplayData: info.gameplayData || [], role: curRole }} />
             <DemoAndAbilitiesContainer props={{ label: props.label, status, setStatus }} />
           </div>

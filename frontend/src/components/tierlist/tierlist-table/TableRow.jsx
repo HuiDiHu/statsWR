@@ -1,6 +1,26 @@
 import { useNavigate } from "react-router-dom";
 const rolesTable = ['baron', 'jungle', 'mid', 'bottom', 'support'];
 
+
+const tierStyle = (tier) => {
+    switch(tier) {
+        case "S+":
+            return "text-amber-400"
+        case "S":
+            return "text-orange-500"
+        case "A":
+            return "text-purple-600"
+        case "B":
+            return "text-blue-600"
+        case "C":
+            return "text-yellow-500"
+        case "D":
+            return "text-white"
+        case "F":
+            return "text-red-600"
+    }
+}
+
 const TableRow = ({ props }) => {
     const navigate = useNavigate()
     const handleRedirect = (label, role) => {
@@ -30,7 +50,7 @@ const TableRow = ({ props }) => {
                 </div>
             </td>
             <td>
-                <h5 className="text-center text-lg">{props.tier}</h5>
+                <h5 className={`text-center text-lg ${tierStyle(props.tier)}`}>{props.tier}</h5>
             </td>
             <td className="py-2 flex justify-center">
                 <img

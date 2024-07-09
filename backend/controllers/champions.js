@@ -2,29 +2,43 @@ const Champion = require('../models/Champion')
 const Abilities = require('../models/Abilities')
 const { StatusCodes } = require('http-status-codes')
 const { BadRequestError, NotFoundError } = require('../errors')
+const uploadDates = require('../constants.json')["upload_dates"]
 
-const defaultSection = 'winRate'
 
 const getAllChampions = async (req, res) => {
-    //sends back an array of non-unique champions sorted by their defaultSection
-    const champions = await Champion.find({})
+    //sends back an array of non-unique champions sorted by their weight
+
+    const champions = await Champion.find({
+        gameplayData: {
+            $elemMatch: { date: new Date(uploadDates[uploadDates.length - 1]) }
+        }
+    })
+
+
     if (!champions) { throw new NotFoundError('Champions not found.') }
-    champions.sort((a, b) => (a.gameplayData[a.gameplayData.length - 1][defaultSection] < b.gameplayData[b.gameplayData.length - 1][defaultSection] ? 1 : -1))
+    champions.sort((a, b) => (a.gameplayData[a.gameplayData.length - 1]['weight'] < b.gameplayData[b.gameplayData.length - 1]['weight'] ? 1 : -1))
     return res.status(StatusCodes.OK).json({ champions });
 }
 
 const getAllLaneChampions = async (req, res) => {
-    //sends back an array of unique champions filtered by the given roleId and sorted by their defaultSection
+    //sends back an array of unique champions filtered by the given roleId and sorted by their weight
     const {
         params: { id: roleId }
     } = req
     if (!roleId || Number(roleId) === 0) {
         return await getAllChampions(req, res);
     }
+
     //filter by role
-    const champions = await Champion.find({ role: Number(roleId) })
+    const champions = await Champion.find({
+        role: Number(roleId),
+        gameplayData: {
+            $elemMatch: { date: new Date(uploadDates[uploadDates.length - 1]) }
+        }
+    })
+
     if (!champions) { throw new NotFoundError(`Champions of lane:${roleId} not found.`) }
-    champions.sort((a, b) => (a.gameplayData[a.gameplayData.length - 1][defaultSection] < b.gameplayData[b.gameplayData.length - 1][defaultSection] ? 1 : -1))
+    champions.sort((a, b) => (a.gameplayData[a.gameplayData.length - 1]['weight'] < b.gameplayData[b.gameplayData.length - 1]['weight'] ? 1 : -1))
     return res.status(StatusCodes.OK).json({ champions });
 }
 

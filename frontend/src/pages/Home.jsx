@@ -19,10 +19,10 @@ const Home = ({ props }) => {
         label: 'Home',
         loginModal, signupModal, setLoginModal, setSignupModal,
         isLogged: props.isLogged,
-        setLogged: props.setLogged 
+        setLogged: props.setLogged
       }} />
-      {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{setLoginModal, setSignupModal, setLogged: props.setLogged }} />}
-      {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{setLoginModal, setSignupModal, setLogged: props.setLogged }} />}
+      {loginModal && <LoginModal onClose={() => setLoginModal(false)} props={{ setLoginModal, setSignupModal, setLogged: props.setLogged }} />}
+      {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{ setLoginModal, setSignupModal, setLogged: props.setLogged }} />}
       <div className='pt-20 w-1/3 h-[90vh] m-auto flex flex-col items-center min-w-[200px]'>
         <div className='h-[15vh]'></div>
         <SearchIcons />
