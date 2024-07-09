@@ -415,7 +415,7 @@ const GraphContent = ({ props }) => {
 
     useEffect(() => {
         d3.select(ref.current).select('svg')
-            .transition().duration(625)
+            .transition().duration(650)
             .attr('width', props.dim)
             .attr('height', props.dim)
 
