@@ -4,8 +4,9 @@
   "description": "",
   "main": "./api/index.js",
   "scripts": {
-    "start": "node ./api/index.js",
-    "dev": "nodemon ./index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "vercel-build": "echo build"
   },
   "keywords": [],
   "author": "",
