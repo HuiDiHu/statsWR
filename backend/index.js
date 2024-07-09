@@ -6,20 +6,20 @@ const app = express();
 
 const cors = require('cors')
 //authenticate when trying to create comments
-const authenticateUser = require('../middleware/authentication');
+const authenticateUser = require('./middleware/authentication');
 
 
 //connectDB
-const connectDB = require('../db/connect');
+const connectDB = require('./db/connect');
 
 //routers
-const championsRouter = require('../routes/champions');
-const authRouter = require('../routes/auth');
-const commentRouter = require('../routes/comments');
+const championsRouter = require('./routes/champions');
+const authRouter = require('./routes/auth');
+const commentRouter = require('./routes/comments');
 
 //error handler
-const notFoundMiddleware = require('../middleware/not-found.js');
-const errorHandlerMiddleware = require('../middleware/error-handler.js');
+const notFoundMiddleware = require('./middleware/not-found.js');
+const errorHandlerMiddleware = require('./middleware/error-handler.js');
 
 app.use(express.json())
 app.use(cors({
@@ -28,7 +28,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization']
 }))
 
-const { getAllChampionComments } = require('../controllers/comments')
+const { getAllChampionComments } = require('./controllers/comments')
 
 //routes
 app.get('/', async (req, res) => {
