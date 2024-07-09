@@ -3,6 +3,8 @@ import TimeAgo from 'react-timeago'
 import { BiSolidUpvote } from "react-icons/bi"
 import { BiSolidDownvote } from "react-icons/bi"
 import { IoTrashOutline } from "react-icons/io5";
+import { MdReportGmailerrorred } from "react-icons/md";
+import { useSnackbar } from 'notistack'
 import axios from 'axios'
 
 const Comment = ({ props }) => {
@@ -10,6 +12,8 @@ const Comment = ({ props }) => {
     const [upvote, setUpvote] = useState(false)
     const [downvote, setDownvote] = useState(false)
     const [cumulativeCount, setCumulativeCount] = useState(props.data.upvotes.length - props.data.downvotes.length)
+    const { enqueueSnackbar } = useSnackbar()
+    const [reported, setReported] = useState(props.data.reports.includes(window.sessionStorage.getItem('userID')));
 
     //this seems completely useless but CommentSection breaks without it :/
     useEffect(() => {
@@ -79,16 +83,49 @@ const Comment = ({ props }) => {
                     comments.filter((item) => item._id !== props.data._id)
                 ))
                 props.setN(prev => prev - 1)
+                enqueueSnackbar('Comment deleted successfully', { variant: 'success' })
             })
             .catch((error) => {
                 console.log(error)
                 if (error.response.status === 401) {
                     window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile'); window.sessionStorage.removeItem('userID');
                     props.setLoginModal(true); props.setLogged(false)
+                } else {
+                    enqueueSnackbar('Error', { variant: 'error' })
                 }
             })
     }
 
+    const handleReport = () => {
+        axios
+            .create({
+                baseURL: 'http://localhost:5555',
+                headers: {
+                    Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
+                }
+            })
+            .put(`api/v1/comments/report/${props.data._id}`, { report: !reported })
+            .then((res) => {
+                if (!reported) {
+                    props.setComments(comments => (
+                        comments.filter((item) => item._id !== props.data._id)
+                    ))
+                    props.setN(prev => prev - 1)
+                } else {
+                    setReported(prev => { !prev })
+                }
+                enqueueSnackbar('Updated report status successfully', { variant: 'success' })
+            })
+            .catch((error) => {
+                console.log(error)
+                if (error.response.status === 401) {
+                    window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile'); window.sessionStorage.removeItem('userID');
+                    props.setLoginModal(true); props.setLogged(false)
+                } else {
+                    enqueueSnackbar('Error', { variant: 'error' })
+                }
+            })
+    }
     const textRef = useRef()
     return (
         <div className='relative flex w-full p-4 bg-[#31313c] border-b border-[#1e1e1e]'>
@@ -139,6 +176,10 @@ const Comment = ({ props }) => {
             {window.sessionStorage.getItem('userID') === props.data.user.userID && <IoTrashOutline
                 className='absolute lg:bottom-3 lg:-right-6 lg:w-5 lg:h-5 bottom-2 -right-4 w-4 h-4 hover:text-red-600 pointer-events-auto cursor-pointer'
                 onClick={handleDelete}
+            />}
+            {window.sessionStorage.getItem('userID') !== props.data.user.userID && <MdReportGmailerrorred
+                className={`absolute lg:top-3 lg:-right-[27px] lg:w-6 lg:h-6 top-2 -right-[19px] w-5 h-5 ${reported ? 'text-red-600 hover:text-white' : 'text-white hover:text-red-600'} pointer-events-auto cursor-pointer`}
+                onClick={handleReport}
             />}
         </div>
     )

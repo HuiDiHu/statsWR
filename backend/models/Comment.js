@@ -26,6 +26,10 @@ const CommentSchema = new mongoose.Schema({
         required: true
     },
     user: userSchema,
+    reports: {
+        type: [String],
+        default: []
+    },
     upvotes: {
         type: [String],
         default: []

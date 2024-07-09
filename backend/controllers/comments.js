@@ -50,14 +50,14 @@ const updateComment = async (req, res) => {
     //single comment with commentID (unique id)
 
     let updates = {
-        "$push": {},
+        "$addToSet": {},
         "$pull": {}
     }
     if (upvote !== null) {
-        upvote ? updates["$push"]["upvotes"] = req.user.userID : updates["$pull"]["upvotes"] = req.user.userID
+        upvote ? updates["$addToSet"]["upvotes"] = req.user.userID : updates["$pull"]["upvotes"] = req.user.userID
     }
     if (downvote !== null) {
-        downvote ? updates["$push"]["downvotes"] = req.user.userID : updates["$pull"]["downvotes"] = req.user.userID
+        downvote ? updates["$addToSet"]["downvotes"] = req.user.userID : updates["$pull"]["downvotes"] = req.user.userID
     }
     const comment = await Comment.findByIdAndUpdate(commentID, updates, {new: true})
     res.status(StatusCodes.OK).json({ comment })
@@ -78,11 +78,31 @@ const deleteComment = async (req, res) => {
     res.status(StatusCodes.OK).json({ comment })
 }
 
+const updateReports = async (req, res) => {
+    const {
+        params: { id: commentID }
+    } = req;
+    const { report } = req.body
+    let updates = {
+        "$addToSet": {},
+        "$pull": {}
+    }
+    if (report) {
+        updates["$addToSet"]["reports"] = req.user.userID
+    } else {
+        updates["$pull"]["reports"] = req.user.userID
+    }
+    await Comment.findByIdAndUpdate(commentID, updates, {new: true})
+
+    res.status(StatusCodes.OK).send('Comment report status successfully updated.')
+}
+
 module.exports = {
     getAllChampionComments,
     createComment,
     updateComment,
-    deleteComment
+    deleteComment,
+    updateReports
 }
 
 
