@@ -31,6 +31,10 @@ app.use(cors({
 const { getAllChampionComments } = require('../controllers/comments')
 
 //routes
+app.get('/', async (req, res) => {
+    res.send("Vercel deployed!")
+})
+
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/champions', championsRouter);
 app.get('/api/v1/comments/', getAllChampionComments)
