@@ -14,7 +14,7 @@ const CommentSectionHeader = ({ props }) => {
         }
         axios
             .create({
-                baseURL: 'http://localhost:5555',
+                baseURL: 'https://statswr-api.onrender.com',
                 headers: {
                     Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
                 }
