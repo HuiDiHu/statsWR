@@ -17,7 +17,7 @@ const TableBody = ({ props }) => {
         setFocusSection(defaultSection)
         setIsDecreasing(1)
         axios
-            .get(`http://localhost:5555/api/v1/champions/lanes/${props.roleIndex}`)
+            .get(`http://localhost:5555/v1/champions/lanes/${props.roleIndex}`)
             .then((res) => {
                 setRoleFilteredChampions(res.data.champions)
                 setLoading(false)

@@ -16,7 +16,7 @@ const DemoAndAbilitiesContainer = ({ props }) => {
 
   useLayoutEffect(() => {
     axios
-      .get(`http://localhost:5555/api/v1/champions/abilities/${props.label}`)
+      .get(`http://localhost:5555/v1/champions/abilities/${props.label}`)
       .then((res) => {
         setChampAbilities(res.data.abilities)
         props.setStatus("AOK")

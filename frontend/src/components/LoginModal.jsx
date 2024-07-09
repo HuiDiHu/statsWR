@@ -12,7 +12,7 @@ const LoginModal = ({ onClose, props }) => {
     const handleLoginSubmit = () => {
         setLoading(true)
         axios
-            .post('http://localhost:5555/api/v1/auth/login', { email, password })
+            .post('http://localhost:5555/v1/auth/login', { email, password })
             .then((res) => {
                 props.setLoginModal(false);
                 setErrMsg(""); setEmail(""); setPassword("");

@@ -19,7 +19,7 @@ const CommentSectionHeader = ({ props }) => {
                     Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
                 }
             })
-            .post(`/api/v1/comments/create/?champion=${props.label}`,
+            .post(`/v1/comments/create/?champion=${props.label}`,
                 {
                     text: commentText.trim().replaceAll('\n', '\\n')
                 }

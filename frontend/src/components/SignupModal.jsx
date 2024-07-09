@@ -12,7 +12,7 @@ const SignupModal = ({ onClose, props }) => {
     const handleSignupSubmit = () => {
         setLoading(true)
         axios
-            .post('http://localhost:5555/api/v1/auth/register', { email, username, password })
+            .post('http://localhost:5555/v1/auth/register', { email, username, password })
             .then((res) => {
                 props.setSignupModal(false)
                 setErrMsg(""); setEmail(""); setUsername(""); setPassword("");

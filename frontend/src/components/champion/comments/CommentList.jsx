@@ -36,7 +36,7 @@ const CommentList = ({ props }) => {
         //console.log("reloaded...")
         setLoading(true)
         axios
-            .get(`http://localhost:5555/api/v1/comments/?champion=${props.label}`)
+            .get(`http://localhost:5555/v1/comments/?champion=${props.label}`)
             .then((res) => {
                 props.setSortedBy('Popular')
                 setComments(res.data.comments.sort((a, b) => sortByPopular(a, b)))
