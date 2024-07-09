@@ -32,7 +32,7 @@ const { getAllChampionComments } = require('./controllers/comments')
 
 //routes
 app.get('/', async (req, res) => {
-    res.send("Vercel deployed!")
+    res.send("Render deployed!")
 })
 
 app.use('/api/v1/auth', authRouter);
