@@ -34,14 +34,14 @@ const StatsLabel = ({ props }) => {
         <div className='flex flex-col items-center max-w-fit'>
             <div className='flex items-center py-4 bg-gradient-to-r from-orange-500 to-orange-800 rounded-lg text-center h-20 lg:h-24'>
                 <div className='text-xs lg:text-base flex flex-col px-4 lg:px-8'>
-                    {props.rank && props.prevRank && diffChecker('rank',  -1.00 * (Number(props.rank.split('/')[0]) - Number(props.prevRank.split('/')[0])))}
-                    <span className='font-bold'>{props.rank}</span>
-                    <span>Rank</span>
+                    <span className='font-bold text-xl'>{props.tier}</span>
+                    <span>Tier</span>
                 </div>
                 <div className='h-[90%] border' />
                 <div className='text-xs lg:text-base flex flex-col px-4 lg:px-8'>
-                    <span className='font-bold'>{props.tier}</span>
-                    <span>Tier</span>
+                    {props.rank && props.prevRank && diffChecker('rank', -1.00 * (Number(props.rank.split('/')[0]) - Number(props.prevRank.split('/')[0])))}
+                    <span className='font-bold'>{props.rank}</span>
+                    <span>Rank</span>
                 </div>
                 <div className='h-[90%] border' />
                 <div className='text-xs lg:text-base flex flex-col px-4 lg:px-8'>
