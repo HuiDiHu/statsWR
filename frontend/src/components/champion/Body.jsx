@@ -68,7 +68,7 @@ const Body = ({ props }) => {
         >
           <span className='text-md'> Back</span>
         </Link>
-        {loading && <div className='w-full h-32 flex flex-col items-center justify-end'>
+        {loading && <div className='absolute top-32 right-32 w-32 h-32 flex flex-col items-start justify-end'>
           <img
             src={logo}
             className='h-20 w-20 animate-pulse'
