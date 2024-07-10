@@ -86,7 +86,7 @@ const Navbar = ({ props }) => {
                         <ul className='flex mb-2.5'>
                             {navItems.map((item, index) => (
                                 <li key={index} className={`h-16 w-32 flex items-center justify-center border-orange-700 rounded-lg ${index ? 'border-l' : 'border-r'}`}>
-                                    <div className='w-[75%] h-[80%] hover:bg-[#31313c] rounded-xl flex items-center justify-center'>
+                                    <div className={`w-[75%] h-[80%] ${item.label === props.label ? 'bg-[#31313c]' : ''} rounded-xl flex items-center justify-center`}>
                                         <Link to={item.to}>
                                             <span>{item.label}</span>
                                         </Link>
