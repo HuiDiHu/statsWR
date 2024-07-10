@@ -59,7 +59,7 @@ const Body = ({ props }) => {
       onClick={() => { setIsClicked(0) }}
     >
       <div
-        className='relative w-[90%] sm:w-[80%] min-h-[1000px] bg-[#31313c] rounded-lg mt-2'
+        className='relative w-full sm:w-[80%] min-h-[1000px] bg-[#31313c] rounded-lg mt-2'
         onClick={() => { setIsClicked(0) }}
       >
         <Link
