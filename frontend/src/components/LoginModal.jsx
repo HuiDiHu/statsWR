@@ -95,10 +95,10 @@ const LoginModal = ({ onClose, props }) => {
                         <span className="text-xl">Forgot Password?</span>
                     </button>
                 </div>
-                {loading && <img className="h-12 w-12 lg:h-14 lg:w-14 absolute bottom-5 right-5 lg:bottom-10 lg:right-10 animate-spin" src={logo}/>}
+                {loading && <img className="h-12 w-12 lg:h-14 lg:w-14 absolute bottom-5 right-5 lg:bottom-10 lg:right-10 animate-spin" src={logo} />}
                 <p className="text-xs absolute bottom-5 left-5">
                     <span>Need an account?{' '}</span>
-                    <span 
+                    <span
                         className="text-sky-600 cursor-pointer"
                         onClick={() => {
                             props.setLoginModal(false);

@@ -112,63 +112,6 @@ const GraphContent = ({ props }) => {
                 .style("stroke", "orange")
                 .style("stroke-width", 3);
 
-            svg.selectAll('circle')
-                .data(values)
-                .enter()
-                .append('circle')//creates circle elements
-                .attr('fill', 'orange')
-                .attr('class', 'dataPoint')
-                .attr('data-date', (d) => {
-                    return d[0]
-                })
-                .attr('data-value', (d) => {
-                    return d[1]
-                })
-                .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
-                .attr('cy', (d) => yAxisScale(baseline)) //y position
-                .attr('r', (d) => width/80); //radius size of each point
-
-            svg.selectAll('circle')
-                .data(values)
-                .transition().duration(850)
-                .attr('fill', 'orange')
-                .attr('class', 'dataPoint')
-                .attr('data-date', (d) => {
-                    return d[0]
-                })
-                .attr('data-value', (d) => {
-                    return d[1]
-                })
-                .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
-                .attr('cy', (d) => yAxisScale(d[1] / 100)) //y position
-                .attr('r', (d) => width/80); //radius size of each point
-
-            svg.selectAll("circle")
-                .on("mouseover", function (event, d) {
-                    // Get the coordinates of the mouse pointer and bounding box proportions
-                    // const [mouseX, mouseY] = d3.pointer(event, this);
-                    const relLeft = this.getBoundingClientRect().left - d3.select(bodyRef.current).node().getBoundingClientRect().left
-                    const relTop = this.getBoundingClientRect().top - d3.select(bodyRef.current).node().getBoundingClientRect().top
-                    const circleRect = this.getBoundingClientRect()
-                    const tooltipWidth = tooltip.node().getBoundingClientRect().width;
-                    const tooltipHeight = tooltip.node().getBoundingClientRect().height;
-                    const tooltipLeft = relLeft + (circleRect.width / 2) - (tooltipWidth / 2);
-                    const tooltipTop = relTop - tooltipHeight - 10;
-
-                    // Create or update the tooltip
-                    d3.select(bodyRef.current).selectAll("#tooltip")
-                        .style("left", tooltipLeft + "px")
-                        .style("top", tooltipTop + "px")
-                        .html(`${d[0].slice(0, 10)}<br>${d[1] + "%"}`)
-                        .style("visibility", "visible")
-                    //.html() allows html tags inside of the tooltip
-                })
-                .on("mouseout", function () {
-                    d3.selectAll("#tooltip")
-                        .style("visibility", "hidden")
-                });
-
-
             const xAxis = d3.axisBottom(xAxisScale)
             const yAxis = d3.axisLeft(yAxisScale)
             yAxis.tickFormat(d3.format(".0%")); //display percentages
@@ -201,6 +144,67 @@ const GraphContent = ({ props }) => {
             //.selectAll("text")
             //.attr("font-size", "0.95em")
             //.attr("display", "none");
+            svg.selectAll('circle')
+            .data(values)
+            .enter()
+            .append('circle')//creates circle elements
+            .attr('fill', 'orange')
+            .attr('class', 'dataPoint')
+            .attr('data-date', (d) => {
+                return d[0]
+            })
+            .attr('data-value', (d) => {
+                return d[1]
+            })
+            .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
+            .attr('cy', (d) => yAxisScale(baseline)) //y position
+            .attr('r', (d) => width/70); //radius size of each point
+
+        svg.selectAll('circle')
+            .data(values)
+            .transition().duration(850)
+            .attr('fill', 'orange')
+            .attr('class', 'dataPoint')
+            .attr('data-date', (d) => {
+                return d[0]
+            })
+            .attr('data-value', (d) => {
+                return d[1]
+            })
+            .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
+            .attr('cy', (d) => yAxisScale(d[1] / 100)) //y position
+            .attr('r', (d) => width/70); //radius size of each point
+
+        svg.selectAll("circle")
+            .on("mouseover", function (event, d) {
+                // Get the coordinates of the mouse pointer and bounding box proportions
+                // const [mouseX, mouseY] = d3.pointer(event, this);
+                const relLeft = this.getBoundingClientRect().left - d3.select(bodyRef.current).node().getBoundingClientRect().left
+                const relTop = this.getBoundingClientRect().top - d3.select(bodyRef.current).node().getBoundingClientRect().top
+                const circleRect = this.getBoundingClientRect()
+                const tooltipWidth = tooltip.node().getBoundingClientRect().width;
+                const tooltipHeight = tooltip.node().getBoundingClientRect().height;
+                const tooltipLeft = relLeft + (circleRect.width / 2) - (tooltipWidth / 2);
+                const tooltipTop = relTop - tooltipHeight - 10;
+
+                d3.select(this)
+                    .attr("fill", "darkorange")
+
+                // Create or update the tooltip
+                d3.select(bodyRef.current).selectAll("#tooltip")
+                    .style("left", tooltipLeft + "px")
+                    .style("top", tooltipTop + "px")
+                    .html(`${d[0].slice(0, 10)}<br>${d[1] + "%"}`)
+                    .style("visibility", "visible")
+                //.html() allows html tags inside of the tooltip
+            })
+            .on("mouseout", function () {
+                d3.select(this) //change the circle back to normal color
+                    .attr("fill", "orange")
+
+                d3.selectAll("#tooltip")
+                    .style("visibility", "hidden")
+            });
 
         }, 150)
     }
@@ -303,63 +307,6 @@ const GraphContent = ({ props }) => {
                 .style("stroke", "orange")
                 .style("stroke-width", 3);
 
-            svg.selectAll('circle')
-                .data(values)
-                .enter()
-                .append('circle')//creates circle elements
-                .attr('fill', 'orange')
-                .attr('class', 'dataPoint')
-                .attr('data-date', (d) => {
-                    return d[0]
-                })
-                .attr('data-value', (d) => {
-                    return d[1]
-                })
-                .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
-                .attr('cy', (d) => yAxisScale(baseline)) //y position
-                .attr('r', (d) => width/80); //radius size of each point
-
-            svg.selectAll('circle')
-                .data(values)
-                .transition().duration(850)
-                .attr('fill', 'orange')
-                .attr('class', 'dataPoint')
-                .attr('data-date', (d) => {
-                    return d[0]
-                })
-                .attr('data-value', (d) => {
-                    return d[1]
-                })
-                .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
-                .attr('cy', (d) => yAxisScale(d[1])) //y position
-                .attr('r', (d) => width/80); //radius size of each point
-
-            svg.selectAll("circle")
-                .on("mouseover", function (event, d) {
-                    // Get the coordinates of the mouse pointer and bounding box proportions
-                    // const [mouseX, mouseY] = d3.pointer(event, this);
-                    const relLeft = this.getBoundingClientRect().left - d3.select(bodyRef.current).node().getBoundingClientRect().left
-                    const relTop = this.getBoundingClientRect().top - d3.select(bodyRef.current).node().getBoundingClientRect().top
-                    const circleRect = this.getBoundingClientRect()
-                    const tooltipWidth = tooltip.node().getBoundingClientRect().width;
-                    const tooltipHeight = tooltip.node().getBoundingClientRect().height;
-                    const tooltipLeft = relLeft + (circleRect.width / 2) - (tooltipWidth / 2);
-                    const tooltipTop = relTop - tooltipHeight - 10;
-
-                    // Create or update the tooltip
-                    d3.select(bodyRef.current).selectAll("#tooltip")
-                        .style("left", tooltipLeft + "px")
-                        .style("top", tooltipTop + "px")
-                        .html(`${d[0].slice(0, 10)}<br>${"#" + d[1]}`)
-                        .style("visibility", "visible")
-                    //.html() allows html tags inside of the tooltip
-                })
-                .on("mouseout", function () {
-                    d3.selectAll("#tooltip")
-                        .style("visibility", "hidden")
-                });
-
-
             const xAxis = d3.axisBottom(xAxisScale)
             const yAxis = d3.axisLeft(yAxisScale)
             //TODO: change this once tier and rank calculated in backend
@@ -371,7 +318,6 @@ const GraphContent = ({ props }) => {
 
             yAxis.tickValues(rankTickArr) // manually set max/min ticks
 
-            //Remember svg = d3.select('svg');
             svg.append('g')
                 .call(xAxis) //draws x axis within g element
                 .attr('id', 'x-axis')
@@ -399,6 +345,69 @@ const GraphContent = ({ props }) => {
             //.selectAll("text")
             //.attr("font-size", "0.95em")
             //.attr("display", "none");
+
+            //apparently gridlines have prio over circles so we gotta move circles even lower
+            svg.selectAll('circle')
+            .data(values)
+            .enter()
+            .append('circle')//creates circle elements
+            .attr('fill', 'orange')
+            .attr('class', 'dataPoint')
+            .attr('data-date', (d) => {
+                return d[0]
+            })
+            .attr('data-value', (d) => {
+                return d[1]
+            })
+            .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
+            .attr('cy', (d) => yAxisScale(baseline)) //y position
+            .attr('r', (d) => width/70); //radius size of each point
+
+        svg.selectAll('circle')
+            .data(values)
+            .transition().duration(850)
+            .attr('fill', 'orange')
+            .attr('class', 'dataPoint')
+            .attr('data-date', (d) => {
+                return d[0]
+            })
+            .attr('data-value', (d) => {
+                return d[1]
+            })
+            .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
+            .attr('cy', (d) => yAxisScale(d[1])) //y position
+            .attr('r', (d) => width/70); //radius size of each point
+
+        svg.selectAll("circle")
+            .on("mouseover", function (event, d) {
+                // Get the coordinates of the mouse pointer and bounding box proportions
+                // const [mouseX, mouseY] = d3.pointer(event, this);
+                const relLeft = this.getBoundingClientRect().left - d3.select(bodyRef.current).node().getBoundingClientRect().left
+                const relTop = this.getBoundingClientRect().top - d3.select(bodyRef.current).node().getBoundingClientRect().top
+                const circleRect = this.getBoundingClientRect()
+                const tooltipWidth = tooltip.node().getBoundingClientRect().width;
+                const tooltipHeight = tooltip.node().getBoundingClientRect().height;
+                const tooltipLeft = relLeft + (circleRect.width / 2) - (tooltipWidth / 2);
+                const tooltipTop = relTop - tooltipHeight - 10;
+
+                d3.select(this) //make selected circle dark orange
+                    .attr("fill", "darkorange")
+
+                // Create or update the tooltip
+                d3.select(bodyRef.current).selectAll("#tooltip")
+                    .style("left", tooltipLeft + "px")
+                    .style("top", tooltipTop + "px")
+                    .html(`${d[0].slice(0, 10)}<br>${"#" + d[1]}`)
+                    .style("visibility", "visible")
+                //.html() allows html tags inside of the tooltip
+            })
+            .on("mouseout", function () {
+                d3.select(this) //change the circle back to normal color
+                .attr("fill", "orange")
+
+                d3.selectAll("#tooltip")
+                    .style("visibility", "hidden")
+            });
 
         }, 150)
     }

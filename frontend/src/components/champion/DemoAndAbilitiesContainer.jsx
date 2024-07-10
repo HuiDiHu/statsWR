@@ -35,6 +35,7 @@ const DemoAndAbilitiesContainer = ({ props }) => {
             autoPlay
             loop
             muted
+            playsInline
             onLoadStart={() => setDemoLoaded(false)}
             onLoadedData={() => setDemoLoaded(true)}
             key={champAbilities[selectedAbility].demoSrc}
