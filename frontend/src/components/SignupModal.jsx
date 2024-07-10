@@ -42,7 +42,7 @@ const SignupModal = ({ onClose, props }) => {
             onClick={onClose}
         >
             <div
-                className="relative w-[80%] md:w-[60%] lg:w-[45%] h-[550px] bg-[#31313c] rounded-3xl flex flex-col justify-between items-center py-2"
+                className="relative w-[95%] sm:w-[80%] md:w-[60%] lg:w-[45%] h-[550px] bg-[#31313c] rounded-3xl flex flex-col justify-between items-center py-2"
                 onClick={(e) => e.stopPropagation()}
                 onKeyDown={(e) => {
                     e.key === "Enter" &&
