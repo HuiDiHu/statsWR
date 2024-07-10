@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react'
 import { Link } from "react-router-dom";
 import logo from 'assets/logo.png'
 import { navItems } from 'src/constants'
+const defaultProfile = 'EMPTY_CHAMPION'
 
 const Navbar = ({ props }) => {
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -58,7 +59,7 @@ const Navbar = ({ props }) => {
                         <div className={window.sessionStorage.getItem('token') ? 'flex items-center' : 'hidden'}>
                             <img
                                 className='h-12 w-12 rounded-full mr-2'
-                                src={`../../assets/misc/profile/${window.sessionStorage.getItem('profile')}.png`}
+                                src={`../../assets/misc/profile/${window.sessionStorage.getItem('profile') ? window.sessionStorage.getItem('profile') : defaultProfile}.png`}
                             />
                             <h2 className='max-w-[100px] lg:max-w-[125px] text-center break-words'>
                                 {window.sessionStorage.getItem('username')}

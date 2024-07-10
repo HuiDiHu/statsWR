@@ -6,6 +6,7 @@ import GraphsContainer from './GraphsContainer'
 import { allChampions } from 'src/constants'
 import DemoAndAbilitiesContainer from './DemoAndAbilitiesContainer'
 import { Link } from 'react-router-dom'
+import logo from 'assets/logo.png'
 
 const Body = ({ props }) => {
   const [loading, setLoading] = useState(false)
@@ -67,6 +68,14 @@ const Body = ({ props }) => {
         >
           <span className='text-md'> Back</span>
         </Link>
+        {loading && <div className='w-full h-32 flex flex-col items-center justify-end'>
+          <img
+            src={logo}
+            className='h-20 w-20 animate-pulse'
+          />
+          <span className='text-lg animate-pulse'> Loading... </span>
+        </div>
+        }
         {info && championData &&
           <div className='flex flex-col items-center'>
             <IconAndRoles props={{
@@ -89,9 +98,9 @@ const Body = ({ props }) => {
                 prevPickRate: info.gameplayData.length > 1 ? info.gameplayData[info.gameplayData.length - 2]['pickRate'] : info.gameplayData[info.gameplayData.length - 1]['pickRate'],
                 banRate: info.gameplayData[info.gameplayData.length - 1]['banRate'],
                 prevBanRate: info.gameplayData.length > 1 ? info.gameplayData[info.gameplayData.length - 2]['banRate'] : info.gameplayData[info.gameplayData.length - 1]['banRate'],
-              } : 
+              } :
               { tier: '', rank: 0, prevRank: 0, winRate: 0, prevWinRate: 0, pickRate: 0, prevPickRate: 0, banRate: 0, prevBanRate: 0 }
-          } />
+            } />
             <GraphsContainer props={{ label: props.label, isHovered, setIsHovered, isClicked, setIsClicked, gameplayData: info.gameplayData || [], role: curRole }} />
             <DemoAndAbilitiesContainer props={{ label: props.label, status, setStatus }} />
           </div>

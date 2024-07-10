@@ -5,7 +5,6 @@ import axios from 'axios'
 const defaultSection = 'tier';
 
 const TableBody = ({ props }) => {
-    const [loading, setLoading] = useState(false)
     const [roleFilteredChampions, setRoleFilteredChampions] = useState([])
     const [focusSection, setFocusSection] = useState(defaultSection)
     const [isDecreasing, setIsDecreasing] = useState(1)
@@ -13,17 +12,17 @@ const TableBody = ({ props }) => {
     const focusSectionStyle = `${isDecreasing === 1 ? 'border-b-orange-700' : 'border-t-orange-700'} text-orange-500`;
 
     useEffect(() => {
-        setLoading(true)
+        props.setLoading(true)
         setFocusSection(defaultSection)
         setIsDecreasing(1)
         axios
             .get(`https://statswr-api.onrender.com/api/v1/champions/lanes/${props.roleIndex}`)
             .then((res) => {
                 setRoleFilteredChampions(res.data.champions)
-                setLoading(false)
+                props.setLoading(false)
             })
             .catch((error) => {
-                setLoading(false)
+                props.setLoading(false)
                 console.log(error)
             })
     }, [props.roleIndex])
@@ -92,7 +91,7 @@ const TableBody = ({ props }) => {
                     </th>
                 </tr>
             </thead>
-            <tbody className={loading && props.roleIndex === 0 ? 'hidden' : undefined}>
+            <tbody className={props.loading && props.roleIndex === 0 ? 'hidden' : undefined}>
                 {roleFilteredChampions.map((champion, index) => (
                     <TableRow
                         key={index}
