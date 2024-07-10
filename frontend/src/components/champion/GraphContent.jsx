@@ -309,7 +309,6 @@ const GraphContent = ({ props }) => {
 
             const xAxis = d3.axisBottom(xAxisScale)
             const yAxis = d3.axisLeft(yAxisScale)
-            //TODO: change this once tier and rank calculated in backend
             let rankTickArr = [1, 10];
             for (let i = 20; i < baseline - 3; i += 10){   
                 rankTickArr.push(i)

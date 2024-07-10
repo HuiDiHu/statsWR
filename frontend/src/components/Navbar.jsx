@@ -13,7 +13,7 @@ const Navbar = ({ props }) => {
         setMobileDrawerOpen(!mobileDrawerOpen);
     }
 
-    
+
     return (
         <nav className={`${mobileDrawerOpen && 'sticky '}top-0 z-20 py-3 backdrop-blur-lg ${!mobileDrawerOpen && 'border-b '} border-neutral-700/80`}>
             <div className='container px-4 mx-auto relative text-sm'>
@@ -68,8 +68,8 @@ const Navbar = ({ props }) => {
                         <button
                             className={`${window.sessionStorage.getItem('token') ? '' : 'hidden'} rounded-lg h-8 min-w-16 lg:h-10 lg:min-w-20 bg-red-700 text-nowrap`}
                             onClick={() => {
-                                window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile'); window.sessionStorage.removeItem('userID'); 
-                                props.setLogged(false); setDummy(prev => {!prev})
+                                window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile'); window.sessionStorage.removeItem('userID');
+                                props.setLogged(false); setDummy(prev => { !prev })
                             }}
                         >
                             Sign Out
@@ -83,15 +83,18 @@ const Navbar = ({ props }) => {
                 </div>
                 {mobileDrawerOpen && !props.loginModal && !props.signupModal && (
                     <div className="right-0 z-20 p-5 bg-neutral-900 w-full flex flex-col justify-center items-center lg:hidden">
-                        <ul>
+                        <ul className='flex mb-2.5'>
                             {navItems.map((item, index) => (
-                                <li key={index} className="py-4">
-                                    <Link to={item.to}>
-                                        <span>{item.label}</span>
-                                    </Link>
+                                <li key={index} className={`h-16 w-32 flex items-center justify-center border-orange-700 rounded-lg ${index ? 'border-l' : 'border-r'}`}>
+                                    <div className='w-[75%] h-[80%] hover:bg-[#31313c] rounded-xl flex items-center justify-center'>
+                                        <Link to={item.to}>
+                                            <span>{item.label}</span>
+                                        </Link>
+                                    </div>
                                 </li>
                             ))}
                         </ul>
+                        <div className='w-[80%] border border-gray-500'> </div>
                         <div className={`${window.sessionStorage.getItem('token') ? 'hidden' : 'flex'} space-x-6 mt-5`}>
                             <button onClick={() => { props.setLoginModal(true); props.setSignupModal(false); setMobileDrawerOpen(false) }} className="py-2 px-3 border rounded-md">
                                 Sign In
