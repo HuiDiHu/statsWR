@@ -4,7 +4,6 @@ import Home from './pages/Home';
 import Tierlist from './pages/Tierlist';
 import Champion from './pages/Champion'
 import Test from './pages/Test'
-import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
   const [logged, setLogged] = useState(window.sessionStorage.getItem('token') !== null)

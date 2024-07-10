@@ -6,6 +6,7 @@ import SearchIcons from 'src/components/home/SearchIcons'
 import Footer from 'src/components/Footer'
 import LoginModal from 'src/components/LoginModal';
 import SignupModal from 'src/components/SignupModal';
+import { Analytics } from '@vercel/analytics/react';
 
 const Home = ({ props }) => {
   const [searchResults, setSearchResults] = useState([]);
@@ -30,6 +31,7 @@ const Home = ({ props }) => {
         <SearchResultsList props={{ searchResults }} />
       </div>
       <Footer />
+      <Analytics />
     </div>
   )
 }
