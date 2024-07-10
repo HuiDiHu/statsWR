@@ -126,7 +126,7 @@ const GraphContent = ({ props }) => {
                 })
                 .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
                 .attr('cy', (d) => yAxisScale(baseline)) //y position
-                .attr('r', (d) => 5); //radius size of each point
+                .attr('r', (d) => width/80); //radius size of each point
 
             svg.selectAll('circle')
                 .data(values)
@@ -141,7 +141,7 @@ const GraphContent = ({ props }) => {
                 })
                 .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
                 .attr('cy', (d) => yAxisScale(d[1] / 100)) //y position
-                .attr('r', (d) => 5); //radius size of each point
+                .attr('r', (d) => width/80); //radius size of each point
 
             svg.selectAll("circle")
                 .on("mouseover", function (event, d) {
@@ -181,6 +181,7 @@ const GraphContent = ({ props }) => {
                 //height-padding must be in brackets
                 .attr('transform', 'translate(0, ' + (height - paddingBottom) + ')')
                 .selectAll("text") // Select all x-axis labels
+                .attr("font-size", width/35 + "px")
                 .attr("transform", "rotate(-30)") // Rotate labels
                 .style("text-anchor", "end") // Align labels to the end of the tick
                 .attr("dx", "-.8em") // Adjust horizontal position
@@ -195,6 +196,8 @@ const GraphContent = ({ props }) => {
                     .attr("x2", width - paddingLeft - paddingRight)
                     .attr("stroke", "orange")
                     .attr("stroke-opacity", 0.5))
+                .selectAll("text") // Select all y-axis labels
+                .attr("font-size", width/35 + "px")
             //.selectAll("text")
             //.attr("font-size", "0.95em")
             //.attr("display", "none");
@@ -314,7 +317,7 @@ const GraphContent = ({ props }) => {
                 })
                 .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
                 .attr('cy', (d) => yAxisScale(baseline)) //y position
-                .attr('r', (d) => 5); //radius size of each point
+                .attr('r', (d) => width/80); //radius size of each point
 
             svg.selectAll('circle')
                 .data(values)
@@ -329,7 +332,7 @@ const GraphContent = ({ props }) => {
                 })
                 .attr('cx', (d, i) => xAxisScale(datesArray[i])) //x position
                 .attr('cy', (d) => yAxisScale(d[1])) //y position
-                .attr('r', (d) => 5); //radius size of each point
+                .attr('r', (d) => width/80); //radius size of each point
 
             svg.selectAll("circle")
                 .on("mouseover", function (event, d) {
@@ -361,7 +364,7 @@ const GraphContent = ({ props }) => {
             const yAxis = d3.axisLeft(yAxisScale)
             //TODO: change this once tier and rank calculated in backend
             let rankTickArr = [1, 10];
-            for (let i = 20; i < baseline; i += 10){   
+            for (let i = 20; i < baseline - 3; i += 10){   
                 rankTickArr.push(i)
             };
             rankTickArr.push(baseline)
@@ -376,6 +379,7 @@ const GraphContent = ({ props }) => {
                 //height-padding must be in brackets
                 .attr('transform', 'translate(0, ' + (height - paddingBottom) + ')')
                 .selectAll("text") // Select all x-axis labels
+                .attr("font-size", width/35 + "px")
                 .attr("transform", "rotate(-30)") // Rotate labels
                 .style("text-anchor", "end") // Align labels to the end of the tick
                 .attr("dx", "-.8em") // Adjust horizontal position
@@ -390,6 +394,8 @@ const GraphContent = ({ props }) => {
                     .attr("x2", width - paddingLeft - paddingRight)
                     .attr("stroke", "orange")
                     .attr("stroke-opacity", 0.5))
+                .selectAll("text") // Select all y-axis labels
+                .attr("font-size", width/35 + "px")
             //.selectAll("text")
             //.attr("font-size", "0.95em")
             //.attr("display", "none");
@@ -405,7 +411,7 @@ const GraphContent = ({ props }) => {
             return dateA - dateB; // Compare the dates
         });
         if (props.id === 'RANK') {
-            genRankGraph(values.map(d => [d[0], Number(d[1].split('/')[0])]), Math.max(...(values.map(d => Number(d[1].split('/')[1])))))
+            genRankGraph(values.map(d => [d[0], Number(d[1].split('/')[0])]), Math.max(...( values.map(d => ( Math.max(Number(d[1].split('/')[1]), Number(d[1].split('/')[0])) )) )))
         } else {
             genPercentGraph(values)
         }

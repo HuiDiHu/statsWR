@@ -2,11 +2,11 @@ import GraphContent from "./GraphContent";
 
 const Graph = ({ props }) => {
 
-    const graphStyle = 'lg:w-[400px] lg:h-[400px] w-[150px] h-[150px] rounded-lg bg-[#1e1e1e] mx-2 lg:mx-8 ease-in duration-500 pointer-events-none'
-    const selectedGraphStyle = 'lg:w-[450px] lg:h-[450px] w-[175px] h-[175px] rounded-lg bg-[#1e1e1e] mx-2 lg:mx-8 ease-in duration-[400ms] shadow-[rgba(194,65,12,0.5)_12px_6px_4.8px_0px] pointer-events-none'
-    const unselectedGraphStyle = 'lg:w-[375px] lg:h-[375px] w-[137.5px] h-[137.5px] rounded-lg bg-[#1e1e1e] mx-4 ease-in duration-500 pointer-events-none'
-    const clickedGraphStyle = 'lg:w-[600px] lg:h-[600px] w-[225px] h-[225px] rounded-xl bg-[#1e1e1e] mx-2 lg:mx-8 ease-in duration-[400ms] pointer-events-none'
-    const nonclickedGraphStyle = 'lg:w-[200px] lg:h-[200px] w-[100px] h-[100px] rounded-md bg-[#1e1e1e] mx-4 ease-in duration-500 pointer-events-none'
+    const graphStyle = 'lg:w-[400px] lg:h-[400px] sm:w-[175px] sm:h-[175px] w-[150px] h-[150px] rounded-lg bg-[#1e1e1e] mx-2 lg:mx-8 ease-in duration-500 pointer-events-none'
+    const selectedGraphStyle = 'lg:w-[450px] lg:h-[450px] sm:w-[190px] sm:h-[190px] w-[175px] h-[175px] rounded-lg bg-[#1e1e1e] mx-2 lg:mx-8 ease-in duration-[400ms] shadow-[rgba(194,65,12,0.5)_12px_6px_4.8px_0px] pointer-events-none'
+    const unselectedGraphStyle = 'lg:w-[375px] lg:h-[375px] sm:w-[150px] sm:h-[150px] w-[137.5px] h-[137.5px] rounded-lg bg-[#1e1e1e] mx-4 ease-in duration-500 pointer-events-none'
+    const clickedGraphStyle = 'lg:w-[600px] lg:h-[600px] sm:w-[250px] sm:h-[250px] w-[225px] h-[225px] rounded-xl bg-[#1e1e1e] mx-2 lg:mx-8 ease-in duration-[400ms] pointer-events-none'
+    const nonclickedGraphStyle = 'lg:w-[200px] lg:h-[200px] sm:w-[115px] sm:h-[115px] w-[100px] h-[100px] rounded-md bg-[#1e1e1e] mx-4 ease-in duration-500 pointer-events-none'
 
     const labelStyle = 'text-xl border-2 border-y-0 border-orange-700 px-4 mb-1 ease-in duration-500 pointer-events-none'
     const selectedLabelStyle = 'text-2xl border-2 border-y-0 border-orange-700 px-4 mb-1 ease-in duration-500 pointer-events-none'
