@@ -15,7 +15,6 @@ const App = () => {
       <Route path='/tierlist' element={<Tierlist props={{logged, setLogged}} />} />
       <Route path='/champion/:id' element={<Champion props={{logged, setLogged}} />} />
       <Route path='/test' element={<Test />}/>
-      <Analytics />
     </Routes>
   )
 }
