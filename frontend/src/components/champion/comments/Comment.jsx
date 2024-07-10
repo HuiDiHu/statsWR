@@ -136,7 +136,7 @@ const Comment = ({ props }) => {
             <div className='w-[75%] flex flex-col'>
                 <h6 className='space-x-3'>
                     <span className='text-sm'>@{props.data.user.username}</span>
-                    <span className='text-xs opacity-60'><TimeAgo date={props.data.updatedAt} /></span>
+                    <span className='text-xs opacity-60'><TimeAgo datetime={props.data.updatedAt} /></span>
                 </h6>
                 <div className='flex flex-col w-full rounded-xl border p-2 pointer-events-none'>
                     <p ref={textRef} className={`${show === 'Read more' ? 'max-h-16 overflow-y-hidden' : 'h-auto'} text-sm text-wrap break-words pointer-events-auto`}>
