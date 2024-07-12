@@ -78,8 +78,9 @@ const translateRawChampionsData = () => {
                         winRate: champion.winRate,
                         pickRate: champion.pickRate,
                         banRate: champion.banRate,
-                        weight: (champion.winRate - 50) * 0.5 + (champion.pickRate + champion.banRate) * 0.15, //0.5 weight for win rate
-                                                                                                               //0.15 weight for pick rate and ban rate
+                        weight: (champion.winRate - 50) * 0.75 + champion.pickRate * 0.175 + champion.banRate * 0.075, //0.75 weight for win rate
+                                                                                                                       //0.175 weight for pick rate
+                                                                                                                       //0.075
                         date: new Date(currentDate)
                     }
                 })
