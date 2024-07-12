@@ -49,7 +49,7 @@ const TableRow = ({ props }) => {
                     <span className="md:pl-2 md:text-center max-md:truncate text-xs font-semibold group-hover:text-orange-500">{props.name}</span>
                 </div>
             </td>
-            <td>
+            <td className={`${props.focusSection === 'tier' && 'bg-zinc-800'}`}>
                 <h5 className={`text-center text-lg ${tierStyle(props.tier)}`}>{props.tier}</h5>
             </td>
             <td className="py-2 flex justify-center">
