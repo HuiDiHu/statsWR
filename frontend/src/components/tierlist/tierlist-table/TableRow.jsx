@@ -40,7 +40,7 @@ const TableRow = ({ props }) => {
                 <span>{props.rank}</span>
             </td>
             <td className="py-1">
-                <div className='flex max-md:flex-col md:items-center max-md:max-w-20'>
+                <div className='flex max-md:flex-col md:items-center max-md:max-w-20 w-min'>
                     <img
                         className='h-8 w-8 rounded-sm'
                         src={`assets/champion-icons/${props.label}.png`}
@@ -49,8 +49,8 @@ const TableRow = ({ props }) => {
                     <span className="md:pl-2 md:text-center max-md:truncate text-xs font-semibold group-hover:text-orange-500">{props.name}</span>
                 </div>
             </td>
-            <td>
-                <h5 className={`text-center text-lg ${tierStyle(props.tier)}`}>{props.tier}</h5>
+            <td className={`${props.focusSection === 'tier' && 'bg-zinc-800'}`}>
+                <h5 className={`text-center text-md lg:text-lg ${tierStyle(props.tier)} px-1.5`}>{props.tier}</h5>
             </td>
             <td className="py-2 flex justify-center">
                 <img
