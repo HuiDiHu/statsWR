@@ -71,7 +71,7 @@ const LoginModal = ({ onClose, props }) => {
                         <div className="w-[50%] h-full flex items-center justify-center rounded-xl border border-white">
                             <input
                                 className="bg-transparent text-xl w-[90%] outline-none"
-                                placeholder="Enter Password"
+                                placeholder="Passwords are encrypted"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
