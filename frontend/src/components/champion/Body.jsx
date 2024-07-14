@@ -68,13 +68,13 @@ const Body = ({ props }) => {
         >
           <span className='text-md'> Back</span>
         </Link>
-        {loading && <div className='absolute top-24 right-24 flex flex-col items-start justify-end'>
+        {loading && <div className='absolute top-24 right-24 flex flex-col items-center justify-end'>
           <img
             src={logo}
             className='h-20 w-20 animate-pulse'
           />
           <span className='text-lg animate-pulse'> Loading... </span>
-          <span className='text-lg animate-pulse text-orange-600'> May take up to 50 seconds </span>
+          <span className='text-md animate-pulse text-orange-600'> May take up to 50 seconds </span>
 
         </div>
         }
