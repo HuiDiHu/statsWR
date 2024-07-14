@@ -4,7 +4,7 @@ const User = require('../models/User')
 
 //Importing Module: require('http-status-codes') imports the http-status-codes module, which provides a convenient way to access HTTP status codes.
 //Object Destructuring: { StatusCodes } extracts the StatusCodes property from the module, making it available as a local variable in the current file.
-//Allows for the use of meaningful constants (StatusCodes.OK, StatusCodes.NOT_FOUND) instead of hardcoding numeric HTTP status codes throughout your application. 
+//Allows for the use of meaningful constants (StatusCodes.OK, StatusCodes.NOT_FOUND) instead of hardcoding numeric HTTP status codes throughout the application. 
 const { StatusCodes } = require('http-status-codes')
 
 //Go up two levels (..) from auth.js to /controllers to /backend and then import 2 errors from the /errors folder. 
