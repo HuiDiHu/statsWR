@@ -74,6 +74,8 @@ const Body = ({ props }) => {
             className='h-20 w-20 animate-pulse'
           />
           <span className='text-lg animate-pulse'> Loading... </span>
+          <span className='text-lg animate-pulse text-orange-600'> May take up to 50 seconds </span>
+
         </div>
         }
         {info && championData &&
