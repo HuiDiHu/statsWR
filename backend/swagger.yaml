@@ -209,6 +209,7 @@ paths:
           description: ''
           headers: {}
       deprecated: false
+      security: []
   /report/{id}:
     parameters:
       - in: path
