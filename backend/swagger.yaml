@@ -167,6 +167,18 @@ paths:
           description: ''
           headers: {}
       deprecated: false
+    delete:
+      tags:
+      - Comment
+      summary: Delete Single Comment
+      operationId: DeleteSingleComment
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /comments:
     get:
       tags:
       - Comment
@@ -182,17 +194,6 @@ paths:
         schema:
           type: string
           example: AATROX
-      responses:
-        '200':
-          description: ''
-          headers: {}
-      deprecated: false
-    delete:
-      tags:
-      - Comment
-      summary: Delete Single Comment
-      operationId: DeleteSingleComment
-      parameters: []
       responses:
         '200':
           description: ''
