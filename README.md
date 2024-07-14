@@ -2,7 +2,7 @@
 
 Website Link: https://statswr.vercel.app
 
-API Documentation: https://statswr-api.onrender.com/api-docs
+API Documentation: https://statswr-api.onrender.com/api-docs DM for access
 
 
 ## Getting Started
