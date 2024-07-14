@@ -15,7 +15,7 @@ paths:
       operationId: RegisterUser
       parameters: []
       requestBody:
-        description: ''
+        description: 'User email, username, and password'
         content:
           application/json:
             schema:
@@ -44,7 +44,7 @@ paths:
       operationId: LoginUser
       parameters: []
       requestBody:
-        description: ''
+        description: 'User email and password'
         content:
           application/json:
             schema:
@@ -136,22 +136,24 @@ paths:
           headers: {}
       deprecated: false
       security: []
-  /comments/{id}:
-    parameters:
-      - in: path
-        name: id
-        schema:
-          type: string
-        required: true
-        description: The comment ID
+  /comments/create/:
     post:
       tags:
       - Comment
       summary: Create Single Comment
       operationId: CreateSingleComment
-      parameters: []
-      requestBody:
+      parameters:
+      - name: champion
+        in: query
         description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: AATROX
+      requestBody:
+        description: 'Comment text'
         content:
           application/json:
             schema:
@@ -167,6 +169,14 @@ paths:
           description: ''
           headers: {}
       deprecated: false
+  /comments/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The comment ID
     delete:
       tags:
       - Comment
@@ -178,7 +188,7 @@ paths:
           description: ''
           headers: {}
       deprecated: false
-  /comments:
+  /comments/:
     get:
       tags:
       - Comment
@@ -214,6 +224,21 @@ paths:
       description: ''
       operationId: UpdateSingleCommentReport
       parameters: []
+      requestBody:
+        description: 'Update upvote and downvote status of comment'
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/CreateSingleCommentRequest'
+              - example:
+                  upvote: true
+                  downvote: false
+                  
+            example:
+              upvote: true
+              downvote: false
+        required: true
       responses:
         '200':
           description: ''
