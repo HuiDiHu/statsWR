@@ -1,0 +1,277 @@
+openapi: 3.0.0
+info:
+  title: statsWR API
+  contact: {}
+  version: '1.0'
+servers:
+- url: https://statswr-api.onrender.com/api/v1
+  variables: {}
+paths:
+  /auth/register:
+    post:
+      tags:
+      - Auth
+      summary: Register User
+      operationId: RegisterUser
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/RegisterUserRequest'
+              - example:
+                  username: John Cena 2
+                  email: johncena69420@gmail.com
+                  password: '123456'
+            example:
+              username: John Cena 2
+              email: johncena69420@gmail.com
+              password: '123456'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+  /auth/login:
+    post:
+      tags:
+      - Auth
+      summary: Login User
+      operationId: LoginUser
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/LoginUserRequest'
+              - example:
+                  email: johncena69@gmail.com
+                  password: '123456'
+            example:
+              email: johncena69@gmail.com
+              password: '123456'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+  /champions:
+    get:
+      tags:
+      - Champion
+      summary: Get All Champions
+      operationId: GetAllChampions
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+  /champions/lanes/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+        description: The lane ID [0, 5]
+    get:
+      tags:
+      - Champion
+      summary: Get All Role Champions
+      operationId: GetAllRoleChampions
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+  /champions/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The champion label
+    get:
+      tags:
+      - Champion
+      summary: Get Single Champion
+      operationId: GetSingleChampion
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+  /champions/abilities/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The champion label
+    get:
+      tags:
+      - Champion
+      summary: Get Single Champion Ability Info
+      operationId: GetSingleChampionAbilityInfo
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+  /comments/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The comment ID
+    post:
+      tags:
+      - Comment
+      summary: Create Single Comment
+      operationId: CreateSingleComment
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/CreateSingleCommentRequest'
+              - example:
+                  text: Hello world 2
+            example:
+              text: Hello world 2
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    get:
+      tags:
+      - Comment
+      summary: Get All Champion Comments
+      operationId: GetAllChampionComments
+      parameters:
+      - name: champion
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: AATROX
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    delete:
+      tags:
+      - Comment
+      summary: Delete Single Comment
+      operationId: DeleteSingleComment
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /report/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The comment ID
+    put:
+      tags:
+      - Comment
+      summary: Update Single Comment Report
+      description: ''
+      operationId: UpdateSingleCommentReport
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+components:
+  schemas:
+    RegisterUserRequest:
+      title: RegisterUserRequest
+      required:
+      - username
+      - email
+      - password
+      type: object
+      properties:
+        username:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+      example:
+        username: John Cena 2
+        email: johncena69420@gmail.com
+        password: '123456'
+    LoginUserRequest:
+      title: LoginUserRequest
+      required:
+      - email
+      - password
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+      example:
+        email: johncena69@gmail.com
+        password: '123456'
+    CreateSingleCommentRequest:
+      title: CreateSingleCommentRequest
+      required:
+      - text
+      type: object
+      properties:
+        text:
+          type: string
+      example:
+        text: Hello world 2
+  securitySchemes:
+    httpBearer:
+      type: http
+      scheme: bearer
+security:
+- httpBearer: []
+tags:
+- name: Auth
+  description: ''
+- name: Champion
+  description: ''
+- name: Comment
+  description: ''

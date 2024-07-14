@@ -4,7 +4,14 @@ require('express-async-errors');
 
 const app = express();
 
+//security
 const cors = require('cors')
+
+//swagger
+const swaggerUI = require('swagger-ui-express')
+const YAML = require('yamljs')
+const swaggerDocument = YAML.load('./swagger.yaml')
+
 //authenticate when trying to create comments
 const authenticateUser = require('./middleware/authentication');
 
@@ -30,6 +37,7 @@ app.use(cors({
 
 const { getAllChampionComments } = require('./controllers/comments')
 
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
 //routes
 app.get('/', async (req, res) => {
     res.send("Render deployed!")
