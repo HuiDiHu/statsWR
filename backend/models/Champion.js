@@ -1,6 +1,8 @@
-const mongoose = require('mongoose');
-const { BadRequestError } = require('../errors');
+const mongoose = require('mongoose'); //required for creating mongoose schemas
+const { BadRequestError } = require('../errors'); //include BadRequestError from errors folder
 
+//Create basic schema to hold the statistics of a single champion's role.   
+//The raw values for this schema are provided by the rawChampionsData folder, and translated by a combination of translateRawChampionsData.js and uploadPatchData.js
 const ChampionGameplaySchema = new mongoose.Schema({
     winRate: {
         type: Number,
@@ -26,8 +28,9 @@ const ChampionGameplaySchema = new mongoose.Schema({
         type: Date,
         default: Date.now()
     }
-})
+}) //Note that some champions do not have any gameplay data so instead of making the fields required, we use a default value. 
 
+//Create another schema to link champion names/roles to their respective gameplay statistics. Called in uploadPatchData.js
 const ChampionSchema = new mongoose.Schema({
     label: {
         type: String,
@@ -41,9 +44,8 @@ const ChampionSchema = new mongoose.Schema({
         type: Number,
         required: [true, 'Please provide champion role']
     },
-    gameplayData: [ChampionGameplaySchema]
-}, { timestamps: true }).index({label: 1, role: 1}, {unique: true});
+    gameplayData: [ChampionGameplaySchema] //Holds an array of individual ChampionGameplaySchemas. The number of indexes should be equal to however many positions a champ is played 
+}, { timestamps: true }).index({label: 1, role: 1}, {unique: true}); //Prevent duplicates, sort label and role (1 for ascending, -1 for descending), and {timestmaps: true} ensures MongoDB automatically manages createdAt and updatedAt timestamps for each object
 
 
-
-module.exports = mongoose.model('Champion', ChampionSchema)
+module.exports = mongoose.model('Champion', ChampionSchema) //Export the mongoose model so that 'Champion' objects can be created using ChampionSchema
