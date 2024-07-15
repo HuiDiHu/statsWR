@@ -47,7 +47,7 @@ In the backend terminal
 v1 backend API Documentation: https://statswr-api.onrender.com/api-docs (DM for cors access)
 
 ## Testing
-unit tested using Vitest
+Unit testing with Vitest in process!
 
 ## Find a bug?
 Before sending a PR, squash all your merges and file an issue first.
