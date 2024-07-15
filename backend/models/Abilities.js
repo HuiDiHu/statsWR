@@ -2,7 +2,7 @@ const mongoose = require('mongoose'); //required for creating mongoose schemas
 const { BadRequestError } = require('../errors'); //include BadRequestError from errors folder
 
 //Create a basic schema to hold a single ability's video source, icon source, name, and description
-//The values for this schema are located in championAbilities.json
+//The values for this schema are located in championAbilities.json and are translated by populateAbilities.js
 const AbilitySchema = new mongoose.Schema({
     demoSrc: {
         type: String,
