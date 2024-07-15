@@ -44,7 +44,7 @@ const ChampionSchema = new mongoose.Schema({
         type: Number,
         required: [true, 'Please provide champion role']
     },
-    gameplayData: [ChampionGameplaySchema] //Holds an array of individual ChampionGameplaySchemas. The number of indexes should be equal to however many positions a champ is played 
+    gameplayData: [ChampionGameplaySchema] //Holds an array of individual ChampionGameplaySchemas. The number of indexes should be equal to however many dates that a single champion's role has (number of datapoints for a role)
 }, { timestamps: true }).index({label: 1, role: 1}, {unique: true}); //Prevent duplicates, sort label and role (1 for ascending, -1 for descending), and {timestmaps: true} ensures MongoDB automatically manages createdAt and updatedAt timestamps for each object
 
 
