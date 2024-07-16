@@ -16,9 +16,8 @@ Website Link: https://statswr.vercel.app
 > Tested with npm v10.2.4 Node v20.11.1 
 
 1. ```git clone``` the repository
-2. run ```npm install```
-3. to run locally, switch all instances of ```https://statswr-api.onrender.com``` --> ```http://localhost:5555``` and ```https://statswr.vercel.app``` --> ```http://localhost:5173```
-4. set up environment variables in the backend folder by creating a .env file and adding 
+2. to run locally, switch all instances of ```https://statswr-api.onrender.com``` --> ```http://localhost:5555``` and ```https://statswr.vercel.app``` --> ```http://localhost:5173```
+3. set up environment variables in the backend folder by creating a .env file and adding 
    ```
    PORT = 5555
    
@@ -26,8 +25,8 @@ Website Link: https://statswr.vercel.app
    
    JWT_SECRET = (128 byte string)
    ```
-5. Run development backend server with ```cd backend``` and ```npm run dev```
-6. Run development frontend server on another terminal with ```cd frontend``` and ```npm run dev```
+4. Run development backend server with ```cd backend```, ```npm install```, and ```npm run dev```
+5. Run development frontend server on another terminal with ```cd frontend```, ```npm install```, and ```npm run dev```
 
 ## How to set up the database
 In the backend terminal 
@@ -47,7 +46,7 @@ In the backend terminal
 v1 backend API Documentation: https://statswr-api.onrender.com/api-docs (DM for cors access)
 
 ## Testing
-unit tested using Vitest
+Unit testing with Vitest in process!
 
 ## Find a bug?
 Before sending a PR, squash all your merges and file an issue first.
