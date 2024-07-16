@@ -1,6 +1,8 @@
-const championNames = require('./championNames.json');
-const fs = require('node:fs');
-const rawChampionsData = [
+//This file reads all the text files from the rawChampionsData folder. It defines the translateRawChampionsData function, which is called by uploadPatchData.js and populate.js.
+
+const championNames = require('./championNames.json'); //championNames is an array filled with dictionaries each containing a Champion's Chinese name and uppercase/lowercase English name
+const fs = require('node:fs'); //import the fs module to read text files
+const rawChampionsData = [ //create an array with each index holding a txt file. 
     fs.readFileSync(`./rawChampionsData/baron.txt`, 'utf8'),
     fs.readFileSync(`./rawChampionsData/jungle.txt`, 'utf8'),
     fs.readFileSync(`./rawChampionsData/mid.txt`, 'utf8'),
@@ -16,21 +18,23 @@ const rawChampionsData = [
     3. update version in frontend constants folder
     4. update footer's Last updated on
     5. (if new champion introduced) add to frontend constants and backend championNames.json)
-
-
 */
+
 const uploadDates = require('./constants.json')["upload_dates"]
 const currentDate = uploadDates[uploadDates.length - 1]
 
 const translateRawChampionsData = () => {
+    
+    //Make the dictionary hashMap 1 large dictionary with all of championNames.json keys/values (item.key is a champion name in chinese, and item.val is another dictionary)
     const hashMap = new Map()
     championNames.map((item) => {
         hashMap.set(item.key, item.val)
     })
 
     const lanes = ['baron', 'jungle', 'mid', 'bottom', 'support']
-    let translatedData = []
+    let translatedData = [] //declare empty array which will eventually hold all the translated data and be returned at the end of the file
 
+    //Determines each champions tier
     const selectRank = (percentile) => {
         if (percentile < 0.05) {
             return "S+"
@@ -48,6 +52,7 @@ const translateRawChampionsData = () => {
         return "F"
     }
 
+    //If weight a and b are equal, sort by winrate
     function weightCmp(a, b, aWR, bWR) {
         if (a === b) {
             return aWR < bWR ? 1 : -1
@@ -55,17 +60,17 @@ const translateRawChampionsData = () => {
         return a < b ? 1 : -1
     }
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) { //create loop to iterate over each txt file
         const dataArr = rawChampionsData[i].toString().trim().split('\n\n').map((champion) => {
             const temp = champion.replaceAll('%', '').split('\n')
-            return {
+            return { //take the first 4 lines (skip 5th line since its rank by winrate) for each champion entry
                 label: temp[0],
                 winRate: Number(temp[1]),
                 pickRate: Number(temp[2]),
                 banRate: Number(temp[3])
             }
         })
-        let tempTranslatedData = []
+        let tempTranslatedData = [] //declare empty array to hold the data for 1 itereration (1 txt file)
         for (let j = 0; j < dataArr.length; j++) {
             const champion = dataArr[j]
             if (hashMap.has(champion.label)) {
@@ -80,13 +85,14 @@ const translateRawChampionsData = () => {
                         banRate: champion.banRate,
                         weight: (champion.winRate - 50) * 0.75 + champion.pickRate * 0.175 + champion.banRate * 0.075, //0.75 weight for win rate
                                                                                                                        //0.175 weight for pick rate
-                                                                                                                       //0.075
+                                                                                                                       //0.075 weight for ban rate
                         date: new Date(currentDate)
                     }
                 })
             }
         }
-        
+
+        //Sort tempTranslatedData by weight/winrate using the weightCmp function defined above, and apply selectRank function to determine tier. 
         tempTranslatedData = tempTranslatedData.sort(function (a, b) {
             return weightCmp(a.gameplayData.weight, b.gameplayData.weight, a.gameplayData.winRate, b.gameplayData.winRate)
         }).map((champion, index) => {
@@ -105,9 +111,9 @@ const translateRawChampionsData = () => {
             }
         })
         
-        translatedData.push(...tempTranslatedData)
+        translatedData.push(...tempTranslatedData) //update the translatedData array for each iteration (5 total in this loop, 1 for each txt file) The "..." allows us to put all of the elements from tempTranslatedData into translatedData to keep it as a 1D array.
     }
-    return translatedData
+    return translatedData //return translatedData array that holds the data to create all the Champion objects using the Champion schema in uploadPatchData.js
 }
 
 module.exports = translateRawChampionsData
