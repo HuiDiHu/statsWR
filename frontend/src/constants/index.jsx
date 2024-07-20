@@ -6,7 +6,7 @@ export const navItems = [
 export const regionRankPatch = [
     { label: "\"Global\"", imgSrc: "assets/misc/global-icon.svg" },
     { label: "Diamond+", imgSrc: "assets/misc/diamond-icon.png" },
-    { label: "Version: 5.1D", imgSrc: "/" }
+    { label: "Version: 5.2", imgSrc: "/" }
 ];
 
 export const allChampions = [
@@ -60,6 +60,7 @@ export const allChampions = [
     { label: "LEE_SIN", name: "Lee Sin", role: [0, 2], title: "THE BLIND MONK" },
     { label: "LEONA", name: "Leona", role: [0, 5], title: "THE RADIANT DAWN" },
     { label: "LILLIA", name: "Lillia", role: [0, 2], title: "THE BASHFUL BLOOM" },
+    { label: "LISSANDRA", name: "Lissandra", role: [0, 1, 3, 5], title: "THE ICE WITCH" },
     { label: "LUCIAN", name: "Lucian", role: [0, 1, 3, 4], title: "THE PURIFIER" },
     { label: "LULU", name: "Lulu", role: [0, 5], title: "THE FAE SORCERESS" },
     { label: "LUX", name: "Lux", role: [0, 3, 5], title: "THE LADY OF LUMINOSITY" },

@@ -789,5 +789,12 @@
             "label": "MAOKAI",
             "name": "Maokai"
         }
+    },
+    {
+        "key": "冰霜女巫",
+        "val": {
+            "label": "LISSANDRA",
+            "name": "Lissandra"
+        }
     }
 ]

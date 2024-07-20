@@ -1631,6 +1631,38 @@
             "description": "Lillia causes all enemies with Dream Dust on them to become Drowsy before falling asleep. Those enemies will take extra damage on being forcibly woken up."
         }
     ],
+    "LISSANDRA": [
+        {
+            "demoSrc": "",
+            "iconSrc": "",
+            "name": "ICEBORN SUBJUGATION",
+            "description": "When an enemy champion dies near Lissandra they become a Frozen Thrall. Frozen Thralls slow nearby enemies and then, after a delay, shatter from the intense cold, dealing magic damage to nearby targets."
+        },
+        {
+            "demoSrc": "",
+            "iconSrc": "",
+            "name": "ICE SHARD",
+            "description": "Throws a spear of ice that shatters when it hits an enemy, dealing magic damage and slowing Move Speed. Shards pass through the target, dealing the same damage to other enemies hit."
+        },
+        {
+            "demoSrc": "",
+            "iconSrc": "",
+            "name": "RING OF FROST",
+            "description": "Freezes nearby enemies in ice, dealing magic damage and rooting them."
+        },
+        {
+            "demoSrc": "",
+            "iconSrc": "",
+            "name": "GLACIAL PATH",
+            "description": "Lissandra creates an ice claw that deals magic damage. Reactivating this ability transports Lissandra to the claw's current location."
+        },
+        {
+            "demoSrc": "",
+            "iconSrc": "",
+            "name": "FROZEN TOMB",
+            "description": "If cast on an enemy champion, the target is frozen solid, stunning it. If cast on Lissandra, she encases herself in dark ice, healing herself while becoming untargetable and invulnerable. Dark ice then emanates from the target dealing magic damage to enemies and slowing Move Speed."
+        }
+    ],
     "LUCIAN": [
         {
             "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/fadad9074ffedf8e72a8be5d3b264339f9ea2e63.mp4",
@@ -2207,7 +2239,7 @@
             "description": "Pyke blinks to and executes low health enemies, allowing him to cast this spell again and granting additional gold to an ally who assists."
         }
     ],
-    "RAKAN": [ 
+    "RAKAN": [
         {
             "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/695c6b500a3509fd99c1bb85b65dfed6c250d0ea.mp4",
             "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/953fed441cc67ba0bdc1f6dbb2ace3b6907ea715-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
