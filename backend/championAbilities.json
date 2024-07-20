@@ -1633,32 +1633,32 @@
     ],
     "LISSANDRA": [
         {
-            "demoSrc": "",
-            "iconSrc": "",
+            "demoSrc": "/",
+            "iconSrc": "/",
             "name": "ICEBORN SUBJUGATION",
             "description": "When an enemy champion dies near Lissandra they become a Frozen Thrall. Frozen Thralls slow nearby enemies and then, after a delay, shatter from the intense cold, dealing magic damage to nearby targets."
         },
         {
-            "demoSrc": "",
-            "iconSrc": "",
+            "demoSrc": "/",
+            "iconSrc": "/",
             "name": "ICE SHARD",
             "description": "Throws a spear of ice that shatters when it hits an enemy, dealing magic damage and slowing Move Speed. Shards pass through the target, dealing the same damage to other enemies hit."
         },
         {
-            "demoSrc": "",
-            "iconSrc": "",
+            "demoSrc": "/",
+            "iconSrc": "/",
             "name": "RING OF FROST",
             "description": "Freezes nearby enemies in ice, dealing magic damage and rooting them."
         },
         {
-            "demoSrc": "",
-            "iconSrc": "",
+            "demoSrc": "/",
+            "iconSrc": "/",
             "name": "GLACIAL PATH",
             "description": "Lissandra creates an ice claw that deals magic damage. Reactivating this ability transports Lissandra to the claw's current location."
         },
         {
-            "demoSrc": "",
-            "iconSrc": "",
+            "demoSrc": "/",
+            "iconSrc": "/",
             "name": "FROZEN TOMB",
             "description": "If cast on an enemy champion, the target is frozen solid, stunning it. If cast on Lissandra, she encases herself in dark ice, healing herself while becoming untargetable and invulnerable. Dark ice then emanates from the target dealing magic damage to enemies and slowing Move Speed."
         }
