@@ -42,7 +42,7 @@ const TableRow = ({ props }) => {
             <td className="py-1">
                 <div className='flex max-md:flex-col md:items-center max-md:max-w-20 w-min'>
                     <img
-                        className='h-8 w-8 rounded-sm'
+                        className='h-8 w-8 rounded-sm flex-shrink-0'
                         src={`assets/champion-icons/${props.label}.png`}
                         alt='assets/champion-icons/EMPTY_CHAMPION.png'
                     />
