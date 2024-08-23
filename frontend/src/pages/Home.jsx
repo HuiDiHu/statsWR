@@ -31,7 +31,14 @@ const Home = ({ props }) => {
         <SearchResultsList props={{ searchResults }} />
       </div>
       <Footer />
-      <Analytics />
+      <Analytics
+        beforeSend={(event) => {
+          if (event.url.includes('/private')) {
+            return null;
+          }
+          return event;
+        }}
+      />
     </div>
   )
 }
