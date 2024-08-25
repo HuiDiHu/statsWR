@@ -18,7 +18,7 @@ const rawChampionsData = [ //create an array with each index holding a txt file.
     3. update version in frontend constants folder
     4. update footer's Last updated on
     5. (if new champion introduced) add to frontend constants and backend championNames.json)
-                                    championAbilities.json (nuke the abilities collection and uplaod new)
+                                    championAbilities.json
                                     upload new champion icon to assets
 */
 

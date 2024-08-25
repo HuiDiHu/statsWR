@@ -6,7 +6,7 @@ export const navItems = [
 export const regionRankPatch = [
     { label: "\"Global\"", imgSrc: "assets/misc/global-icon.svg" },
     { label: "Diamond+", imgSrc: "assets/misc/diamond-icon.png" },
-    { label: "Version: 5.2A", imgSrc: "/" }
+    { label: "Version: 5.2B", imgSrc: "/" }
 ];
 
 export const allChampions = [
@@ -67,10 +67,11 @@ export const allChampions = [
     { label: "MALPHITE", name: "Malphite", role: [0, 1, 3, 5], title: "SHARD OF THE MONOLITH" },
     { label: "MASTER_YI", name: "Master Yi", role: [0, 2], title: "THE WUJU BLADESMAN" },
     { label: "MISS_FORTUNE", name: "Miss Fortune", role: [0, 3, 4, 5], title: "THE BOUNTY HUNTER" },
+    { label: "MORDEKAISER", name: "Mordekaiser", role: [0, 1, 2], title: "THE IRON REVENANT" },
     { label: "MORGANA", name: "Morgana", role: [0, 2, 3, 5], title: "THE FALLEN" },
     { label: "DR_MUNDO", name: "Dr. Mundo", role: [0, 1, 2], title: "THE MADMAN OF ZAUN" },
     { label: "NAMI", name: "Nami", role: [0, 5], title: "THE TIDECALLER" },
-    { label: "MAOKAI", name: "Maokai", role: [0, 1, 2, 3, 5], title: "THE TWISTED TREANT" },
+    { label: "MAOKAI", name: "Maokai", role: [0, 1, 2, 5], title: "THE TWISTED TREANT" },
     { label: "NASUS", name: "Nasus", role: [0, 1], title: "THE CURATOR OF THE SANDS" },
     { label: "NAUTILUS", name: "Nautilus", role: [0, 1, 2, 5], title: "THE TITAN OF THE DEPTHS" },
     { label: "NILAH", name: "Nilah", role: [0, 4], title: "THE JOY UNBOUND" },

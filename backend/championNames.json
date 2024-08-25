@@ -86,700 +86,700 @@
     {
         "key": "复仇之矛",
         "val": {
-            "label": "KALISTA", 
+            "label": "KALISTA",
             "name": "Kalista"
         }
     },
     {
         "key": "圣枪游侠",
         "val": {
-            "label": "LUCIAN", 
+            "label": "LUCIAN",
             "name": "Lucian"
         }
     },
     {
         "key": "祖安狂人",
         "val": {
-            "label": "DR_MUNDO", 
+            "label": "DR_MUNDO",
             "name": "Dr. Mundo"
         }
     },
     {
         "key": "山隐之焰",
         "val": {
-            "label": "ORNN", 
+            "label": "ORNN",
             "name": "Ornn"
         }
     },
     {
         "key": "正义天使",
         "val": {
-            "label": "KAYLE", 
+            "label": "KAYLE",
             "name": "Kayle"
         }
     },
     {
         "key": "未来守护者",
         "val": {
-            "label": "JAYCE", 
+            "label": "JAYCE",
             "name": "Jayce"
         }
     },
     {
         "key": "武器大师",
         "val": {
-            "label": "JAX", 
+            "label": "JAX",
             "name": "Jax"
         }
     },
     {
         "key": "灵罗娃娃",
         "val": {
-            "label": "GWEN", 
+            "label": "GWEN",
             "name": "Gwen"
         }
     },
     {
         "key": "爆破鬼才",
         "val": {
-            "label": "ZIGGS", 
+            "label": "ZIGGS",
             "name": "Ziggs"
         }
     },
     {
         "key": "狂暴之心",
         "val": {
-            "label": "KENNEN", 
+            "label": "KENNEN",
             "name": "Kennen"
         }
     },
     {
         "key": "荒漠屠夫",
         "val": {
-            "label": "RENEKTON", 
+            "label": "RENEKTON",
             "name": "Renekton"
         }
     },
     {
         "key": "暗裔剑魔",
         "val": {
-            "label": "AATROX", 
+            "label": "AATROX",
             "name": "Aatrox"
         }
     },
     {
         "key": "沙漠死神",
         "val": {
-            "label": "NASUS", 
+            "label": "NASUS",
             "name": "Nasus"
         }
     },
     {
         "key": "熔岩巨兽",
         "val": {
-            "label": "MALPHITE", 
+            "label": "MALPHITE",
             "name": "Malphite"
         }
     },
     {
         "key": "深海泰坦",
         "val": {
-            "label": "NAUTILUS", 
+            "label": "NAUTILUS",
             "name": "Nautilus"
         }
     },
     {
         "key": "疾风剑豪",
         "val": {
-            "label": "YASUO", 
+            "label": "YASUO",
             "name": "Yasuo"
         }
     },
     {
         "key": "青钢影",
         "val": {
-            "label": "CAMILLE", 
+            "label": "CAMILLE",
             "name": "Camille"
         }
     },
     {
         "key": "诺克萨斯统领",
         "val": {
-            "label": "SWAIN", 
+            "label": "SWAIN",
             "name": "Swain"
         }
     },
     {
         "key": "诺克萨斯之手",
         "val": {
-            "label": "DARIUS", 
+            "label": "DARIUS",
             "name": "Darius"
         }
     },
     {
         "key": "枪火狂徒",
         "val": {
-            "label": "GRAVES", 
+            "label": "GRAVES",
             "name": "Graves"
         }
     },
     {
         "key": "不屈之枪",
         "val": {
-            "label": "PANTHEON", 
+            "label": "PANTHEON",
             "name": "Pantheon"
         }
     },
     {
         "key": "无双剑姬",
         "val": {
-            "label": "FIORA", 
+            "label": "FIORA",
             "name": "Fiora"
         }
     },
     {
         "key": "猩红收割者",
         "val": {
-            "label": "VLADIMIR", 
+            "label": "VLADIMIR",
             "name": "Vladimir"
         }
     },
     {
         "key": "刀锋舞者",
         "val": {
-            "label": "IRELIA", 
+            "label": "IRELIA",
             "name": "Irelia"
         }
     },
     {
         "key": "放逐之刃",
         "val": {
-            "label": "RIVEN", 
+            "label": "RIVEN",
             "name": "Riven"
         }
     },
     {
         "key": "离群之刺",
         "val": {
-            "label": "AKALI", 
+            "label": "AKALI",
             "name": "Akali"
         }
     },
     {
         "key": "破败之王",
         "val": {
-            "label": "VIEGO", 
+            "label": "VIEGO",
             "name": "Viego"
         }
     },
     {
         "key": "含羞蓓蕾",
         "val": {
-            "label": "LILLIA", 
+            "label": "LILLIA",
             "name": "Lillia"
         }
     },
     {
         "key": "披甲龙龟",
         "val": {
-            "label": "RAMMUS", 
+            "label": "RAMMUS",
             "name": "Rammus"
         }
     },
     {
         "key": "殇之木乃伊",
         "val": {
-            "label": "AMUMU", 
+            "label": "AMUMU",
             "name": "Amumu"
         }
     },
     {
         "key": "德邦总管",
         "val": {
-            "label": "XIN_ZHAO", 
+            "label": "XIN_ZHAO",
             "name": "Xin Zhao"
         }
     },
     {
         "key": "无极剑圣",
         "val": {
-            "label": "MASTER_YI", 
+            "label": "MASTER_YI",
             "name": "Master Yi"
         }
     },
     {
         "key": "堕落天使",
         "val": {
-            "label": "MORGANA", 
+            "label": "MORGANA",
             "name": "Morgana"
         }
     },
     {
         "key": "永猎双子",
         "val": {
-            "label": "KINDRED", 
+            "label": "KINDRED",
             "name": "Kindred"
         }
     },
     {
         "key": "刀锋之影",
         "val": {
-            "label": "TALON", 
+            "label": "TALON",
             "name": "Talon"
         }
     },
     {
         "key": "德玛西亚皇子",
         "val": {
-            "label": "JARVAN_IV", 
+            "label": "JARVAN_IV",
             "name": "Jarvan IV"
         }
     },
     {
         "key": "雪原双子",
         "val": {
-            "label": "NUNU_WILLUMP", 
+            "label": "NUNU_WILLUMP",
             "name": "Nunu & Willump"
         }
     },
     {
         "key": "远古恐惧",
         "val": {
-            "label": "FIDDLESTICKS", 
+            "label": "FIDDLESTICKS",
             "name": "Fiddlesticks"
         }
     },
     {
         "key": "祖安怒兽",
         "val": {
-            "label": "WARWICK", 
+            "label": "WARWICK",
             "name": "Warwick"
         }
     },
     {
         "key": "战争之影",
         "val": {
-            "label": "HECARIM", 
+            "label": "HECARIM",
             "name": "Hecarim"
         }
     },
     {
         "key": "影流之镰",
         "val": {
-            "label": "KAYN", 
+            "label": "KAYN",
             "name": "Kayn"
         }
     },
     {
         "key": "痛苦之拥",
         "val": {
-            "label": "EVELYNN", 
+            "label": "EVELYNN",
             "name": "Evelynn"
         }
     },
     {
         "key": "时间刺客",
         "val": {
-            "label": "EKKO", 
+            "label": "EKKO",
             "name": "Ekko"
         }
     },
     {
         "key": "龙血武姬",
         "val": {
-            "label": "SHYVANA", 
+            "label": "SHYVANA",
             "name": "Shyvana"
         }
     },
     {
         "key": "狂战士",
         "val": {
-            "label": "OLAF", 
+            "label": "OLAF",
             "name": "Olaf"
         }
     },
     {
         "key": "潮汐海灵",
         "val": {
-            "label": "FIZZ", 
+            "label": "FIZZ",
             "name": "Fizz"
         }
     },
     {
         "key": "酒桶",
         "val": {
-            "label": "GRAGAS", 
+            "label": "GRAGAS",
             "name": "Gragas"
         }
     },
     {
         "key": "皮城执法官",
         "val": {
-            "label": "VI", 
+            "label": "VI",
             "name": "Vi"
         }
     },
     {
         "key": "虚空掠夺者",
         "val": {
-            "label": "KHAZIX", 
+            "label": "KHAZIX",
             "name": "Kha'zix"
         }
     },
     {
         "key": "影流之主",
         "val": {
-            "label": "ZED", 
+            "label": "ZED",
             "name": "Zed"
         }
     },
     {
         "key": "齐天大圣",
         "val": {
-            "label": "WUKONG", 
+            "label": "WUKONG",
             "name": "Wukong"
         }
     },
     {
         "key": "盲僧",
         "val": {
-            "label": "LEE_SIN", 
+            "label": "LEE_SIN",
             "name": "Lee Sin"
         }
     },
     {
         "key": "瘟疫之源",
         "val": {
-            "label": "TWITCH", 
+            "label": "TWITCH",
             "name": "Twitch"
         }
     },
     {
         "key": "皎月女神",
         "val": {
-            "label": "DIANA", 
+            "label": "DIANA",
             "name": "Diana"
         }
     },
     {
         "key": "傲之追猎者",
         "val": {
-            "label": "RENGAR", 
+            "label": "RENGAR",
             "name": "Rengar"
         }
     },
     {
         "key": "复仇焰魂",
         "val": {
-            "label": "BRAND", 
+            "label": "BRAND",
             "name": "Brand"
         }
     },
     {
         "key": "英勇投弹手",
         "val": {
-            "label": "CORKI", 
+            "label": "CORKI",
             "name": "Corki"
         }
     },
     {
         "key": "卡牌大师",
         "val": {
-            "label": "TWISTED_FATE", 
+            "label": "TWISTED_FATE",
             "name": "Twisted Fate"
         }
     },
     {
         "key": "光辉女郎",
         "val": {
-            "label": "LUX", 
+            "label": "LUX",
             "name": "Lux"
         }
     },
     {
         "key": "邪恶小法师",
         "val": {
-            "label": "VEIGAR", 
+            "label": "VEIGAR",
             "name": "Veigar"
         }
     },
     {
         "key": "黑暗之女",
         "val": {
-            "label": "ANNIE", 
+            "label": "ANNIE",
             "name": "Annie"
         }
     },
     {
         "key": "暗黑元首",
         "val": {
-            "label": "SYNDRA", 
+            "label": "SYNDRA",
             "name": "Syndra"
         }
     },
     {
         "key": "荆棘之兴",
         "val": {
-            "label": "ZYRA", 
+            "label": "ZYRA",
             "name": "Zyra"
         }
     },
     {
         "key": "愁云使者",
         "val": {
-            "label": "VEX", 
+            "label": "VEX",
             "name": "Vex"
         }
     },
     {
         "key": "九尾妖狐",
         "val": {
-            "label": "AHRI", 
+            "label": "AHRI",
             "name": "Ahri"
         }
     },
     {
         "key": "星籁歌姬",
         "val": {
-            "label": "SERAPHINE", 
+            "label": "SERAPHINE",
             "name": "Seraphine"
         }
     },
     {
         "key": "发条魔灵",
         "val": {
-            "label": "ORIANNA", 
+            "label": "ORIANNA",
             "name": "Orianna"
         }
     },
     {
         "key": "虚空行者",
         "val": {
-            "label": "KASSADIN", 
+            "label": "KASSADIN",
             "name": "Kassadin"
         }
     },
     {
         "key": "暮光星灵",
         "val": {
-            "label": "ZOE", 
+            "label": "ZOE",
             "name": "Zoe"
         }
     },
     {
         "key": "赏金猎人",
         "val": {
-            "label": "MISS_FORTUNE", 
+            "label": "MISS_FORTUNE",
             "name": "Miss Fortune"
         }
     },
     {
         "key": "正义巨像",
         "val": {
-            "label": "GALIO", 
+            "label": "GALIO",
             "name": "Galio"
         }
     },
     {
         "key": "铸星龙王",
         "val": {
-            "label": "AURELION_SOL", 
+            "label": "AURELION_SOL",
             "name": "Aurelion Sol"
         }
     },
     {
         "key": "影哨",
         "val": {
-            "label": "AKSHAN", 
+            "label": "AKSHAN",
             "name": "Akshan"
         }
     },
     {
         "key": "探险家",
         "val": {
-            "label": "EZREAL", 
+            "label": "EZREAL",
             "name": "Ezreal"
         }
     },
     {
         "key": "不祥之刃",
         "val": {
-            "label": "KATARINA", 
+            "label": "KATARINA",
             "name": "Katarina"
         }
     },
     {
         "key": "寒冰射手",
         "val": {
-            "label": "ASHE", 
+            "label": "ASHE",
             "name": "Ashe"
         }
     },
     {
         "key": "虚空之女",
         "val": {
-            "label": "KAISA", 
+            "label": "KAISA",
             "name": "Kai'sa"
         }
     },
     {
         "key": "暴走萝莉",
         "val": {
-            "label": "JINX", 
+            "label": "JINX",
             "name": "Jinx"
         }
     },
     {
         "key": "战争女神",
         "val": {
-            "label": "SIVIR", 
+            "label": "SIVIR",
             "name": "Sivir"
         }
     },
     {
         "key": "祖安花火",
         "val": {
-            "label": "ZERI", 
+            "label": "ZERI",
             "name": "Zeri"
         }
     },
     {
         "key": "戏命师",
         "val": {
-            "label": "JHIN", 
+            "label": "JHIN",
             "name": "Jhin"
         }
     },
     {
         "key": "逆羽",
         "val": {
-            "label": "XAYAH", 
+            "label": "XAYAH",
             "name": "Xayah"
         }
     },
     {
         "key": "荣耀行刑官",
         "val": {
-            "label": "DRAVEN", 
+            "label": "DRAVEN",
             "name": "Draven"
         }
     },
     {
         "key": "惩戒之箭",
         "val": {
-            "label": "VARUS", 
+            "label": "VARUS",
             "name": "Varus"
         }
     },
     {
         "key": "沙漠玫瑰",
         "val": {
-            "label": "SAMIRA", 
+            "label": "SAMIRA",
             "name": "Samira"
         }
     },
     {
         "key": "众星之子",
         "val": {
-            "label": "SORAKA", 
+            "label": "SORAKA",
             "name": "Soraka"
         }
     },
     {
         "key": "风暴之怒",
         "val": {
-            "label": "JANNA", 
+            "label": "JANNA",
             "name": "Janna"
         }
     },
     {
         "key": "琴瑟仙女",
         "val": {
-            "label": "SONA", 
+            "label": "SONA",
             "name": "Sona"
         }
     },
     {
         "key": "曙光女神",
         "val": {
-            "label": "LEONA", 
+            "label": "LEONA",
             "name": "Leona"
         }
     },
     {
         "key": "弗雷尔卓德之心",
         "val": {
-            "label": "BRAUM", 
+            "label": "BRAUM",
             "name": "Braum"
         }
     },
     {
         "key": "魂锁典狱长",
         "val": {
-            "label": "THRESH", 
+            "label": "THRESH",
             "name": "Thresh"
         }
     },
     {
         "key": "天启者",
         "val": {
-            "label": "KARMA", 
+            "label": "KARMA",
             "name": "Karma"
         }
     },
     {
         "key": "涤魂圣枪",
         "val": {
-            "label": "SENNA", 
+            "label": "SENNA",
             "name": "Senna"
         }
     },
     {
         "key": "牛头酋长",
         "val": {
-            "label": "ALISTAR", 
+            "label": "ALISTAR",
             "name": "Alistar"
         }
     },
     {
         "key": "唤潮鲛姬",
         "val": {
-            "label": "NAMI", 
+            "label": "NAMI",
             "name": "Nami"
         }
     },
     {
         "key": "仙灵女巫",
         "val": {
-            "label": "LULU", 
+            "label": "LULU",
             "name": "Lulu"
         }
     },
     {
         "key": "蒸汽机器人",
         "val": {
-            "label": "BLITZCRANK", 
+            "label": "BLITZCRANK",
             "name": "Blitzcrank"
         }
     },
     {
         "key": "血港鬼影",
         "val": {
-            "label": "PYKE", 
+            "label": "PYKE",
             "name": "Pyke"
         }
     },
     {
         "key": "魔法猫咪",
         "val": {
-            "label": "YUUMI", 
+            "label": "YUUMI",
             "name": "Yuumi"
         }
     },
     {
         "key": "幻翎",
         "val": {
-            "label": "RAKAN", 
+            "label": "RAKAN",
             "name": "Rakan"
         }
     },
@@ -795,6 +795,13 @@
         "val": {
             "label": "LISSANDRA",
             "name": "Lissandra"
+        }
+    },
+    {
+        "key": "铁铠冥魂",
+        "val": {
+            "label": "MORDEKAISER",
+            "name": "Mordekaiser"
         }
     }
 ]

@@ -1633,32 +1633,32 @@
     ],
     "LISSANDRA": [
         {
-            "demoSrc": "/",
-            "iconSrc": "/",
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10109_0.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11090001_Lissandra_Passive.png",
             "name": "ICEBORN SUBJUGATION",
             "description": "When an enemy champion dies near Lissandra they become a Frozen Thrall. Frozen Thralls slow nearby enemies and then, after a delay, shatter from the intense cold, dealing magic damage to nearby targets."
         },
         {
-            "demoSrc": "/",
-            "iconSrc": "/",
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10109_1.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11090201_Lissandra_Q.png",
             "name": "ICE SHARD",
             "description": "Throws a spear of ice that shatters when it hits an enemy, dealing magic damage and slowing Move Speed. Shards pass through the target, dealing the same damage to other enemies hit."
         },
         {
-            "demoSrc": "/",
-            "iconSrc": "/",
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10109_2.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11090301_Lissandra_W.png",
             "name": "RING OF FROST",
             "description": "Freezes nearby enemies in ice, dealing magic damage and rooting them."
         },
         {
-            "demoSrc": "/",
-            "iconSrc": "/",
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10109_3.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11090401_Lissandra_E.png",
             "name": "GLACIAL PATH",
             "description": "Lissandra creates an ice claw that deals magic damage. Reactivating this ability transports Lissandra to the claw's current location."
         },
         {
-            "demoSrc": "/",
-            "iconSrc": "/",
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10109_R.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11090501_Lissandra_R.png",
             "name": "FROZEN TOMB",
             "description": "If cast on an enemy champion, the target is frozen solid, stunning it. If cast on Lissandra, she encases herself in dark ice, healing herself while becoming untargetable and invulnerable. Dark ice then emanates from the target dealing magic damage to enemies and slowing Move Speed."
         }
@@ -1885,6 +1885,38 @@
             "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d4d9e564880bee9ef9208743f72a65d7eca82149-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
             "name": "BULLET TIME",
             "description": "Miss Fortune channels a barrage of bullets into a cone in front of her, dealing large amounts of damage to enemies. Each wave of Bullet Time can critically strike."
+        }
+    ],
+    "MORDEKAISER": [
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10035_0.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/10350001_Mordekaiser_P.png",
+            "name": "DARKNESS RISE",
+            "description": "Mordekaiser gains a powerful damage aura and Move Speed after landing 3 attacks or spells against champions or monsters."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10035_1.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/10350201_Mordekaiser_Q.png",
+            "name": "OBLITERATE",
+            "description": "Mordekaiser smashes the ground with his mace dealing damage to each enemy struck. Damage is increased when hitting a single enemy."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10035_2.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/10350301_Mordekaiser_W.png",
+            "name": "INDESTRUCTIBLE",
+            "description": "Mordekaiser stores damage he deals and takes to create a shield. He may consume the shield to heal."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10035_3.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/10350401_Mordekaiser_E.png",
+            "name": "DEATH'S GRASP",
+            "description": "Mordekaiser pulls all enemies in an area."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10035_R.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/10350501_Mordekaiser_R.png",
+            "name": "REALM OF DEATH",
+            "description": "Mordekaiser drags his victim to a different dimension with him and steals a portion of their stats. If he kills them, he keeps the stats until the victim respawns."
         }
     ],
     "MORGANA": [
