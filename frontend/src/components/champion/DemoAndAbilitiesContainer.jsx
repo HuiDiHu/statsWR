@@ -16,7 +16,7 @@ const DemoAndAbilitiesContainer = ({ props }) => {
 
   useLayoutEffect(() => {
     axios
-      .get(`https://statswr-api.onrender.com/api/v1/champions/abilities/${props.label}`)
+      .get(`${import.meta.env.VITE_SERVER_URL}/api/v1/champions/abilities/${props.label}`)
       .then((res) => {
         setChampAbilities(res.data.abilities)
         props.setStatus("AOK")

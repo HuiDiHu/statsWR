@@ -46,7 +46,7 @@ const Comment = ({ props }) => {
         }
         axios
             .create({
-                baseURL: 'https://statswr-api.onrender.com',
+                baseURL: import.meta.env.VITE_SERVER_URL,
                 headers: {
                     Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
                 }
@@ -72,7 +72,7 @@ const Comment = ({ props }) => {
     const handleDelete = () => {
         axios
             .create({
-                baseURL: 'https://statswr-api.onrender.com',
+                baseURL: import.meta.env.VITE_SERVER_URL,
                 headers: {
                     Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
                 }
@@ -99,7 +99,7 @@ const Comment = ({ props }) => {
     const handleReport = () => {
         axios
             .create({
-                baseURL: 'https://statswr-api.onrender.com',
+                baseURL: import.meta.env.VITE_SERVER_URL,
                 headers: {
                     Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
                 }

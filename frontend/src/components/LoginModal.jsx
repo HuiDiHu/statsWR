@@ -12,7 +12,7 @@ const LoginModal = ({ onClose, props }) => {
     const handleLoginSubmit = () => {
         setLoading(true)
         axios
-            .post('https://statswr-api.onrender.com/api/v1/auth/login', { email, password })
+            .post(`${import.meta.env.VITE_SERVER_URL}/api/v1/auth/login`, { email, password })
             .then((res) => {
                 props.setLoginModal(false);
                 setErrMsg(""); setEmail(""); setPassword("");

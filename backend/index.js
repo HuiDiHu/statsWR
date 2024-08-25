@@ -30,7 +30,7 @@ const errorHandlerMiddleware = require('./middleware/error-handler.js');
 
 app.use(express.json())
 app.use(cors({
-    origin: 'https://statswr.vercel.app',
+    origin: process.env.CLIENT_URL,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }))

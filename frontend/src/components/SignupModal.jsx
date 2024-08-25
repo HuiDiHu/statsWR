@@ -12,7 +12,7 @@ const SignupModal = ({ onClose, props }) => {
     const handleSignupSubmit = () => {
         setLoading(true)
         axios
-            .post('https://statswr-api.onrender.com/api/v1/auth/register', { email, username, password })
+            .post(`${import.meta.env.VITE_SERVER_URL}/api/v1/auth/register`, { email, username, password })
             .then((res) => {
                 props.setSignupModal(false)
                 setErrMsg(""); setEmail(""); setUsername(""); setPassword("");

@@ -23,7 +23,7 @@ const Body = ({ props }) => {
     window.scrollTo(0, 0)
     setChampTitle(allChampions.find((item) => item.label === props.label).title)
     axios
-      .get(`https://statswr-api.onrender.com/api/v1/champions/${props.label}`)
+      .get(`${import.meta.env.VITE_SERVER_URL}/api/v1/champions/${props.label}`)
       .then((res) => {
         setChampionData(res.data.champion)
         props.setName(res.data.champion[0].name)

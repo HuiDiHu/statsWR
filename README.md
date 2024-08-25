@@ -16,14 +16,19 @@ Website Link: https://statswr.vercel.app
 > Tested with npm v10.2.4 Node v20.11.1 
 
 1. ```git clone``` the repository
-2. to run locally, switch all instances of ```https://statswr-api.onrender.com``` --> ```http://localhost:5555``` and ```https://statswr.vercel.app``` --> ```http://localhost:5173```
-3. set up environment variables in the backend folder by creating a .env file and adding 
+2. set up environment variables in the backend folder by creating a .env file and adding 
    ```
    PORT = 5555
    
    MONGO_URI = (your mongodb URI)
    
    JWT_SECRET = (128 byte string)
+
+   CLIENT_URL = <your client url>
+   ```
+3. set up environment variables in the frontend folder by creating a .env file and adding 
+   ```
+   VITE_SERVER_URL = <your server url>
    ```
 4. Run development backend server with ```cd backend```, ```npm install```, and ```npm run dev```
 5. Run development frontend server on another terminal with ```cd frontend```, ```npm install```, and ```npm run dev```

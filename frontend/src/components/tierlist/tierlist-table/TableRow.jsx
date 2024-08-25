@@ -30,7 +30,7 @@ const TableRow = ({ props }) => {
         }
         navigate(`/champion/${label}`, { state: { retAddr: '/tierlist', champLabel: label, role: role } });
     }
-
+    //TODO: change w-min of line 43 into w-[<some number>%], or grow, (Find difference between w-min and w-fit)
     return (
         <tr
             className='border border-x-0 border-y-1 border-[#1e1e1e] py-1 hover:bg-zinc-800 hover:border hover:border-y-0 hover:border-r-0 hover:border-orange-700 group'
