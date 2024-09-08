@@ -22,7 +22,7 @@ const Footer = () => {
                     </Link>
                 </p>
                 <p className='text-xs'>
-                    <span>Last updated on 9/1/2024</span>
+                    <span>Last updated on 9/8/2024</span>
                 </p>
                 <p className='text-xs line-through'>
                     <span>rito pls release official wildrift API</span>
