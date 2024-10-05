@@ -16,7 +16,7 @@ const rawChampionsData = [ //create an array with each index holding a txt file.
     2. make sure rawChampionsData have the correct data FOR THE PATCH
         //do the last 3 if the patch you are uploading is the last avaliable patch
     3. update version in frontend constants folder
-    4. update footer's Last updated on
+    4. update footer's Last updated on (/frontend/src/components/Footer.jsx)
     5. (if new champion introduced) add to frontend constants and backend championNames.json)
                                     championAbilities.json
                                     upload new champion icon to assets
