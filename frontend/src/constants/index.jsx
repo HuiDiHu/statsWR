@@ -66,6 +66,7 @@ export const allChampions = [
     { label: "LUX", name: "Lux", role: [0, 3, 5], title: "THE LADY OF LUMINOSITY" },
     { label: "MALPHITE", name: "Malphite", role: [0, 1, 3, 5], title: "SHARD OF THE MONOLITH" },
     { label: "MASTER_YI", name: "Master Yi", role: [0, 2], title: "THE WUJU BLADESMAN" },
+    { label: "MILIO", name: "Milio", role: [5], title: "THE GENTLE FLAME" },
     { label: "MISS_FORTUNE", name: "Miss Fortune", role: [0, 3, 4, 5], title: "THE BOUNTY HUNTER" },
     { label: "MORDEKAISER", name: "Mordekaiser", role: [0, 1, 2], title: "THE IRON REVENANT" },
     { label: "MORGANA", name: "Morgana", role: [0, 2, 3, 5], title: "THE FALLEN" },
