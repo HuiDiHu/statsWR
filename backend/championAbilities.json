@@ -1855,6 +1855,38 @@
             "description": "Master Yi moves with unparalleled agility, temporarily increasing his Movement and Attack Speeds as well as making him immune to all slowing effects. While active, Champion kills or assists extend Highlander's duration. Passively reduces cooldown for his other abilities on a kill or assist."
         }
     ],
+    "MILIO": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/7ebd22aaf40ccc3e71a3855be8c5b34937e0efb5.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/19767a64f3d9565b4007a6d99c6838ce9b6f882a-512x512.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
+            "name": "FIRED UP!",
+            "description": "Milio's abilities enchant allies on touch, making their next damage deal a burst of extra damage and burn the target."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/228a5a8d89c499732c35e146d3aaad8812b87bb4.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/fb7edc345203b225ccef075001d065ca64fc3b37-512x512.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
+            "name": "ULTRA MEGA FIRE KICK",
+            "description": "Kick a ball that knocks back an enemy. The ball launches upward on hit and falls toward the enemy, damaging and slowing enemies in the area upon impact."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/f956fc25f93b37f49a2b4baa23a6808df4e938ad.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/94ad5e8334b31eadd300ffb7c4ff4c657817ce17-512x512.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
+            "name": "COZY CAMPFIRE",
+            "description": "Create an empowering zone that heals allies and increases attack range to those inside. The zone follows the ally nearest to the cast point."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/4f81f66a27ebe34d2ece35550655742117410816.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/62e1be1679cf0b13ee534fb1282236f769a15e75-512x512.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
+            "name": "WARM HUGS",
+            "description": "Milio tosses a shield to an ally, temporarily increasing their movement speed. This ability has 2 charges."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/f4ec15694f84287ec58178755ede4e9ffa3dc310.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/04d0105a2b7b33abaea90c8669a8fe888c75eb09-512x512.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
+            "name": "BREATH OF LIFE",
+            "description": "Milio unleashes a wave of soothing flames that heal and remove crowd control effects from allies in range."
+        }
+    ],
     "MISS_FORTUNE": [
         {
             "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/f513b86b43e0427f1e282811ccaad994f5a72a61.mp4",
