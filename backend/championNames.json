@@ -308,6 +308,13 @@
         }
     },
     {
+        "key": "明烛",
+        "val": {
+            "label": "MILIO",
+            "name": "Milio"
+        }
+    },
+    {
         "key": "堕落天使",
         "val": {
             "label": "MORGANA",
