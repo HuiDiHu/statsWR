@@ -17,7 +17,7 @@ const rawChampionsData = [ //create an array with each index holding a txt file.
         //do the last 3 if the patch you are uploading is the last avaliable patch
     3. update version in frontend constants folder
     4. update footer's Last updated on (/frontend/src/components/Footer.jsx)
-    5. (if new champion introduced) add to frontend constants and backend championNames.json)
+    5. (if new champion introduced) add to frontend constants and backend championNames.json) (https://wildrift.leagueoflegends.com/en-us/champions/)
                                     championAbilities.json
                                     upload new champion icon to assets
 */

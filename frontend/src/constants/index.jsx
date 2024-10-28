@@ -6,7 +6,7 @@ export const navItems = [
 export const regionRankPatch = [
     { label: "\"Global\"", imgSrc: "assets/misc/global-icon.svg" },
     { label: "Diamond+", imgSrc: "assets/misc/diamond-icon.png" },
-    { label: "Version: 5.2Cc", imgSrc: "/" }
+    { label: "Version: 5.2D", imgSrc: "/" }
 ];
 
 export const allChampions = [
@@ -40,6 +40,7 @@ export const allChampions = [
     { label: "GRAVES", name: "Graves", role: [0, 1, 2], title: "THE OUTLAW" },
     { label: "GWEN", name: "Gwen", role: [0, 1, 2], title: "THE HALLOWED SEAMSTRESS" },
     { label: "HECARIM", name: "Hecarim", role: [0, 2], title: "THE SHADOW OF WAR" },
+    { label: "HEIMERDINGER", name: "Heimerdinger", role: [0, 3, 5], title: "THE REVERED INVENTOR" },
     { label: "IRELIA", name: "Irelia", role: [0, 1, 3], title: "THE BLADE DANCER" },
     { label: "JANNA", name: "Janna", role: [0, 5], title: "THE STORM'S FURY" },
     { label: "JARVAN_IV", name: "Jarvan IV", role: [0, 2], title: "THE EXAMPLAR OF DEMACIA" },
