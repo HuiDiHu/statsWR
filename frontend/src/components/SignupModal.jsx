@@ -1,6 +1,8 @@
 import { useState } from "react"
 import axios from 'axios'
 import logo from 'assets/logo.png'
+import { IoMdEye } from "react-icons/io";
+import { IoIosEyeOff } from "react-icons/io";
 
 const SignupModal = ({ onClose, props }) => {
     const [email, setEmail] = useState("");
@@ -8,6 +10,7 @@ const SignupModal = ({ onClose, props }) => {
     const [username, setUsername] = useState("");
     const [loading, setLoading] = useState(false);
     const [errMsg, setErrMsg] = useState("")
+    const [passwordVisible, setPasswordVisible] = useState(false);
 
     const handleSignupSubmit = () => {
         setLoading(true)
@@ -79,18 +82,29 @@ const SignupModal = ({ onClose, props }) => {
                             />
                         </div>
                     </div>
-                    <div className="flex w-full h-[33%] items-center justify-center my-3">
+                    <div className="flex w-full h-[33%] items-center justify-center my-3 relative">
                         <div className="w-[30%] h-full flex items-center justify-center">
                             <span className="text-xl">Password:</span>
                         </div>
-                        <div className="w-[50%] h-full flex items-center justify-center rounded-xl border border-white">
+                        <div className="w-[50%] h-full flex items-center justify-center rounded-xl border border-white relative">
                             <input
                                 className="bg-transparent text-xl w-[90%] outline-none"
+                                type={passwordVisible ? 'text' : 'password'}
                                 placeholder="Password is encrypted"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
+                        {passwordVisible ? 
+                            <IoIosEyeOff 
+                                className="cursor-pointer text-gray-400 select-none absolute right-4 xl:right-5 w-7 h-7"
+                                onClick={() => setPasswordVisible(false)}
+                            /> : 
+                            <IoMdEye 
+                                className="cursor-pointer select-none absolute right-4 xl:right-5 w-7 h-7"
+                                onClick={() => setPasswordVisible(true)}
+                            />
+                        }
                     </div>
                 </div>
                 <div className="w-full h-[5%]">
