@@ -991,6 +991,38 @@
             "description": "Hecarim summons spectral riders and charges forward, dealing magic damage in a line. Hecarim creates a shockwave when he finishes his charge, causing nearby enemies to flee in terror."
         }
     ],
+    "HEIMERDINGER": [
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/46d77ec880047c0ed5ef2a955e842e151a563913.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/54ba6a436e6d23a0ef69cb8f9d00e065e24eeb86-256x256.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
+            "name": "HEXTECH AFFINITY",
+            "description": "Gain Move Speed while near allied towers and turrets deployed by Heimerdinger."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/a2930b16a7f79918bbb2968894805a5a0d5f3b19.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/b4a989e45a5f85a909bc78e98e1f64d5b4f8b166-256x256.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
+            "name": "H-28 G EVOLUTION TURRET",
+            "description": "Heimerdinger lays down a rapid-fire cannon turret equipped with a secondary pass-through beam attack (turrets deal half damage to towers)."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/c662c7383352e5d8514abfb46ae5231c6bb46f9b.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/68a59d272e7e267b9eb67bf38b4ce9a72b807199-256x256.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
+            "name": "HEXTECH MICRO-ROCKETS",
+            "description": "Heimerdinger fires long-range rockets that converge on his cursor."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/ce4c92979bd902078f401ca5a12279aba00259b0.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/d399be64c3d6fe833038842e70f18bcfd16dfcc8-256x256.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
+            "name": "CH-2 ELECTRON STORM GRENADE",
+            "description": "Heimerdinger fires long-range rockets that converge on his cursor."
+        },
+        {
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/d3a71a1b61ceb0727adb79fc866ac96fb8913036.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/ecdd57ea2714a6d37d60b36894d50796ccf4d07c-256x256.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
+            "name": "UPGRADE!!!",
+            "description": "Heimerdinger invents an upgrade, causing his next spell to have increased effects."
+        }
+    ],
     "IRELIA": [
         {
             "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/fdc33eb21d14ff5781abf3cb038c3c0051429df0.mp4",
