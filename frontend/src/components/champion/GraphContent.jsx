@@ -112,7 +112,19 @@ const GraphContent = ({ props }) => {
                 .style("stroke", "orange")
                 .style("stroke-width", 3);
 
+            //SCALE THE X AXIS SO THAT 10 TICKS ARE DISPLAYED
             const xAxis = d3.axisBottom(xAxisScale)
+            const minDate = d3.min(datesArray);
+            const maxDate = d3.max(datesArray);
+            const tickValues = []; // Calculate 10 evenly spaced tick values between minDate and maxDate
+            const step = (maxDate - minDate) / 9; // 9 steps for 10 ticks
+            for (let i = 0; i <= 9; i++) {
+                tickValues.push(new Date(minDate.getTime() + i * step));
+            }
+            xAxis.tickValues(tickValues); // Set the x-axis to use the manually calculated tick values
+            xAxis.tickFormat(d3.timeFormat("%b %d")); //format for month, day
+
+            //DISPLAY THE Y AXIS WITH PERCENTAGES
             const yAxis = d3.axisLeft(yAxisScale)
             yAxis.tickFormat(d3.format(".0%")); //display percentages
 
@@ -307,7 +319,19 @@ const GraphContent = ({ props }) => {
                 .style("stroke", "orange")
                 .style("stroke-width", 3);
 
+            //SCALE THE X AXIS SO THAT 10 TICKS ARE DISPLAYED
             const xAxis = d3.axisBottom(xAxisScale)
+            const minDate = d3.min(datesArray);
+            const maxDate = d3.max(datesArray);
+            const tickValues = []; // Calculate 10 evenly spaced tick values between minDate and maxDate
+            const step = (maxDate - minDate) / 9; // 9 steps for 10 ticks
+            for (let i = 0; i <= 9; i++) {
+                tickValues.push(new Date(minDate.getTime() + i * step));
+            }
+            xAxis.tickValues(tickValues); // Set the x-axis to use the manually calculated tick values
+            xAxis.tickFormat(d3.timeFormat("%b %d")); //format for month, day
+
+            //SCALE THE Y AXIS TO INCREMENT BY 10 RANKS EACH TICK (but start at 1)
             const yAxis = d3.axisLeft(yAxisScale)
             let rankTickArr = [1, 10];
             for (let i = 20; i < baseline - 3; i += 10){   
