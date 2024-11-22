@@ -159,6 +159,38 @@
             "description": "Alistar lets out a wild roar, removing all crowd control effects on himself, and reducing incoming physical and magical damage for the duration."
         }
     ],
+    "AMBESSA": [
+        {
+            "demoSrc": "",
+            "iconSrc": "",
+            "name": "DRAKEHOUND'S STEP",
+            "description": ""
+        },
+        {
+            "demoSrc": "",
+            "iconSrc": "",
+            "name": "CUNNING SWEEP / SUNDERING SLAM",
+            "description": ""
+        },
+        {
+            "demoSrc": "",
+            "iconSrc": "",
+            "name": "REPUDIATION",
+            "description": ""
+        },
+        {
+            "demoSrc": "",
+            "iconSrc": "",
+            "name": "LACERATE",
+            "description": ""
+        },
+        {
+            "demoSrc": "",
+            "iconSrc": "",
+            "name": "PUBLIC EXECUTION",
+            "description": ""
+        }
+    ],
     "AMUMU": [
         {
             "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/87a6b65b507ca624ff7250c771c45e0bbf702e3c.mp4",

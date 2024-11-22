@@ -6,7 +6,7 @@ export const navItems = [
 export const regionRankPatch = [
     { label: "\"Global\"", imgSrc: "assets/misc/global-icon.svg" },
     { label: "Diamond+", imgSrc: "assets/misc/diamond-icon.png" },
-    { label: "Version: 5.2D", imgSrc: "/" }
+    { label: "Version: 5.2Dd", imgSrc: "/" }
 ];
 
 export const allChampions = [
@@ -15,6 +15,7 @@ export const allChampions = [
     { label: "AKALI", name: "Akali", role: [0, 1, 3], title: "THE ROGUE ASSASSIN" },
     { label: "AKSHAN", name: "Akshan", role: [0, 1, 3], title: "THE ROGUE SENTINEL" },
     { label: "ALISTAR", name: "Alistar", role: [0, 5], title: "THE MINOTAUR" },
+    { label: "AMBESSA", name: "Ambessa", role: [0, 1], title: "MATRIARCH OF WAR" },
     { label: "AMUMU", name: "Amumu", role: [0, 2], title: "THE SAD MUMMY" },
     { label: "ANNIE", name: "Annie", role: [0, 3], title: "THE DARK CHILD" },
     { label: "ASHE", name: "Ashe", role: [0, 4, 5], title: "THE FROST ARCHER" },

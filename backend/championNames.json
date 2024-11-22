@@ -175,6 +175,13 @@
         }
     },
     {
+        "key": "铁血狼母",
+        "val": {
+            "label": "AMBESSA",
+            "name": "Ambessa"
+        }
+    },
+    {
         "key": "熔岩巨兽",
         "val": {
             "label": "MALPHITE",
