@@ -161,34 +161,34 @@
     ],
     "AMBESSA": [
         {
-            "demoSrc": "",
-            "iconSrc": "",
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/06464756ac3dbe53dcb14ccdf96708a9bfe67cea.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/12cafbd0f4399269f558fe93bccd8a94a755c382-512x512.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
             "name": "DRAKEHOUND'S STEP",
-            "description": ""
+            "description": "Entering an attack or movement command while casting an ability will cause Ambessa to dash a short distance once the ability is cast, granting her next attack bonus range, damage, and attack speed, and refunding energy."
         },
         {
-            "demoSrc": "",
-            "iconSrc": "",
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/3294c8e418e599980bd845fd919d321e91271c8c.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/bdb86a3969c80c0eb1dde89126968165f583a9a4-512x512.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
             "name": "CUNNING SWEEP / SUNDERING SLAM",
-            "description": ""
+            "description": "Ambessa sweeps her twin drakehounds in a semicircle in front of her, dealing bonus damage to enemies hit by the blades. Striking an enemy will transform the next cast of this ability for a short period of time, causing her to slam her twin drakehounds down in a line in front of her, dealing bonus damage to the first enemy hit."
         },
         {
-            "demoSrc": "",
-            "iconSrc": "",
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/7f53dc1afe0c7baeb9a677c91e17d8c76d47305f.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/66a518f54a41b14a7d8bc0efea4a8f48a5192506-512x512.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
             "name": "REPUDIATION",
-            "description": ""
+            "description": "Ambessa gains a shield, briefly braces herself, and then slams the ground to damage nearby enemies. If she blocked any non-minion damage while bracing herself, this ability will deal increased damage."
         },
         {
-            "demoSrc": "",
-            "iconSrc": "",
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/8a39eb910618b634a6ed0b919ee55de77b614cd9.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/1cd0bddd824b53da43c80ccf8cea3f6100299691-512x512.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
             "name": "LACERATE",
-            "description": ""
+            "description": "Ambessa whips her twin drakehounds around herself, damaging and slowing nearby enemies. Initiating Drakehound's Step from this ability causes her to strike a second time at the end of its dash."
         },
         {
-            "demoSrc": "",
-            "iconSrc": "",
+            "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data/304bc3f57fa84cc8a7c80e19be70ed343bd0cc5e.mp4",
+            "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/42d558821aab18ebc8b78c2a0468c400a17eb0f7-512x512.png?auto=format&fit=crop&q=80&h=64&w=64&crop=center",
             "name": "PUBLIC EXECUTION",
-            "description": ""
+            "description": "Ambessa blinks to the farthest enemy champion in a line of her choosing and suppresses them upon her arrival. She then slams the enemy into the ground where they take damage and are stunned."
         }
     ],
     "AMUMU": [
