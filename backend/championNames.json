@@ -824,5 +824,12 @@
             "label": "MORDEKAISER",
             "name": "Mordekaiser"
         }
+    },
+    {
+        "key": "炼金术士",
+        "val": {
+            "label": "SINGED",
+            "name": "Singed"
+        }
     }
 ]
