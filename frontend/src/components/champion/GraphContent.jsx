@@ -7,6 +7,7 @@ const GraphContent = ({ props }) => {
     //const values = [["2024-06-17", 49.22], ["2023-06-17", 44.22], ["2022-06-17", 34.22], ["2021-06-17", 50.22], ["2023-02-17", 50.22]];
 
     const genPercentGraph = (values) => {
+        if (!values || values == undefined || values.length == 0) return;
         setTimeout(() => {
             d3.select(ref.current).selectAll('svg').remove();
 
@@ -437,6 +438,7 @@ const GraphContent = ({ props }) => {
 
     useLayoutEffect(() => {
         const values = props.data
+        if (!values || values == undefined || values.length == 0) return;
         values.sort((a, b) => {
             let dateA = new Date(a[0]); // Parse each date string into a Date object
             let dateB = new Date(b[0]);

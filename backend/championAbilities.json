@@ -2527,6 +2527,38 @@
             "description": "Riven empowers her keepsake weapon with energy, and gains Attack Damage and Range. During this time, she also gains the ability to use Wind Slash, a powerful ranged attack, once."
         }
     ],
+    "RUMBLE": [
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10140_0.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11400001_Rumble_Passive.png",
+            "name": "JUNKYARD TITAN",
+            "description": "Every spell Rumble casts gives him Heat. When he reaches 50% Heat he reaches Danger Zone, granting all his basic abilities bonus effects. When he reaches 100% Heat, he starts Overheating, gaining bonus Attack Speed and granting his basic attacks bonus damage, but making him unable to cast spells for a few seconds."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10140_1.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11400201_Rumble_Q.png",
+            "name": "FLAMESPITTER",
+            "description": "Rumble torches opponents in front of him, dealing magic damage in a cone for 3 seconds. While in Danger Zone this damage is increased."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10140_2.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11400301_Rumble_W.png",
+            "name": "SCRAP SHIELD",
+            "description": "Rumble pulls up a shield, protecting him from damage and granting him a quick burst of speed. While in Danger Zone, the shield strength and speed bonus is increased."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10140_3.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11400401_Rumble_E.png",
+            "name": "ELECTRO HARPOON",
+            "description": "Rumble launches a harpoon, electrocuting his target with magic damage, slowing their Move Speed, and reducing their Magic Resist. Rumble can carry 2 harpoons at a time. While in Danger Zone the damage and slow percentage is increased."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10140_R.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11400501_Rumble_R.png",
+            "name": "THE EQUALIZER",
+            "description": "Rumble fires off a group of rockets, creating a wall of flames that damages and slows enemies."
+        }
+    ],
     "SAMIRA": [
         {
             "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/40d8b02b3033367b830359bfd1b8378714ea1481.mp4",
@@ -3357,6 +3389,38 @@
             "iconSrc": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8d6c285e075928129c29a0c1cec99c7b6fd06419-96x96.jpg?auto=format&fit=crop&q=80&h=96&w=96&crop=center",
             "name": "ASSAULT AND BATTERY",
             "description": "Vi runs down an enemy, knocking aside anyone in the way. When she reaches her target she knocks it into the air, jumps after it, and slams it back into the ground."
+        }
+    ],
+    "VIKTOR": [
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10144_0.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11440001_Viktor_-_P.png",
+            "name": "GLORIOUS EVOLUTION",
+            "description": "Viktor gains Hex Fragments whenever he kills an enemy. With every 100 Hex Fragments he obtains, Viktor permanently augments an active ability. After upgrading all of his basic abilities, he can gather 100 Hex Fragments to augment his ultimate ability."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10144_1.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11440201_Viktor_-_Q.png",
+            "name": "SIPHON POWER",
+            "description": "Viktor blasts an enemy unit with magic damage, which grants him a shield and empowers his next basic attack. Augment: Siphon Power's shield is increased by 60% and Viktor gains bonus move speed after casting the Ability."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10144_2.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11440301_Viktor_-_W.png",
+            "name": "GRAVITY FIELD",
+            "description": "Viktor conjures a heavy gravitational field that slows enemies caught within its radius. Enemies who stay in the field for too long become stunned. Augment: Viktor's spells apply a slow to enemies."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10144_3.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11441201_Viktor_-_E.png",
+            "name": "HEXTECH RAY",
+            "description": "Viktor uses his biomechanical arm to fire a Hextech Ray that cuts across the field in a line, dealing damage to all enemies in its path. Augment: An explosion follows in the Hextech Ray's wake, dealing magic damage."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10144_R.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11440401_Viktor_-_R.png",
+            "name": "ARCANE STORM",
+            "description": "Viktor conjures an Arcane Storm on the field, dealing magic damage and interrupting enemy channels. The storm periodically does magic damage to all nearby enemies and can be redirected by Viktor. Augment: The Arcane Storm moves 25% faster, and whenever champions die after taking damage from it, the storm grows and increases in its duration."
         }
     ],
     "VIEGO": [

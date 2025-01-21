@@ -831,5 +831,19 @@
             "label": "SINGED",
             "name": "Singed"
         }
+    },
+    {
+        "key": "奥术先驱",
+        "val": {
+            "label": "VIKTOR",
+            "name": "Viktor"
+        }
+    },
+    {
+        "key": "机械公敌",
+        "val": {
+            "label": "RUMBLE",
+            "name": "Rumble"
+        }
     }
 ]

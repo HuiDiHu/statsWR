@@ -21,15 +21,15 @@ const Body = ({ props }) => {
   useLayoutEffect(() => {
     setLoading(true)
     window.scrollTo(0, 0)
-    setChampTitle(allChampions.find((item) => item.label === props.label).title)
+    setChampTitle(allChampions.find((item) => item.label === props.label).title || "TITLE NOT FOUND")
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/api/v1/champions/${props.label}`)
       .then((res) => {
         setChampionData(res.data.champion)
-        props.setName(res.data.champion[0].name)
+        props.setName(res.data.champion[0]?.name || "CHAMPION NOT FOUND")
         setInfo({
           label: props.label,
-          gameplayData: (curRole ? res.data.champion.find((item) => item.role === curRole).gameplayData : res.data.champion[0].gameplayData),
+          gameplayData: (curRole ? res.data.champion.find((item) => item.role === curRole).gameplayData : (res.data.champion[0]?.gameplayData)),
         })
         setCurRole(curRole ? curRole : res.data.champion[0].role)
         setStatus("AOK")

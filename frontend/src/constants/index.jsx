@@ -6,7 +6,7 @@ export const navItems = [
 export const regionRankPatch = [
     { label: "\"Global\"", imgSrc: "assets/misc/global-icon.svg" },
     { label: "Diamond+", imgSrc: "assets/misc/diamond-icon.png" },
-    { label: "Version: 5.3D", imgSrc: "/" }
+    { label: "Version: 6.0A", imgSrc: "/" }
 ];
 
 export const allChampions = [
@@ -16,7 +16,7 @@ export const allChampions = [
     { label: "AKSHAN", name: "Akshan", role: [0, 1, 3], title: "THE ROGUE SENTINEL" },
     { label: "ALISTAR", name: "Alistar", role: [0, 5], title: "THE MINOTAUR" },
     { label: "AMBESSA", name: "Ambessa", role: [0, 1], title: "MATRIARCH OF WAR" },
-    { label: "AMUMU", name: "Amumu", role: [0, 2], title: "THE SAD MUMMY" },
+    { label: "AMUMU", name: "Amumu", role: [0, 1, 2], title: "THE SAD MUMMY" },
     { label: "ANNIE", name: "Annie", role: [0, 3], title: "THE DARK CHILD" },
     { label: "ASHE", name: "Ashe", role: [0, 4, 5], title: "THE FROST ARCHER" },
     { label: "AURELION_SOL", name: "Aurelion Sol", role: [0, 3], title: "THE STAR FORGER" },
@@ -89,6 +89,7 @@ export const allChampions = [
     { label: "RENEKTON", name: "Renekton", role: [0, 1], title: "THE BUTCHER OF THE SANDS" },
     { label: "RENGAR", name: "Rengar", role: [0, 1, 2], title: "THE PRIDESTALKER" },
     { label: "RIVEN", name: "Riven", role: [0, 1, 2], title: "THE EXILE" },
+    { label: "RUMBLE", name: "Rumble", role: [0, 1, 2, 3, 5], title: "THE MECHANIZED MENACE" },
     { label: "SAMIRA", name: "Samira", role: [0, 4], title: "THE DESERT ROSE" },
     { label: "SENNA", name: "Senna", role: [0, 5], title: "THE REDEEMER" },
     { label: "SERAPHINE", name: "Seraphine", role: [0, 3, 4, 5], title: "THE STARRY-EYED SONGSTRESS" },
@@ -115,6 +116,7 @@ export const allChampions = [
     { label: "VEIGAR", name: "Veigar", role: [0, 3, 5], title: "THE TINY MASTER OF EVIL" },
     { label: "VEX", name: "Vex", role: [0, 3], title: "THE GLOOMIST" },
     { label: "VI", name: "Vi", role: [0, 2], title: "THE PILTOVER ENFORCER" },
+    { label: "VIKTOR", name: "Viktor", role: [0, 1, 3], title: "THE HERALD OF THE ARCANE" },
     { label: "VIEGO", name: "Viego", role: [0, 1, 2], title: "THE RUINED KING" },
     { label: "VLADIMIR", name: "Vladimir", role: [0, 1, 3], title: "THE CRIMSON REAPER" },
     { label: "VOLIBEAR", name: "Volibear", role: [0, 1, 2], title: "THE RELENTLESS STORM" },
