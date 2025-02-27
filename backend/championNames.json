@@ -845,5 +845,12 @@
             "label": "RUMBLE",
             "name": "Rumble"
         }
+    },
+    {
+        "key": "迷失之牙",
+        "val": {
+            "label": "GNAR",
+            "name": "Gnar"
+        }
     }
 ]

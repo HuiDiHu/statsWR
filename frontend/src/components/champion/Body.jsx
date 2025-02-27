@@ -31,7 +31,7 @@ const Body = ({ props }) => {
           label: props.label,
           gameplayData: (curRole ? res.data.champion.find((item) => item.role === curRole).gameplayData : (res.data.champion[0]?.gameplayData)),
         })
-        setCurRole(curRole ? curRole : res.data.champion[0].role)
+        setCurRole(curRole ? curRole : res.data.champion[0]?.role)
         setStatus("AOK")
         setLoading(false);
       })

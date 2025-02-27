@@ -6,7 +6,7 @@ export const navItems = [
 export const regionRankPatch = [
     { label: "\"Global\"", imgSrc: "assets/misc/global-icon.svg" },
     { label: "Diamond+", imgSrc: "assets/misc/diamond-icon.png" },
-    { label: "Version: 6.0B", imgSrc: "/" }
+    { label: "Version: 6.0C", imgSrc: "/" }
 ];
 
 export const allChampions = [
@@ -37,6 +37,7 @@ export const allChampions = [
     { label: "FIZZ", name: "Fizz", role: [0, 2, 3], title: "THE TIDAL TRICKSTER" },
     { label: "GALIO", name: "Galio", role: [0, 3, 5], title: "THE COLOSSUS" },
     { label: "GAREN", name: "Garen", role: [0, 1], title: "THE MIGHT OF DEMACIA" },
+    { label: "GNAR", name: "Gnar", role: [0, 1], title: "THE MISSING LINK" },
     { label: "GRAGAS", name: "Gragas", role: [0, 1, 2, 3], title: "THE RABBLE ROUSER" },
     { label: "GRAVES", name: "Graves", role: [0, 1, 2], title: "THE OUTLAW" },
     { label: "GWEN", name: "Gwen", role: [0, 1, 2], title: "THE HALLOWED SEAMSTRESS" },
