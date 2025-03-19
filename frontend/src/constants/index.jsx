@@ -6,7 +6,7 @@ export const navItems = [
 export const regionRankPatch = [
     { label: "\"Global\"", imgSrc: "assets/misc/global-icon.svg" },
     { label: "Diamond+", imgSrc: "assets/misc/diamond-icon.png" },
-    { label: "Version: 6.0C", imgSrc: "/" }
+    { label: "Version: 6.0Ca", imgSrc: "/" }
 ];
 
 export const allChampions = [
