@@ -23,5 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+# Tests
+Tests/
+
 #PORT and MongoDB URI key
 .env
