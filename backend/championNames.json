@@ -852,5 +852,19 @@
             "label": "GNAR",
             "name": "Gnar"
         }
+    },
+    {
+        "key": "圣锤之毅",
+        "val": {
+            "label": "POPPY",
+            "name": "Poppy"
+        }
+    },
+    {
+        "key": "符文法师",
+        "val": {
+            "label": "RYZE",
+            "name": "Ryze"
+        }
     }
 ]

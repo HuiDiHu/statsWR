@@ -2367,6 +2367,38 @@
             "description": "Pantheon composes himself and then leaps into the air, landing at a chosen location as a comet, slowing and dealing damage in a line pointing to where he lands."
         }
     ],
+    "POPPY": [
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10076_0.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/10760001_Poppy_Passive1.png",
+            "name": "IRON AMBASSADOR",
+            "description": "Poppy throws her buckler that bounces off the target. Poppy can pick it up to gain a temporary shield."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10076_1.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/10760201_Poppy_Q.png",
+            "name": "HAMMER SHOCK",
+            "description": "Poppy swings her hammer, dealing damage and creating a zone that will slow enemies and explode after a delay."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10076_2.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/10760301_Poppy_W2.png",
+            "name": "STEADFAST PRESENCE",
+            "description": "Poppy passively gains Armor and Magic Resist. This bonus increases when she is low on Health. Poppy can activate Steadfast Presence to gain Move Speed and stop enemy dashes around her. If a dash is stopped, the enemy is slowed and grounded."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10076_3.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/10760401_Poppy_E.png",
+            "name": "HEROIC CHARGE",
+            "description": "Poppy dashes to the target and pushes it back. If the target is pushed into a wall, it is stunned."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10076_R.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/10760501_Poppy_R.png",
+            "name": "KEEPER'S VERDICT",
+            "description": "Poppy channels a hammer strike that knocks enemies very far away."
+        }
+    ],
     "PYKE": [
         {
             "demoSrc": "https://cmsassets.rgpub.io/sanity/files/dsfx7636/game_data_live/3d714ac9a42252cf54835e3a25dd6e1161dc7ee6.mp4",
@@ -2589,6 +2621,38 @@
             "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11400501_Rumble_R.png",
             "name": "THE EQUALIZER",
             "description": "Rumble fires off a group of rockets, creating a wall of flames that damages and slows enemies."
+        }
+    ],
+    "RYZE": [
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10137_0.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11370001_Ryze_P.png",
+            "name": "ARCANE MASTERY",
+            "description": "Ryze's spells deal extra damage based on his Bonus Mana, and he gains a percentage increase to his maximum Mana based on his Ability Power."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10137_1.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11370201_Ryze_Q.png",
+            "name": "OVERLOAD",
+            "description": "Passively, Ryze's other basic abilities reset the cooldown of Overload and charge a rune. When Ryze casts Overload with 2 runes charged, he gains a brief burst of Move Speed. On cast, Ryze throws a charge of pure energy in a line, dealing damage to the first enemy struck. If the target has Flux on it, Overload deals extra damage and bounces to nearby enemies with Flux."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10137_2.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11370301_Ryze_W.png",
+            "name": "RUNE PRISON",
+            "description": "Ryze traps a target in a cage of runes, damaging them and slowing their movement. If the target has Flux on it, they are instead rooted."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10137_3.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11370401_Ryze_E.png",
+            "name": "SPELL FLUX",
+            "description": "Ryze releases an orb of pure magical power that damages an enemy and debuffs all nearby enemies. Ryze's spells have additional effects against the debuffed enemy."
+        },
+        {
+            "demoSrc": "https://game.gtimg.cn/images/lgamem/video/skill/10137_R.mp4",
+            "iconSrc": "https://game.gtimg.cn/images/lgamem/act/lrlib/img/SkillIcons/11370501_Ryze_R.png",
+            "name": "REALM WARP",
+            "description": "Passively, Overload deals even more damage against targets with Flux. On cast, Ryze creates a portal to a nearby location. After a few seconds, allies standing near the portal are teleported to the target location."
         }
     ],
     "SAMIRA": [

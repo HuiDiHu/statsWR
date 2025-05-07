@@ -6,7 +6,7 @@ export const navItems = [
 export const regionRankPatch = [
     { label: "\"Global\"", imgSrc: "assets/misc/global-icon.svg" },
     { label: "Diamond+", imgSrc: "assets/misc/diamond-icon.png" },
-    { label: "Version: 6.0Ca", imgSrc: "/" }
+    { label: "Version: 6.1A", imgSrc: "/" }
 ];
 
 export const allChampions = [
@@ -84,6 +84,7 @@ export const allChampions = [
     { label: "ORIANNA", name: "Orianna", role: [0, 3], title: "THE LADY OF CLOCKWORK" },
     { label: "ORNN", name: "Ornn", role: [0, 1], title: "THE FIRE BELOW THE MOUNTAIN" },
     { label: "PANTHEON", name: "Pantheon", role: [0, 1, 2, 3, 5], title: "THE UNBREAKABLE SPEAR" },
+    { label: "POPPY", name: "Poppy", role: [0, 1, 2, 5], title: "KEEPER OF THE HAMMER" },
     { label: "PYKE", name: "Pyke", role: [0, 5], title: "THE BLOODHARBOR RIPPER" },
     { label: "RAKAN", name: "Rakan", role: [0, 5], title: "THE CHARMER" },
     { label: "RAMMUS", name: "Rammus", role: [0, 2], title: "THE ARMORDILLO" },
@@ -91,6 +92,7 @@ export const allChampions = [
     { label: "RENGAR", name: "Rengar", role: [0, 1, 2], title: "THE PRIDESTALKER" },
     { label: "RIVEN", name: "Riven", role: [0, 1, 2], title: "THE EXILE" },
     { label: "RUMBLE", name: "Rumble", role: [0, 1, 2, 3, 5], title: "THE MECHANIZED MENACE" },
+    { label: "RYZE", name: "Ryze", role: [0, 1, 3], title: "THE RUNE MAGE" },
     { label: "SAMIRA", name: "Samira", role: [0, 4], title: "THE DESERT ROSE" },
     { label: "SENNA", name: "Senna", role: [0, 5], title: "THE REDEEMER" },
     { label: "SERAPHINE", name: "Seraphine", role: [0, 3, 4, 5], title: "THE STARRY-EYED SONGSTRESS" },

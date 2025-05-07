@@ -13,7 +13,7 @@ const start = async () => {
         await connectDB(process.env.MONGO_URI) //connect to MongoDB
         const translatedJson = translateRawChampionsData() //Call translateRawChampionsData() function to give translatedJson an array of all Champions
 
-        console.log("Completed: ")
+        console.log("Processing: ")
         for (const champion of translatedJson) { //iterate through each index of translatedJson which represents a champion/role pair
             console.log(champion.label)
             if ((await Champion.findOne({ label: champion.label, role: Number(champion.role) })) == null) { //if a champion/role pair doesn't exist, create it
