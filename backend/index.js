@@ -29,6 +29,11 @@ const notFoundMiddleware = require('./middleware/not-found.js');
 const errorHandlerMiddleware = require('./middleware/error-handler.js');
 
 app.use(express.json())
+app.use('/api/v1/champions', cors({
+    origin: '*',
+    methods: ['GET'],
+    allowedHeaders: ['Content-Type']
+}))
 app.use(cors({
     origin: process.env.CLIENT_URL,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
