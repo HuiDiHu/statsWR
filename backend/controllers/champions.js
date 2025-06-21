@@ -55,6 +55,49 @@ const getAllLaneChampions = async (req, res) => {
     return res.status(StatusCodes.OK).json({ champions });
 }
 
+// finds champions that have data from the latest patch
+// returns information and their gameplay data from the latest patch
+const getAllLaneChampionsLatest = async (req, res) => {
+    let {
+        params: { id: roleId }
+    } = req
+
+    const matchCondition = {
+        gameplayData: {
+            $elemMatch: { date: new Date(uploadDates[uploadDates.length - 1]) }
+        }
+    }
+
+    if (roleId && Number(roleId) >= 1 && Number(roleId) <= 5) {
+        matchCondition.role = Number(roleId)
+    }
+
+    const champions = await Champion.aggregate([
+        {
+            $match: matchCondition
+        },
+        {
+            $addFields: {
+                gameplayData: {
+                    $arrayElemAt: [
+                        {
+                            $filter: {
+                                input: "$gameplayData",
+                                cond: { $eq: ["$$this.date", new Date(uploadDates[uploadDates.length - 1])] }
+                            }
+                        },
+                        0
+                    ]
+                }
+            }
+        }
+    ]);
+
+    if (!champions) { throw new NotFoundError(`Champions of lane:${roleId} not found.`) }
+
+    return res.status(StatusCodes.OK).json({ champions });
+}
+
 //sends back an array of Champion objects that all share the same name (role differs)
 const getChampion = async (req, res) => {
     //use destructuring syntax to extract label (chinese name) from the request object
@@ -101,6 +144,7 @@ const getChampionAbilities = async (req, res) => {
 module.exports = { //Exports the functions so they can be used by other parts of the application. Some are called by index.js
     getAllChampions,
     getAllLaneChampions,
+    getAllLaneChampionsLatest,
     getChampion,
     getChampionAbilities
 }
