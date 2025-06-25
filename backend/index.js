@@ -39,6 +39,7 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }))
+// TODO: Add origin of the MCP server here
 
 const { getAllChampionComments } = require('./controllers/comments')
 

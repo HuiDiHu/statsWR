@@ -25,36 +25,6 @@ const getAllChampions = async (req, res) => {
     return res.status(StatusCodes.OK).json({ champions });
 }
 
-//sends back an array of unique champions filtered by the given roleId and sorted by their weight
-const getAllLaneChampions = async (req, res) => {
-    //use destructuring syntax to extract roleId from the request object
-    const {
-        params: { id: roleId }
-    } = req
-
-    //if no role is selected, call getAllChampions function defined above
-    if (!roleId || Number(roleId) === 0) {
-        return await getAllChampions(req, res);
-    }
-
-    //create champions array with all Champion objects that have the most recent patch data and also match the selected role
-    const champions = await Champion.find({
-        role: Number(roleId),
-        gameplayData: {
-            $elemMatch: { date: new Date(uploadDates[uploadDates.length - 1]) }
-        }
-    })
-
-    //throw error if the find statement above fails
-    if (!champions) { throw new NotFoundError(`Champions of lane:${roleId} not found.`) }
-
-    //sort the champions array in descending order according to each Champions' weight
-    champions.sort((a, b) => (a.gameplayData[a.gameplayData.length - 1]['weight'] < b.gameplayData[b.gameplayData.length - 1]['weight'] ? 1 : -1))
-
-    //confirm that the function was successful and return the champions array as a json response for frontend display
-    return res.status(StatusCodes.OK).json({ champions });
-}
-
 // finds champions that have data from the latest patch
 // returns information and their gameplay data from the latest patch
 const getAllLaneChampionsLatest = async (req, res) => {
@@ -78,7 +48,7 @@ const getAllLaneChampionsLatest = async (req, res) => {
         },
         {
             $addFields: {
-                gameplayData: {
+                gameplayData: [{
                     $arrayElemAt: [
                         {
                             $filter: {
@@ -88,12 +58,14 @@ const getAllLaneChampionsLatest = async (req, res) => {
                         },
                         0
                     ]
-                }
+                }]
             }
         }
     ]);
 
     if (!champions) { throw new NotFoundError(`Champions of lane:${roleId} not found.`) }
+
+    champions.sort((a, b) => (a.gameplayData[a.gameplayData.length - 1]['weight'] < b.gameplayData[b.gameplayData.length - 1]['weight'] ? 1 : -1))
 
     return res.status(StatusCodes.OK).json({ champions });
 }
@@ -143,7 +115,6 @@ const getChampionAbilities = async (req, res) => {
 
 module.exports = { //Exports the functions so they can be used by other parts of the application. Some are called by index.js
     getAllChampions,
-    getAllLaneChampions,
     getAllLaneChampionsLatest,
     getChampion,
     getChampionAbilities
