@@ -26,5 +26,8 @@ dist-ssr
 # Tests
 Tests/
 
-#PORT and MongoDB URI key
+# PORT and MongoDB URI key
 .env
+
+# Virtual environment for webscraper
+.venv
