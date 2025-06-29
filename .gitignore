@@ -31,3 +31,6 @@ Tests/
 
 # Virtual environment for webscraper
 .venv
+
+# champions gameplay data
+backend/rawChampionsData/*
