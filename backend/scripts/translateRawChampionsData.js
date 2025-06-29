@@ -12,14 +12,11 @@ const rawChampionsData = [ //create an array with each index holding a txt file.
     fs.readFileSync(`./rawChampionsData/support.txt`, 'utf8')
 ]
 
-//IMPORTANT!!! READ this before populate or uploadPatchData
+//IMPORTANT!!! READ this before autoUpdate
 /* Checklist
-    1. make sure last element in constants.json upload_dates is the correct date FOR THE PATCH
-    2. make sure rawChampionsData have the correct data FOR THE PATCH
-        //do the last 3 if the patch you are uploading is the last avaliable patch
-    3. update version in frontend constants folder
-    4. update footer's Last updated on (/frontend/src/components/Footer.jsx)
-    5. (if new champion introduced) add to frontend constants and backend championNames.json) (https://lolm.qq.com/v2/champions.html)
+    1. (optional) update version in frontend constants folder
+    2. (optional) update footer's Last updated on (/frontend/src/components/Footer.jsx)
+    3. (if new champion introduced) add to frontend constants and backend championNames.json) (https://lolm.qq.com/v2/champions.html)
                                     championAbilities.json
                                     upload new champion icon to assets
 */
