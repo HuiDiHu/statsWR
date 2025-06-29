@@ -16,14 +16,17 @@ const start = async () => {
             const champion = {label: key, ability: championAbilities[key]} //give the champion variable a label holding the champions Uppercase english name, and an array holding all the info for 1 champion's abilities
             await Abilities.create(champion) //create new Abilites object using champion variable
         }
-        process.exit()
     } catch (error) { //Throw BadRequestError if try statement fails
         console.log(error)
         throw new BadRequestError('Unable to connect to MongoDB')
     }
 }
 
-start() //call the function
+if (require.main === module) { //will only run if this file is executed directly
+    start().finally(() => {
+        process.exit()
+    })
+}
 
 
 

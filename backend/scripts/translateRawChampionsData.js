@@ -124,4 +124,5 @@ module.exports = translateRawChampionsData
 
 if (require.main === module) {
     console.log("---- Raw Champions Data:", translateRawChampionsData())
+    process.exit()
 }

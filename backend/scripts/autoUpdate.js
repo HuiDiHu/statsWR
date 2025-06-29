@@ -1,6 +1,6 @@
 
 
-const uploadPatchData = require('./uploadPatchData')
+const { uploadPatchData } = require('./uploadPatchData')
 
 const getCurrentDate = () => {
     let currentDate = new Date()
@@ -40,7 +40,14 @@ const updateUploadDates = (cb = null) => {
                     return;
                 }
                 console.log('Data successfully added to the constants.json');
-                if (cb) cb();
+                if (cb) {
+                    cb().then(() => {
+                        console.log("Auto Update ended on:", getCurrentDate());
+                        process.exit();
+                    })
+                } else {
+                    console.error("callback function is null");
+                }
             });
         } catch (parseErr) {
             console.error('Error parsing JSON:', parseErr);
@@ -58,7 +65,8 @@ if (require.main === module) {
     console.log("Auto Update started on:", getCurrentDate())
     spawnLolmWebScraper().on('close', async (exit_code) => {
         console.log("lolm scraper exit code: ", exit_code)
-        updateUploadDates( uploadPatchData )
+        if (exit_code == 0)
+            updateUploadDates( uploadPatchData )
     })
 }
 

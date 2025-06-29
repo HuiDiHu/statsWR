@@ -27,7 +27,6 @@ const start = async () => {
                 { $push: { gameplayData: champion.gameplayData } }
             )
         }
-        process.exit()
     } catch (error) { //throw error if the statement above fails
         console.log(error)
         throw new BadRequestError('Unable to access/upload to MongoDB')
@@ -37,5 +36,7 @@ const start = async () => {
 module.exports = { uploadPatchData: start }
 
 if (require.main === module) { //will only run if this file is executed directly
-    start()
+    start().finally(() => {
+        process.exit()
+    })
 }
