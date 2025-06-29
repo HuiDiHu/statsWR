@@ -31,24 +31,20 @@ const updateUploadDates = (cb = null) => {
             if (!("upload_dates" in jsonData))
                 throw new Error("upload_dates not in jsonData")
     
-            jsonData["upload_dates"].push(getCurrentISODate())
+            const currentISODate = getCurrentISODate()
+            jsonData["upload_dates"].push(currentISODate)
             const updatedJsonString = JSON.stringify(jsonData, null, 2)
 
-            fs.writeFile(filePath, updatedJsonString, 'utf8', (write_err) => {
-                if (write_err) {
-                    console.error('Error writing file:', write_err);
-                    return;
-                }
-                console.log('Data successfully added to the constants.json');
-                if (cb) {
-                    cb().then(() => {
-                        console.log("Auto Update ended on:", getCurrentDate());
-                        process.exit();
-                    })
-                } else {
-                    console.error("callback function is null");
-                }
-            });
+            fs.writeFileSync(filePath, updatedJsonString, 'utf8')
+            console.log('Data successfully added to the constants.json');
+            if (cb) {
+                cb(currentISODate).then(() => {
+                    console.log("Auto Update ended on:", getCurrentDate());
+                    process.exit();
+                })
+            } else {
+                console.error("callback function is null");
+            }
         } catch (parseErr) {
             console.error('Error parsing JSON:', parseErr);
         }

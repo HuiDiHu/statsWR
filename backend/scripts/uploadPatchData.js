@@ -10,10 +10,10 @@ const translateRawChampionsData = require('./translateRawChampionsData') //Impor
 const Champion = require('../models/Champion') //Import the Champion schema
 const { BadRequestError } = require('../errors') //Include badRequestError defined in errors folder
 
-const start = async () => {
+const start = async (currentPatchDate = null) => {
     try {
         await connectDB(process.env.MONGO_URI) //connect to MongoDB
-        const translatedJson = translateRawChampionsData() //Call translateRawChampionsData() function to give translatedJson an array of all Champions
+        const translatedJson = translateRawChampionsData(currentPatchDate) //Call translateRawChampionsData() function to give translatedJson an array of all Champions
 
         console.log("Processing: ")
         for (const champion of translatedJson) { //iterate through each index of translatedJson which represents a champion/role pair

@@ -27,7 +27,7 @@ const rawChampionsData = [ //create an array with each index holding a txt file.
 const uploadDates = require('../constants.json')["upload_dates"]
 const currentDate = uploadDates[uploadDates.length - 1]
 
-const translateRawChampionsData = () => {
+const translateRawChampionsData = (currentPatchDate = null) => {
     
     //Make the dictionary hashMap 1 large dictionary with all of championNames.json keys/values (item.key is a champion name in chinese, and item.val is another dictionary)
     const hashMap = new Map()
@@ -90,7 +90,7 @@ const translateRawChampionsData = () => {
                         weight: (champion.winRate - 50) + champion.pickRate * 0.1 + champion.banRate * 0.0667, //1 weight for win rate
                                                                                                               //0.1 weight for pick rate
                                                                                                               //0.067 weight for ban rate
-                        date: new Date(currentDate)
+                        date: new Date(currentPatchDate ?? currentDate)
                     }
                 })
             }
