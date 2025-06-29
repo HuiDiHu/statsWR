@@ -2,11 +2,13 @@
 //Afterwards, we run uploadPatchData.js 4-5 times to get 4-5 datapoints by opening a terminal and doing "cd backend" and "node uploadPatchData.js" 
 //Keep in mind that we have to delete/copy/paste each patch into the txt files in between each individual runtime
 
+// PLEASE EXECUTE within the root directory of the backend
+
 require('dotenv').config() //loads environment variables from a .env file containing info like port number, and database user/password
-const connectDB = require('./db/connect') //Go up one level (.) from uploadPatchData.js to /backend, and then select db folder and go into connect.js to retrieve connectDB function
+const connectDB = require('../db/connect') //Go up one level (.) from uploadPatchData.js to /backend, and then select db folder and go into connect.js to retrieve connectDB function
 const translateRawChampionsData = require('./translateRawChampionsData') //Import the translateRawChampionsData function
-const Champion = require('./models/Champion') //Import the Champion schema
-const { BadRequestError } = require('./errors') //Include badRequestError defined in errors folder
+const Champion = require('../models/Champion') //Import the Champion schema
+const { BadRequestError } = require('../errors') //Include badRequestError defined in errors folder
 
 const start = async () => {
     try {
@@ -32,4 +34,8 @@ const start = async () => {
     }
 }
 
-start() //call the function
+module.exports = { uploadPatchData: start }
+
+if (require.main === module) { //will only run if this file is executed directly
+    start()
+}

@@ -1,6 +1,8 @@
 //This file reads all the text files from the rawChampionsData folder. It defines the translateRawChampionsData function, which is called by uploadPatchData.js and populate.js.
 
-const championNames = require('./championNames.json'); //championNames is an array filled with dictionaries each containing a Champion's Chinese name and uppercase/lowercase English name
+// PLEASE EXECUTE within the root directory of the backend
+
+const championNames = require('../championNames.json'); //championNames is an array filled with dictionaries each containing a Champion's Chinese name and uppercase/lowercase English name
 const fs = require('node:fs'); //import the fs module to read text files
 const rawChampionsData = [ //create an array with each index holding a txt file. 
     fs.readFileSync(`./rawChampionsData/baron.txt`, 'utf8'),
@@ -22,7 +24,7 @@ const rawChampionsData = [ //create an array with each index holding a txt file.
                                     upload new champion icon to assets
 */
 
-const uploadDates = require('./constants.json')["upload_dates"]
+const uploadDates = require('../constants.json')["upload_dates"]
 const currentDate = uploadDates[uploadDates.length - 1]
 
 const translateRawChampionsData = () => {
@@ -120,4 +122,6 @@ const translateRawChampionsData = () => {
 
 module.exports = translateRawChampionsData
 
-
+if (require.main === module) {
+    console.log("---- Raw Champions Data:", translateRawChampionsData())
+}
