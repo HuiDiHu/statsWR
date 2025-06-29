@@ -2,16 +2,20 @@
 
 const uploadPatchData = require('./uploadPatchData')
 
-const getCurrentISODate = () => {
+const getCurrentDate = () => {
     let currentDate = new Date()
     const offset = currentDate.getTimezoneOffset()
     currentDate = new Date(currentDate.getTime() - (offset*60*1000))
 
-    const dateParsed = currentDate.toISOString().split('T')[0]
+    return currentDate
+}
+
+const getCurrentISODate = () => {
+    const dateParsed = getCurrentDate().toISOString().split('T')[0]
     return dateParsed
 }
 
-const updateUploadDates = () => {
+const updateUploadDates = (cb = null) => {
     const fs = require('fs')
     const filePath = './constants.json'
 
@@ -36,6 +40,7 @@ const updateUploadDates = () => {
                     return;
                 }
                 console.log('Data successfully added to the constants.json');
+                if (cb) cb();
             });
         } catch (parseErr) {
             console.error('Error parsing JSON:', parseErr);
@@ -43,11 +48,18 @@ const updateUploadDates = () => {
     });
 }
 
-if (require.main === module) {
+const spawnLolmWebScraper = () => {
+    const spawn = require("child_process").spawn;
+    const pythonProcess = spawn('python',["../webscraper/scraper.py"])
+    return pythonProcess
+}
 
-    // scrape latest gameplay data
-    updateUploadDates()
-    // call uploadPatchData
+if (require.main === module) {
+    console.log("Auto Update started on:", getCurrentDate())
+    spawnLolmWebScraper().on('close', async (exit_code) => {
+        console.log("lolm scraper exit code: ", exit_code)
+        updateUploadDates( uploadPatchData )
+    })
 }
 
 
