@@ -35,9 +35,9 @@ Website Link: https://statswr.vercel.app
 
 ## How to set up the database
 In the backend terminal 
-* Run ```node populateAbilities.js``` to populate abilities
-* Run ```node uploadPatchData.js``` to upload the gameplay data within the rawChampionsData folder (can be updated)
-* nuke the champions collection to reset
+* Run ```node scripts/populateAbilities.js``` to populate abilities
+* Run ```node scripts/autoUpdate.js``` to upload the gameplay data within the rawChampionsData folder (can be updated)
+* Run ```node scripts/deleteAllGameplayDataByDate.js``` to delete all gameplayData entries with the date field equal to targetPatchDate
 
 ## Known issues (Work In Progress)
 * Graph hover attribute sometimes not zeroing when moving cursor off of the graph
