@@ -17,7 +17,17 @@ from openai import OpenAI
 load_dotenv()
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'), timeout=60.0)
 
-message_history = []
+message_history = [
+    {
+        "role": "system",
+        "content": [
+            {
+                "type": "input_text",
+                "text": "You are a helpful chatbot that's very knowledgable about WildRift, a game made by Riot Games. Your name is 'Scuttle Crab'.",
+            },
+        ]
+    }
+]
 
 def update_message_history(isUser:bool, message:str, msg_id:str = None):
     if not message:
