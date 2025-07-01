@@ -56,7 +56,7 @@ def get_response_from_input(prompt:str) -> str:
     update_message_history(True, prompt)
 
     resp = client.responses.create(
-        model="gpt-4o-mini",
+        model="o3-mini",
         tools=[
             {
                 "type": "mcp",
