@@ -61,8 +61,14 @@ if (require.main === module) {
     console.log("Auto Update started on:", getCurrentDate())
     spawnLolmWebScraper().on('close', async (exit_code) => {
         console.log("lolm scraper exit code: ", exit_code)
-        if (exit_code == 0)
-            updateUploadDates( uploadPatchData )
+        console.log("Starting a 20-second timer...");
+        
+        if (exit_code == 0) {
+            setTimeout(() => {
+                console.log("starting upload dates");
+                updateUploadDates( uploadPatchData )
+            }, 20000);
+        }
     })
 }
 
