@@ -1,4 +1,6 @@
 const express = require('express');
+const serverless = require('serverless-http')
+
 require('dotenv').config();
 require('express-async-errors');
 
@@ -58,17 +60,10 @@ app.use('/api/v1/comments', authenticateUser, commentRouter);
 app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
 
-const port = process.env.PORT || 5555;
+const handler = serverless(app)
 
-const start = async () => {
-    try {
-        await connectDB(process.env.MONGO_URI)
-        app.listen(port, () =>
-            console.log(`Server is listening on port ${port}...`)
-        );
-    } catch (error) {
-        console.log(error);
-    }
-};
+module.exports.handler = async (event, context) => {
+    await connectDB(process.env.MONGO_URI)
 
-start();
+    return handler(event, context);
+}
