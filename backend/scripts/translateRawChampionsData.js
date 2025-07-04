@@ -1,16 +1,7 @@
-//This file reads all the text files from the rawChampionsData folder. It defines the translateRawChampionsData function, which is called by uploadPatchData.js and populate.js.
-
 // PLEASE EXECUTE within the root directory of the backend
 
 const championNames = require('../championNames.json'); //championNames is an array filled with dictionaries each containing a Champion's Chinese name and uppercase/lowercase English name
 const fs = require('node:fs'); //import the fs module to read text files
-const rawChampionsData = [ //create an array with each index holding a txt file. 
-    fs.readFileSync(`./rawChampionsData/baron.txt`, 'utf8'),
-    fs.readFileSync(`./rawChampionsData/jungle.txt`, 'utf8'),
-    fs.readFileSync(`./rawChampionsData/mid.txt`, 'utf8'),
-    fs.readFileSync(`./rawChampionsData/bottom.txt`, 'utf8'),
-    fs.readFileSync(`./rawChampionsData/support.txt`, 'utf8')
-]
 
 //IMPORTANT!!! READ this before autoUpdate
 /* Checklist
@@ -25,6 +16,14 @@ const uploadDates = require('../constants.json')["upload_dates"]
 const currentDate = uploadDates[uploadDates.length - 1]
 
 const translateRawChampionsData = (currentPatchDate = null) => {
+
+    const rawChampionsData = [ //create an array with each index holding a txt file. 
+        fs.readFileSync(`./rawChampionsData/baron.txt`, 'utf8'),
+        fs.readFileSync(`./rawChampionsData/jungle.txt`, 'utf8'),
+        fs.readFileSync(`./rawChampionsData/mid.txt`, 'utf8'),
+        fs.readFileSync(`./rawChampionsData/bottom.txt`, 'utf8'),
+        fs.readFileSync(`./rawChampionsData/support.txt`, 'utf8')
+    ]
     
     //Make the dictionary hashMap 1 large dictionary with all of championNames.json keys/values (item.key is a champion name in chinese, and item.val is another dictionary)
     const hashMap = new Map()
