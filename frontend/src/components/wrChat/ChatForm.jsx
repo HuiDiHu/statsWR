@@ -128,7 +128,7 @@ const ChatForm = ({ className, ...props }) => {
     >
       <div
         ref={scrollContainerRef}
-        className="flex-1 justify-start items-center px-6"
+        className={`flex-1 ${ messages.length ? 'justify-start items-center' : 'content-center' } px-6`}
         style={{
           overflowY: "auto",
           scrollbarGutter: "stable",
