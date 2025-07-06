@@ -1,6 +1,7 @@
 export const navItems = [
     { label: "Home", to: "/" },
-    { label: "Tier List", to: "/tierlist" }
+    { label: "Tier List", to: "/tierlist" },
+    { label: "ChatWR", to: "/chat" }
 ];
 
 export const regionRankPatch = [
