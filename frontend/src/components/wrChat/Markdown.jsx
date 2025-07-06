@@ -83,7 +83,7 @@ const Markdown = ({ children, className = "" }) => {
                 hr: () => <hr className="border-gray-600 my-4" />,
 
                 // Strong and emphasis
-                strong: ({ children }) => <strong className="font-bold text-gray-100">{children}</strong>,
+                strong: ({ children }) => <strong className="font-bold text-orange-500">{children}</strong>,
                 em: ({ children }) => <em className="italic text-gray-200">{children}</em>,
             }}
             >

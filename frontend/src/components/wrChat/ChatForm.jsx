@@ -2,15 +2,19 @@ import { useRef, useState, useEffect } from "react"
 import clsx from 'clsx'
 import { useChat } from "@ai-sdk/react"
 import { ArrowUpIcon, User, Bot } from "lucide-react"
+
+import 'src/style/wrChat/global.css'
 import ChatButton from "./ChatButton"
 import { ChatTooltip, ChatTooltipContent, ChatTooltipTrigger, ChatTooltipProvider } from "./ChatTooltip"
 import AutoResizeTextarea from "./AutoResizeTextArea"
 import Markdown from "./Markdown"
-import 'src/style/wrChat/global.css'
+import Header from "./ui/Header"
+import { LoadingResponse, RetrievingToolResult, ReadyState, ErrorResponseState } from "./ui/LoadingStates"
 
 const ChatForm = ({ className, ...props }) => {
   const scrollContainerRef = useRef(null)
   const [autoScrollEnabled, setAutoScrollEnabled] = useState(true)
+  const [isStreamingTool, setIsStreamingTool] = useState(false)
 
   const { messages, input, status, setInput, append } = useChat({
     api: `${import.meta.env.VITE_SERVER_URL}/api/v1/chat/response`,
@@ -39,14 +43,37 @@ const ChatForm = ({ className, ...props }) => {
     }
   })
 
-  useEffect(() => {
-    if (!autoScrollEnabled || (status !== 'streaming' && status !== 'ready')) return
+  const autoScroll = () => {
     const el = scrollContainerRef.current
     if (el) {
       // push scroll to bottom
       el.scrollTop = el.scrollHeight
     }
+  }
+
+  useEffect(() => {
+    if (!autoScrollEnabled) return
+    const role = messages.length > 0 ? messages[messages.length - 1].role : null
+
+    if (role == null) return
+    if (role == 'assistant' && status !== 'streaming' && status !== 'ready') return
+
+    autoScroll()
   }, [messages, status, autoScrollEnabled])
+
+  useEffect(() => {
+    if (messages.length === 0) return;
+    if (status === 'streaming') {
+      const lastMsg = messages[messages.length - 1]
+      let containsTool = lastMsg.parts.some(part => part.type === 'tool-invocation')
+      if (containsTool != isStreamingTool)
+        containsTool ? setIsStreamingTool(true) : setIsStreamingTool(false)
+    }
+  }, [status, messages])
+
+  useEffect(() => {
+    console.log("--- status:", status)
+  }, [status])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -58,26 +85,24 @@ const ChatForm = ({ className, ...props }) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault()
       handleSubmit(e)
-      console.log(messages)
     }
   }
 
-  const header = (
-    <header className="m-auto flex max-w-96 flex-col gap-5 text-center">
-      <h1 className="text-2xl font-semibold leading-none tracking-tight text-white whitespace-pre">
-        <span>stats</span>
-        <span className='bg-gradient-to-r from-orange-500 to-red-700 text-transparent bg-clip-text'>
-            {"WR "}
-        </span>
-        Chat Assistant
-    </h1>
-      <p className="text-gray-400 text-sm">
-        Powered by <span className="text-orange-400 font-medium">OpenAI</span> and the{" "}
-        <span className="text-orange-400 font-medium">Vercel AI SDK</span>
-      </p>
-      <p className="text-gray-400 text-sm">Start a conversation by typing your message below.</p>
-    </header>
-  )
+  const loadingUIStates = () => {
+    if (messages.length === 0) return;
+
+    if (status === 'submitted' || messages[messages.length - 1].role === 'system') {
+      return <LoadingResponse />
+    } else if (status === 'ready') {
+      isStreamingTool && setIsStreamingTool(false)
+      return <ReadyState />
+    } else if (status === 'error') {
+      isStreamingTool && setIsStreamingTool(false)
+      return <ErrorResponseState />
+    } else if (isStreamingTool) {
+      return <RetrievingToolResult />
+    }
+  }
 
   const messageList = (
     <div className="mb-4 mt-10 flex flex-col gap-4 grow max-h-[60vh]">
@@ -115,6 +140,7 @@ const ChatForm = ({ className, ...props }) => {
           </div>)
         }
       })}
+      {loadingUIStates()}
     </div>
   )
 
@@ -149,7 +175,7 @@ const ChatForm = ({ className, ...props }) => {
           e.target.style.scrollbarColor = "transparent transparent"
         }}
       >
-        {messages.length ? messageList : header}
+        {messages.length ? messageList : <Header />}
       </div>
       <ChatTooltipProvider>
         <form

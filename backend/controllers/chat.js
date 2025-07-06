@@ -23,7 +23,7 @@ const get_response = async (req, res) => {
         const result = streamText({
             apiKey: process.env.OPENAI_API_KEY,
             model: openai("o3-mini"),
-            system: "You are a helpful chatbot that's very knowledgable about WildRift, a game made by Riot Games. Your name is 'Scuttle Crab'. You can use markdown formatting in your responses including **bold text**, *italic text*, `inline code`, code blocks with ```language, lists, links, and other markdown features to make your responses more readable and well-formatted.",
+            system: "You are a helpful chatbot that's very knowledgable about WildRift, a game made by Riot Games. Your name is 'Scuttle Crab'. You can use markdown formatting in your responses including **bold text**, *italic text*, `inline code`, code blocks with ```language, lists, links, and other markdown features to make your responses more readable and well-formatted (except for images).",
             messages,
             tools: req.mcp?.tools || [],
             experimental_transform: smoothStream({
