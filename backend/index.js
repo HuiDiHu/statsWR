@@ -23,6 +23,7 @@ const connectDB = require('./db/connect');
 const championsRouter = require('./routes/champions');
 const authRouter = require('./routes/auth');
 const commentRouter = require('./routes/comments');
+const chatRouter = require('./routes/chat')
 
 //error handler
 const notFoundMiddleware = require('./middleware/not-found.js');
@@ -49,10 +50,17 @@ app.get('/', async (req, res) => {
     res.send("Render deployed!")
 })
 
+// auth
 app.use('/api/v1/auth', authRouter);
+// champions
 app.use('/api/v1/champions', championsRouter);
+
+// comments
 app.get('/api/v1/comments/', getAllChampionComments)
 app.use('/api/v1/comments', authenticateUser, commentRouter);
+
+// chat
+app.use('/api/v1/chat', chatRouter)
 
 
 app.use(notFoundMiddleware)
