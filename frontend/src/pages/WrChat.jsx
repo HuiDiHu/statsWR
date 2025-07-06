@@ -4,7 +4,7 @@ import Navbar from 'src/components/Navbar'
 import Footer from 'src/components/Footer'
 import LoginModal from 'src/components/LoginModal';
 import SignupModal from 'src/components/SignupModal';
-import { ChatForm } from "src/components/wrChat/ChatForm"
+import ChatForm from "src/components/wrChat/ChatForm"
 import { ChatTooltipProvider } from "src/components/wrChat/ChatTooltip"
 
 
@@ -13,7 +13,7 @@ const WrChat = ({ props }) => {
     const [signupModal, setSignupModal] = useState(false);
 
     return (
-        <div className="h-screen w-screen flex flex-col">
+        <div className="h-screen w-screen flex flex-col overflow-hidden">
             <Navbar props={{
                 titleHidden: false,
                 label: 'ChatWR',

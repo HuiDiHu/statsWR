@@ -2,7 +2,7 @@ import ReactMarkdown from "react-markdown"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"
 
-export function Markdown({ children, className = "" }) {
+const Markdown = ({ children, className = "" }) => {
   return (
     <div className={className}>
         <ReactMarkdown
@@ -92,3 +92,5 @@ export function Markdown({ children, className = "" }) {
     </div>
   )
 }
+
+export default Markdown

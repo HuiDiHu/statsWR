@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react"
 import clsx from 'clsx'
 
-export function AutoResizeTextarea({ className, value, onChange, ...props }) {
+const AutoResizeTextarea = ({ className, value, onChange, ...props }) => {
   const textareaRef = useRef(null)
 
   const resizeTextarea = () => {
@@ -30,3 +30,5 @@ export function AutoResizeTextarea({ className, value, onChange, ...props }) {
     />
   )
 }
+
+export default AutoResizeTextarea

@@ -40,4 +40,4 @@ const ChatButton = forwardRef(({ className, variant = "default", size = "default
 
 ChatButton.displayName = "ChatButton"
 
-export { ChatButton }
+export default ChatButton
