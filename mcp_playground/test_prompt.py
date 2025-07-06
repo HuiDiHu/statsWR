@@ -61,7 +61,7 @@ def get_response_from_input(prompt:str) -> str:
             {
                 "type": "mcp",
                 "server_label": "statsWR_mcp_server_test",
-                "server_url": "https://statswr-mcp-server.onrender.com/mcp/",
+                "server_url": os.getenv('MCP_SERVER_URL'),
                 "require_approval": "never",
             },
         ],
