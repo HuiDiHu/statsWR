@@ -5,9 +5,9 @@ const ChatButton = forwardRef(({ className, variant = "default", size = "default
   const getVariantStyles = () => {
     switch (variant) {
       case "ghost":
-        return "hover:bg-gray-700 hover:text-white text-gray-300"
+        return "hover:bg-gray-700 hover:text-orange-500 text-gray-300"
       case "outline":
-        return "border border-gray-600 bg-gray-800 hover:bg-gray-700 hover:text-white text-gray-300"
+        return "border border-gray-600 bg-gray-800 hover:bg-gray-700 hover:text-orange-500 text-gray-300"
       default:
         return "bg-orange-500 text-white hover:bg-orange-600"
     }

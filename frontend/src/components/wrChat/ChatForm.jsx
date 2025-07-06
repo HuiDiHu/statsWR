@@ -194,7 +194,6 @@ const ChatForm = ({ className, ...props }) => {
               <ChatButton
                 variant="ghost"
                 size="sm"
-                className="w-6 h-6 rounded-full p-0 hover:bg-gray-700 text-gray-400 hover:text-white"
               >
                 <ArrowUpIcon size={16} />
               </ChatButton>
