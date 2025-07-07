@@ -114,7 +114,7 @@ const ChatForm = ({ className, ...props }) => {
           return (<div
             key={index}
             className={clsx(
-              "flex items-start gap-3 max-w-[80%]",
+              "flex items-start gap-3 w-full lg:max-w-[80%]",
               message.role === "user" ? "self-end flex-row-reverse" : "self-start",
             )}
           >
@@ -147,7 +147,7 @@ const ChatForm = ({ className, ...props }) => {
   return (
     <div
       className={clsx(
-        "mx-[20%] min-w-[60%] flex h-full min-h-full flex-col items-stretch",
+        "mx-[5%] sm:mx-[10%] lg:mx-[20%] min-w-[60%] flex h-full min-h-full flex-col items-stretch",
         className,
       )}
       {...props}
