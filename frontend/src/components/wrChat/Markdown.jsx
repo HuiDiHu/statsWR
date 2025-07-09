@@ -4,7 +4,7 @@ import remarkGfm from "remark-gfm"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"
 
-const Markdown = ({ children, className = "" }) => {
+const Markdown = ({ children, className = "", navigate = null }) => {
   return (
     <div className={className}>
       <ReactMarkdown
@@ -112,7 +112,23 @@ const Markdown = ({ children, className = "" }) => {
             if (src && src.includes("quickchart.io")) {
               return <img src={src} alt={alt} className="my-2" />;
             }
-            return <img src={src} alt={alt} className="w-14 h-14" />;
+            if (src.startsWith('../../../public/assets/champion-icons/')) {
+              return <div className="w-14 h-14 overflow-hidden">
+                <img 
+                  src={src} 
+                  alt={alt} 
+                  className="w-14 h-14 cursor-pointer transition-all duration-300 hover:scale-110"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    if (src && navigate && src.length > 42) {
+                      const label = src.substring(38, src.length - 4)
+                      navigate(`/champion/${label}`, { state: { retAddr: '/chat', champLabel: label } });
+                    }
+                  }}
+                />;
+              </div>
+            }
+            return <img src={src} alt={alt} />;
           },
 
           // Emoji-based "Bar Charts"

@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom";
 import clsx from 'clsx'
 import { useChat } from "@ai-sdk/react"
 import { ArrowUpIcon, User, Bot } from "lucide-react"
@@ -12,6 +13,8 @@ import Header from "./ui/Header"
 import { LoadingResponse, RetrievingToolResult, ReadyState, ErrorResponseState } from "./ui/LoadingStates"
 
 const ChatForm = ({ className, setLoginModal, setLogged, props }) => {
+  const navigate = useNavigate()
+
   const scrollContainerRef = useRef(null)
   const [autoScrollEnabled, setAutoScrollEnabled] = useState(true)
   const [isStreamingTool, setIsStreamingTool] = useState(false)
@@ -37,9 +40,9 @@ const ChatForm = ({ className, setLoginModal, setLogged, props }) => {
             Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
           },
         }
-        const message = {
-          content: input, 
-          role: "user" 
+        const message = { 
+          role: "system",
+          content: `You've just made tool invocation(s), here are the successful toolCallIds: ${result_ids.toString()}`,
         }
     
         void append(message, options)
@@ -154,7 +157,7 @@ const ChatForm = ({ className, setLoginModal, setLogged, props }) => {
                 message.role === "user" ? "bg-orange-500 text-white" : "bg-gray-700 text-gray-200",
               )}
             >
-              <Markdown className={message.role === "user" ? "text-white" : "text-gray-200"}>{message.content}</Markdown>
+              <Markdown className={message.role === "user" ? "text-white" : "text-gray-200"} navigate={navigate}>{message.content}</Markdown>
             </div>
           </div>)
         }

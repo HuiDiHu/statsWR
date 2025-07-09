@@ -28,7 +28,7 @@ const get_response = async (req, res) => {
                     Please be liberal with easy to understand statistical representation when convenient (you should use it often but only when useful): \
                     bar charts using '▇'\
                     embed quickchart.io graphics when appropriate, \
-                    embed champion icons using '![<champion_label>](../../../public/assets/champion-icons/<champion_label>.png)'. \
+                    embed champion icons using '![<champion_label>](../../../public/assets/champion-icons/<champion_label>.png)'. Clicking on this will redirct the user to a detailed champion statistics page for that champion. \
                     <champion_label> represent is the label of a champion, you can think of it as champion's english name but all upper case, '_' as delimiter, and no other special characters. For example, gragas -> GRAGAS, dr. mundo -> DR_MUNDO, Kai'sa -> KAISA, master yi -> MASTER_YI.",
             messages,
             tools: req.mcp?.tools || [],
