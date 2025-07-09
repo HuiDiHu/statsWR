@@ -34,7 +34,7 @@ const CommentSectionHeader = ({ props }) => {
                 console.log(error)
                 if (error.response.status === 401) {
                     window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile'); window.sessionStorage.removeItem('userID'); 
-                    props.setLoginModal(true); props.setLogged(false)
+                    props.setLoginModal(true); props.setLogged(false);
                 }
             })
         

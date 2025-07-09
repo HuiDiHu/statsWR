@@ -25,7 +25,7 @@ const WrChat = ({ props }) => {
             {signupModal && <SignupModal onClose={() => setSignupModal(false)} props={{ setLoginModal, setSignupModal, setLogged: props.setLogged }} />}
             <div className='flex grow'>
                 <ChatTooltipProvider delayDuration={0}>
-                    <ChatForm />
+                    <ChatForm setLoginModal={setLoginModal} setLogged = {props.setLogged} />
                 </ChatTooltipProvider>
             </div>
         </div>

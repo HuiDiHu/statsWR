@@ -60,7 +60,7 @@ app.get('/api/v1/comments/', getAllChampionComments)
 app.use('/api/v1/comments', authenticateUser, commentRouter);
 
 // chat
-app.use('/api/v1/chat', chatRouter)
+app.use('/api/v1/chat', authenticateUser, chatRouter)
 
 
 app.use(notFoundMiddleware)

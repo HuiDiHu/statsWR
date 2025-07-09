@@ -11,12 +11,13 @@ import Markdown from "./Markdown"
 import Header from "./ui/Header"
 import { LoadingResponse, RetrievingToolResult, ReadyState, ErrorResponseState } from "./ui/LoadingStates"
 
-const ChatForm = ({ className, ...props }) => {
+const ChatForm = ({ className, setLoginModal, setLogged, props }) => {
   const scrollContainerRef = useRef(null)
   const [autoScrollEnabled, setAutoScrollEnabled] = useState(true)
   const [isStreamingTool, setIsStreamingTool] = useState(false)
+  const [chatId, setChatId] = useState(1)
 
-  const { messages, input, status, setInput, append } = useChat({
+  const { messages, setMessages, input, status, setInput, append } = useChat({
     api: `${import.meta.env.VITE_SERVER_URL}/api/v1/chat/response`,
 
     onFinish: (message) => {
@@ -31,15 +32,26 @@ const ChatForm = ({ className, ...props }) => {
       })
 
       if (result_ids.length > 0) {
-        void append({ 
-          role: "system",
-          content: `You've just made tool invocation(s), here are the successful toolCallIds: ${result_ids.toString()}`,
-        })
+        const options = {
+          headers: {
+            Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
+          },
+        }
+        const message = {
+          content: input, 
+          role: "user" 
+        }
+    
+        void append(message, options)
       }
     },
 
     onError: (err) => {
-      console.log("useChat error:", err)
+      if (err.toString().includes("Authentication invalid")) {
+        setMessages([])
+        window.sessionStorage.removeItem('token'); window.sessionStorage.removeItem('username'); window.sessionStorage.removeItem('profile'); window.sessionStorage.removeItem('userID'); 
+        setLoginModal(true); setLogged(false);
+      }
     }
   })
 
@@ -71,13 +83,20 @@ const ChatForm = ({ className, ...props }) => {
     }
   }, [status, messages])
 
-  useEffect(() => {
-    console.log("--- status:", status)
-  }, [status])
-
   const handleSubmit = (e) => {
     e.preventDefault()
-    void append({ content: input, role: "user" })
+
+    const options = {
+      headers: {
+        Authorization: `Bearer ${window.sessionStorage.getItem('token')}`
+      },
+    }
+    const message = {
+      content: input, 
+      role: "user" 
+    }
+
+    void append(message, options)
     setInput("")
   }
 
