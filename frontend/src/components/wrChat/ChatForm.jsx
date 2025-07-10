@@ -12,6 +12,8 @@ import Markdown from "./Markdown"
 import Header from "./ui/Header"
 import { LoadingResponse, RetrievingToolResult, ReadyState, ErrorResponseState } from "./ui/LoadingStates"
 
+const defaultProfile = 'EMPTY_CHAMPION'
+
 const ChatForm = ({ className, setLoginModal, setLogged, props }) => {
   const navigate = useNavigate()
 
@@ -143,11 +145,20 @@ const ChatForm = ({ className, setLoginModal, setLogged, props }) => {
             {/* Profile Circle */}
             <div
               className={clsx(
-                "w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0",
+                "rounded-full flex items-center justify-center flex-shrink-0",
                 message.role === "user" ? "bg-orange-500 text-white" : "bg-gray-700 text-gray-300",
               )}
             >
-              {message.role === "user" ? <User size={16} /> : <Bot size={16} />}
+              {message.role === "user" ? 
+                <img
+                  className='h-10 w-10 rounded-full border-orange-500 border-[1px]'
+                  src={`../../../assets/misc/profile/${window.sessionStorage.getItem('profile') ? window.sessionStorage.getItem('profile') : defaultProfile}.png`}
+                /> : 
+                <img
+                  className='h-10 w-10 rounded-full border-gray-700 border-[1px]'
+                  src={`../../../assets/misc/profile/ScuttleCrab.png`}
+                /> 
+              }
             </div>
 
             {/* Message Content */}
