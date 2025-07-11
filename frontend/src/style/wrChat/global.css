@@ -1,0 +1,69 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+  
+@keyframes zoom-in {
+    from {
+        transform: scale(0.95);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+  
+.animate-in {
+    animation: fade-in 0.2s ease-out, zoom-in 0.2s ease-out;
+}
+
+.fade-in-0 {
+    animation-fill-mode: forwards;
+}
+
+.zoom-in-95 {
+    animation-fill-mode: forwards;
+}
+
+.chat-container {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #374151 transparent;
+}
+
+.chat-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 3px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+    background: #4b5563;
+}
+
+/* Only show scrollbar when hovering or when content overflows */
+.chat-container {
+    scrollbar-width: none;
+}
+
+.chat-container:hover {
+    scrollbar-width: thin;
+}
+
+.chat-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.chat-container:hover::-webkit-scrollbar {
+    width: 6px;
+}
