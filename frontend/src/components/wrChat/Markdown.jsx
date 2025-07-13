@@ -109,6 +109,7 @@ const Markdown = ({ children, className = "", navigate = null }) => {
           ),
 
           img: ({ src, alt }) => {
+            alt = alt || "../../../public/assets/misc/profile/EMPTY_CHAMPION.png"
             if (src && src.includes("quickchart.io")) {
               return <img src={src} alt={alt} className="my-2" />;
             }
