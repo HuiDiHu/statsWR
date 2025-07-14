@@ -85,6 +85,8 @@ const ChatForm = ({ className, setLoginModal, setLogged, props }) => {
       let containsTool = lastMsg.parts.some(part => part.type === 'tool-invocation')
       if (containsTool != isStreamingTool)
         containsTool ? setIsStreamingTool(true) : setIsStreamingTool(false)
+    } else if (status == 'ready') {
+      console.log("last message:", messages[messages.length - 1].content)
     }
   }, [status, messages])
 

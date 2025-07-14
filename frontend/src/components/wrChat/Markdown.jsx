@@ -109,15 +109,31 @@ const Markdown = ({ children, className = "", navigate = null }) => {
           ),
 
           img: ({ src, alt }) => {
-            alt = alt || "../../../public/assets/misc/profile/EMPTY_CHAMPION.png"
-            if (src && src.includes("quickchart.io")) {
-              return <img src={src} alt={alt} className="my-2" />;
+            if (src && src.includes("https://quickchart.io")) {
+              try {
+                return (
+                  <img
+                    id={src}
+                    src={src}
+                    onLoad={(e) => {
+                      e.target.style.display = "block";
+                    }}
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                      e.target.onError = null;
+                    }}
+                  />
+                );
+              } catch (err) {
+                return null;
+              }
             }
             if (src.startsWith('../../../public/assets/champion-icons/')) {
               return <div className="w-14 h-14 overflow-hidden">
-                <img 
-                  src={src} 
-                  alt={alt} 
+                <img
+                  src={src}
+                  alt={alt}
+                  loading="lazy"
                   className="w-14 h-14 cursor-pointer transition-all duration-300 hover:scale-110"
                   onClick={(e) => {
                     e.preventDefault()
@@ -129,7 +145,14 @@ const Markdown = ({ children, className = "", navigate = null }) => {
                 />;
               </div>
             }
-            return <img src={src} alt={alt} />;
+            return <img
+              src={src}
+              alt={"../../../public/assets/misc/profile/EMPTY_CHAMPION.png"}
+              onError={(e) => {
+                e.onerror = null
+                e.src = "../../../public/assets/misc/profile/EMPTY_CHAMPION.png"
+              }}
+            />;
           },
 
           // Emoji-based "Bar Charts"
