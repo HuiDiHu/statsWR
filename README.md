@@ -18,13 +18,17 @@ Website Link: https://statswr.vercel.app
 1. ```git clone``` the repository
 2. set up environment variables in the backend folder by creating a .env file and adding 
    ```
-   PORT = 5555
-   
-   MONGO_URI = (your mongodb URI)
-   
-   JWT_SECRET = (128 byte string)
-
    CLIENT_URL = <your client url>
+   JWT_SECRET = (128 byte string)
+   MONGO_URI = (your mongodb URI)
+
+   PORT = 5555
+
+   MCP_CLIENT_REFRESH_INTERVAL = 1500000 # 25 minutes
+
+   # required for chatbot
+   OPENAI_API_KEY = <your openai api key>
+   MCP_SERVER_URL = <your mcp server base url>/mcp/
    ```
 3. set up environment variables in the frontend folder by creating a .env file and adding 
    ```
