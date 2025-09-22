@@ -132,7 +132,7 @@ const Markdown = ({ children, className = "", navigate = null }) => {
               return <div className="w-14 h-14 overflow-hidden">
                 <img
                   src={src}
-                  alt={alt}
+                  alt='../../../public/assets/champion-icons/EMPTY_CHAMPION.png'
                   loading="lazy"
                   className="w-14 h-14 cursor-pointer transition-all duration-300 hover:scale-110"
                   onClick={(e) => {
