@@ -27,7 +27,7 @@ export function ReadyState() {
 export function ErrorResponseState() {
     return (
         <div className='gap-3 bg-red-400 rounded-lg text-center text-black font-semibold'>
-            Response Error sadge
+            Feature currently under construction... Please come back next time
         </div>
     )
 }
