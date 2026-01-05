@@ -20,7 +20,9 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.4.1",
     "nodemon": "^3.1.2",
+    "serverless": "^4.29.4",
     "serverless-http": "^3.2.0",
+    "serverless-offline": "^14.4.0",
     "swagger-ui-express": "^5.0.1",
     "yamljs": "^0.3.0"
   }

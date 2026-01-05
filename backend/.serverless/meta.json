@@ -1,0 +1,22 @@
+{
+  "/Users/andyhu/Desktop/statsWR/backend/serverless.yaml": {
+    "versionFramework": "4.29.4",
+    "servicePath": "/Users/andyhu/Desktop/statsWR/backend/serverless.yaml",
+    "serviceConfigFileName": "serverless.yaml",
+    "service": {
+      "plugins": [
+        "serverless-offline"
+      ]
+    },
+    "serviceRawFile": "plugins:\n  - serverless-offline",
+    "command": [],
+    "options": {
+      "verbose": true
+    },
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}

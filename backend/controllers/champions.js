@@ -22,6 +22,8 @@ const getAllChampions = async (req, res) => {
     champions.sort((a, b) => (a.gameplayData[a.gameplayData.length - 1]['weight'] < b.gameplayData[b.gameplayData.length - 1]['weight'] ? 1 : -1))
 
     //confirm that the function was successful and return the champions array as a json response for frontend display
+
+    res.setHeader('Cache-Control', 'public, max-age=604800, immutable');
     return res.status(StatusCodes.OK).json({ champions });
 }
 
@@ -67,6 +69,7 @@ const getAllLaneChampionsLatest = async (req, res) => {
 
     champions.sort((a, b) => (a.gameplayData[a.gameplayData.length - 1]['weight'] < b.gameplayData[b.gameplayData.length - 1]['weight'] ? 1 : -1))
 
+    res.setHeader('Cache-Control', 'public, max-age=604800, immutable');
     return res.status(StatusCodes.OK).json({ champions });
 }
 
@@ -89,6 +92,7 @@ const getChampion = async (req, res) => {
     //sort the champion array in descending order according to most recent pickrate
     champion.sort((a, b) => (a.gameplayData[a.gameplayData.length - 1].pickRate < b.gameplayData[b.gameplayData.length - 1].pickRate ? 1 : -1))
 
+    res.setHeader('Cache-Control', 'public, max-age=604800, immutable');
     //confirm that the function was successful and return the champion array as a json response for frontend display
     return res.status(StatusCodes.OK).json({ champion });
 }
@@ -109,6 +113,7 @@ const getChampionAbilities = async (req, res) => {
     //throw error if the ability object is not found
     if (!abilities) { throw new NotFoundError(`Champion with label:${label} not found.`) }
 
+    res.setHeader('Cache-Control', 'public, max-age=604800, immutable');
     //confirm that the function was successful and return the *NESTED ABILITYSCHEMA OBJECT ARRAY* as a json response for frontend display
     return res.status(StatusCodes.OK).json({ abilities: abilities.ability })
 }
