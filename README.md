@@ -30,7 +30,7 @@ Website Link: https://statswr.vercel.app
    ```
    VITE_SERVER_URL = <your server url>
    ```
-4. Run development backend server with ```cd backend```, ```npm install```, and ```npm run dev```
+4. Run development backend server with ```cd backend```, ```npm install```, and ```npx serverless offline```
 5. Run development frontend server on another terminal with ```cd frontend```, ```npm install```, and ```npm run dev```
 
 ## How to set up the database
